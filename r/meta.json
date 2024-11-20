@@ -1,0 +1,26 @@
+{
+  "figures": [
+    {
+      "year": 2000,
+      "total": 1000,
+      "radio": 0,
+      "television": 0,
+      "internet": 0,
+      "periodicals": 0,
+      "out_of_home": 0,
+      "direct_mail": 0,
+      "yellow_pages": 0,
+      "miscellaneous": 0,
+      "nominal_gdp": 1000,
+      "real_gdp": 1000,
+      "gdp_deflator": 1
+    }
+  ],
+  "ads": [
+    {
+      "year": 2000,
+      "name": "Hilltop",
+      "client": "Coca-Cola"
+    }
+  ]
+}

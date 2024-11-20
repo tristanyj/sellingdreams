@@ -1,0 +1,13 @@
+html {
+  @apply bg-gray-50;
+}
+
+body {
+  @apply font-inter;
+}
+
+#container svg {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
