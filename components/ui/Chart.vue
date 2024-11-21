@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import type { d3GSelection } from '@/types';
 
 const { width, height } = useChartConfig();
+const { drawSteamGraph } = useChartDrawStack();
 
 const container = ref<HTMLElement | null>(null);
 const g = ref<d3GSelection | null>(null);
@@ -14,14 +15,16 @@ function createVisualization() {
   g.value.selectAll('*').remove();
 
   // -----------------
-  // LINES
+  // Steam Graph
   // -----------------
+
+  drawSteamGraph(g.value);
 }
 
-function updateVisualization() {
-  if (!container.value) return;
-  createVisualization();
-}
+// function updateVisualization() {
+//   if (!container.value) return;
+//   createVisualization();
+// }
 
 const mountToContainer = () => {
   if (!container.value) {
@@ -35,7 +38,8 @@ const mountToContainer = () => {
     .attr('width', width)
     .attr('viewBox', `0 0 ${width} ${height}`)
     .attr('class', 'mx-auto');
-  g.value = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
+  g.value = svg.append('g');
+  // .attr('transform', `translate(${width / 2},${height / 2})`);
 
   createVisualization();
 

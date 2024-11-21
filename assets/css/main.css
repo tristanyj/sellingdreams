@@ -1,5 +1,5 @@
 html {
-  @apply bg-gray-50;
+  @apply bg-gray-50 text-gray-950;
 }
 
 body {
@@ -10,4 +10,5 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  border: 1px solid #123456;
 }
