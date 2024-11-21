@@ -2,6 +2,9 @@
 import * as d3 from 'd3';
 import type { d3GSelection } from '@/types';
 
+const figureStore = useFigureStore();
+const { figures } = storeToRefs(figureStore);
+
 const { width, height } = useChartConfig();
 const { drawSteamGraph } = useChartDrawStack();
 
@@ -18,7 +21,7 @@ function createVisualization() {
   // Steam Graph
   // -----------------
 
-  drawSteamGraph(g.value);
+  drawSteamGraph(g.value, figures.value);
 }
 
 // function updateVisualization() {

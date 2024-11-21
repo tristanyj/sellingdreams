@@ -17,6 +17,7 @@ export interface Figure {
   nominal_gdp: number;
   real_gdp: number;
   gdp_deflator: number;
+  [key: string]: number;
 }
 
 export interface Ad {
