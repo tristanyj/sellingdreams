@@ -4,8 +4,13 @@ export function useChartConfig() {
   // ------------------------------
 
   const width = 1400;
-  const height = 1400;
-  const margin = 100;
+  const height = 600;
+  const margin = {
+    top: 100,
+    right: 100,
+    bottom: 100,
+    left: 100,
+  };
 
   return {
     width,

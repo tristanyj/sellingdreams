@@ -1,18 +1,7 @@
 import * as d3 from 'd3';
-
 import type { d3GSelection, Figure } from '~/types';
 
-interface ProcessedDataPoint {
-  key: string;
-  value: number;
-  year: number;
-  rank: number;
-  proportion: number;
-}
-
-const xMargin = 200;
-
-const selectableKeys = [
+const categories = [
   'internet',
   'radio',
   'yellow_pages',
@@ -23,98 +12,133 @@ const selectableKeys = [
   'television',
 ];
 
+const spacing = 10;
+const align = 'start';
+
 export function useChartDrawStack() {
   const { width, height, margin } = useChartConfig();
-  // ------------------------------
-  // Main Config
-  // ------------------------------
 
-  const drawSteamGraph = (g: d3GSelection, figures: Figure[]) => {
-    // 1. Setup scales (same as before)
-    const yScale = d3
-      .scaleTime()
-      .domain([new Date(1900, 0, 1), new Date(2000, 11, 31)])
-      .range([margin, height - margin]);
+  const drawAreaBump = (g: d3GSelection, figures: Figure[]) => {
+    // First compute total values and positions for each slice (year)
+    const slices = new Map();
+    figures.forEach((year) => {
+      const slice = {
+        id: year.year,
+        total: 0,
+        x: 0,
+        values: new Map(),
+      };
 
-    const xScale = d3
-      .scaleLinear()
-      .domain([1, 8])
-      .range([xMargin, width - xMargin]);
-
-    // Modify width scale to use full available space
-    const availableWidth = (width - xMargin * 10) / 2; // divide by 2 as we extend both sides
-    const widthScale = d3.scaleLinear().domain([0, 1]).range([0, availableWidth]); // This will make proportions fill available space
-
-    // 2. Prepare data (same as before)
-    const categories = [
-      'radio',
-      'television',
-      'internet',
-      'periodicals',
-      'out_of_home',
-      'direct_mail',
-      'yellow_pages',
-      'miscellaneous',
-    ];
-
-    const ribbonData = categories.map((category) => {
-      return figures.map((year) => ({
-        year: new Date(year.year, 0, 1),
-        category: category,
-        rank: year.categories[category].rank,
-        proportion: year.categories[category].proportion_of_ads,
-      }));
+      // Calculate total and store values
+      categories.forEach((cat) => {
+        const value = year.categories[cat].proportion_of_ads;
+        slice.total += value;
+        slice.values.set(cat, {
+          serieId: cat,
+          value,
+          position: 0,
+          height: 0,
+          beforeHeight: 0,
+        });
+      });
+      slices.set(year.year, slice);
     });
 
-    // 3. Create area generator (same as before)
+    // Setup scales
+    const xScale = d3
+      .scalePoint()
+      .domain(figures.map((f) => f.year))
+      .range([margin.left, width - margin.right]);
+
+    const heightScale = d3
+      .scaleLinear()
+      .domain([0, d3.max(Array.from(slices.values()), (d) => d.total)!])
+      .range([0, height - categories.length * spacing]);
+
+    // Calculate positions for each slice
+    slices.forEach((slice, x) => {
+      slice.x = xScale(x);
+      const sliceHeight = heightScale(slice.total) + slice.values.size * spacing;
+
+      // Calculate offset based on alignment
+      let offset = 0;
+      if (align === 'middle') {
+        offset = (height - sliceHeight) / 2;
+      } else if (align === 'end') {
+        offset = height - sliceHeight;
+      }
+
+      // Sort and position values within slice
+      Array.from(slice.values.values())
+        .sort((a, b) => b.value - a.value)
+        .forEach((value, position, all) => {
+          const previousValues = all.filter((_, pos) => pos < position);
+          const beforeValue = previousValues.reduce((t, v) => t + v.value, 0);
+
+          const sliceValue = slice.values.get(value.serieId)!;
+          sliceValue.position = position;
+          sliceValue.height = heightScale(value.value);
+          sliceValue.beforeHeight =
+            heightScale(beforeValue) + offset + spacing * (previousValues.length + 0.5);
+        });
+    });
+
+    // Calculate area points with padding for smooth transitions
+    const areaPointPadding = xScale.step() * Math.min(0.6 * 0.5, 0.5);
+
+    // Create series data
+    const series = categories.map((category) => {
+      const points = [];
+      const areaPoints = [];
+
+      figures.forEach((year, i) => {
+        const slice = slices.get(year.year);
+        const position = slice.values.get(category);
+        const x = slice.x;
+        const { beforeHeight, height } = position;
+
+        // Center point
+        points.push({
+          x,
+          y: beforeHeight + height / 2,
+          height,
+          data: year.categories[category],
+        });
+
+        // Area points with padding for smooth transitions
+        if (i > 0) {
+          areaPoints.push({ x: x - areaPointPadding, y0: beforeHeight, y1: beforeHeight + height });
+        }
+        areaPoints.push({ x, y0: beforeHeight, y1: beforeHeight + height });
+        if (i < figures.length - 1) {
+          areaPoints.push({ x: x + areaPointPadding, y0: beforeHeight, y1: beforeHeight + height });
+        }
+      });
+
+      return { id: category, points, areaPoints };
+    });
+
+    // Create area generator
     const area = d3
-      .area<any>()
-      .x0((d) => xScale(d.rank) - widthScale(d.proportion))
-      .x1((d) => xScale(d.rank) + widthScale(d.proportion))
-      .y((d) => yScale(d.year))
+      .area()
+      .x((d) => d.x)
+      .y0((d) => d.y0)
+      .y1((d) => d.y1)
       .curve(d3.curveBasis);
 
-    // 4. Draw the ribbons
-    g.selectAll('.ribbon')
-      .data(ribbonData)
+    // Draw areas
+    g.selectAll('.area')
+      .data(series)
       .join('path')
-      .attr('class', 'ribbon')
-      .attr('d', area)
+      .attr('class', 'area')
+      .attr('d', (d) => area(d.areaPoints))
       .attr('fill', (d, i) => d3.schemeCategory10[i])
-      .attr('opacity', 0.7);
-
-    // 5. Add labels above ribbons
-    ribbonData.forEach((categoryData, i) => {
-      // Get first data point for initial position
-      const firstPoint = categoryData[0];
-      const lastPoint = categoryData[categoryData.length - 1];
-
-      // Add start label
-      g.append('text')
-        .attr('class', 'ribbon-label')
-        .attr('x', xScale(firstPoint.rank))
-        .attr('y', yScale(firstPoint.year) - 10) // Position above the ribbon
-        .attr('text-anchor', 'middle')
-        .attr('fill', d3.schemeCategory10[i])
-        .text(firstPoint.category);
-
-      // Add end label
-      g.append('text')
-        .attr('class', 'ribbon-label')
-        .attr('x', xScale(lastPoint.rank))
-        .attr('y', yScale(lastPoint.year) + 20) // Position below the ribbon
-        .attr('text-anchor', 'middle')
-        .attr('fill', d3.schemeCategory10[i])
-        .text(lastPoint.category);
-    });
-
-    // 6. Add y-axis (same as before)
-    const yAxis = d3.axisLeft(yScale).ticks(d3.timeYear.every(10)).tickFormat(d3.timeFormat('%Y'));
-
-    g.append('g').attr('transform', `translate(${xMargin}, 0)`).call(yAxis);
+      .attr('stroke', 'white')
+      .attr('stroke-width', 1)
+      .attr('opacity', 0.8);
   };
 
   return {
-    drawSteamGraph,
+    drawStreamGraph: drawAreaBump,
   };
 }
