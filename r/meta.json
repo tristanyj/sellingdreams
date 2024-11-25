@@ -14,6 +14,67 @@
       "nominal_gdp": 1000,
       "real_gdp": 1000,
       "gdp_deflator": 1
+    },
+    {
+      "year": 2000,
+      "radio": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "television": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "internet": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "periodicals": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "out_of_home": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "direct_mail": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "yellow_pages": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "miscellaneous": {
+        "nominal": 0,
+        "real": 0,
+        "rank": 0,
+        "proportion": 0.64
+      },
+      "total": {
+        "nominal": 1000,
+        "real": 1000,
+        "proportion": 0.64
+      },
+      "gdp": {
+        "nominal": 1000,
+        "real": 1000,
+        "deflator": 1
+      }
     }
   ],
   "ads": [

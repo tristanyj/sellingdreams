@@ -2,22 +2,36 @@
 // Dataset
 // --------------------------------
 
+interface Category {
+  nominal: number;
+  real: number;
+  rank: number;
+  proportion_of_ads: number;
+}
+
 export interface Figure {
   year: number;
-  radio: number;
-  television: number;
-  internet: number;
-  periodicals: number;
-  out_of_home: number;
-  direct_mail: number;
-  yellow_pages: number;
-  miscellaneous: number;
-  nominal_total: number;
-  real_total: number;
-  nominal_gdp: number;
-  real_gdp: number;
-  gdp_deflator: number;
-  [key: string]: number;
+  categories: Record<
+    | 'radio'
+    | 'television'
+    | 'internet'
+    | 'periodicals'
+    | 'out_of_home'
+    | 'direct_mail'
+    | 'yellow_pages'
+    | 'miscellaneous',
+    Category
+  >[];
+  total: {
+    nominal: number;
+    real: number;
+    proportion_of_gdp: number;
+  };
+  gdp: {
+    real: number;
+    nominal: number;
+    deflator: number;
+  };
 }
 
 export interface Ad {

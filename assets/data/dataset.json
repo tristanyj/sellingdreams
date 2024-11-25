@@ -2,1619 +2,6366 @@
   "figures": [
     {
       "year": 1900,
-      "nominal_total": 450000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 21197000000,
-      "real_gdp": 521778000000,
-      "gdp_deflator": 4.06,
-      "real_total": 11083743842
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 450000000,
+          "real": 11083743842,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 450000000,
+        "real": 11083743842,
+        "proportion_of_gdp": 0.0212
+      },
+      "gdp": {
+        "nominal": 21197000000,
+        "real": 521778000000,
+        "deflator": 4.06
+      }
     },
     {
       "year": 1901,
-      "nominal_total": 500000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 22931000000,
-      "real_gdp": 549046000000,
-      "gdp_deflator": 4.18,
-      "real_total": 11961722488
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 500000000,
+          "real": 11961722488,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 500000000,
+        "real": 11961722488,
+        "proportion_of_gdp": 0.0218
+      },
+      "gdp": {
+        "nominal": 22931000000,
+        "real": 549046000000,
+        "deflator": 4.18
+      }
     },
     {
       "year": 1902,
-      "nominal_total": 575000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 24754000000,
-      "real_gdp": 576747000000,
-      "gdp_deflator": 4.29,
-      "real_total": 13403263403
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 575000000,
+          "real": 13403263403,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 575000000,
+        "real": 13403263403,
+        "proportion_of_gdp": 0.0232
+      },
+      "gdp": {
+        "nominal": 24754000000,
+        "real": 576747000000,
+        "deflator": 4.29
+      }
     },
     {
       "year": 1903,
-      "nominal_total": 650000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 26647000000,
-      "real_gdp": 592997000000,
-      "gdp_deflator": 4.49,
-      "real_total": 14476614699
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 650000000,
+          "real": 14476614699,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 650000000,
+        "real": 14476614699,
+        "proportion_of_gdp": 0.0244
+      },
+      "gdp": {
+        "nominal": 26647000000,
+        "real": 592997000000,
+        "deflator": 4.49
+      }
     },
     {
       "year": 1904,
-      "nominal_total": 750000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 26360000000,
-      "real_gdp": 571371000000,
-      "gdp_deflator": 4.61,
-      "real_total": 16268980477
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 750000000,
+          "real": 16268980477,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 750000000,
+        "real": 16268980477,
+        "proportion_of_gdp": 0.0285
+      },
+      "gdp": {
+        "nominal": 26360000000,
+        "real": 571371000000,
+        "deflator": 4.61
+      }
     },
     {
       "year": 1905,
-      "nominal_total": 775000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 29523000000,
-      "real_gdp": 635290000000,
-      "gdp_deflator": 4.65,
-      "real_total": 16666666667
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 775000000,
+          "real": 16666666667,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 775000000,
+        "real": 16666666667,
+        "proportion_of_gdp": 0.0263
+      },
+      "gdp": {
+        "nominal": 29523000000,
+        "real": 635290000000,
+        "deflator": 4.65
+      }
     },
     {
       "year": 1906,
-      "nominal_total": 800000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 31794000000,
-      "real_gdp": 660583000000,
-      "gdp_deflator": 4.81,
-      "real_total": 16632016632
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 800000000,
+          "real": 16632016632,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 800000000,
+        "real": 16632016632,
+        "proportion_of_gdp": 0.0252
+      },
+      "gdp": {
+        "nominal": 31794000000,
+        "real": 660583000000,
+        "deflator": 4.81
+      }
     },
     {
       "year": 1907,
-      "nominal_total": 850000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 34639000000,
-      "real_gdp": 676850000000,
-      "gdp_deflator": 5.12,
-      "real_total": 16601562500
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 850000000,
+          "real": 16601562500,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 850000000,
+        "real": 16601562500,
+        "proportion_of_gdp": 0.0245
+      },
+      "gdp": {
+        "nominal": 34639000000,
+        "real": 676850000000,
+        "deflator": 5.12
+      }
     },
     {
       "year": 1908,
-      "nominal_total": 925000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 30797000000,
-      "real_gdp": 602975000000,
-      "gdp_deflator": 5.11,
-      "real_total": 18101761252
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 925000000,
+          "real": 18101761252,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 925000000,
+        "real": 18101761252,
+        "proportion_of_gdp": 0.03
+      },
+      "gdp": {
+        "nominal": 30797000000,
+        "real": 602975000000,
+        "deflator": 5.11
+      }
     },
     {
       "year": 1909,
-      "nominal_total": 1000000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 32540000000,
-      "real_gdp": 646065000000,
-      "gdp_deflator": 5.04,
-      "real_total": 19841269841
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1000000000,
+          "real": 19841269841,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1000000000,
+        "real": 19841269841,
+        "proportion_of_gdp": 0.0307
+      },
+      "gdp": {
+        "nominal": 32540000000,
+        "real": 646065000000,
+        "deflator": 5.04
+      }
     },
     {
       "year": 1910,
-      "nominal_total": 1000000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 33746000000,
-      "real_gdp": 653021000000,
-      "gdp_deflator": 5.17,
-      "real_total": 19342359768
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1000000000,
+          "real": 19342359768,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1000000000,
+        "real": 19342359768,
+        "proportion_of_gdp": 0.0296
+      },
+      "gdp": {
+        "nominal": 33746000000,
+        "real": 653021000000,
+        "deflator": 5.17
+      }
     },
     {
       "year": 1911,
-      "nominal_total": 1010000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 34675000000,
-      "real_gdp": 674178000000,
-      "gdp_deflator": 5.14,
-      "real_total": 19649805447
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1010000000,
+          "real": 19649805447,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1010000000,
+        "real": 19649805447,
+        "proportion_of_gdp": 0.0291
+      },
+      "gdp": {
+        "nominal": 34675000000,
+        "real": 674178000000,
+        "deflator": 5.14
+      }
     },
     {
       "year": 1912,
-      "nominal_total": 1030000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 37745000000,
-      "real_gdp": 705765000000,
-      "gdp_deflator": 5.35,
-      "real_total": 19252336449
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1030000000,
+          "real": 19252336449,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1030000000,
+        "real": 19252336449,
+        "proportion_of_gdp": 0.0273
+      },
+      "gdp": {
+        "nominal": 37745000000,
+        "real": 705765000000,
+        "deflator": 5.35
+      }
     },
     {
       "year": 1913,
-      "nominal_total": 1060000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 39517000000,
-      "real_gdp": 733625000000,
-      "gdp_deflator": 5.39,
-      "real_total": 19666048237
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1060000000,
+          "real": 19666048237,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1060000000,
+        "real": 19666048237,
+        "proportion_of_gdp": 0.0268
+      },
+      "gdp": {
+        "nominal": 39517000000,
+        "real": 733625000000,
+        "deflator": 5.39
+      }
     },
     {
       "year": 1914,
-      "nominal_total": 1100000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 36831000000,
-      "real_gdp": 677455000000,
-      "gdp_deflator": 5.44,
-      "real_total": 20220588235
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1100000000,
+          "real": 20220588235,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1100000000,
+        "real": 20220588235,
+        "proportion_of_gdp": 0.0299
+      },
+      "gdp": {
+        "nominal": 36831000000,
+        "real": 677455000000,
+        "deflator": 5.44
+      }
     },
     {
       "year": 1915,
-      "nominal_total": 1100000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 39048000000,
-      "real_gdp": 695924000000,
-      "gdp_deflator": 5.61,
-      "real_total": 19607843137
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1100000000,
+          "real": 19607843137,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1100000000,
+        "real": 19607843137,
+        "proportion_of_gdp": 0.0282
+      },
+      "gdp": {
+        "nominal": 39048000000,
+        "real": 695924000000,
+        "deflator": 5.61
+      }
     },
     {
       "year": 1916,
-      "nominal_total": 1240000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 50117000000,
-      "real_gdp": 792425000000,
-      "gdp_deflator": 6.32,
-      "real_total": 19620253165
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1240000000,
+          "real": 19620253165,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1240000000,
+        "real": 19620253165,
+        "proportion_of_gdp": 0.0247
+      },
+      "gdp": {
+        "nominal": 50117000000,
+        "real": 792425000000,
+        "deflator": 6.32
+      }
     },
     {
       "year": 1917,
-      "nominal_total": 1380000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 60278000000,
-      "real_gdp": 772825000000,
-      "gdp_deflator": 7.8,
-      "real_total": 17692307692
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1380000000,
+          "real": 17692307692,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1380000000,
+        "real": 17692307692,
+        "proportion_of_gdp": 0.0229
+      },
+      "gdp": {
+        "nominal": 60278000000,
+        "real": 772825000000,
+        "deflator": 7.8
+      }
     },
     {
       "year": 1918,
-      "nominal_total": 1240000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 0,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 0,
-      "nominal_gdp": 76567000000,
-      "real_gdp": 842527000000,
-      "gdp_deflator": 9.09,
-      "real_total": 13641364136
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 2,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1240000000,
+          "real": 13641364136,
+          "rank": 1,
+          "proportion_of_ads": 1
+        }
+      },
+      "total": {
+        "nominal": 1240000000,
+        "real": 13641364136,
+        "proportion_of_gdp": 0.0162
+      },
+      "gdp": {
+        "nominal": 76567000000,
+        "real": 842527000000,
+        "deflator": 9.09
+      }
     },
     {
       "year": 1919,
-      "nominal_total": 1930000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 722000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1208000000,
-      "nominal_gdp": 79090000000,
-      "real_gdp": 849287000000,
-      "gdp_deflator": 9.31,
-      "real_total": 20730397422
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 722000000,
+          "real": 7755102041,
+          "rank": 2,
+          "proportion_of_ads": 0.3741
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1208000000,
+          "real": 12975295381,
+          "rank": 1,
+          "proportion_of_ads": 0.6259
+        }
+      },
+      "total": {
+        "nominal": 1930000000,
+        "real": 20730397422,
+        "proportion_of_gdp": 0.0244
+      },
+      "gdp": {
+        "nominal": 79090000000,
+        "real": 849287000000,
+        "deflator": 9.31
+      }
     },
     {
       "year": 1920,
-      "nominal_total": 2480000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 825000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1655000000,
-      "nominal_gdp": 89246000000,
-      "real_gdp": 841350000000,
-      "gdp_deflator": 10.61,
-      "real_total": 23374175306
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 825000000,
+          "real": 7775683318,
+          "rank": 2,
+          "proportion_of_ads": 0.3327
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1655000000,
+          "real": 15598491989,
+          "rank": 1,
+          "proportion_of_ads": 0.6673
+        }
+      },
+      "total": {
+        "nominal": 2480000000,
+        "real": 23374175306,
+        "proportion_of_gdp": 0.0278
+      },
+      "gdp": {
+        "nominal": 89246000000,
+        "real": 841350000000,
+        "deflator": 10.61
+      }
     },
     {
       "year": 1921,
-      "nominal_total": 1930000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 948000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 982000000,
-      "nominal_gdp": 74314000000,
-      "real_gdp": 822062000000,
-      "gdp_deflator": 9.04,
-      "real_total": 21349557522
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 948000000,
+          "real": 10486725664,
+          "rank": 2,
+          "proportion_of_ads": 0.4912
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 982000000,
+          "real": 10862831858,
+          "rank": 1,
+          "proportion_of_ads": 0.5088
+        }
+      },
+      "total": {
+        "nominal": 1930000000,
+        "real": 21349557522,
+        "proportion_of_gdp": 0.026
+      },
+      "gdp": {
+        "nominal": 74314000000,
+        "real": 822062000000,
+        "deflator": 9.04
+      }
     },
     {
       "year": 1922,
-      "nominal_total": 2200000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1018000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1182000000,
-      "nominal_gdp": 74140000000,
-      "real_gdp": 867711000000,
-      "gdp_deflator": 8.54,
-      "real_total": 25761124122
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1018000000,
+          "real": 11920374707,
+          "rank": 2,
+          "proportion_of_ads": 0.4627
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1182000000,
+          "real": 13840749415,
+          "rank": 1,
+          "proportion_of_ads": 0.5373
+        }
+      },
+      "total": {
+        "nominal": 2200000000,
+        "real": 25761124122,
+        "proportion_of_gdp": 0.0297
+      },
+      "gdp": {
+        "nominal": 74140000000,
+        "real": 867711000000,
+        "deflator": 8.54
+      }
     },
     {
       "year": 1923,
-      "nominal_total": 2400000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1095000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1305000000,
-      "nominal_gdp": 86238000000,
-      "real_gdp": 981966000000,
-      "gdp_deflator": 8.78,
-      "real_total": 27334851936
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1095000000,
+          "real": 12471526196,
+          "rank": 2,
+          "proportion_of_ads": 0.4562
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1305000000,
+          "real": 14863325740,
+          "rank": 1,
+          "proportion_of_ads": 0.5438
+        }
+      },
+      "total": {
+        "nominal": 2400000000,
+        "real": 27334851936,
+        "proportion_of_gdp": 0.0278
+      },
+      "gdp": {
+        "nominal": 86238000000,
+        "real": 981966000000,
+        "deflator": 8.78
+      }
     },
     {
       "year": 1924,
-      "nominal_total": 2480000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1177000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1303000000,
-      "nominal_gdp": 87786000000,
-      "real_gdp": 1012202000000,
-      "gdp_deflator": 8.67,
-      "real_total": 28604382930
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1177000000,
+          "real": 13575547866,
+          "rank": 2,
+          "proportion_of_ads": 0.4746
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1303000000,
+          "real": 15028835063,
+          "rank": 1,
+          "proportion_of_ads": 0.5254
+        }
+      },
+      "total": {
+        "nominal": 2480000000,
+        "real": 28604382930,
+        "proportion_of_gdp": 0.0283
+      },
+      "gdp": {
+        "nominal": 87786000000,
+        "real": 1012202000000,
+        "deflator": 8.67
+      }
     },
     {
       "year": 1925,
-      "nominal_total": 2600000000,
-      "radio": 0,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1266000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1334000000,
-      "nominal_gdp": 91449000000,
-      "real_gdp": 1035978000000,
-      "gdp_deflator": 8.83,
-      "real_total": 29445073613
+      "categories": {
+        "radio": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 3,
+          "proportion_of_ads": 0
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1266000000,
+          "real": 14337485844,
+          "rank": 2,
+          "proportion_of_ads": 0.4869
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1334000000,
+          "real": 15107587769,
+          "rank": 1,
+          "proportion_of_ads": 0.5131
+        }
+      },
+      "total": {
+        "nominal": 2600000000,
+        "real": 29445073613,
+        "proportion_of_gdp": 0.0284
+      },
+      "gdp": {
+        "nominal": 91449000000,
+        "real": 1035978000000,
+        "deflator": 8.83
+      }
     },
     {
       "year": 1926,
-      "nominal_total": 2700000000,
-      "radio": 2000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1334000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1363000000,
-      "nominal_gdp": 97885000000,
-      "real_gdp": 1103673000000,
-      "gdp_deflator": 8.87,
-      "real_total": 30439684329
+      "categories": {
+        "radio": {
+          "nominal": 2000000,
+          "real": 22547914,
+          "rank": 3,
+          "proportion_of_ads": 0.0007
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1334000000,
+          "real": 15039458850,
+          "rank": 2,
+          "proportion_of_ads": 0.4943
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1363000000,
+          "real": 15366403608,
+          "rank": 1,
+          "proportion_of_ads": 0.505
+        }
+      },
+      "total": {
+        "nominal": 2700000000,
+        "real": 30439684329,
+        "proportion_of_gdp": 0.0276
+      },
+      "gdp": {
+        "nominal": 97885000000,
+        "real": 1103673000000,
+        "deflator": 8.87
+      }
     },
     {
       "year": 1927,
-      "nominal_total": 2720000000,
-      "radio": 6000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1406000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1308000000,
-      "nominal_gdp": 96466000000,
-      "real_gdp": 1114332000000,
-      "gdp_deflator": 8.66,
-      "real_total": 31408775982
+      "categories": {
+        "radio": {
+          "nominal": 6000000,
+          "real": 69284065,
+          "rank": 3,
+          "proportion_of_ads": 0.0022
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1406000000,
+          "real": 16235565820,
+          "rank": 1,
+          "proportion_of_ads": 0.5169
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1308000000,
+          "real": 15103926097,
+          "rank": 2,
+          "proportion_of_ads": 0.4809
+        }
+      },
+      "total": {
+        "nominal": 2720000000,
+        "real": 31408775982,
+        "proportion_of_gdp": 0.0282
+      },
+      "gdp": {
+        "nominal": 96466000000,
+        "real": 1114332000000,
+        "deflator": 8.66
+      }
     },
     {
       "year": 1928,
-      "nominal_total": 2760000000,
-      "radio": 15000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1468000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1277000000,
-      "nominal_gdp": 98305000000,
-      "real_gdp": 1127103000000,
-      "gdp_deflator": 8.72,
-      "real_total": 31651376147
+      "categories": {
+        "radio": {
+          "nominal": 15000000,
+          "real": 172018349,
+          "rank": 3,
+          "proportion_of_ads": 0.0054
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1468000000,
+          "real": 16834862385,
+          "rank": 1,
+          "proportion_of_ads": 0.5319
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1277000000,
+          "real": 14644495413,
+          "rank": 2,
+          "proportion_of_ads": 0.4627
+        }
+      },
+      "total": {
+        "nominal": 2760000000,
+        "real": 31651376147,
+        "proportion_of_gdp": 0.0281
+      },
+      "gdp": {
+        "nominal": 98305000000,
+        "real": 1127103000000,
+        "deflator": 8.72
+      }
     },
     {
       "year": 1929,
-      "nominal_total": 2850000000,
-      "radio": 35000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1534000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1281000000,
-      "nominal_gdp": 104556000000,
-      "real_gdp": 1191100000000,
-      "gdp_deflator": 8.75,
-      "real_total": 32571428571
+      "categories": {
+        "radio": {
+          "nominal": 35000000,
+          "real": 400000000,
+          "rank": 3,
+          "proportion_of_ads": 0.0123
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1534000000,
+          "real": 17531428571,
+          "rank": 1,
+          "proportion_of_ads": 0.5382
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1281000000,
+          "real": 14640000000,
+          "rank": 2,
+          "proportion_of_ads": 0.4495
+        }
+      },
+      "total": {
+        "nominal": 2850000000,
+        "real": 32571428571,
+        "proportion_of_gdp": 0.0273
+      },
+      "gdp": {
+        "nominal": 104556000000,
+        "real": 1191100000000,
+        "deflator": 8.75
+      }
     },
     {
       "year": 1930,
-      "nominal_total": 2450000000,
-      "radio": 43000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1352000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 1055000000,
-      "nominal_gdp": 92160000000,
-      "real_gdp": 1089800000000,
-      "gdp_deflator": 8.42,
-      "real_total": 29097387173
+      "categories": {
+        "radio": {
+          "nominal": 43000000,
+          "real": 510688836,
+          "rank": 3,
+          "proportion_of_ads": 0.0176
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1352000000,
+          "real": 16057007126,
+          "rank": 1,
+          "proportion_of_ads": 0.5518
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1055000000,
+          "real": 12529691211,
+          "rank": 2,
+          "proportion_of_ads": 0.4306
+        }
+      },
+      "total": {
+        "nominal": 2450000000,
+        "real": 29097387173,
+        "proportion_of_gdp": 0.0266
+      },
+      "gdp": {
+        "nominal": 92160000000,
+        "real": 1089800000000,
+        "deflator": 8.42
+      }
     },
     {
       "year": 1931,
-      "nominal_total": 2100000000,
-      "radio": 52000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1193000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 856000000,
-      "nominal_gdp": 77391000000,
-      "real_gdp": 1020000000000,
-      "gdp_deflator": 7.58,
-      "real_total": 27704485488
+      "categories": {
+        "radio": {
+          "nominal": 52000000,
+          "real": 686015831,
+          "rank": 3,
+          "proportion_of_ads": 0.0248
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1193000000,
+          "real": 15738786280,
+          "rank": 1,
+          "proportion_of_ads": 0.5678
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 856000000,
+          "real": 11292875989,
+          "rank": 2,
+          "proportion_of_ads": 0.4074
+        }
+      },
+      "total": {
+        "nominal": 2100000000,
+        "real": 27704485488,
+        "proportion_of_gdp": 0.0271
+      },
+      "gdp": {
+        "nominal": 77391000000,
+        "real": 1020000000000,
+        "deflator": 7.58
+      }
     },
     {
       "year": 1932,
-      "nominal_total": 1620000000,
-      "radio": 63000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 971000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 586000000,
-      "nominal_gdp": 59522000000,
-      "real_gdp": 888400000000,
-      "gdp_deflator": 6.72,
-      "real_total": 24107142857
+      "categories": {
+        "radio": {
+          "nominal": 63000000,
+          "real": 937500000,
+          "rank": 3,
+          "proportion_of_ads": 0.0389
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 971000000,
+          "real": 14449404762,
+          "rank": 1,
+          "proportion_of_ads": 0.5994
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 586000000,
+          "real": 8720238095,
+          "rank": 2,
+          "proportion_of_ads": 0.3617
+        }
+      },
+      "total": {
+        "nominal": 1620000000,
+        "real": 24107142857,
+        "proportion_of_gdp": 0.0272
+      },
+      "gdp": {
+        "nominal": 59522000000,
+        "real": 888400000000,
+        "deflator": 6.72
+      }
     },
     {
       "year": 1933,
-      "nominal_total": 1325000000,
-      "radio": 76000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 792000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 457000000,
-      "nominal_gdp": 57154000000,
-      "real_gdp": 877400000000,
-      "gdp_deflator": 6.54,
-      "real_total": 20259938838
+      "categories": {
+        "radio": {
+          "nominal": 76000000,
+          "real": 1162079511,
+          "rank": 3,
+          "proportion_of_ads": 0.0574
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 792000000,
+          "real": 12110091743,
+          "rank": 1,
+          "proportion_of_ads": 0.5977
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 457000000,
+          "real": 6987767584,
+          "rank": 2,
+          "proportion_of_ads": 0.3449
+        }
+      },
+      "total": {
+        "nominal": 1325000000,
+        "real": 20259938838,
+        "proportion_of_gdp": 0.0232
+      },
+      "gdp": {
+        "nominal": 57154000000,
+        "real": 877400000000,
+        "deflator": 6.54
+      }
     },
     {
       "year": 1934,
-      "nominal_total": 1650000000,
-      "radio": 93000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 865000000,
-      "out_of_home": 0,
-      "direct_mail": 0,
-      "yellow_pages": 0,
-      "miscellaneous": 692000000,
-      "nominal_gdp": 66800000000,
-      "real_gdp": 972300000000,
-      "gdp_deflator": 6.86,
-      "real_total": 24052478134
+      "categories": {
+        "radio": {
+          "nominal": 93000000,
+          "real": 1355685131,
+          "rank": 3,
+          "proportion_of_ads": 0.0564
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 4,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 5,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 865000000,
+          "real": 12609329446,
+          "rank": 1,
+          "proportion_of_ads": 0.5242
+        },
+        "out_of_home": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "direct_mail": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 692000000,
+          "real": 10087463557,
+          "rank": 2,
+          "proportion_of_ads": 0.4194
+        }
+      },
+      "total": {
+        "nominal": 1650000000,
+        "real": 24052478134,
+        "proportion_of_gdp": 0.0247
+      },
+      "gdp": {
+        "nominal": 66800000000,
+        "real": 972300000000,
+        "deflator": 6.86
+      }
     },
     {
       "year": 1935,
-      "nominal_total": 1720000000,
-      "radio": 113000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 952000000,
-      "out_of_home": 31000000,
-      "direct_mail": 282000000,
-      "yellow_pages": 0,
-      "miscellaneous": 342000000,
-      "nominal_gdp": 74241000000,
-      "real_gdp": 1058800000000,
-      "gdp_deflator": 6.99,
-      "real_total": 24606580830
+      "categories": {
+        "radio": {
+          "nominal": 113000000,
+          "real": 1616595136,
+          "rank": 4,
+          "proportion_of_ads": 0.0657
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 952000000,
+          "real": 13619456366,
+          "rank": 1,
+          "proportion_of_ads": 0.5535
+        },
+        "out_of_home": {
+          "nominal": 31000000,
+          "real": 443490701,
+          "rank": 5,
+          "proportion_of_ads": 0.018
+        },
+        "direct_mail": {
+          "nominal": 282000000,
+          "real": 4034334764,
+          "rank": 3,
+          "proportion_of_ads": 0.164
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 342000000,
+          "real": 4892703863,
+          "rank": 2,
+          "proportion_of_ads": 0.1988
+        }
+      },
+      "total": {
+        "nominal": 1720000000,
+        "real": 24606580830,
+        "proportion_of_gdp": 0.0232
+      },
+      "gdp": {
+        "nominal": 74241000000,
+        "real": 1058800000000,
+        "deflator": 6.99
+      }
     },
     {
       "year": 1936,
-      "nominal_total": 1930000000,
-      "radio": 122000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1069000000,
-      "out_of_home": 38000000,
-      "direct_mail": 319000000,
-      "yellow_pages": 0,
-      "miscellaneous": 382000000,
-      "nominal_gdp": 84830000000,
-      "real_gdp": 1195300000000,
-      "gdp_deflator": 7.08,
-      "real_total": 27259887006
+      "categories": {
+        "radio": {
+          "nominal": 122000000,
+          "real": 1723163842,
+          "rank": 4,
+          "proportion_of_ads": 0.0632
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1069000000,
+          "real": 15098870056,
+          "rank": 1,
+          "proportion_of_ads": 0.5539
+        },
+        "out_of_home": {
+          "nominal": 38000000,
+          "real": 536723164,
+          "rank": 5,
+          "proportion_of_ads": 0.0197
+        },
+        "direct_mail": {
+          "nominal": 319000000,
+          "real": 4505649718,
+          "rank": 3,
+          "proportion_of_ads": 0.1653
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 382000000,
+          "real": 5395480226,
+          "rank": 2,
+          "proportion_of_ads": 0.1979
+        }
+      },
+      "total": {
+        "nominal": 1930000000,
+        "real": 27259887006,
+        "proportion_of_gdp": 0.0228
+      },
+      "gdp": {
+        "nominal": 84830000000,
+        "real": 1195300000000,
+        "deflator": 7.08
+      }
     },
     {
       "year": 1937,
-      "nominal_total": 2100000000,
-      "radio": 165000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1140000000,
-      "out_of_home": 44000000,
-      "direct_mail": 333000000,
-      "yellow_pages": 0,
-      "miscellaneous": 418000000,
-      "nominal_gdp": 93003000000,
-      "real_gdp": 1256500000000,
-      "gdp_deflator": 7.34,
-      "real_total": 28610354223
+      "categories": {
+        "radio": {
+          "nominal": 165000000,
+          "real": 2247956403,
+          "rank": 4,
+          "proportion_of_ads": 0.0786
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1140000000,
+          "real": 15531335150,
+          "rank": 1,
+          "proportion_of_ads": 0.5429
+        },
+        "out_of_home": {
+          "nominal": 44000000,
+          "real": 599455041,
+          "rank": 5,
+          "proportion_of_ads": 0.021
+        },
+        "direct_mail": {
+          "nominal": 333000000,
+          "real": 4536784741,
+          "rank": 3,
+          "proportion_of_ads": 0.1586
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 418000000,
+          "real": 5694822888,
+          "rank": 2,
+          "proportion_of_ads": 0.199
+        }
+      },
+      "total": {
+        "nominal": 2100000000,
+        "real": 28610354223,
+        "proportion_of_gdp": 0.0226
+      },
+      "gdp": {
+        "nominal": 93003000000,
+        "real": 1256500000000,
+        "deflator": 7.34
+      }
     },
     {
       "year": 1938,
-      "nominal_total": 1930000000,
-      "radio": 167000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1015000000,
-      "out_of_home": 43000000,
-      "direct_mail": 324000000,
-      "yellow_pages": 0,
-      "miscellaneous": 381000000,
-      "nominal_gdp": 87352000000,
-      "real_gdp": 1214900000000,
-      "gdp_deflator": 7.2,
-      "real_total": 26805555556
+      "categories": {
+        "radio": {
+          "nominal": 167000000,
+          "real": 2319444444,
+          "rank": 4,
+          "proportion_of_ads": 0.0865
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1015000000,
+          "real": 14097222222,
+          "rank": 1,
+          "proportion_of_ads": 0.5259
+        },
+        "out_of_home": {
+          "nominal": 43000000,
+          "real": 597222222,
+          "rank": 5,
+          "proportion_of_ads": 0.0223
+        },
+        "direct_mail": {
+          "nominal": 324000000,
+          "real": 4500000000,
+          "rank": 3,
+          "proportion_of_ads": 0.1679
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 381000000,
+          "real": 5291666667,
+          "rank": 2,
+          "proportion_of_ads": 0.1974
+        }
+      },
+      "total": {
+        "nominal": 1930000000,
+        "real": 26805555556,
+        "proportion_of_gdp": 0.0221
+      },
+      "gdp": {
+        "nominal": 87352000000,
+        "real": 1214900000000,
+        "deflator": 7.2
+      }
     },
     {
       "year": 1939,
-      "nominal_total": 2010000000,
-      "radio": 184000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1048000000,
-      "out_of_home": 44000000,
-      "direct_mail": 333000000,
-      "yellow_pages": 0,
-      "miscellaneous": 401000000,
-      "nominal_gdp": 93437000000,
-      "real_gdp": 1312400000000,
-      "gdp_deflator": 7.11,
-      "real_total": 28270042194
+      "categories": {
+        "radio": {
+          "nominal": 184000000,
+          "real": 2587904360,
+          "rank": 4,
+          "proportion_of_ads": 0.0915
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1048000000,
+          "real": 14739803094,
+          "rank": 1,
+          "proportion_of_ads": 0.5214
+        },
+        "out_of_home": {
+          "nominal": 44000000,
+          "real": 618846695,
+          "rank": 5,
+          "proportion_of_ads": 0.0219
+        },
+        "direct_mail": {
+          "nominal": 333000000,
+          "real": 4683544304,
+          "rank": 3,
+          "proportion_of_ads": 0.1657
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 401000000,
+          "real": 5639943741,
+          "rank": 2,
+          "proportion_of_ads": 0.1995
+        }
+      },
+      "total": {
+        "nominal": 2010000000,
+        "real": 28270042194,
+        "proportion_of_gdp": 0.0215
+      },
+      "gdp": {
+        "nominal": 93437000000,
+        "real": 1312400000000,
+        "deflator": 7.11
+      }
     },
     {
       "year": 1940,
-      "nominal_total": 2110000000,
-      "radio": 215000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1096000000,
-      "out_of_home": 45000000,
-      "direct_mail": 334000000,
-      "yellow_pages": 0,
-      "miscellaneous": 420000000,
-      "nominal_gdp": 102899000000,
-      "real_gdp": 1428100000000,
-      "gdp_deflator": 7.18,
-      "real_total": 29387186630
+      "categories": {
+        "radio": {
+          "nominal": 215000000,
+          "real": 2994428969,
+          "rank": 4,
+          "proportion_of_ads": 0.1019
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1096000000,
+          "real": 15264623955,
+          "rank": 1,
+          "proportion_of_ads": 0.5194
+        },
+        "out_of_home": {
+          "nominal": 45000000,
+          "real": 626740947,
+          "rank": 5,
+          "proportion_of_ads": 0.0213
+        },
+        "direct_mail": {
+          "nominal": 334000000,
+          "real": 4651810585,
+          "rank": 3,
+          "proportion_of_ads": 0.1583
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 420000000,
+          "real": 5849582173,
+          "rank": 2,
+          "proportion_of_ads": 0.1991
+        }
+      },
+      "total": {
+        "nominal": 2110000000,
+        "real": 29387186630,
+        "proportion_of_gdp": 0.0205
+      },
+      "gdp": {
+        "nominal": 102899000000,
+        "real": 1428100000000,
+        "deflator": 7.18
+      }
     },
     {
       "year": 1941,
-      "nominal_total": 2250000000,
-      "radio": 247000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1153000000,
-      "out_of_home": 53000000,
-      "direct_mail": 353000000,
-      "yellow_pages": 0,
-      "miscellaneous": 444000000,
-      "nominal_gdp": 129309000000,
-      "real_gdp": 1681000000000,
-      "gdp_deflator": 7.65,
-      "real_total": 29411764706
+      "categories": {
+        "radio": {
+          "nominal": 247000000,
+          "real": 3228758170,
+          "rank": 4,
+          "proportion_of_ads": 0.1098
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1153000000,
+          "real": 15071895425,
+          "rank": 1,
+          "proportion_of_ads": 0.5124
+        },
+        "out_of_home": {
+          "nominal": 53000000,
+          "real": 692810458,
+          "rank": 5,
+          "proportion_of_ads": 0.0236
+        },
+        "direct_mail": {
+          "nominal": 353000000,
+          "real": 4614379085,
+          "rank": 3,
+          "proportion_of_ads": 0.1569
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 444000000,
+          "real": 5803921569,
+          "rank": 2,
+          "proportion_of_ads": 0.1973
+        }
+      },
+      "total": {
+        "nominal": 2250000000,
+        "real": 29411764706,
+        "proportion_of_gdp": 0.0174
+      },
+      "gdp": {
+        "nominal": 129309000000,
+        "real": 1681000000000,
+        "deflator": 7.65
+      }
     },
     {
       "year": 1942,
-      "nominal_total": 2160000000,
-      "radio": 260000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1092000000,
-      "out_of_home": 44000000,
-      "direct_mail": 329000000,
-      "yellow_pages": 0,
-      "miscellaneous": 435000000,
-      "nominal_gdp": 165952000000,
-      "real_gdp": 1998500000000,
-      "gdp_deflator": 8.29,
-      "real_total": 26055488540
+      "categories": {
+        "radio": {
+          "nominal": 260000000,
+          "real": 3136308806,
+          "rank": 4,
+          "proportion_of_ads": 0.1204
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1092000000,
+          "real": 13172496984,
+          "rank": 1,
+          "proportion_of_ads": 0.5056
+        },
+        "out_of_home": {
+          "nominal": 44000000,
+          "real": 530759952,
+          "rank": 5,
+          "proportion_of_ads": 0.0204
+        },
+        "direct_mail": {
+          "nominal": 329000000,
+          "real": 3968636912,
+          "rank": 3,
+          "proportion_of_ads": 0.1523
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 435000000,
+          "real": 5247285887,
+          "rank": 2,
+          "proportion_of_ads": 0.2014
+        }
+      },
+      "total": {
+        "nominal": 2160000000,
+        "real": 26055488540,
+        "proportion_of_gdp": 0.013
+      },
+      "gdp": {
+        "nominal": 165952000000,
+        "real": 1998500000000,
+        "deflator": 8.29
+      }
     },
     {
       "year": 1943,
-      "nominal_total": 2490000000,
-      "radio": 314000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1325000000,
-      "out_of_home": 42000000,
-      "direct_mail": 322000000,
-      "yellow_pages": 0,
-      "miscellaneous": 487000000,
-      "nominal_gdp": 203084000000,
-      "real_gdp": 2338800000000,
-      "gdp_deflator": 8.68,
-      "real_total": 28686635945
+      "categories": {
+        "radio": {
+          "nominal": 314000000,
+          "real": 3617511521,
+          "rank": 4,
+          "proportion_of_ads": 0.1261
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1325000000,
+          "real": 15264976959,
+          "rank": 1,
+          "proportion_of_ads": 0.5321
+        },
+        "out_of_home": {
+          "nominal": 42000000,
+          "real": 483870968,
+          "rank": 5,
+          "proportion_of_ads": 0.0169
+        },
+        "direct_mail": {
+          "nominal": 322000000,
+          "real": 3709677419,
+          "rank": 3,
+          "proportion_of_ads": 0.1293
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 487000000,
+          "real": 5610599078,
+          "rank": 2,
+          "proportion_of_ads": 0.1956
+        }
+      },
+      "total": {
+        "nominal": 2490000000,
+        "real": 28686635945,
+        "proportion_of_gdp": 0.0123
+      },
+      "gdp": {
+        "nominal": 203084000000,
+        "real": 2338800000000,
+        "deflator": 8.68
+      }
     },
     {
       "year": 1944,
-      "nominal_total": 2700000000,
-      "radio": 393000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1397000000,
-      "out_of_home": 56000000,
-      "direct_mail": 326000000,
-      "yellow_pages": 0,
-      "miscellaneous": 528000000,
-      "nominal_gdp": 224447000000,
-      "real_gdp": 2524800000000,
-      "gdp_deflator": 8.89,
-      "real_total": 30371203600
+      "categories": {
+        "radio": {
+          "nominal": 393000000,
+          "real": 4420697413,
+          "rank": 3,
+          "proportion_of_ads": 0.1456
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1397000000,
+          "real": 15714285714,
+          "rank": 1,
+          "proportion_of_ads": 0.5174
+        },
+        "out_of_home": {
+          "nominal": 56000000,
+          "real": 629921260,
+          "rank": 5,
+          "proportion_of_ads": 0.0207
+        },
+        "direct_mail": {
+          "nominal": 326000000,
+          "real": 3667041620,
+          "rank": 4,
+          "proportion_of_ads": 0.1207
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 528000000,
+          "real": 5939257593,
+          "rank": 2,
+          "proportion_of_ads": 0.1956
+        }
+      },
+      "total": {
+        "nominal": 2700000000,
+        "real": 30371203600,
+        "proportion_of_gdp": 0.012
+      },
+      "gdp": {
+        "nominal": 224447000000,
+        "real": 2524800000000,
+        "deflator": 8.89
+      }
     },
     {
       "year": 1945,
-      "nominal_total": 2840000000,
-      "radio": 424000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1499000000,
-      "out_of_home": 72000000,
-      "direct_mail": 290000000,
-      "yellow_pages": 0,
-      "miscellaneous": 555000000,
-      "nominal_gdp": 228007000000,
-      "real_gdp": 2500100000000,
-      "gdp_deflator": 9.11,
-      "real_total": 31174533480
+      "categories": {
+        "radio": {
+          "nominal": 424000000,
+          "real": 4654226125,
+          "rank": 3,
+          "proportion_of_ads": 0.1493
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1499000000,
+          "real": 16454445664,
+          "rank": 1,
+          "proportion_of_ads": 0.5278
+        },
+        "out_of_home": {
+          "nominal": 72000000,
+          "real": 790340285,
+          "rank": 5,
+          "proportion_of_ads": 0.0254
+        },
+        "direct_mail": {
+          "nominal": 290000000,
+          "real": 3183315038,
+          "rank": 4,
+          "proportion_of_ads": 0.1021
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 555000000,
+          "real": 6092206367,
+          "rank": 2,
+          "proportion_of_ads": 0.1954
+        }
+      },
+      "total": {
+        "nominal": 2840000000,
+        "real": 31174533480,
+        "proportion_of_gdp": 0.0125
+      },
+      "gdp": {
+        "nominal": 228007000000,
+        "real": 2500100000000,
+        "deflator": 9.11
+      }
     },
     {
       "year": 1946,
-      "nominal_total": 3340000000,
-      "radio": 455000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 1807000000,
-      "out_of_home": 86000000,
-      "direct_mail": 334000000,
-      "yellow_pages": 0,
-      "miscellaneous": 658000000,
-      "nominal_gdp": 227535000000,
-      "real_gdp": 2209900000000,
-      "gdp_deflator": 10.26,
-      "real_total": 32553606238
+      "categories": {
+        "radio": {
+          "nominal": 455000000,
+          "real": 4434697856,
+          "rank": 3,
+          "proportion_of_ads": 0.1362
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 1807000000,
+          "real": 17612085770,
+          "rank": 1,
+          "proportion_of_ads": 0.541
+        },
+        "out_of_home": {
+          "nominal": 86000000,
+          "real": 838206628,
+          "rank": 5,
+          "proportion_of_ads": 0.0257
+        },
+        "direct_mail": {
+          "nominal": 334000000,
+          "real": 3255360624,
+          "rank": 4,
+          "proportion_of_ads": 0.1
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 658000000,
+          "real": 6413255361,
+          "rank": 2,
+          "proportion_of_ads": 0.197
+        }
+      },
+      "total": {
+        "nominal": 3340000000,
+        "real": 32553606238,
+        "proportion_of_gdp": 0.0147
+      },
+      "gdp": {
+        "nominal": 227535000000,
+        "real": 2209900000000,
+        "deflator": 10.26
+      }
     },
     {
       "year": 1947,
-      "nominal_total": 4260000000,
-      "radio": 506000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 2217000000,
-      "out_of_home": 121000000,
-      "direct_mail": 579000000,
-      "yellow_pages": 0,
-      "miscellaneous": 837000000,
-      "nominal_gdp": 249616000000,
-      "real_gdp": 2184600000000,
-      "gdp_deflator": 11.41,
-      "real_total": 37335670465
+      "categories": {
+        "radio": {
+          "nominal": 506000000,
+          "real": 4434706398,
+          "rank": 4,
+          "proportion_of_ads": 0.1188
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 2217000000,
+          "real": 19430324277,
+          "rank": 1,
+          "proportion_of_ads": 0.5204
+        },
+        "out_of_home": {
+          "nominal": 121000000,
+          "real": 1060473269,
+          "rank": 5,
+          "proportion_of_ads": 0.0284
+        },
+        "direct_mail": {
+          "nominal": 579000000,
+          "real": 5074496056,
+          "rank": 3,
+          "proportion_of_ads": 0.1359
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 837000000,
+          "real": 7335670465,
+          "rank": 2,
+          "proportion_of_ads": 0.1965
+        }
+      },
+      "total": {
+        "nominal": 4260000000,
+        "real": 37335670465,
+        "proportion_of_gdp": 0.0171
+      },
+      "gdp": {
+        "nominal": 249616000000,
+        "real": 2184600000000,
+        "deflator": 11.41
+      }
     },
     {
       "year": 1948,
-      "nominal_total": 4870000000,
-      "radio": 562000000,
-      "television": 0,
-      "internet": 0,
-      "periodicals": 2529000000,
-      "out_of_home": 132000000,
-      "direct_mail": 689000000,
-      "yellow_pages": 0,
-      "miscellaneous": 958000000,
-      "nominal_gdp": 274468000000,
-      "real_gdp": 2274600000000,
-      "gdp_deflator": 12.06,
-      "real_total": 40381426202
+      "categories": {
+        "radio": {
+          "nominal": 562000000,
+          "real": 4660033167,
+          "rank": 4,
+          "proportion_of_ads": 0.1154
+        },
+        "television": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 6,
+          "proportion_of_ads": 0
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 2529000000,
+          "real": 20970149254,
+          "rank": 1,
+          "proportion_of_ads": 0.5193
+        },
+        "out_of_home": {
+          "nominal": 132000000,
+          "real": 1094527363,
+          "rank": 5,
+          "proportion_of_ads": 0.0271
+        },
+        "direct_mail": {
+          "nominal": 689000000,
+          "real": 5713101161,
+          "rank": 3,
+          "proportion_of_ads": 0.1415
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 958000000,
+          "real": 7943615257,
+          "rank": 2,
+          "proportion_of_ads": 0.1967
+        }
+      },
+      "total": {
+        "nominal": 4870000000,
+        "real": 40381426202,
+        "proportion_of_gdp": 0.0177
+      },
+      "gdp": {
+        "nominal": 274468000000,
+        "real": 2274600000000,
+        "deflator": 12.06
+      }
     },
     {
       "year": 1949,
-      "nominal_total": 5210000000,
-      "radio": 571000000,
-      "television": 58000000,
-      "internet": 0,
-      "periodicals": 2672000000,
-      "out_of_home": 131000000,
-      "direct_mail": 756000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1022000000,
-      "nominal_gdp": 272475000000,
-      "real_gdp": 2261900000000,
-      "gdp_deflator": 12.05,
-      "real_total": 43236514523
+      "categories": {
+        "radio": {
+          "nominal": 571000000,
+          "real": 4738589212,
+          "rank": 4,
+          "proportion_of_ads": 0.1096
+        },
+        "television": {
+          "nominal": 58000000,
+          "real": 481327801,
+          "rank": 6,
+          "proportion_of_ads": 0.0111
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 2672000000,
+          "real": 22174273859,
+          "rank": 1,
+          "proportion_of_ads": 0.5129
+        },
+        "out_of_home": {
+          "nominal": 131000000,
+          "real": 1087136929,
+          "rank": 5,
+          "proportion_of_ads": 0.0251
+        },
+        "direct_mail": {
+          "nominal": 756000000,
+          "real": 6273858921,
+          "rank": 3,
+          "proportion_of_ads": 0.1451
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1022000000,
+          "real": 8481327801,
+          "rank": 2,
+          "proportion_of_ads": 0.1962
+        }
+      },
+      "total": {
+        "nominal": 5210000000,
+        "real": 43236514523,
+        "proportion_of_gdp": 0.0191
+      },
+      "gdp": {
+        "nominal": 272475000000,
+        "real": 2261900000000,
+        "deflator": 12.05
+      }
     },
     {
       "year": 1950,
-      "nominal_total": 5700000000,
-      "radio": 605000000,
-      "television": 171000000,
-      "internet": 0,
-      "periodicals": 2857000000,
-      "out_of_home": 142000000,
-      "direct_mail": 803000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1122000000,
-      "nominal_gdp": 299827000000,
-      "real_gdp": 2458500000000,
-      "gdp_deflator": 12.17,
-      "real_total": 46836483155
+      "categories": {
+        "radio": {
+          "nominal": 605000000,
+          "real": 4971240756,
+          "rank": 4,
+          "proportion_of_ads": 0.1061
+        },
+        "television": {
+          "nominal": 171000000,
+          "real": 1405094495,
+          "rank": 5,
+          "proportion_of_ads": 0.03
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 2857000000,
+          "real": 23475760066,
+          "rank": 1,
+          "proportion_of_ads": 0.5012
+        },
+        "out_of_home": {
+          "nominal": 142000000,
+          "real": 1166803615,
+          "rank": 6,
+          "proportion_of_ads": 0.0249
+        },
+        "direct_mail": {
+          "nominal": 803000000,
+          "real": 6598192276,
+          "rank": 3,
+          "proportion_of_ads": 0.1409
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1122000000,
+          "real": 9219391947,
+          "rank": 2,
+          "proportion_of_ads": 0.1968
+        }
+      },
+      "total": {
+        "nominal": 5700000000,
+        "real": 46836483155,
+        "proportion_of_gdp": 0.019
+      },
+      "gdp": {
+        "nominal": 299827000000,
+        "real": 2458500000000,
+        "deflator": 12.17
+      }
     },
     {
       "year": 1951,
-      "nominal_total": 6420000000,
-      "radio": 606000000,
-      "television": 332000000,
-      "internet": 0,
-      "periodicals": 3142000000,
-      "out_of_home": 149000000,
-      "direct_mail": 924000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1267000000,
-      "nominal_gdp": 346914000000,
-      "real_gdp": 2656300000000,
-      "gdp_deflator": 12.99,
-      "real_total": 49422632794
+      "categories": {
+        "radio": {
+          "nominal": 606000000,
+          "real": 4665127021,
+          "rank": 4,
+          "proportion_of_ads": 0.0944
+        },
+        "television": {
+          "nominal": 332000000,
+          "real": 2555812163,
+          "rank": 5,
+          "proportion_of_ads": 0.0517
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 3142000000,
+          "real": 24187836798,
+          "rank": 1,
+          "proportion_of_ads": 0.4894
+        },
+        "out_of_home": {
+          "nominal": 149000000,
+          "real": 1147036182,
+          "rank": 6,
+          "proportion_of_ads": 0.0232
+        },
+        "direct_mail": {
+          "nominal": 924000000,
+          "real": 7113163972,
+          "rank": 3,
+          "proportion_of_ads": 0.1439
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1267000000,
+          "real": 9753656659,
+          "rank": 2,
+          "proportion_of_ads": 0.1974
+        }
+      },
+      "total": {
+        "nominal": 6420000000,
+        "real": 49422632794,
+        "proportion_of_gdp": 0.0185
+      },
+      "gdp": {
+        "nominal": 346914000000,
+        "real": 2656300000000,
+        "deflator": 12.99
+      }
     },
     {
       "year": 1952,
-      "nominal_total": 7140000000,
-      "radio": 624000000,
-      "television": 454000000,
-      "internet": 0,
-      "periodicals": 3474000000,
-      "out_of_home": 162000000,
-      "direct_mail": 1024000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1402000000,
-      "nominal_gdp": 367341000000,
-      "real_gdp": 2764800000000,
-      "gdp_deflator": 13.27,
-      "real_total": 53805576488
+      "categories": {
+        "radio": {
+          "nominal": 624000000,
+          "real": 4702336096,
+          "rank": 4,
+          "proportion_of_ads": 0.0874
+        },
+        "television": {
+          "nominal": 454000000,
+          "real": 3421250942,
+          "rank": 5,
+          "proportion_of_ads": 0.0636
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 3474000000,
+          "real": 26179351922,
+          "rank": 1,
+          "proportion_of_ads": 0.4866
+        },
+        "out_of_home": {
+          "nominal": 162000000,
+          "real": 1220798794,
+          "rank": 6,
+          "proportion_of_ads": 0.0227
+        },
+        "direct_mail": {
+          "nominal": 1024000000,
+          "real": 7716654107,
+          "rank": 3,
+          "proportion_of_ads": 0.1434
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1402000000,
+          "real": 10565184627,
+          "rank": 2,
+          "proportion_of_ads": 0.1964
+        }
+      },
+      "total": {
+        "nominal": 7140000000,
+        "real": 53805576488,
+        "proportion_of_gdp": 0.0194
+      },
+      "gdp": {
+        "nominal": 367341000000,
+        "real": 2764800000000,
+        "deflator": 13.27
+      }
     },
     {
       "year": 1953,
-      "nominal_total": 7740000000,
-      "radio": 611000000,
-      "television": 606000000,
-      "internet": 0,
-      "periodicals": 3725000000,
-      "out_of_home": 176000000,
-      "direct_mail": 1099000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1523000000,
-      "nominal_gdp": 389218000000,
-      "real_gdp": 2894400000000,
-      "gdp_deflator": 13.44,
-      "real_total": 57589285714
+      "categories": {
+        "radio": {
+          "nominal": 611000000,
+          "real": 4546130952,
+          "rank": 4,
+          "proportion_of_ads": 0.0789
+        },
+        "television": {
+          "nominal": 606000000,
+          "real": 4508928571,
+          "rank": 5,
+          "proportion_of_ads": 0.0783
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 3725000000,
+          "real": 27715773810,
+          "rank": 1,
+          "proportion_of_ads": 0.4813
+        },
+        "out_of_home": {
+          "nominal": 176000000,
+          "real": 1309523810,
+          "rank": 6,
+          "proportion_of_ads": 0.0227
+        },
+        "direct_mail": {
+          "nominal": 1099000000,
+          "real": 8177083333,
+          "rank": 3,
+          "proportion_of_ads": 0.142
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1523000000,
+          "real": 11331845238,
+          "rank": 2,
+          "proportion_of_ads": 0.1968
+        }
+      },
+      "total": {
+        "nominal": 7740000000,
+        "real": 57589285714,
+        "proportion_of_gdp": 0.0199
+      },
+      "gdp": {
+        "nominal": 389218000000,
+        "real": 2894400000000,
+        "deflator": 13.44
+      }
     },
     {
       "year": 1954,
-      "nominal_total": 8150000000,
-      "radio": 559000000,
-      "television": 809000000,
-      "internet": 0,
-      "periodicals": 3793000000,
-      "out_of_home": 187000000,
-      "direct_mail": 1202000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1600000000,
-      "nominal_gdp": 390549000000,
-      "real_gdp": 2877700000000,
-      "gdp_deflator": 13.58,
-      "real_total": 60014727541
+      "categories": {
+        "radio": {
+          "nominal": 559000000,
+          "real": 4116347570,
+          "rank": 5,
+          "proportion_of_ads": 0.0686
+        },
+        "television": {
+          "nominal": 809000000,
+          "real": 5957290133,
+          "rank": 4,
+          "proportion_of_ads": 0.0993
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 3793000000,
+          "real": 27930780560,
+          "rank": 1,
+          "proportion_of_ads": 0.4654
+        },
+        "out_of_home": {
+          "nominal": 187000000,
+          "real": 1377025037,
+          "rank": 6,
+          "proportion_of_ads": 0.0229
+        },
+        "direct_mail": {
+          "nominal": 1202000000,
+          "real": 8851251841,
+          "rank": 3,
+          "proportion_of_ads": 0.1475
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1600000000,
+          "real": 11782032401,
+          "rank": 2,
+          "proportion_of_ads": 0.1963
+        }
+      },
+      "total": {
+        "nominal": 8150000000,
+        "real": 60014727541,
+        "proportion_of_gdp": 0.0209
+      },
+      "gdp": {
+        "nominal": 390549000000,
+        "real": 2877700000000,
+        "deflator": 13.58
+      }
     },
     {
       "year": 1955,
-      "nominal_total": 9150000000,
-      "radio": 545000000,
-      "television": 1035000000,
-      "internet": 0,
-      "periodicals": 4286000000,
-      "out_of_home": 192000000,
-      "direct_mail": 1299000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1793000000,
-      "nominal_gdp": 425478000000,
-      "real_gdp": 3083000000000,
-      "gdp_deflator": 13.77,
-      "real_total": 66448801743
+      "categories": {
+        "radio": {
+          "nominal": 545000000,
+          "real": 3957879448,
+          "rank": 5,
+          "proportion_of_ads": 0.0596
+        },
+        "television": {
+          "nominal": 1035000000,
+          "real": 7516339869,
+          "rank": 4,
+          "proportion_of_ads": 0.1131
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 4286000000,
+          "real": 31125635439,
+          "rank": 1,
+          "proportion_of_ads": 0.4684
+        },
+        "out_of_home": {
+          "nominal": 192000000,
+          "real": 1394335512,
+          "rank": 6,
+          "proportion_of_ads": 0.021
+        },
+        "direct_mail": {
+          "nominal": 1299000000,
+          "real": 9433551198,
+          "rank": 3,
+          "proportion_of_ads": 0.142
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1793000000,
+          "real": 13021060276,
+          "rank": 2,
+          "proportion_of_ads": 0.196
+        }
+      },
+      "total": {
+        "nominal": 9150000000,
+        "real": 66448801743,
+        "proportion_of_gdp": 0.0215
+      },
+      "gdp": {
+        "nominal": 425478000000,
+        "real": 3083000000000,
+        "deflator": 13.77
+      }
     },
     {
       "year": 1956,
-      "nominal_total": 9910000000,
-      "radio": 567000000,
-      "television": 1225000000,
-      "internet": 0,
-      "periodicals": 4550000000,
-      "out_of_home": 201000000,
-      "direct_mail": 1419000000,
-      "yellow_pages": 0,
-      "miscellaneous": 1948000000,
-      "nominal_gdp": 449353000000,
-      "real_gdp": 3148800000000,
-      "gdp_deflator": 14.24,
-      "real_total": 69592696629
+      "categories": {
+        "radio": {
+          "nominal": 567000000,
+          "real": 3981741573,
+          "rank": 5,
+          "proportion_of_ads": 0.0572
+        },
+        "television": {
+          "nominal": 1225000000,
+          "real": 8602528090,
+          "rank": 4,
+          "proportion_of_ads": 0.1236
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 4550000000,
+          "real": 31952247191,
+          "rank": 1,
+          "proportion_of_ads": 0.4591
+        },
+        "out_of_home": {
+          "nominal": 201000000,
+          "real": 1411516854,
+          "rank": 6,
+          "proportion_of_ads": 0.0203
+        },
+        "direct_mail": {
+          "nominal": 1419000000,
+          "real": 9964887640,
+          "rank": 3,
+          "proportion_of_ads": 0.1432
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 1948000000,
+          "real": 13679775281,
+          "rank": 2,
+          "proportion_of_ads": 0.1966
+        }
+      },
+      "total": {
+        "nominal": 9910000000,
+        "real": 69592696629,
+        "proportion_of_gdp": 0.0221
+      },
+      "gdp": {
+        "nominal": 449353000000,
+        "real": 3148800000000,
+        "deflator": 14.24
+      }
     },
     {
       "year": 1957,
-      "nominal_total": 10270000000,
-      "radio": 618000000,
-      "television": 1286000000,
-      "internet": 0,
-      "periodicals": 4684000000,
-      "out_of_home": 199000000,
-      "direct_mail": 1471000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2012000000,
-      "nominal_gdp": 474039000000,
-      "real_gdp": 3215100000000,
-      "gdp_deflator": 14.74,
-      "real_total": 69674355495
+      "categories": {
+        "radio": {
+          "nominal": 618000000,
+          "real": 4192672999,
+          "rank": 5,
+          "proportion_of_ads": 0.0602
+        },
+        "television": {
+          "nominal": 1286000000,
+          "real": 8724559023,
+          "rank": 4,
+          "proportion_of_ads": 0.1252
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 4684000000,
+          "real": 31777476255,
+          "rank": 1,
+          "proportion_of_ads": 0.4561
+        },
+        "out_of_home": {
+          "nominal": 199000000,
+          "real": 1350067843,
+          "rank": 6,
+          "proportion_of_ads": 0.0194
+        },
+        "direct_mail": {
+          "nominal": 1471000000,
+          "real": 9979647218,
+          "rank": 3,
+          "proportion_of_ads": 0.1432
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2012000000,
+          "real": 13649932157,
+          "rank": 2,
+          "proportion_of_ads": 0.1959
+        }
+      },
+      "total": {
+        "nominal": 10270000000,
+        "real": 69674355495,
+        "proportion_of_gdp": 0.0217
+      },
+      "gdp": {
+        "nominal": 474039000000,
+        "real": 3215100000000,
+        "deflator": 14.74
+      }
     },
     {
       "year": 1958,
-      "nominal_total": 10310000000,
-      "radio": 620000000,
-      "television": 1387000000,
-      "internet": 0,
-      "periodicals": 4502000000,
-      "out_of_home": 192000000,
-      "direct_mail": 1589000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2020000000,
-      "nominal_gdp": 481229000000,
-      "real_gdp": 3191200000000,
-      "gdp_deflator": 15.09,
-      "real_total": 68323392975
+      "categories": {
+        "radio": {
+          "nominal": 620000000,
+          "real": 4108681246,
+          "rank": 5,
+          "proportion_of_ads": 0.0601
+        },
+        "television": {
+          "nominal": 1387000000,
+          "real": 9191517561,
+          "rank": 4,
+          "proportion_of_ads": 0.1345
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 4502000000,
+          "real": 29834327369,
+          "rank": 1,
+          "proportion_of_ads": 0.4367
+        },
+        "out_of_home": {
+          "nominal": 192000000,
+          "real": 1272365805,
+          "rank": 6,
+          "proportion_of_ads": 0.0186
+        },
+        "direct_mail": {
+          "nominal": 1589000000,
+          "real": 10530152419,
+          "rank": 3,
+          "proportion_of_ads": 0.1541
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2020000000,
+          "real": 13386348575,
+          "rank": 2,
+          "proportion_of_ads": 0.1959
+        }
+      },
+      "total": {
+        "nominal": 10310000000,
+        "real": 68323392975,
+        "proportion_of_gdp": 0.0214
+      },
+      "gdp": {
+        "nominal": 481229000000,
+        "real": 3191200000000,
+        "deflator": 15.09
+      }
     },
     {
       "year": 1959,
-      "nominal_total": 11270000000,
-      "radio": 656000000,
-      "television": 1529000000,
-      "internet": 0,
-      "periodicals": 4998000000,
-      "out_of_home": 193000000,
-      "direct_mail": 1688000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2206000000,
-      "nominal_gdp": 521654000000,
-      "real_gdp": 3412400000000,
-      "gdp_deflator": 15.29,
-      "real_total": 73708306082
+      "categories": {
+        "radio": {
+          "nominal": 656000000,
+          "real": 4290385873,
+          "rank": 5,
+          "proportion_of_ads": 0.0582
+        },
+        "television": {
+          "nominal": 1529000000,
+          "real": 10000000000,
+          "rank": 4,
+          "proportion_of_ads": 0.1357
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 4998000000,
+          "real": 32688031393,
+          "rank": 1,
+          "proportion_of_ads": 0.4435
+        },
+        "out_of_home": {
+          "nominal": 193000000,
+          "real": 1262262917,
+          "rank": 6,
+          "proportion_of_ads": 0.0171
+        },
+        "direct_mail": {
+          "nominal": 1688000000,
+          "real": 11039895356,
+          "rank": 3,
+          "proportion_of_ads": 0.1498
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2206000000,
+          "real": 14427730543,
+          "rank": 2,
+          "proportion_of_ads": 0.1957
+        }
+      },
+      "total": {
+        "nominal": 11270000000,
+        "real": 73708306082,
+        "proportion_of_gdp": 0.0216
+      },
+      "gdp": {
+        "nominal": 521654000000,
+        "real": 3412400000000,
+        "deflator": 15.29
+      }
     },
     {
       "year": 1960,
-      "nominal_total": 11960000000,
-      "radio": 693000000,
-      "television": 1627000000,
-      "internet": 0,
-      "periodicals": 5265000000,
-      "out_of_home": 203000000,
-      "direct_mail": 1830000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2342000000,
-      "nominal_gdp": 542382000000,
-      "real_gdp": 3500300000000,
-      "gdp_deflator": 15.49,
-      "real_total": 77211103938
+      "categories": {
+        "radio": {
+          "nominal": 693000000,
+          "real": 4473854099,
+          "rank": 5,
+          "proportion_of_ads": 0.0579
+        },
+        "television": {
+          "nominal": 1627000000,
+          "real": 10503550678,
+          "rank": 4,
+          "proportion_of_ads": 0.136
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 5265000000,
+          "real": 33989670755,
+          "rank": 1,
+          "proportion_of_ads": 0.4402
+        },
+        "out_of_home": {
+          "nominal": 203000000,
+          "real": 1310522918,
+          "rank": 6,
+          "proportion_of_ads": 0.017
+        },
+        "direct_mail": {
+          "nominal": 1830000000,
+          "real": 11814073596,
+          "rank": 3,
+          "proportion_of_ads": 0.153
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2342000000,
+          "real": 15119431892,
+          "rank": 2,
+          "proportion_of_ads": 0.1958
+        }
+      },
+      "total": {
+        "nominal": 11960000000,
+        "real": 77211103938,
+        "proportion_of_gdp": 0.0221
+      },
+      "gdp": {
+        "nominal": 542382000000,
+        "real": 3500300000000,
+        "deflator": 15.49
+      }
     },
     {
       "year": 1961,
-      "nominal_total": 11860000000,
-      "radio": 683000000,
-      "television": 1691000000,
-      "internet": 0,
-      "periodicals": 5136000000,
-      "out_of_home": 180000000,
-      "direct_mail": 1850000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2320000000,
-      "nominal_gdp": 562209000000,
-      "real_gdp": 3590100000000,
-      "gdp_deflator": 15.66,
-      "real_total": 75734355045
+      "categories": {
+        "radio": {
+          "nominal": 683000000,
+          "real": 4361430396,
+          "rank": 5,
+          "proportion_of_ads": 0.0576
+        },
+        "television": {
+          "nominal": 1691000000,
+          "real": 10798212005,
+          "rank": 4,
+          "proportion_of_ads": 0.1426
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 5136000000,
+          "real": 32796934866,
+          "rank": 1,
+          "proportion_of_ads": 0.4331
+        },
+        "out_of_home": {
+          "nominal": 180000000,
+          "real": 1149425287,
+          "rank": 6,
+          "proportion_of_ads": 0.0152
+        },
+        "direct_mail": {
+          "nominal": 1850000000,
+          "real": 11813537676,
+          "rank": 3,
+          "proportion_of_ads": 0.156
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2320000000,
+          "real": 14814814815,
+          "rank": 2,
+          "proportion_of_ads": 0.1956
+        }
+      },
+      "total": {
+        "nominal": 11860000000,
+        "real": 75734355045,
+        "proportion_of_gdp": 0.0211
+      },
+      "gdp": {
+        "nominal": 562209000000,
+        "real": 3590100000000,
+        "deflator": 15.66
+      }
     },
     {
       "year": 1962,
-      "nominal_total": 12430000000,
-      "radio": 736000000,
-      "television": 1897000000,
-      "internet": 0,
-      "periodicals": 5263000000,
-      "out_of_home": 171000000,
-      "direct_mail": 1933000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2430000000,
-      "nominal_gdp": 603922000000,
-      "real_gdp": 3810100000000,
-      "gdp_deflator": 15.85,
-      "real_total": 78422712934
+      "categories": {
+        "radio": {
+          "nominal": 736000000,
+          "real": 4643533123,
+          "rank": 5,
+          "proportion_of_ads": 0.0592
+        },
+        "television": {
+          "nominal": 1897000000,
+          "real": 11968454259,
+          "rank": 4,
+          "proportion_of_ads": 0.1526
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 5263000000,
+          "real": 33205047319,
+          "rank": 1,
+          "proportion_of_ads": 0.4234
+        },
+        "out_of_home": {
+          "nominal": 171000000,
+          "real": 1078864353,
+          "rank": 6,
+          "proportion_of_ads": 0.0138
+        },
+        "direct_mail": {
+          "nominal": 1933000000,
+          "real": 12195583596,
+          "rank": 3,
+          "proportion_of_ads": 0.1555
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2430000000,
+          "real": 15331230284,
+          "rank": 2,
+          "proportion_of_ads": 0.1955
+        }
+      },
+      "total": {
+        "nominal": 12430000000,
+        "real": 78422712934,
+        "proportion_of_gdp": 0.0206
+      },
+      "gdp": {
+        "nominal": 603922000000,
+        "real": 3810100000000,
+        "deflator": 15.85
+      }
     },
     {
       "year": 1963,
-      "nominal_total": 13100000000,
-      "radio": 789000000,
-      "television": 2032000000,
-      "internet": 0,
-      "periodicals": 5463000000,
-      "out_of_home": 171000000,
-      "direct_mail": 2078000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2567000000,
-      "nominal_gdp": 637450000000,
-      "real_gdp": 3976100000000,
-      "gdp_deflator": 16.03,
-      "real_total": 81721771678
+      "categories": {
+        "radio": {
+          "nominal": 789000000,
+          "real": 4922021210,
+          "rank": 5,
+          "proportion_of_ads": 0.0602
+        },
+        "television": {
+          "nominal": 2032000000,
+          "real": 12676232065,
+          "rank": 4,
+          "proportion_of_ads": 0.1551
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 5463000000,
+          "real": 34079850281,
+          "rank": 1,
+          "proportion_of_ads": 0.417
+        },
+        "out_of_home": {
+          "nominal": 171000000,
+          "real": 1066749844,
+          "rank": 6,
+          "proportion_of_ads": 0.0131
+        },
+        "direct_mail": {
+          "nominal": 2078000000,
+          "real": 12963194011,
+          "rank": 3,
+          "proportion_of_ads": 0.1586
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2567000000,
+          "real": 16013724267,
+          "rank": 2,
+          "proportion_of_ads": 0.196
+        }
+      },
+      "total": {
+        "nominal": 13100000000,
+        "real": 81721771678,
+        "proportion_of_gdp": 0.0206
+      },
+      "gdp": {
+        "nominal": 637450000000,
+        "real": 3976100000000,
+        "deflator": 16.03
+      }
     },
     {
       "year": 1964,
-      "nominal_total": 14150000000,
-      "radio": 846000000,
-      "television": 2289000000,
-      "internet": 0,
-      "periodicals": 5883000000,
-      "out_of_home": 175000000,
-      "direct_mail": 2184000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2773000000,
-      "nominal_gdp": 684460000000,
-      "real_gdp": 4205300000000,
-      "gdp_deflator": 16.28,
-      "real_total": 86916461916
+      "categories": {
+        "radio": {
+          "nominal": 846000000,
+          "real": 5196560197,
+          "rank": 5,
+          "proportion_of_ads": 0.0598
+        },
+        "television": {
+          "nominal": 2289000000,
+          "real": 14060196560,
+          "rank": 3,
+          "proportion_of_ads": 0.1618
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 5883000000,
+          "real": 36136363636,
+          "rank": 1,
+          "proportion_of_ads": 0.4158
+        },
+        "out_of_home": {
+          "nominal": 175000000,
+          "real": 1074938575,
+          "rank": 6,
+          "proportion_of_ads": 0.0124
+        },
+        "direct_mail": {
+          "nominal": 2184000000,
+          "real": 13415233415,
+          "rank": 4,
+          "proportion_of_ads": 0.1543
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2773000000,
+          "real": 17033169533,
+          "rank": 2,
+          "proportion_of_ads": 0.196
+        }
+      },
+      "total": {
+        "nominal": 14150000000,
+        "real": 86916461916,
+        "proportion_of_gdp": 0.0207
+      },
+      "gdp": {
+        "nominal": 684460000000,
+        "real": 4205300000000,
+        "deflator": 16.28
+      }
     },
     {
       "year": 1965,
-      "nominal_total": 15250000000,
-      "radio": 917000000,
-      "television": 2515000000,
-      "internet": 0,
-      "periodicals": 6329000000,
-      "out_of_home": 180000000,
-      "direct_mail": 2324000000,
-      "yellow_pages": 0,
-      "miscellaneous": 2985000000,
-      "nominal_gdp": 742289000000,
-      "real_gdp": 4478600000000,
-      "gdp_deflator": 16.57,
-      "real_total": 92033796017
+      "categories": {
+        "radio": {
+          "nominal": 917000000,
+          "real": 5534097767,
+          "rank": 5,
+          "proportion_of_ads": 0.0601
+        },
+        "television": {
+          "nominal": 2515000000,
+          "real": 15178032589,
+          "rank": 3,
+          "proportion_of_ads": 0.1649
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 6329000000,
+          "real": 38195534098,
+          "rank": 1,
+          "proportion_of_ads": 0.415
+        },
+        "out_of_home": {
+          "nominal": 180000000,
+          "real": 1086300543,
+          "rank": 6,
+          "proportion_of_ads": 0.0118
+        },
+        "direct_mail": {
+          "nominal": 2324000000,
+          "real": 14025347013,
+          "rank": 4,
+          "proportion_of_ads": 0.1524
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 2985000000,
+          "real": 18014484007,
+          "rank": 2,
+          "proportion_of_ads": 0.1957
+        }
+      },
+      "total": {
+        "nominal": 15250000000,
+        "real": 92033796017,
+        "proportion_of_gdp": 0.0205
+      },
+      "gdp": {
+        "nominal": 742289000000,
+        "real": 4478600000000,
+        "deflator": 16.57
+      }
     },
     {
       "year": 1966,
-      "nominal_total": 16630000000,
-      "radio": 1010000000,
-      "television": 2823000000,
-      "internet": 0,
-      "periodicals": 6901000000,
-      "out_of_home": 178000000,
-      "direct_mail": 2461000000,
-      "yellow_pages": 0,
-      "miscellaneous": 3257000000,
-      "nominal_gdp": 813414000000,
-      "real_gdp": 4773900000000,
-      "gdp_deflator": 17.04,
-      "real_total": 97593896714
+      "categories": {
+        "radio": {
+          "nominal": 1010000000,
+          "real": 5927230047,
+          "rank": 5,
+          "proportion_of_ads": 0.0607
+        },
+        "television": {
+          "nominal": 2823000000,
+          "real": 16566901408,
+          "rank": 3,
+          "proportion_of_ads": 0.1698
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 6901000000,
+          "real": 40498826291,
+          "rank": 1,
+          "proportion_of_ads": 0.415
+        },
+        "out_of_home": {
+          "nominal": 178000000,
+          "real": 1044600939,
+          "rank": 6,
+          "proportion_of_ads": 0.0107
+        },
+        "direct_mail": {
+          "nominal": 2461000000,
+          "real": 14442488263,
+          "rank": 4,
+          "proportion_of_ads": 0.148
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 3257000000,
+          "real": 19113849765,
+          "rank": 2,
+          "proportion_of_ads": 0.1959
+        }
+      },
+      "total": {
+        "nominal": 16630000000,
+        "real": 97593896714,
+        "proportion_of_gdp": 0.0204
+      },
+      "gdp": {
+        "nominal": 813414000000,
+        "real": 4773900000000,
+        "deflator": 17.04
+      }
     },
     {
       "year": 1967,
-      "nominal_total": 16870000000,
-      "radio": 1048000000,
-      "television": 2909000000,
-      "internet": 0,
-      "periodicals": 6930000000,
-      "out_of_home": 191000000,
-      "direct_mail": 2488000000,
-      "yellow_pages": 0,
-      "miscellaneous": 3304000000,
-      "nominal_gdp": 859959000000,
-      "real_gdp": 4904900000000,
-      "gdp_deflator": 17.53,
-      "real_total": 96235025670
+      "categories": {
+        "radio": {
+          "nominal": 1048000000,
+          "real": 5978322875,
+          "rank": 5,
+          "proportion_of_ads": 0.0621
+        },
+        "television": {
+          "nominal": 2909000000,
+          "real": 16594409584,
+          "rank": 3,
+          "proportion_of_ads": 0.1724
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 6930000000,
+          "real": 39532230462,
+          "rank": 1,
+          "proportion_of_ads": 0.4108
+        },
+        "out_of_home": {
+          "nominal": 191000000,
+          "real": 1089560753,
+          "rank": 6,
+          "proportion_of_ads": 0.0113
+        },
+        "direct_mail": {
+          "nominal": 2488000000,
+          "real": 14192812322,
+          "rank": 4,
+          "proportion_of_ads": 0.1475
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 3304000000,
+          "real": 18847689675,
+          "rank": 2,
+          "proportion_of_ads": 0.1959
+        }
+      },
+      "total": {
+        "nominal": 16870000000,
+        "real": 96235025670,
+        "proportion_of_gdp": 0.0196
+      },
+      "gdp": {
+        "nominal": 859959000000,
+        "real": 4904900000000,
+        "deflator": 17.53
+      }
     },
     {
       "year": 1968,
-      "nominal_total": 18090000000,
-      "radio": 1190000000,
-      "television": 3231000000,
-      "internet": 0,
-      "periodicals": 7297000000,
-      "out_of_home": 208000000,
-      "direct_mail": 2612000000,
-      "yellow_pages": 0,
-      "miscellaneous": 3552000000,
-      "nominal_gdp": 940651000000,
-      "real_gdp": 5145900000000,
-      "gdp_deflator": 18.28,
-      "real_total": 98960612691
+      "categories": {
+        "radio": {
+          "nominal": 1190000000,
+          "real": 6509846827,
+          "rank": 5,
+          "proportion_of_ads": 0.0658
+        },
+        "television": {
+          "nominal": 3231000000,
+          "real": 17675054705,
+          "rank": 3,
+          "proportion_of_ads": 0.1786
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 7297000000,
+          "real": 39917943107,
+          "rank": 1,
+          "proportion_of_ads": 0.4034
+        },
+        "out_of_home": {
+          "nominal": 208000000,
+          "real": 1137855580,
+          "rank": 6,
+          "proportion_of_ads": 0.0115
+        },
+        "direct_mail": {
+          "nominal": 2612000000,
+          "real": 14288840263,
+          "rank": 4,
+          "proportion_of_ads": 0.1444
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 3552000000,
+          "real": 19431072210,
+          "rank": 2,
+          "proportion_of_ads": 0.1964
+        }
+      },
+      "total": {
+        "nominal": 18090000000,
+        "real": 98960612691,
+        "proportion_of_gdp": 0.0192
+      },
+      "gdp": {
+        "nominal": 940651000000,
+        "real": 5145900000000,
+        "deflator": 18.28
+      }
     },
     {
       "year": 1969,
-      "nominal_total": 19420000000,
-      "radio": 1264000000,
-      "television": 3585000000,
-      "internet": 0,
-      "periodicals": 7874000000,
-      "out_of_home": 213000000,
-      "direct_mail": 2670000000,
-      "yellow_pages": 0,
-      "miscellaneous": 3814000000,
-      "nominal_gdp": 1017615000000,
-      "real_gdp": 5306600000000,
-      "gdp_deflator": 19.18,
-      "real_total": 101251303441
+      "categories": {
+        "radio": {
+          "nominal": 1264000000,
+          "real": 6590198123,
+          "rank": 5,
+          "proportion_of_ads": 0.0651
+        },
+        "television": {
+          "nominal": 3585000000,
+          "real": 18691345151,
+          "rank": 3,
+          "proportion_of_ads": 0.1846
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 7874000000,
+          "real": 41053180396,
+          "rank": 1,
+          "proportion_of_ads": 0.4055
+        },
+        "out_of_home": {
+          "nominal": 213000000,
+          "real": 1110531804,
+          "rank": 6,
+          "proportion_of_ads": 0.011
+        },
+        "direct_mail": {
+          "nominal": 2670000000,
+          "real": 13920750782,
+          "rank": 4,
+          "proportion_of_ads": 0.1375
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 3814000000,
+          "real": 19885297185,
+          "rank": 2,
+          "proportion_of_ads": 0.1964
+        }
+      },
+      "total": {
+        "nominal": 19420000000,
+        "real": 101251303441,
+        "proportion_of_gdp": 0.0191
+      },
+      "gdp": {
+        "nominal": 1017615000000,
+        "real": 5306600000000,
+        "deflator": 19.18
+      }
     },
     {
       "year": 1970,
-      "nominal_total": 19550000000,
-      "radio": 1308000000,
-      "television": 3596000000,
-      "internet": 0,
-      "periodicals": 7798000000,
-      "out_of_home": 234000000,
-      "direct_mail": 2766000000,
-      "yellow_pages": 0,
-      "miscellaneous": 3848000000,
-      "nominal_gdp": 1073303000000,
-      "real_gdp": 5316400000000,
-      "gdp_deflator": 20.19,
-      "real_total": 96830113918
+      "categories": {
+        "radio": {
+          "nominal": 1308000000,
+          "real": 6478454681,
+          "rank": 5,
+          "proportion_of_ads": 0.0669
+        },
+        "television": {
+          "nominal": 3596000000,
+          "real": 17810797424,
+          "rank": 3,
+          "proportion_of_ads": 0.1839
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 7798000000,
+          "real": 38623080733,
+          "rank": 1,
+          "proportion_of_ads": 0.3989
+        },
+        "out_of_home": {
+          "nominal": 234000000,
+          "real": 1158989599,
+          "rank": 6,
+          "proportion_of_ads": 0.012
+        },
+        "direct_mail": {
+          "nominal": 2766000000,
+          "real": 13699851412,
+          "rank": 4,
+          "proportion_of_ads": 0.1415
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 3848000000,
+          "real": 19058940069,
+          "rank": 2,
+          "proportion_of_ads": 0.1968
+        }
+      },
+      "total": {
+        "nominal": 19550000000,
+        "real": 96830113918,
+        "proportion_of_gdp": 0.0182
+      },
+      "gdp": {
+        "nominal": 1073303000000,
+        "real": 5316400000000,
+        "deflator": 20.19
+      }
     },
     {
       "year": 1971,
-      "nominal_total": 20700000000,
-      "radio": 1445000000,
-      "television": 3534000000,
-      "internet": 0,
-      "periodicals": 8314000000,
-      "out_of_home": 261000000,
-      "direct_mail": 3067000000,
-      "yellow_pages": 0,
-      "miscellaneous": 4079000000,
-      "nominal_gdp": 1164850000000,
-      "real_gdp": 5491400000000,
-      "gdp_deflator": 21.21,
-      "real_total": 97595473833
+      "categories": {
+        "radio": {
+          "nominal": 1445000000,
+          "real": 6812824140,
+          "rank": 5,
+          "proportion_of_ads": 0.0698
+        },
+        "television": {
+          "nominal": 3534000000,
+          "real": 16661951909,
+          "rank": 3,
+          "proportion_of_ads": 0.1707
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 8314000000,
+          "real": 39198491278,
+          "rank": 1,
+          "proportion_of_ads": 0.4016
+        },
+        "out_of_home": {
+          "nominal": 261000000,
+          "real": 1230551627,
+          "rank": 6,
+          "proportion_of_ads": 0.0126
+        },
+        "direct_mail": {
+          "nominal": 3067000000,
+          "real": 14460160302,
+          "rank": 4,
+          "proportion_of_ads": 0.1482
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 4079000000,
+          "real": 19231494578,
+          "rank": 2,
+          "proportion_of_ads": 0.1971
+        }
+      },
+      "total": {
+        "nominal": 20700000000,
+        "real": 97595473833,
+        "proportion_of_gdp": 0.0178
+      },
+      "gdp": {
+        "nominal": 1164850000000,
+        "real": 5491400000000,
+        "deflator": 21.21
+      }
     },
     {
       "year": 1972,
-      "nominal_total": 23210000000,
-      "radio": 1612000000,
-      "television": 4091000000,
-      "internet": 0,
-      "periodicals": 9218000000,
-      "out_of_home": 292000000,
-      "direct_mail": 3420000000,
-      "yellow_pages": 0,
-      "miscellaneous": 4577000000,
-      "nominal_gdp": 1279110000000,
-      "real_gdp": 5780000000000,
-      "gdp_deflator": 22.13,
-      "real_total": 104880253050
+      "categories": {
+        "radio": {
+          "nominal": 1612000000,
+          "real": 7284229553,
+          "rank": 5,
+          "proportion_of_ads": 0.0695
+        },
+        "television": {
+          "nominal": 4091000000,
+          "real": 18486217804,
+          "rank": 3,
+          "proportion_of_ads": 0.1763
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 9218000000,
+          "real": 41653863534,
+          "rank": 1,
+          "proportion_of_ads": 0.3972
+        },
+        "out_of_home": {
+          "nominal": 292000000,
+          "real": 1319475825,
+          "rank": 6,
+          "proportion_of_ads": 0.0126
+        },
+        "direct_mail": {
+          "nominal": 3420000000,
+          "real": 15454134659,
+          "rank": 4,
+          "proportion_of_ads": 0.1474
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 4577000000,
+          "real": 20682331676,
+          "rank": 2,
+          "proportion_of_ads": 0.1972
+        }
+      },
+      "total": {
+        "nominal": 23210000000,
+        "real": 104880253050,
+        "proportion_of_gdp": 0.0181
+      },
+      "gdp": {
+        "nominal": 1279110000000,
+        "real": 5780000000000,
+        "deflator": 22.13
+      }
     },
     {
       "year": 1973,
-      "nominal_total": 24980000000,
-      "radio": 1723000000,
-      "television": 4460000000,
-      "internet": 0,
-      "periodicals": 9859000000,
-      "out_of_home": 308000000,
-      "direct_mail": 3698000000,
-      "yellow_pages": 0,
-      "miscellaneous": 4932000000,
-      "nominal_gdp": 1425376000000,
-      "real_gdp": 6106400000000,
-      "gdp_deflator": 23.34,
-      "real_total": 107026563839
+      "categories": {
+        "radio": {
+          "nominal": 1723000000,
+          "real": 7382176521,
+          "rank": 5,
+          "proportion_of_ads": 0.069
+        },
+        "television": {
+          "nominal": 4460000000,
+          "real": 19108826050,
+          "rank": 3,
+          "proportion_of_ads": 0.1785
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 9859000000,
+          "real": 42240788346,
+          "rank": 1,
+          "proportion_of_ads": 0.3947
+        },
+        "out_of_home": {
+          "nominal": 308000000,
+          "real": 1319622965,
+          "rank": 6,
+          "proportion_of_ads": 0.0123
+        },
+        "direct_mail": {
+          "nominal": 3698000000,
+          "real": 15844044559,
+          "rank": 4,
+          "proportion_of_ads": 0.148
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 4932000000,
+          "real": 21131105398,
+          "rank": 2,
+          "proportion_of_ads": 0.1974
+        }
+      },
+      "total": {
+        "nominal": 24980000000,
+        "real": 107026563839,
+        "proportion_of_gdp": 0.0175
+      },
+      "gdp": {
+        "nominal": 1425376000000,
+        "real": 6106400000000,
+        "deflator": 23.34
+      }
     },
     {
       "year": 1974,
-      "nominal_total": 26620000000,
-      "radio": 1837000000,
-      "television": 4854000000,
-      "internet": 0,
-      "periodicals": 10318000000,
-      "out_of_home": 309000000,
-      "direct_mail": 4054000000,
-      "yellow_pages": 0,
-      "miscellaneous": 5248000000,
-      "nominal_gdp": 1545243000000,
-      "real_gdp": 6073400000000,
-      "gdp_deflator": 25.43,
-      "real_total": 104679512387
+      "categories": {
+        "radio": {
+          "nominal": 1837000000,
+          "real": 7223751475,
+          "rank": 5,
+          "proportion_of_ads": 0.069
+        },
+        "television": {
+          "nominal": 4854000000,
+          "real": 19087691703,
+          "rank": 3,
+          "proportion_of_ads": 0.1823
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 10318000000,
+          "real": 40574125049,
+          "rank": 1,
+          "proportion_of_ads": 0.3876
+        },
+        "out_of_home": {
+          "nominal": 309000000,
+          "real": 1215100275,
+          "rank": 6,
+          "proportion_of_ads": 0.0116
+        },
+        "direct_mail": {
+          "nominal": 4054000000,
+          "real": 15941801022,
+          "rank": 4,
+          "proportion_of_ads": 0.1523
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 5248000000,
+          "real": 20637042863,
+          "rank": 2,
+          "proportion_of_ads": 0.1971
+        }
+      },
+      "total": {
+        "nominal": 26620000000,
+        "real": 104679512387,
+        "proportion_of_gdp": 0.0172
+      },
+      "gdp": {
+        "nominal": 1545243000000,
+        "real": 6073400000000,
+        "deflator": 25.43
+      }
     },
     {
       "year": 1975,
-      "nominal_total": 27900000000,
-      "radio": 1980000000,
-      "television": 5263000000,
-      "internet": 0,
-      "periodicals": 10692000000,
-      "out_of_home": 335000000,
-      "direct_mail": 4124000000,
-      "yellow_pages": 0,
-      "miscellaneous": 5506000000,
-      "nominal_gdp": 1684904000000,
-      "real_gdp": 6060900000000,
-      "gdp_deflator": 27.8,
-      "real_total": 100359712230
+      "categories": {
+        "radio": {
+          "nominal": 1980000000,
+          "real": 7122302158,
+          "rank": 5,
+          "proportion_of_ads": 0.071
+        },
+        "television": {
+          "nominal": 5263000000,
+          "real": 18931654676,
+          "rank": 3,
+          "proportion_of_ads": 0.1886
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 10692000000,
+          "real": 38460431655,
+          "rank": 1,
+          "proportion_of_ads": 0.3832
+        },
+        "out_of_home": {
+          "nominal": 335000000,
+          "real": 1205035971,
+          "rank": 6,
+          "proportion_of_ads": 0.012
+        },
+        "direct_mail": {
+          "nominal": 4124000000,
+          "real": 14834532374,
+          "rank": 4,
+          "proportion_of_ads": 0.1478
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 5506000000,
+          "real": 19805755396,
+          "rank": 2,
+          "proportion_of_ads": 0.1973
+        }
+      },
+      "total": {
+        "nominal": 27900000000,
+        "real": 100359712230,
+        "proportion_of_gdp": 0.0166
+      },
+      "gdp": {
+        "nominal": 1684904000000,
+        "real": 6060900000000,
+        "deflator": 27.8
+      }
     },
     {
       "year": 1976,
-      "nominal_total": 33300000000,
-      "radio": 2330000000,
-      "television": 6721000000,
-      "internet": 0,
-      "periodicals": 12528000000,
-      "out_of_home": 383000000,
-      "direct_mail": 4786000000,
-      "yellow_pages": 0,
-      "miscellaneous": 6552000000,
-      "nominal_gdp": 1873412000000,
-      "real_gdp": 6387400000000,
-      "gdp_deflator": 29.33,
-      "real_total": 113535629049
+      "categories": {
+        "radio": {
+          "nominal": 2330000000,
+          "real": 7944084555,
+          "rank": 5,
+          "proportion_of_ads": 0.07
+        },
+        "television": {
+          "nominal": 6721000000,
+          "real": 22915103989,
+          "rank": 2,
+          "proportion_of_ads": 0.2018
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 12528000000,
+          "real": 42713944766,
+          "rank": 1,
+          "proportion_of_ads": 0.3762
+        },
+        "out_of_home": {
+          "nominal": 383000000,
+          "real": 1305830208,
+          "rank": 6,
+          "proportion_of_ads": 0.0115
+        },
+        "direct_mail": {
+          "nominal": 4786000000,
+          "real": 16317763382,
+          "rank": 4,
+          "proportion_of_ads": 0.1437
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 6552000000,
+          "real": 22338902148,
+          "rank": 3,
+          "proportion_of_ads": 0.1968
+        }
+      },
+      "total": {
+        "nominal": 33300000000,
+        "real": 113535629049,
+        "proportion_of_gdp": 0.0178
+      },
+      "gdp": {
+        "nominal": 1873412000000,
+        "real": 6387400000000,
+        "deflator": 29.33
+      }
     },
     {
       "year": 1977,
-      "nominal_total": 37440000000,
-      "radio": 2634000000,
-      "television": 7612000000,
-      "internet": 0,
-      "periodicals": 14224000000,
-      "out_of_home": 418000000,
-      "direct_mail": 5164000000,
-      "yellow_pages": 0,
-      "miscellaneous": 7388000000,
-      "nominal_gdp": 2081826000000,
-      "real_gdp": 6682800000000,
-      "gdp_deflator": 31.15,
-      "real_total": 120192616372
+      "categories": {
+        "radio": {
+          "nominal": 2634000000,
+          "real": 8455858748,
+          "rank": 5,
+          "proportion_of_ads": 0.0704
+        },
+        "television": {
+          "nominal": 7612000000,
+          "real": 24436597111,
+          "rank": 2,
+          "proportion_of_ads": 0.2033
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 14224000000,
+          "real": 45662921348,
+          "rank": 1,
+          "proportion_of_ads": 0.3799
+        },
+        "out_of_home": {
+          "nominal": 418000000,
+          "real": 1341894061,
+          "rank": 6,
+          "proportion_of_ads": 0.0112
+        },
+        "direct_mail": {
+          "nominal": 5164000000,
+          "real": 16577849117,
+          "rank": 4,
+          "proportion_of_ads": 0.1379
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 7388000000,
+          "real": 23717495987,
+          "rank": 3,
+          "proportion_of_ads": 0.1973
+        }
+      },
+      "total": {
+        "nominal": 37440000000,
+        "real": 120192616372,
+        "proportion_of_gdp": 0.018
+      },
+      "gdp": {
+        "nominal": 2081826000000,
+        "real": 6682800000000,
+        "deflator": 31.15
+      }
     },
     {
       "year": 1978,
-      "nominal_total": 43330000000,
-      "radio": 3052000000,
-      "television": 8955000000,
-      "internet": 0,
-      "periodicals": 16315000000,
-      "out_of_home": 466000000,
-      "direct_mail": 5987000000,
-      "yellow_pages": 0,
-      "miscellaneous": 8555000000,
-      "nominal_gdp": 2351599000000,
-      "real_gdp": 7052700000000,
-      "gdp_deflator": 33.34,
-      "real_total": 129964007199
+      "categories": {
+        "radio": {
+          "nominal": 3052000000,
+          "real": 9154169166,
+          "rank": 5,
+          "proportion_of_ads": 0.0704
+        },
+        "television": {
+          "nominal": 8955000000,
+          "real": 26859628074,
+          "rank": 2,
+          "proportion_of_ads": 0.2067
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 16315000000,
+          "real": 48935212957,
+          "rank": 1,
+          "proportion_of_ads": 0.3765
+        },
+        "out_of_home": {
+          "nominal": 466000000,
+          "real": 1397720456,
+          "rank": 6,
+          "proportion_of_ads": 0.0108
+        },
+        "direct_mail": {
+          "nominal": 5987000000,
+          "real": 17957408518,
+          "rank": 4,
+          "proportion_of_ads": 0.1382
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 8555000000,
+          "real": 25659868026,
+          "rank": 3,
+          "proportion_of_ads": 0.1974
+        }
+      },
+      "total": {
+        "nominal": 43330000000,
+        "real": 129964007199,
+        "proportion_of_gdp": 0.0184
+      },
+      "gdp": {
+        "nominal": 2351599000000,
+        "real": 7052700000000,
+        "deflator": 33.34
+      }
     },
     {
       "year": 1979,
-      "nominal_total": 48780000000,
-      "radio": 3310000000,
-      "television": 10154000000,
-      "internet": 0,
-      "periodicals": 18490000000,
-      "out_of_home": 540000000,
-      "direct_mail": 6653000000,
-      "yellow_pages": 0,
-      "miscellaneous": 9633000000,
-      "nominal_gdp": 2627333000000,
-      "real_gdp": 7276000000000,
-      "gdp_deflator": 36.1,
-      "real_total": 135124653740
+      "categories": {
+        "radio": {
+          "nominal": 3310000000,
+          "real": 9168975069,
+          "rank": 5,
+          "proportion_of_ads": 0.0679
+        },
+        "television": {
+          "nominal": 10154000000,
+          "real": 28127423823,
+          "rank": 2,
+          "proportion_of_ads": 0.2082
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 7,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 18490000000,
+          "real": 51218836565,
+          "rank": 1,
+          "proportion_of_ads": 0.379
+        },
+        "out_of_home": {
+          "nominal": 540000000,
+          "real": 1495844875,
+          "rank": 6,
+          "proportion_of_ads": 0.0111
+        },
+        "direct_mail": {
+          "nominal": 6653000000,
+          "real": 18429362881,
+          "rank": 4,
+          "proportion_of_ads": 0.1364
+        },
+        "yellow_pages": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "miscellaneous": {
+          "nominal": 9633000000,
+          "real": 26684210526,
+          "rank": 3,
+          "proportion_of_ads": 0.1975
+        }
+      },
+      "total": {
+        "nominal": 48780000000,
+        "real": 135124653740,
+        "proportion_of_gdp": 0.0186
+      },
+      "gdp": {
+        "nominal": 2627333000000,
+        "real": 7276000000000,
+        "deflator": 36.1
+      }
     },
     {
       "year": 1980,
-      "nominal_total": 53570000000,
-      "radio": 3702000000,
-      "television": 11488000000,
-      "internet": 0,
-      "periodicals": 19747000000,
-      "out_of_home": 578000000,
-      "direct_mail": 7596000000,
-      "yellow_pages": 2900000000,
-      "miscellaneous": 7559000000,
-      "nominal_gdp": 2857307000000,
-      "real_gdp": 7257300000000,
-      "gdp_deflator": 39.38,
-      "real_total": 136033519553
+      "categories": {
+        "radio": {
+          "nominal": 3702000000,
+          "real": 9400711021,
+          "rank": 5,
+          "proportion_of_ads": 0.0691
+        },
+        "television": {
+          "nominal": 11488000000,
+          "real": 29172168614,
+          "rank": 2,
+          "proportion_of_ads": 0.2144
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 19747000000,
+          "real": 50144743525,
+          "rank": 1,
+          "proportion_of_ads": 0.3686
+        },
+        "out_of_home": {
+          "nominal": 578000000,
+          "real": 1467750127,
+          "rank": 7,
+          "proportion_of_ads": 0.0108
+        },
+        "direct_mail": {
+          "nominal": 7596000000,
+          "real": 19288979177,
+          "rank": 3,
+          "proportion_of_ads": 0.1418
+        },
+        "yellow_pages": {
+          "nominal": 2900000000,
+          "real": 7364144236,
+          "rank": 6,
+          "proportion_of_ads": 0.0541
+        },
+        "miscellaneous": {
+          "nominal": 7559000000,
+          "real": 19195022854,
+          "rank": 4,
+          "proportion_of_ads": 0.1411
+        }
+      },
+      "total": {
+        "nominal": 53570000000,
+        "real": 136033519553,
+        "proportion_of_gdp": 0.0187
+      },
+      "gdp": {
+        "nominal": 2857307000000,
+        "real": 7257300000000,
+        "deflator": 39.38
+      }
     },
     {
       "year": 1981,
-      "nominal_total": 60460000000,
-      "radio": 4230000000,
-      "television": 12889000000,
-      "internet": 0,
-      "periodicals": 22048000000,
-      "out_of_home": 650000000,
-      "direct_mail": 8944000000,
-      "yellow_pages": 3300000000,
-      "miscellaneous": 8399000000,
-      "nominal_gdp": 3207041000000,
-      "real_gdp": 7441500000000,
-      "gdp_deflator": 43.09,
-      "real_total": 140310977025
+      "categories": {
+        "radio": {
+          "nominal": 4230000000,
+          "real": 9816662799,
+          "rank": 5,
+          "proportion_of_ads": 0.07
+        },
+        "television": {
+          "nominal": 12889000000,
+          "real": 29911812485,
+          "rank": 2,
+          "proportion_of_ads": 0.2132
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 22048000000,
+          "real": 51167324205,
+          "rank": 1,
+          "proportion_of_ads": 0.3647
+        },
+        "out_of_home": {
+          "nominal": 650000000,
+          "real": 1508470643,
+          "rank": 7,
+          "proportion_of_ads": 0.0108
+        },
+        "direct_mail": {
+          "nominal": 8944000000,
+          "real": 20756556045,
+          "rank": 3,
+          "proportion_of_ads": 0.1479
+        },
+        "yellow_pages": {
+          "nominal": 3300000000,
+          "real": 7658389417,
+          "rank": 6,
+          "proportion_of_ads": 0.0546
+        },
+        "miscellaneous": {
+          "nominal": 8399000000,
+          "real": 19491761430,
+          "rank": 4,
+          "proportion_of_ads": 0.1389
+        }
+      },
+      "total": {
+        "nominal": 60460000000,
+        "real": 140310977025,
+        "proportion_of_gdp": 0.0189
+      },
+      "gdp": {
+        "nominal": 3207041000000,
+        "real": 7441500000000,
+        "deflator": 43.09
+      }
     },
     {
       "year": 1982,
-      "nominal_total": 66670000000,
-      "radio": 4670000000,
-      "television": 14713000000,
-      "internet": 0,
-      "periodicals": 23428000000,
-      "out_of_home": 721000000,
-      "direct_mail": 10319000000,
-      "yellow_pages": 3800000000,
-      "miscellaneous": 9019000000,
-      "nominal_gdp": 3343789000000,
-      "real_gdp": 7307300000000,
-      "gdp_deflator": 45.76,
-      "real_total": 145694930070
+      "categories": {
+        "radio": {
+          "nominal": 4670000000,
+          "real": 10205419580,
+          "rank": 5,
+          "proportion_of_ads": 0.07
+        },
+        "television": {
+          "nominal": 14713000000,
+          "real": 32152534965,
+          "rank": 2,
+          "proportion_of_ads": 0.2207
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 23428000000,
+          "real": 51197552448,
+          "rank": 1,
+          "proportion_of_ads": 0.3514
+        },
+        "out_of_home": {
+          "nominal": 721000000,
+          "real": 1575611888,
+          "rank": 7,
+          "proportion_of_ads": 0.0108
+        },
+        "direct_mail": {
+          "nominal": 10319000000,
+          "real": 22550262238,
+          "rank": 3,
+          "proportion_of_ads": 0.1548
+        },
+        "yellow_pages": {
+          "nominal": 3800000000,
+          "real": 8304195804,
+          "rank": 6,
+          "proportion_of_ads": 0.057
+        },
+        "miscellaneous": {
+          "nominal": 9019000000,
+          "real": 19709353147,
+          "rank": 4,
+          "proportion_of_ads": 0.1353
+        }
+      },
+      "total": {
+        "nominal": 66670000000,
+        "real": 145694930070,
+        "proportion_of_gdp": 0.0199
+      },
+      "gdp": {
+        "nominal": 3343789000000,
+        "real": 7307300000000,
+        "deflator": 45.76
+      }
     },
     {
       "year": 1983,
-      "nominal_total": 76000000000,
-      "radio": 5210000000,
-      "television": 16879000000,
-      "internet": 0,
-      "periodicals": 26968000000,
-      "out_of_home": 794000000,
-      "direct_mail": 11795000000,
-      "yellow_pages": 4400000000,
-      "miscellaneous": 9954000000,
-      "nominal_gdp": 3634038000000,
-      "real_gdp": 7642300000000,
-      "gdp_deflator": 47.55,
-      "real_total": 159831756046
+      "categories": {
+        "radio": {
+          "nominal": 5210000000,
+          "real": 10956887487,
+          "rank": 5,
+          "proportion_of_ads": 0.0686
+        },
+        "television": {
+          "nominal": 16879000000,
+          "real": 35497371188,
+          "rank": 2,
+          "proportion_of_ads": 0.2221
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 26968000000,
+          "real": 56715036803,
+          "rank": 1,
+          "proportion_of_ads": 0.3548
+        },
+        "out_of_home": {
+          "nominal": 794000000,
+          "real": 1669821241,
+          "rank": 7,
+          "proportion_of_ads": 0.0104
+        },
+        "direct_mail": {
+          "nominal": 11795000000,
+          "real": 24805467928,
+          "rank": 3,
+          "proportion_of_ads": 0.1552
+        },
+        "yellow_pages": {
+          "nominal": 4400000000,
+          "real": 9253417455,
+          "rank": 6,
+          "proportion_of_ads": 0.0579
+        },
+        "miscellaneous": {
+          "nominal": 9954000000,
+          "real": 20933753943,
+          "rank": 4,
+          "proportion_of_ads": 0.131
+        }
+      },
+      "total": {
+        "nominal": 76000000000,
+        "real": 159831756046,
+        "proportion_of_gdp": 0.0209
+      },
+      "gdp": {
+        "nominal": 3634038000000,
+        "real": 7642300000000,
+        "deflator": 47.55
+      }
     },
     {
       "year": 1984,
-      "nominal_total": 88010000000,
-      "radio": 5817000000,
-      "television": 20043000000,
-      "internet": 0,
-      "periodicals": 30905000000,
-      "out_of_home": 872000000,
-      "direct_mail": 13800000000,
-      "yellow_pages": 4900000000,
-      "miscellaneous": 11673000000,
-      "nominal_gdp": 4037613000000,
-      "real_gdp": 8195300000000,
-      "gdp_deflator": 49.26,
-      "real_total": 178664230613
+      "categories": {
+        "radio": {
+          "nominal": 5817000000,
+          "real": 11808769793,
+          "rank": 5,
+          "proportion_of_ads": 0.0661
+        },
+        "television": {
+          "nominal": 20043000000,
+          "real": 40688185140,
+          "rank": 2,
+          "proportion_of_ads": 0.2277
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 30905000000,
+          "real": 62738530248,
+          "rank": 1,
+          "proportion_of_ads": 0.3512
+        },
+        "out_of_home": {
+          "nominal": 872000000,
+          "real": 1770198944,
+          "rank": 7,
+          "proportion_of_ads": 0.0099
+        },
+        "direct_mail": {
+          "nominal": 13800000000,
+          "real": 28014616322,
+          "rank": 3,
+          "proportion_of_ads": 0.1568
+        },
+        "yellow_pages": {
+          "nominal": 4900000000,
+          "real": 9947218839,
+          "rank": 6,
+          "proportion_of_ads": 0.0557
+        },
+        "miscellaneous": {
+          "nominal": 11673000000,
+          "real": 23696711328,
+          "rank": 4,
+          "proportion_of_ads": 0.1326
+        }
+      },
+      "total": {
+        "nominal": 88010000000,
+        "real": 178664230613,
+        "proportion_of_gdp": 0.0218
+      },
+      "gdp": {
+        "nominal": 4037613000000,
+        "real": 8195300000000,
+        "deflator": 49.26
+      }
     },
     {
       "year": 1985,
-      "nominal_total": 94900000000,
-      "radio": 6490000000,
-      "television": 21287000000,
-      "internet": 0,
-      "periodicals": 32886000000,
-      "out_of_home": 945000000,
-      "direct_mail": 15500000000,
-      "yellow_pages": 5800000000,
-      "miscellaneous": 11992000000,
-      "nominal_gdp": 4338979000000,
-      "real_gdp": 8537000000000,
-      "gdp_deflator": 50.82,
-      "real_total": 186737504919
+      "categories": {
+        "radio": {
+          "nominal": 6490000000,
+          "real": 12770562771,
+          "rank": 5,
+          "proportion_of_ads": 0.0684
+        },
+        "television": {
+          "nominal": 21287000000,
+          "real": 41887052342,
+          "rank": 2,
+          "proportion_of_ads": 0.2243
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 32886000000,
+          "real": 64710743802,
+          "rank": 1,
+          "proportion_of_ads": 0.3465
+        },
+        "out_of_home": {
+          "nominal": 945000000,
+          "real": 1859504132,
+          "rank": 7,
+          "proportion_of_ads": 0.01
+        },
+        "direct_mail": {
+          "nominal": 15500000000,
+          "real": 30499803227,
+          "rank": 3,
+          "proportion_of_ads": 0.1633
+        },
+        "yellow_pages": {
+          "nominal": 5800000000,
+          "real": 11412829595,
+          "rank": 6,
+          "proportion_of_ads": 0.0611
+        },
+        "miscellaneous": {
+          "nominal": 11992000000,
+          "real": 23597009052,
+          "rank": 4,
+          "proportion_of_ads": 0.1264
+        }
+      },
+      "total": {
+        "nominal": 94900000000,
+        "real": 186737504919,
+        "proportion_of_gdp": 0.0219
+      },
+      "gdp": {
+        "nominal": 4338979000000,
+        "real": 8537000000000,
+        "deflator": 50.82
+      }
     },
     {
       "year": 1986,
-      "nominal_total": 102370000000,
-      "radio": 6949000000,
-      "television": 23199000000,
-      "internet": 0,
-      "periodicals": 34881000000,
-      "out_of_home": 985000000,
-      "direct_mail": 17145000000,
-      "yellow_pages": 6500000000,
-      "miscellaneous": 12711000000,
-      "nominal_gdp": 4579631000000,
-      "real_gdp": 8832600000000,
-      "gdp_deflator": 51.85,
-      "real_total": 197434908390
+      "categories": {
+        "radio": {
+          "nominal": 6949000000,
+          "real": 13402121504,
+          "rank": 5,
+          "proportion_of_ads": 0.0679
+        },
+        "television": {
+          "nominal": 23199000000,
+          "real": 44742526519,
+          "rank": 2,
+          "proportion_of_ads": 0.2266
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 34881000000,
+          "real": 67272902604,
+          "rank": 1,
+          "proportion_of_ads": 0.3407
+        },
+        "out_of_home": {
+          "nominal": 985000000,
+          "real": 1899710704,
+          "rank": 7,
+          "proportion_of_ads": 0.0096
+        },
+        "direct_mail": {
+          "nominal": 17145000000,
+          "real": 33066538091,
+          "rank": 3,
+          "proportion_of_ads": 0.1675
+        },
+        "yellow_pages": {
+          "nominal": 6500000000,
+          "real": 12536162006,
+          "rank": 6,
+          "proportion_of_ads": 0.0635
+        },
+        "miscellaneous": {
+          "nominal": 12711000000,
+          "real": 24514946962,
+          "rank": 4,
+          "proportion_of_ads": 0.1242
+        }
+      },
+      "total": {
+        "nominal": 102370000000,
+        "real": 197434908390,
+        "proportion_of_gdp": 0.0224
+      },
+      "gdp": {
+        "nominal": 4579631000000,
+        "real": 8832600000000,
+        "deflator": 51.85
+      }
     },
     {
       "year": 1987,
-      "nominal_total": 110270000000,
-      "radio": 7206000000,
-      "television": 24262000000,
-      "internet": 0,
-      "periodicals": 37673000000,
-      "out_of_home": 1025000000,
-      "direct_mail": 19111000000,
-      "yellow_pages": 7300000000,
-      "miscellaneous": 13693000000,
-      "nominal_gdp": 4855215000000,
-      "real_gdp": 9137700000000,
-      "gdp_deflator": 53.13,
-      "real_total": 207547524939
+      "categories": {
+        "radio": {
+          "nominal": 7206000000,
+          "real": 13562958780,
+          "rank": 6,
+          "proportion_of_ads": 0.0653
+        },
+        "television": {
+          "nominal": 24262000000,
+          "real": 45665349144,
+          "rank": 2,
+          "proportion_of_ads": 0.22
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 37673000000,
+          "real": 70907208733,
+          "rank": 1,
+          "proportion_of_ads": 0.3416
+        },
+        "out_of_home": {
+          "nominal": 1025000000,
+          "real": 1929230190,
+          "rank": 7,
+          "proportion_of_ads": 0.0093
+        },
+        "direct_mail": {
+          "nominal": 19111000000,
+          "real": 35970261622,
+          "rank": 3,
+          "proportion_of_ads": 0.1733
+        },
+        "yellow_pages": {
+          "nominal": 7300000000,
+          "real": 13739883305,
+          "rank": 5,
+          "proportion_of_ads": 0.0662
+        },
+        "miscellaneous": {
+          "nominal": 13693000000,
+          "real": 25772633164,
+          "rank": 4,
+          "proportion_of_ads": 0.1242
+        }
+      },
+      "total": {
+        "nominal": 110270000000,
+        "real": 207547524939,
+        "proportion_of_gdp": 0.0227
+      },
+      "gdp": {
+        "nominal": 4855215000000,
+        "real": 9137700000000,
+        "deflator": 53.13
+      }
     },
     {
       "year": 1988,
-      "nominal_total": 118750000000,
-      "radio": 7798000000,
-      "television": 26131000000,
-      "internet": 0,
-      "periodicals": 40075000000,
-      "out_of_home": 1064000000,
-      "direct_mail": 21115000000,
-      "yellow_pages": 7781000000,
-      "miscellaneous": 14786000000,
-      "nominal_gdp": 5236438000000,
-      "real_gdp": 9519400000000,
-      "gdp_deflator": 55,
-      "real_total": 215909090909
+      "categories": {
+        "radio": {
+          "nominal": 7798000000,
+          "real": 14178181818,
+          "rank": 5,
+          "proportion_of_ads": 0.0657
+        },
+        "television": {
+          "nominal": 26131000000,
+          "real": 47510909091,
+          "rank": 2,
+          "proportion_of_ads": 0.2201
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 40075000000,
+          "real": 72863636364,
+          "rank": 1,
+          "proportion_of_ads": 0.3375
+        },
+        "out_of_home": {
+          "nominal": 1064000000,
+          "real": 1934545455,
+          "rank": 7,
+          "proportion_of_ads": 0.009
+        },
+        "direct_mail": {
+          "nominal": 21115000000,
+          "real": 38390909091,
+          "rank": 3,
+          "proportion_of_ads": 0.1778
+        },
+        "yellow_pages": {
+          "nominal": 7781000000,
+          "real": 14147272727,
+          "rank": 6,
+          "proportion_of_ads": 0.0655
+        },
+        "miscellaneous": {
+          "nominal": 14786000000,
+          "real": 26883636364,
+          "rank": 4,
+          "proportion_of_ads": 0.1245
+        }
+      },
+      "total": {
+        "nominal": 118750000000,
+        "real": 215909090909,
+        "proportion_of_gdp": 0.0227
+      },
+      "gdp": {
+        "nominal": 5236438000000,
+        "real": 9519400000000,
+        "deflator": 55
+      }
     },
     {
       "year": 1989,
-      "nominal_total": 124770000000,
-      "radio": 8323000000,
-      "television": 27459000000,
-      "internet": 0,
-      "periodicals": 42059000000,
-      "out_of_home": 1111000000,
-      "direct_mail": 21945000000,
-      "yellow_pages": 8330000000,
-      "miscellaneous": 15543000000,
-      "nominal_gdp": 5641580000000,
-      "real_gdp": 9869000000000,
-      "gdp_deflator": 57.16,
-      "real_total": 218282015395
+      "categories": {
+        "radio": {
+          "nominal": 8323000000,
+          "real": 14560881735,
+          "rank": 6,
+          "proportion_of_ads": 0.0667
+        },
+        "television": {
+          "nominal": 27459000000,
+          "real": 48038838348,
+          "rank": 2,
+          "proportion_of_ads": 0.2201
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 42059000000,
+          "real": 73581175647,
+          "rank": 1,
+          "proportion_of_ads": 0.3371
+        },
+        "out_of_home": {
+          "nominal": 1111000000,
+          "real": 1943666900,
+          "rank": 7,
+          "proportion_of_ads": 0.0089
+        },
+        "direct_mail": {
+          "nominal": 21945000000,
+          "real": 38392232330,
+          "rank": 3,
+          "proportion_of_ads": 0.1759
+        },
+        "yellow_pages": {
+          "nominal": 8330000000,
+          "real": 14573128062,
+          "rank": 5,
+          "proportion_of_ads": 0.0668
+        },
+        "miscellaneous": {
+          "nominal": 15543000000,
+          "real": 27192092372,
+          "rank": 4,
+          "proportion_of_ads": 0.1246
+        }
+      },
+      "total": {
+        "nominal": 124770000000,
+        "real": 218282015395,
+        "proportion_of_gdp": 0.0221
+      },
+      "gdp": {
+        "nominal": 5641580000000,
+        "real": 9869000000000,
+        "deflator": 57.16
+      }
     },
     {
       "year": 1990,
-      "nominal_total": 129968000000,
-      "radio": 8726000000,
-      "television": 29247000000,
-      "internet": 0,
-      "periodicals": 41959000000,
-      "out_of_home": 1084000000,
-      "direct_mail": 23370000000,
-      "yellow_pages": 8926000000,
-      "miscellaneous": 16656000000,
-      "nominal_gdp": 5963144000000,
-      "real_gdp": 10055100000000,
-      "gdp_deflator": 59.31,
-      "real_total": 219133367054
+      "categories": {
+        "radio": {
+          "nominal": 8726000000,
+          "real": 14712527398,
+          "rank": 6,
+          "proportion_of_ads": 0.0671
+        },
+        "television": {
+          "nominal": 29247000000,
+          "real": 49312089024,
+          "rank": 2,
+          "proportion_of_ads": 0.225
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 41959000000,
+          "real": 70745236891,
+          "rank": 1,
+          "proportion_of_ads": 0.3228
+        },
+        "out_of_home": {
+          "nominal": 1084000000,
+          "real": 1827685045,
+          "rank": 7,
+          "proportion_of_ads": 0.0083
+        },
+        "direct_mail": {
+          "nominal": 23370000000,
+          "real": 39403136065,
+          "rank": 3,
+          "proportion_of_ads": 0.1798
+        },
+        "yellow_pages": {
+          "nominal": 8926000000,
+          "real": 15049738661,
+          "rank": 5,
+          "proportion_of_ads": 0.0687
+        },
+        "miscellaneous": {
+          "nominal": 16656000000,
+          "real": 28082953971,
+          "rank": 4,
+          "proportion_of_ads": 0.1282
+        }
+      },
+      "total": {
+        "nominal": 129968000000,
+        "real": 219133367054,
+        "proportion_of_gdp": 0.0218
+      },
+      "gdp": {
+        "nominal": 5963144000000,
+        "real": 10055100000000,
+        "deflator": 59.31
+      }
     },
     {
       "year": 1991,
-      "nominal_total": 128352000000,
-      "radio": 8476000000,
-      "television": 28606000000,
-      "internet": 0,
-      "periodicals": 39915000000,
-      "out_of_home": 1077000000,
-      "direct_mail": 24460000000,
-      "yellow_pages": 9182000000,
-      "miscellaneous": 16636000000,
-      "nominal_gdp": 6158129000000,
-      "real_gdp": 10044200000000,
-      "gdp_deflator": 61.3,
-      "real_total": 209383360522
+      "categories": {
+        "radio": {
+          "nominal": 8476000000,
+          "real": 13827079935,
+          "rank": 6,
+          "proportion_of_ads": 0.066
+        },
+        "television": {
+          "nominal": 28606000000,
+          "real": 46665579119,
+          "rank": 2,
+          "proportion_of_ads": 0.2229
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 39915000000,
+          "real": 65114192496,
+          "rank": 1,
+          "proportion_of_ads": 0.311
+        },
+        "out_of_home": {
+          "nominal": 1077000000,
+          "real": 1756933116,
+          "rank": 7,
+          "proportion_of_ads": 0.0084
+        },
+        "direct_mail": {
+          "nominal": 24460000000,
+          "real": 39902120718,
+          "rank": 3,
+          "proportion_of_ads": 0.1906
+        },
+        "yellow_pages": {
+          "nominal": 9182000000,
+          "real": 14978792822,
+          "rank": 5,
+          "proportion_of_ads": 0.0715
+        },
+        "miscellaneous": {
+          "nominal": 16636000000,
+          "real": 27138662316,
+          "rank": 4,
+          "proportion_of_ads": 0.1296
+        }
+      },
+      "total": {
+        "nominal": 128352000000,
+        "real": 209383360522,
+        "proportion_of_gdp": 0.0208
+      },
+      "gdp": {
+        "nominal": 6158129000000,
+        "real": 10044200000000,
+        "deflator": 61.3
+      }
     },
     {
       "year": 1992,
-      "nominal_total": 133750000000,
-      "radio": 8654000000,
-      "television": 31079000000,
-      "internet": 0,
-      "periodicals": 40827000000,
-      "out_of_home": 1030000000,
-      "direct_mail": 25392000000,
-      "yellow_pages": 9320000000,
-      "miscellaneous": 17448000000,
-      "nominal_gdp": 6520327000000,
-      "real_gdp": 10398000000000,
-      "gdp_deflator": 62.7,
-      "real_total": 213317384370
+      "categories": {
+        "radio": {
+          "nominal": 8654000000,
+          "real": 13802232855,
+          "rank": 6,
+          "proportion_of_ads": 0.0647
+        },
+        "television": {
+          "nominal": 31079000000,
+          "real": 49567783094,
+          "rank": 2,
+          "proportion_of_ads": 0.2324
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 40827000000,
+          "real": 65114832536,
+          "rank": 1,
+          "proportion_of_ads": 0.3052
+        },
+        "out_of_home": {
+          "nominal": 1030000000,
+          "real": 1642743222,
+          "rank": 7,
+          "proportion_of_ads": 0.0077
+        },
+        "direct_mail": {
+          "nominal": 25392000000,
+          "real": 40497607656,
+          "rank": 3,
+          "proportion_of_ads": 0.1898
+        },
+        "yellow_pages": {
+          "nominal": 9320000000,
+          "real": 14864433812,
+          "rank": 5,
+          "proportion_of_ads": 0.0697
+        },
+        "miscellaneous": {
+          "nominal": 17448000000,
+          "real": 27827751196,
+          "rank": 4,
+          "proportion_of_ads": 0.1305
+        }
+      },
+      "total": {
+        "nominal": 133750000000,
+        "real": 213317384370,
+        "proportion_of_gdp": 0.0205
+      },
+      "gdp": {
+        "nominal": 6520327000000,
+        "real": 10398000000000,
+        "deflator": 62.7
+      }
     },
     {
       "year": 1993,
-      "nominal_total": 140956000000,
-      "radio": 9457000000,
-      "television": 32471000000,
-      "internet": 0,
-      "periodicals": 42642000000,
-      "out_of_home": 1090000000,
-      "direct_mail": 27266000000,
-      "yellow_pages": 9517000000,
-      "miscellaneous": 18513000000,
-      "nominal_gdp": 6858559000000,
-      "real_gdp": 10684200000000,
-      "gdp_deflator": 64.19,
-      "real_total": 219591836735
+      "categories": {
+        "radio": {
+          "nominal": 9457000000,
+          "real": 14732824427,
+          "rank": 6,
+          "proportion_of_ads": 0.0671
+        },
+        "television": {
+          "nominal": 32471000000,
+          "real": 50585761022,
+          "rank": 2,
+          "proportion_of_ads": 0.2304
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 42642000000,
+          "real": 66430908241,
+          "rank": 1,
+          "proportion_of_ads": 0.3025
+        },
+        "out_of_home": {
+          "nominal": 1090000000,
+          "real": 1698083814,
+          "rank": 7,
+          "proportion_of_ads": 0.0077
+        },
+        "direct_mail": {
+          "nominal": 27266000000,
+          "real": 42477021343,
+          "rank": 3,
+          "proportion_of_ads": 0.1934
+        },
+        "yellow_pages": {
+          "nominal": 9517000000,
+          "real": 14826296931,
+          "rank": 5,
+          "proportion_of_ads": 0.0675
+        },
+        "miscellaneous": {
+          "nominal": 18513000000,
+          "real": 28840940957,
+          "rank": 4,
+          "proportion_of_ads": 0.1313
+        }
+      },
+      "total": {
+        "nominal": 140956000000,
+        "real": 219591836735,
+        "proportion_of_gdp": 0.0206
+      },
+      "gdp": {
+        "nominal": 6858559000000,
+        "real": 10684200000000,
+        "deflator": 64.19
+      }
     },
     {
       "year": 1994,
-      "nominal_total": 153024000000,
-      "radio": 10529000000,
-      "television": 36342000000,
-      "internet": 0,
-      "periodicals": 45630000000,
-      "out_of_home": 1167000000,
-      "direct_mail": 29638000000,
-      "yellow_pages": 9825000000,
-      "miscellaneous": 19893000000,
-      "nominal_gdp": 7287236000000,
-      "real_gdp": 11114600000000,
-      "gdp_deflator": 65.56,
-      "real_total": 233410616229
+      "categories": {
+        "radio": {
+          "nominal": 10529000000,
+          "real": 16060097621,
+          "rank": 5,
+          "proportion_of_ads": 0.0688
+        },
+        "television": {
+          "nominal": 36342000000,
+          "real": 55433190970,
+          "rank": 2,
+          "proportion_of_ads": 0.2375
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 45630000000,
+          "real": 69600366077,
+          "rank": 1,
+          "proportion_of_ads": 0.2982
+        },
+        "out_of_home": {
+          "nominal": 1167000000,
+          "real": 1780048810,
+          "rank": 7,
+          "proportion_of_ads": 0.0076
+        },
+        "direct_mail": {
+          "nominal": 29638000000,
+          "real": 45207443563,
+          "rank": 3,
+          "proportion_of_ads": 0.1937
+        },
+        "yellow_pages": {
+          "nominal": 9825000000,
+          "real": 14986272117,
+          "rank": 6,
+          "proportion_of_ads": 0.0642
+        },
+        "miscellaneous": {
+          "nominal": 19893000000,
+          "real": 30343197071,
+          "rank": 4,
+          "proportion_of_ads": 0.13
+        }
+      },
+      "total": {
+        "nominal": 153024000000,
+        "real": 233410616229,
+        "proportion_of_gdp": 0.021
+      },
+      "gdp": {
+        "nominal": 7287236000000,
+        "real": 11114600000000,
+        "deflator": 65.56
+      }
     },
     {
       "year": 1995,
-      "nominal_total": 162930000000,
-      "radio": 11338000000,
-      "television": 37828000000,
-      "internet": 0,
-      "periodicals": 48456000000,
-      "out_of_home": 1263000000,
-      "direct_mail": 32866000000,
-      "yellow_pages": 10236000000,
-      "miscellaneous": 20943000000,
-      "nominal_gdp": 7639749000000,
-      "real_gdp": 11413000000000,
-      "gdp_deflator": 66.93,
-      "real_total": 243433437920
+      "categories": {
+        "radio": {
+          "nominal": 11338000000,
+          "real": 16940086658,
+          "rank": 5,
+          "proportion_of_ads": 0.0696
+        },
+        "television": {
+          "nominal": 37828000000,
+          "real": 56518750934,
+          "rank": 2,
+          "proportion_of_ads": 0.2322
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 48456000000,
+          "real": 72398027790,
+          "rank": 1,
+          "proportion_of_ads": 0.2974
+        },
+        "out_of_home": {
+          "nominal": 1263000000,
+          "real": 1887046168,
+          "rank": 7,
+          "proportion_of_ads": 0.0078
+        },
+        "direct_mail": {
+          "nominal": 32866000000,
+          "real": 49105035111,
+          "rank": 3,
+          "proportion_of_ads": 0.2017
+        },
+        "yellow_pages": {
+          "nominal": 10236000000,
+          "real": 15293590318,
+          "rank": 6,
+          "proportion_of_ads": 0.0628
+        },
+        "miscellaneous": {
+          "nominal": 20943000000,
+          "real": 31290900941,
+          "rank": 4,
+          "proportion_of_ads": 0.1285
+        }
+      },
+      "total": {
+        "nominal": 162930000000,
+        "real": 243433437920,
+        "proportion_of_gdp": 0.0213
+      },
+      "gdp": {
+        "nominal": 7639749000000,
+        "real": 11413000000000,
+        "deflator": 66.93
+      }
     },
     {
       "year": 1996,
-      "nominal_total": 175230000000,
-      "radio": 12269000000,
-      "television": 42484000000,
-      "internet": 0,
-      "periodicals": 51220000000,
-      "out_of_home": 1339000000,
-      "direct_mail": 34509000000,
-      "yellow_pages": 10849000000,
-      "miscellaneous": 22560000000,
-      "nominal_gdp": 8073122000000,
-      "real_gdp": 11843600000000,
-      "gdp_deflator": 68.16,
-      "real_total": 257086267606
+      "categories": {
+        "radio": {
+          "nominal": 12269000000,
+          "real": 18000293427,
+          "rank": 5,
+          "proportion_of_ads": 0.07
+        },
+        "television": {
+          "nominal": 42484000000,
+          "real": 62329812207,
+          "rank": 2,
+          "proportion_of_ads": 0.2424
+        },
+        "internet": {
+          "nominal": 0,
+          "real": 0,
+          "rank": 8,
+          "proportion_of_ads": 0
+        },
+        "periodicals": {
+          "nominal": 51220000000,
+          "real": 75146713615,
+          "rank": 1,
+          "proportion_of_ads": 0.2923
+        },
+        "out_of_home": {
+          "nominal": 1339000000,
+          "real": 1964495305,
+          "rank": 7,
+          "proportion_of_ads": 0.0076
+        },
+        "direct_mail": {
+          "nominal": 34509000000,
+          "real": 50629401408,
+          "rank": 3,
+          "proportion_of_ads": 0.1969
+        },
+        "yellow_pages": {
+          "nominal": 10849000000,
+          "real": 15916960094,
+          "rank": 6,
+          "proportion_of_ads": 0.0619
+        },
+        "miscellaneous": {
+          "nominal": 22560000000,
+          "real": 33098591549,
+          "rank": 4,
+          "proportion_of_ads": 0.1287
+        }
+      },
+      "total": {
+        "nominal": 175230000000,
+        "real": 257086267606,
+        "proportion_of_gdp": 0.0217
+      },
+      "gdp": {
+        "nominal": 8073122000000,
+        "real": 11843600000000,
+        "deflator": 68.16
+      }
     },
     {
       "year": 1997,
-      "nominal_total": 187529000000,
-      "radio": 13491000000,
-      "television": 44130000000,
-      "internet": 600000000,
-      "periodicals": 55600000000,
-      "out_of_home": 1455000000,
-      "direct_mail": 36890000000,
-      "yellow_pages": 11423000000,
-      "miscellaneous": 23940000000,
-      "nominal_gdp": 8577552000000,
-      "real_gdp": 12370300000000,
-      "gdp_deflator": 69.34,
-      "real_total": 270448514566
+      "categories": {
+        "radio": {
+          "nominal": 13491000000,
+          "real": 19456302279,
+          "rank": 5,
+          "proportion_of_ads": 0.0719
+        },
+        "television": {
+          "nominal": 44130000000,
+          "real": 63642918950,
+          "rank": 2,
+          "proportion_of_ads": 0.2353
+        },
+        "internet": {
+          "nominal": 600000000,
+          "real": 865301413,
+          "rank": 8,
+          "proportion_of_ads": 0.0032
+        },
+        "periodicals": {
+          "nominal": 55600000000,
+          "real": 80184597635,
+          "rank": 1,
+          "proportion_of_ads": 0.2965
+        },
+        "out_of_home": {
+          "nominal": 1455000000,
+          "real": 2098355927,
+          "rank": 7,
+          "proportion_of_ads": 0.0078
+        },
+        "direct_mail": {
+          "nominal": 36890000000,
+          "real": 53201615229,
+          "rank": 3,
+          "proportion_of_ads": 0.1967
+        },
+        "yellow_pages": {
+          "nominal": 11423000000,
+          "real": 16473896741,
+          "rank": 6,
+          "proportion_of_ads": 0.0609
+        },
+        "miscellaneous": {
+          "nominal": 23940000000,
+          "real": 34525526392,
+          "rank": 4,
+          "proportion_of_ads": 0.1277
+        }
+      },
+      "total": {
+        "nominal": 187529000000,
+        "real": 270448514566,
+        "proportion_of_gdp": 0.0219
+      },
+      "gdp": {
+        "nominal": 8577552000000,
+        "real": 12370300000000,
+        "deflator": 69.34
+      }
     },
     {
       "year": 1998,
-      "nominal_total": 206697000000,
-      "radio": 15073000000,
-      "television": 49513000000,
-      "internet": 1383000000,
-      "periodicals": 59042000000,
-      "out_of_home": 1576000000,
-      "direct_mail": 39620000000,
-      "yellow_pages": 11990000000,
-      "miscellaneous": 28500000000,
-      "nominal_gdp": 9062817000000,
-      "real_gdp": 12924900000000,
-      "gdp_deflator": 70.1,
-      "real_total": 294860199715
+      "categories": {
+        "radio": {
+          "nominal": 15073000000,
+          "real": 21502139800,
+          "rank": 5,
+          "proportion_of_ads": 0.0729
+        },
+        "television": {
+          "nominal": 49513000000,
+          "real": 70631954351,
+          "rank": 2,
+          "proportion_of_ads": 0.2395
+        },
+        "internet": {
+          "nominal": 1383000000,
+          "real": 1972895863,
+          "rank": 8,
+          "proportion_of_ads": 0.0067
+        },
+        "periodicals": {
+          "nominal": 59042000000,
+          "real": 84225392297,
+          "rank": 1,
+          "proportion_of_ads": 0.2856
+        },
+        "out_of_home": {
+          "nominal": 1576000000,
+          "real": 2248216833,
+          "rank": 7,
+          "proportion_of_ads": 0.0076
+        },
+        "direct_mail": {
+          "nominal": 39620000000,
+          "real": 56519258203,
+          "rank": 3,
+          "proportion_of_ads": 0.1917
+        },
+        "yellow_pages": {
+          "nominal": 11990000000,
+          "real": 17104136947,
+          "rank": 6,
+          "proportion_of_ads": 0.058
+        },
+        "miscellaneous": {
+          "nominal": 28500000000,
+          "real": 40656205421,
+          "rank": 4,
+          "proportion_of_ads": 0.1379
+        }
+      },
+      "total": {
+        "nominal": 206697000000,
+        "real": 294860199715,
+        "proportion_of_gdp": 0.0228
+      },
+      "gdp": {
+        "nominal": 9062817000000,
+        "real": 12924900000000,
+        "deflator": 70.1
+      }
     },
     {
       "year": 1999,
-      "nominal_total": 222308000000,
-      "radio": 17215000000,
-      "television": 52581000000,
-      "internet": 2832000000,
-      "periodicals": 62355000000,
-      "out_of_home": 4780000000,
-      "direct_mail": 41403000000,
-      "yellow_pages": 12652000000,
-      "miscellaneous": 28490000000,
-      "nominal_gdp": 9631172000000,
-      "real_gdp": 13543800000000,
-      "gdp_deflator": 71.08,
-      "real_total": 312757456387
+      "categories": {
+        "radio": {
+          "nominal": 17215000000,
+          "real": 24219189645,
+          "rank": 5,
+          "proportion_of_ads": 0.0774
+        },
+        "television": {
+          "nominal": 52581000000,
+          "real": 73974395048,
+          "rank": 2,
+          "proportion_of_ads": 0.2365
+        },
+        "internet": {
+          "nominal": 2832000000,
+          "real": 3984243106,
+          "rank": 8,
+          "proportion_of_ads": 0.0127
+        },
+        "periodicals": {
+          "nominal": 62355000000,
+          "real": 87725098481,
+          "rank": 1,
+          "proportion_of_ads": 0.2805
+        },
+        "out_of_home": {
+          "nominal": 4780000000,
+          "real": 6724817107,
+          "rank": 7,
+          "proportion_of_ads": 0.0215
+        },
+        "direct_mail": {
+          "nominal": 41403000000,
+          "real": 58248452448,
+          "rank": 3,
+          "proportion_of_ads": 0.1862
+        },
+        "yellow_pages": {
+          "nominal": 12652000000,
+          "real": 17799662352,
+          "rank": 6,
+          "proportion_of_ads": 0.0569
+        },
+        "miscellaneous": {
+          "nominal": 28490000000,
+          "real": 40081598199,
+          "rank": 4,
+          "proportion_of_ads": 0.1282
+        }
+      },
+      "total": {
+        "nominal": 222308000000,
+        "real": 312757456387,
+        "proportion_of_gdp": 0.0231
+      },
+      "gdp": {
+        "nominal": 9631172000000,
+        "real": 13543800000000,
+        "deflator": 71.08
+      }
     },
     {
       "year": 2000,
-      "nominal_total": 247472000000,
-      "radio": 19295000000,
-      "television": 60257000000,
-      "internet": 6507000000,
-      "periodicals": 66335000000,
-      "out_of_home": 5176000000,
-      "direct_mail": 44591000000,
-      "yellow_pages": 13228000000,
-      "miscellaneous": 32083000000,
-      "nominal_gdp": 10250952000000,
-      "real_gdp": 14096000000000,
-      "gdp_deflator": 72.71,
-      "real_total": 340354834273
+      "categories": {
+        "radio": {
+          "nominal": 19295000000,
+          "real": 26536927520,
+          "rank": 5,
+          "proportion_of_ads": 0.078
+        },
+        "television": {
+          "nominal": 60257000000,
+          "real": 82873057351,
+          "rank": 2,
+          "proportion_of_ads": 0.2435
+        },
+        "internet": {
+          "nominal": 6507000000,
+          "real": 8949250447,
+          "rank": 7,
+          "proportion_of_ads": 0.0263
+        },
+        "periodicals": {
+          "nominal": 66335000000,
+          "real": 91232292670,
+          "rank": 1,
+          "proportion_of_ads": 0.2681
+        },
+        "out_of_home": {
+          "nominal": 5176000000,
+          "real": 7118690689,
+          "rank": 8,
+          "proportion_of_ads": 0.0209
+        },
+        "direct_mail": {
+          "nominal": 44591000000,
+          "real": 61327190208,
+          "rank": 3,
+          "proportion_of_ads": 0.1802
+        },
+        "yellow_pages": {
+          "nominal": 13228000000,
+          "real": 18192820795,
+          "rank": 6,
+          "proportion_of_ads": 0.0535
+        },
+        "miscellaneous": {
+          "nominal": 32083000000,
+          "real": 44124604594,
+          "rank": 4,
+          "proportion_of_ads": 0.1296
+        }
+      },
+      "total": {
+        "nominal": 247472000000,
+        "real": 340354834273,
+        "proportion_of_gdp": 0.0241
+      },
+      "gdp": {
+        "nominal": 10250952000000,
+        "real": 14096000000000,
+        "deflator": 72.71
+      }
     }
   ],
   "ads": []
