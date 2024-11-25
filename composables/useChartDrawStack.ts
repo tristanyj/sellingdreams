@@ -1,37 +1,56 @@
 import * as d3 from 'd3';
 import type { d3GSelection, Figure } from '~/types';
 
-const categories = [
-  'internet',
-  'radio',
-  'yellow_pages',
-  'out_of_home',
-  'periodicals',
-  'direct_mail',
-  'miscellaneous',
-  'television',
-];
-
-const spacing = 10;
-const align = 'start';
-
 export function useChartDrawStack() {
   const { width, height, margin } = useChartConfig();
 
   const drawAreaBump = (g: d3GSelection, figures: Figure[]) => {
-    // First compute total values and positions for each slice (year)
-    const slices = new Map();
-    figures.forEach((year) => {
+    const categories = [
+      'radio',
+      'television',
+      'internet',
+      'periodicals',
+      'out_of_home',
+      'direct_mail',
+      'yellow_pages',
+      'miscellaneous',
+    ];
+
+    const spacing = 5; // Adjust this value to control space between categories
+    const totalSpacing = (categories.length - 1) * spacing;
+
+    // 1. Create slices for each year
+    const slices = new Map<
+      number,
+      {
+        year: number;
+        total: number;
+        x: number;
+        values: Map<
+          string,
+          {
+            serieId: string;
+            value: number;
+            position: number;
+            height: number;
+            beforeHeight: number;
+          }
+        >;
+      }
+    >();
+
+    // Initialize slices
+    figures.forEach((yearData) => {
       const slice = {
-        id: year.year,
+        year: yearData.year,
         total: 0,
         x: 0,
         values: new Map(),
       };
 
-      // Calculate total and store values
+      // Calculate total and store category values
       categories.forEach((cat) => {
-        const value = year.categories[cat].proportion_of_ads;
+        const value = yearData.categories[cat].proportion_of_ads;
         slice.total += value;
         slice.values.set(cat, {
           serieId: cat,
@@ -41,10 +60,11 @@ export function useChartDrawStack() {
           beforeHeight: 0,
         });
       });
-      slices.set(year.year, slice);
+
+      slices.set(yearData.year, slice);
     });
 
-    // Setup scales
+    // 2. Setup scales
     const xScale = d3
       .scalePoint()
       .domain(figures.map((f) => f.year))
@@ -52,81 +72,65 @@ export function useChartDrawStack() {
 
     const heightScale = d3
       .scaleLinear()
-      .domain([0, d3.max(Array.from(slices.values()), (d) => d.total)!])
-      .range([0, height - categories.length * spacing]);
+      .domain([0, 1])
+      .range([0, height - margin.bottom - margin.top - totalSpacing]); // Subtract total spacing
 
-    // Calculate positions for each slice
-    slices.forEach((slice, x) => {
-      slice.x = xScale(x);
-      const sliceHeight = heightScale(slice.total) + slice.values.size * spacing;
+    // Calculate padding for smooth transitions
+    const xStep = xScale.step();
+    const areaPointPadding = xStep * 0.3; // Adjust this value to control curve smoothness
 
-      // Calculate offset based on alignment
-      let offset = 0;
-      if (align === 'middle') {
-        offset = (height - sliceHeight) / 2;
-      } else if (align === 'end') {
-        offset = height - sliceHeight;
-      }
+    // 3. Calculate positions within each slice
+    slices.forEach((slice) => {
+      slice.x = xScale(slice.year)!;
 
-      // Sort and position values within slice
-      Array.from(slice.values.values())
-        .sort((a, b) => b.value - a.value)
-        .forEach((value, position, all) => {
-          const previousValues = all.filter((_, pos) => pos < position);
-          const beforeValue = previousValues.reduce((t, v) => t + v.value, 0);
+      const sortedValues = Array.from(slice.values.entries()).sort(
+        ([, a], [, b]) => b.value - a.value
+      );
 
-          const sliceValue = slice.values.get(value.serieId)!;
-          sliceValue.position = position;
-          sliceValue.height = heightScale(value.value);
-          sliceValue.beforeHeight =
-            heightScale(beforeValue) + offset + spacing * (previousValues.length + 0.5);
-        });
+      let currentHeight = margin.top;
+      sortedValues.forEach(([, value], index) => {
+        value.height = heightScale(value.value);
+        value.beforeHeight = currentHeight;
+        // Add spacing after each category except the last one
+        currentHeight += value.height + (index < categories.length - 1 ? spacing : 0);
+      });
     });
-
-    // Calculate area points with padding for smooth transitions
-    const areaPointPadding = xScale.step() * Math.min(0.6 * 0.5, 0.5);
-
-    // Create series data
+    // 4. Create series data with extra points for smooth transitions
     const series = categories.map((category) => {
-      const points = [];
-      const areaPoints = [];
+      const areaPoints: Array<{ x: number; y0: number; y1: number }> = [];
 
-      figures.forEach((year, i) => {
-        const slice = slices.get(year.year);
-        const position = slice.values.get(category);
+      figures.forEach((yearData, i) => {
+        const slice = slices.get(yearData.year)!;
+        const value = slice.values.get(category)!;
         const x = slice.x;
-        const { beforeHeight, height } = position;
+        const y0 = value.beforeHeight;
+        const y1 = y0 + value.height;
 
-        // Center point
-        points.push({
-          x,
-          y: beforeHeight + height / 2,
-          height,
-          data: year.categories[category],
-        });
-
-        // Area points with padding for smooth transitions
+        // Add extra points for smooth transitions
         if (i > 0) {
-          areaPoints.push({ x: x - areaPointPadding, y0: beforeHeight, y1: beforeHeight + height });
+          areaPoints.push({ x: x - areaPointPadding, y0, y1 });
         }
-        areaPoints.push({ x, y0: beforeHeight, y1: beforeHeight + height });
+        areaPoints.push({ x, y0, y1 });
         if (i < figures.length - 1) {
-          areaPoints.push({ x: x + areaPointPadding, y0: beforeHeight, y1: beforeHeight + height });
+          areaPoints.push({ x: x + areaPointPadding, y0, y1 });
         }
       });
 
-      return { id: category, points, areaPoints };
+      return {
+        id: category,
+        areaPoints,
+      };
     });
 
-    // Create area generator
+    // 5. Create area generator
     const area = d3
-      .area()
+      .area<{ x: number; y0: number; y1: number }>()
       .x((d) => d.x)
       .y0((d) => d.y0)
       .y1((d) => d.y1)
       .curve(d3.curveBasis);
 
-    // Draw areas
+    // 6. Draw the areas
     g.selectAll('.area')
       .data(series)
       .join('path')
@@ -134,8 +138,16 @@ export function useChartDrawStack() {
       .attr('d', (d) => area(d.areaPoints))
       .attr('fill', (d, i) => d3.schemeCategory10[i])
       .attr('stroke', 'white')
-      .attr('stroke-width', 1)
-      .attr('opacity', 0.8);
+      .attr('stroke-width', 1.5) // Slightly thicker stroke
+      .attr('stroke-linejoin', 'round') // Smoother corners
+      .attr('opacity', 0.85); // Slightly adjusted opacity
+
+    // 7. Add axis
+    const xAxis = d3.axisBottom(xScale).tickFormat((d) => d.toString());
+
+    g.append('g')
+      .attr('transform', `translate(0, ${height - margin.bottom})`)
+      .call(xAxis);
   };
 
   return {
