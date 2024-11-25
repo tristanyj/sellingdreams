@@ -77,7 +77,7 @@ export function useChartDrawStack() {
 
     // Calculate padding for smooth transitions
     const xStep = xScale.step();
-    const areaPointPadding = xStep * 0.3; // Adjust this value to control curve smoothness
+    const areaPointPadding = xStep * 0.275; // Adjust this value to control curve smoothness
 
     // 3. Calculate positions within each slice
     slices.forEach((slice) => {
@@ -113,6 +113,7 @@ export function useChartDrawStack() {
         areaPoints.push({ x, y0, y1 });
         if (i < figures.length - 1) {
           areaPoints.push({ x: x + areaPointPadding, y0, y1 });
+          // areaPoints.push({ x: x + areaPointPadding * 2, y0, y1 });
         }
       });
 
