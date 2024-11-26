@@ -3,8 +3,8 @@ export function useChartConfig() {
   // Main Config
   // ------------------------------
 
-  const width = 5000;
-  const height = 650;
+  const height = 5000;
+  const width = 1000;
   const margin = {
     top: 20,
     right: 100,
