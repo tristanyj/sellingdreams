@@ -63,36 +63,104 @@ export function useChartDrawStack() {
       slices.set(yearData.year, slice);
     });
 
-    // 2. Setup scales (swapped)
-    const yScale = d3
-      .scalePoint()
-      .domain(figures.map((f) => f.year))
-      .range([margin.top, height - margin.bottom]);
-
     const widthScale = d3
       .scaleLinear()
       .domain([0, 1])
       .range([0, width - margin.left - margin.right - totalSpacing]);
 
     // Calculate padding for smooth transitions
+
+    // ... previous code until position calculation ...
+
+    // 3. Calculate positions within each slice with smoother transitions
+    // First, create an array of intermediate years for smoother transitions
+    const intermediateSteps = 3; // Number of steps between years
+    const allYears: number[] = [];
+    figures.forEach((yearData, i) => {
+      allYears.push(yearData.year);
+      if (i < figures.length - 1) {
+        const nextYear = figures[i + 1].year;
+        for (let step = 1; step <= intermediateSteps; step++) {
+          allYears.push(
+            yearData.year + (step * (nextYear - yearData.year)) / (intermediateSteps + 1)
+          );
+        }
+      }
+    });
+
+    // Adjust yScale to include intermediate points
+    const yScale = d3
+      .scalePoint()
+      .domain(allYears)
+      .range([margin.top, height - margin.bottom]);
+
     const yStep = yScale.step();
     const areaPointPadding = yStep * 0.3;
 
-    // 3. Calculate positions within each slice
-    slices.forEach((slice) => {
-      slice.y = yScale(slice.year)!;
+    // Calculate interpolated positions for each category
+    figures.forEach((yearData, i) => {
+      const slice = slices.get(yearData.year)!;
+      slice.y = yScale(yearData.year)!;
 
       const sortedValues = Array.from(slice.values.entries()).sort(
         ([, a], [, b]) => b.value - a.value
       );
 
-      let currentWidth = margin.left;
+      // If there's a next year, calculate intermediate positions
+      if (i < figures.length - 1) {
+        const nextYearData = figures[i + 1];
+        const nextSlice = slices.get(nextYearData.year)!;
+        const nextSortedValues = Array.from(nextSlice.values.entries()).sort(
+          ([, a], [, b]) => b.value - a.value
+        );
+
+        // Create intermediate slices
+        for (let step = 1; step <= intermediateSteps; step++) {
+          const intermediateYear =
+            yearData.year + (step * (nextYearData.year - yearData.year)) / (intermediateSteps + 1);
+          const intermediateSlice = {
+            year: intermediateYear,
+            total: 0,
+            y: yScale(intermediateYear)!,
+            values: new Map(),
+          };
+
+          // Interpolate values and positions
+          categories.forEach((category) => {
+            const currentValue = slice.values.get(category)!;
+            const nextValue = nextSlice.values.get(category)!;
+            const t = step / (intermediateSteps + 1);
+
+            intermediateSlice.values.set(category, {
+              serieId: category,
+              value: currentValue.value * (1 - t) + nextValue.value * t,
+              position: currentValue.position * (1 - t) + nextValue.position * t,
+              width: 0,
+              beforeWidth: 0,
+            });
+          });
+
+          slices.set(intermediateYear, intermediateSlice);
+        }
+      }
+    });
+
+    // Calculate final positions including intermediate points
+    Array.from(slices.values()).forEach((slice) => {
+      let currentWidth = width - margin.right;
+      const sortedValues = Array.from(slice.values.entries()).sort(
+        ([, a], [, b]) => b.value - a.value
+      );
+
       sortedValues.forEach(([, value], index) => {
-        value.width = widthScale(value.value);
+        value.width = Math.abs(widthScale(value.value) - widthScale(0));
+        currentWidth -= value.width;
         value.beforeWidth = currentWidth;
-        currentWidth += value.width + (index < categories.length - 1 ? spacing : 0);
+        currentWidth -= index < categories.length - 1 ? spacing : 0;
       });
     });
+
+    // ... rest of the code remains similar but uses all points ...
 
     // 4. Create series data with extra points
     const series = categories.map((category) => {
