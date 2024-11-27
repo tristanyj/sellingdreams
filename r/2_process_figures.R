@@ -4,7 +4,6 @@ source("./1_prepare_input.R")
 # Functions
 # ----------------------------
 
-
 process_figures <- function(ad_data, gdp_data) {
   # Clean GDP data first
   gdp_clean <- gdp_data %>%
@@ -16,12 +15,23 @@ process_figures <- function(ad_data, gdp_data) {
       real_gdp = real_gdp * 1000000
     )
 
-  # Clean advertising data
+  # Clean and merge advertising data
   ad_data_clean <- ad_data %>%
-    mutate(across(where(is.character), ~str_remove_all(., " "))) %>%
+    mutate(across(where(is.character), ~str_remove_all(., "[,\\s]"))) %>%
     mutate(across(where(is.character), ~as.numeric(.))) %>%
     mutate(across(-year, ~replace_na(., 0))) %>%
-    rename(nominal_total = total) %>%
+    mutate(
+      nominal_total = total,
+      periodicals = newspapers + other_periodicals + magazines + farm_publications + business_papers,
+      miscellaneous = miscellaneous + other,
+      out_of_home = out_of_home + billboards,
+      yellow_pages = yellow_pages,
+      direct_mail = direct_mail,
+      radio = radio,
+      television = television + broadcast_tv + cable,
+      internet = internet
+    ) %>%
+    select(year, nominal_total, periodicals, miscellaneous, out_of_home, yellow_pages, direct_mail, radio, television, internet) %>%
     mutate(across(-year, ~. * 1000000))
 
   # Categories to process
@@ -31,11 +41,8 @@ process_figures <- function(ad_data, gdp_data) {
   # Process data
   combined_data <- ad_data_clean %>%
     left_join(gdp_clean, by = "year") %>%
-    # Remove group_by and handle year explicitly
     nest(data = -year) %>%
     mutate(processed = map2(year, data, function(yr, year_data) {
-      # Rest of your processing code remains the same
-      # Check if all categories are 0
       all_zeros <- all(map_dbl(categories[-8], ~year_data[[.]]) == 0)
 
       if (all_zeros) {
@@ -69,14 +76,16 @@ process_figures <- function(ad_data, gdp_data) {
 
       category_data$gdp <- list(
         nominal = year_data$nominal_gdp,
+        nominal_per_capita = year_data$nominal_gdp_per_capita,
         real = year_data$real_gdp,
+        real_per_capita = year_data$real_gdp_per_capita,
+        population = year_data$population,
         deflator = year_data$gdp_deflator
       )
 
       c(list(year = yr), category_data)
     }))
 
-  # Convert to array format
   result <- list(
     figures = combined_data %>%
       select(processed) %>%
@@ -85,9 +94,6 @@ process_figures <- function(ad_data, gdp_data) {
 
   return(result)
 }
-
-
-
 
 # ----------------------------
 # Main execution

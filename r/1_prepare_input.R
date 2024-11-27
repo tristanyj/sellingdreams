@@ -3,7 +3,7 @@ library(jsonlite)
 library(dplyr)
 
 files <- list(
-  "ad_expenditure" = "input/raw/ad_expenditure.csv",
+  "ad_expenditure" = "input/raw/ad_exp.csv",
   "gdp" = "input/raw/gdp.csv"
 )
 

@@ -59,7 +59,10 @@
       },
       "gdp": {
         "nominal": 21197000000,
+        "nominal_per_capita": 278.56,
         "real": 521778000000,
+        "real_per_capita": 6857.02,
+        "population": 76094000,
         "deflator": 4.06
       }
     },
@@ -122,7 +125,10 @@
       },
       "gdp": {
         "nominal": 22931000000,
+        "nominal_per_capita": 295.56,
         "real": 549046000000,
+        "real_per_capita": 7076.79,
+        "population": 77584000,
         "deflator": 4.18
       }
     },
@@ -185,7 +191,10 @@
       },
       "gdp": {
         "nominal": 24754000000,
+        "nominal_per_capita": 312.69,
         "real": 576747000000,
+        "real_per_capita": 7285.57,
+        "population": 79163000,
         "deflator": 4.29
       }
     },
@@ -248,7 +257,10 @@
       },
       "gdp": {
         "nominal": 26647000000,
+        "nominal_per_capita": 330.48,
         "real": 592997000000,
+        "real_per_capita": 7354.36,
+        "population": 80632000,
         "deflator": 4.49
       }
     },
@@ -311,7 +323,10 @@
       },
       "gdp": {
         "nominal": 26360000000,
+        "nominal_per_capita": 320.82,
         "real": 571371000000,
+        "real_per_capita": 6953.86,
+        "population": 82166000,
         "deflator": 4.61
       }
     },
@@ -374,7 +389,10 @@
       },
       "gdp": {
         "nominal": 29523000000,
+        "nominal_per_capita": 352.21,
         "real": 635290000000,
+        "real_per_capita": 7579.04,
+        "population": 83822000,
         "deflator": 4.65
       }
     },
@@ -437,7 +455,10 @@
       },
       "gdp": {
         "nominal": 31794000000,
+        "nominal_per_capita": 372.08,
         "real": 660583000000,
+        "real_per_capita": 7730.64,
+        "population": 85450000,
         "deflator": 4.81
       }
     },
@@ -500,7 +521,10 @@
       },
       "gdp": {
         "nominal": 34639000000,
+        "nominal_per_capita": 398.11,
         "real": 676850000000,
+        "real_per_capita": 7779.17,
+        "population": 87008000,
         "deflator": 5.12
       }
     },
@@ -563,7 +587,10 @@
       },
       "gdp": {
         "nominal": 30797000000,
+        "nominal_per_capita": 347.16,
         "real": 602975000000,
+        "real_per_capita": 6797.15,
+        "population": 88710000,
         "deflator": 5.11
       }
     },
@@ -626,7 +653,10 @@
       },
       "gdp": {
         "nominal": 32540000000,
+        "nominal_per_capita": 359.6,
         "real": 646065000000,
+        "real_per_capita": 7139.62,
+        "population": 90490000,
         "deflator": 5.04
       }
     },
@@ -689,7 +719,10 @@
       },
       "gdp": {
         "nominal": 33746000000,
+        "nominal_per_capita": 365.19,
         "real": 653021000000,
+        "real_per_capita": 7066.79,
+        "population": 92407000,
         "deflator": 5.17
       }
     },
@@ -752,7 +785,10 @@
       },
       "gdp": {
         "nominal": 34675000000,
+        "nominal_per_capita": 369.42,
         "real": 674178000000,
+        "real_per_capita": 7182.58,
+        "population": 93863000,
         "deflator": 5.14
       }
     },
@@ -815,7 +851,10 @@
       },
       "gdp": {
         "nominal": 37745000000,
+        "nominal_per_capita": 395.92,
         "real": 705765000000,
+        "real_per_capita": 7403,
+        "population": 95335000,
         "deflator": 5.35
       }
     },
@@ -878,7 +917,10 @@
       },
       "gdp": {
         "nominal": 39517000000,
+        "nominal_per_capita": 406.45,
         "real": 733625000000,
+        "real_per_capita": 7545.64,
+        "population": 97225000,
         "deflator": 5.39
       }
     },
@@ -941,7 +983,10 @@
       },
       "gdp": {
         "nominal": 36831000000,
+        "nominal_per_capita": 371.61,
         "real": 677455000000,
+        "real_per_capita": 6835.31,
+        "population": 99111000,
         "deflator": 5.44
       }
     },
@@ -1004,7 +1049,10 @@
       },
       "gdp": {
         "nominal": 39048000000,
+        "nominal_per_capita": 388.36,
         "real": 695924000000,
+        "real_per_capita": 6921.45,
+        "population": 100546000,
         "deflator": 5.61
       }
     },
@@ -1067,7 +1115,10 @@
       },
       "gdp": {
         "nominal": 50117000000,
+        "nominal_per_capita": 491.53,
         "real": 792425000000,
+        "real_per_capita": 7771.84,
+        "population": 101961000,
         "deflator": 6.32
       }
     },
@@ -1130,7 +1181,10 @@
       },
       "gdp": {
         "nominal": 60278000000,
+        "nominal_per_capita": 582.88,
         "real": 772825000000,
+        "real_per_capita": 7473.12,
+        "population": 103414000,
         "deflator": 7.8
       }
     },
@@ -1193,7 +1247,10 @@
       },
       "gdp": {
         "nominal": 76567000000,
+        "nominal_per_capita": 732.35,
         "real": 842527000000,
+        "real_per_capita": 8058.6,
+        "population": 104550000,
         "deflator": 9.09
       }
     },
@@ -1256,7 +1313,10 @@
       },
       "gdp": {
         "nominal": 79090000000,
+        "nominal_per_capita": 752.78,
         "real": 849287000000,
+        "real_per_capita": 8083.6,
+        "population": 105063000,
         "deflator": 9.31
       }
     },
@@ -1319,7 +1379,10 @@
       },
       "gdp": {
         "nominal": 89246000000,
+        "nominal_per_capita": 838.3,
         "real": 841350000000,
+        "real_per_capita": 7902.9,
+        "population": 106461000,
         "deflator": 10.61
       }
     },
@@ -1345,10 +1408,10 @@
           "proportion_of_ads": 0
         },
         "periodicals": {
-          "nominal": 948000000,
-          "real": 10486725664,
+          "nominal": 947000000,
+          "real": 10475663717,
           "rank": 2,
-          "proportion_of_ads": 0.4912
+          "proportion_of_ads": 0.4909
         },
         "out_of_home": {
           "nominal": 0,
@@ -1372,7 +1435,7 @@
           "nominal": 982000000,
           "real": 10862831858,
           "rank": 1,
-          "proportion_of_ads": 0.5088
+          "proportion_of_ads": 0.5091
         }
       },
       "total": {
@@ -1382,7 +1445,10 @@
       },
       "gdp": {
         "nominal": 74314000000,
+        "nominal_per_capita": 684.68,
         "real": 822062000000,
+        "real_per_capita": 7573.95,
+        "population": 108538000,
         "deflator": 9.04
       }
     },
@@ -1445,7 +1511,10 @@
       },
       "gdp": {
         "nominal": 74140000000,
+        "nominal_per_capita": 673.7,
         "real": 867711000000,
+        "real_per_capita": 7884.76,
+        "population": 110049000,
         "deflator": 8.54
       }
     },
@@ -1508,7 +1577,10 @@
       },
       "gdp": {
         "nominal": 86238000000,
+        "nominal_per_capita": 770.35,
         "real": 981966000000,
+        "real_per_capita": 8771.7,
+        "population": 111947000,
         "deflator": 8.78
       }
     },
@@ -1571,7 +1643,10 @@
       },
       "gdp": {
         "nominal": 87786000000,
+        "nominal_per_capita": 769.32,
         "real": 1012202000000,
+        "real_per_capita": 8870.48,
+        "population": 114109000,
         "deflator": 8.67
       }
     },
@@ -1597,10 +1672,10 @@
           "proportion_of_ads": 0
         },
         "periodicals": {
-          "nominal": 1266000000,
-          "real": 14337485844,
+          "nominal": 1267000000,
+          "real": 14348810872,
           "rank": 2,
-          "proportion_of_ads": 0.4869
+          "proportion_of_ads": 0.4871
         },
         "out_of_home": {
           "nominal": 0,
@@ -1624,7 +1699,7 @@
           "nominal": 1334000000,
           "real": 15107587769,
           "rank": 1,
-          "proportion_of_ads": 0.5131
+          "proportion_of_ads": 0.5129
         }
       },
       "total": {
@@ -1634,7 +1709,10 @@
       },
       "gdp": {
         "nominal": 91449000000,
+        "nominal_per_capita": 789.52,
         "real": 1035978000000,
+        "real_per_capita": 8944.03,
+        "population": 115829000,
         "deflator": 8.83
       }
     },
@@ -1660,10 +1738,10 @@
           "proportion_of_ads": 0
         },
         "periodicals": {
-          "nominal": 1334000000,
-          "real": 15039458850,
+          "nominal": 1335000000,
+          "real": 15050732807,
           "rank": 2,
-          "proportion_of_ads": 0.4943
+          "proportion_of_ads": 0.4944
         },
         "out_of_home": {
           "nominal": 0,
@@ -1687,7 +1765,7 @@
           "nominal": 1363000000,
           "real": 15366403608,
           "rank": 1,
-          "proportion_of_ads": 0.505
+          "proportion_of_ads": 0.5048
         }
       },
       "total": {
@@ -1697,7 +1775,10 @@
       },
       "gdp": {
         "nominal": 97885000000,
+        "nominal_per_capita": 833.79,
         "real": 1103673000000,
+        "real_per_capita": 9401.2,
+        "population": 117397000,
         "deflator": 8.87
       }
     },
@@ -1760,7 +1841,10 @@
       },
       "gdp": {
         "nominal": 96466000000,
+        "nominal_per_capita": 810.4,
         "real": 1114332000000,
+        "real_per_capita": 9361.38,
+        "population": 119035000,
         "deflator": 8.66
       }
     },
@@ -1786,10 +1870,10 @@
           "proportion_of_ads": 0
         },
         "periodicals": {
-          "nominal": 1468000000,
-          "real": 16834862385,
+          "nominal": 1469000000,
+          "real": 16846330275,
           "rank": 1,
-          "proportion_of_ads": 0.5319
+          "proportion_of_ads": 0.5321
         },
         "out_of_home": {
           "nominal": 0,
@@ -1813,7 +1897,7 @@
           "nominal": 1277000000,
           "real": 14644495413,
           "rank": 2,
-          "proportion_of_ads": 0.4627
+          "proportion_of_ads": 0.4625
         }
       },
       "total": {
@@ -1823,7 +1907,10 @@
       },
       "gdp": {
         "nominal": 98305000000,
+        "nominal_per_capita": 815.74,
         "real": 1127103000000,
+        "real_per_capita": 9352.85,
+        "population": 120509000,
         "deflator": 8.72
       }
     },
@@ -1886,7 +1973,10 @@
       },
       "gdp": {
         "nominal": 104556000000,
+        "nominal_per_capita": 857.87,
         "real": 1191100000000,
+        "real_per_capita": 9772.89,
+        "population": 121878000,
         "deflator": 8.75
       }
     },
@@ -1949,7 +2039,10 @@
       },
       "gdp": {
         "nominal": 92160000000,
+        "nominal_per_capita": 748.12,
         "real": 1089800000000,
+        "real_per_capita": 8846.64,
+        "population": 123188000,
         "deflator": 8.42
       }
     },
@@ -2012,7 +2105,10 @@
       },
       "gdp": {
         "nominal": 77391000000,
+        "nominal_per_capita": 623.37,
         "real": 1020000000000,
+        "real_per_capita": 8215.93,
+        "population": 124149000,
         "deflator": 7.58
       }
     },
@@ -2075,7 +2171,10 @@
       },
       "gdp": {
         "nominal": 59522000000,
+        "nominal_per_capita": 476.37,
         "real": 888400000000,
+        "real_per_capita": 7110.1,
+        "population": 124949000,
         "deflator": 6.72
       }
     },
@@ -2138,7 +2237,10 @@
       },
       "gdp": {
         "nominal": 57154000000,
+        "nominal_per_capita": 454.72,
         "real": 877400000000,
+        "real_per_capita": 6980.67,
+        "population": 125690000,
         "deflator": 6.54
       }
     },
@@ -2201,7 +2303,10 @@
       },
       "gdp": {
         "nominal": 66800000000,
+        "nominal_per_capita": 528.13,
         "real": 972300000000,
+        "real_per_capita": 7687.08,
+        "population": 126485000,
         "deflator": 6.86
       }
     },
@@ -2264,7 +2369,10 @@
       },
       "gdp": {
         "nominal": 74241000000,
+        "nominal_per_capita": 582.91,
         "real": 1058800000000,
+        "real_per_capita": 8313.31,
+        "population": 127362000,
         "deflator": 6.99
       }
     },
@@ -2327,7 +2435,10 @@
       },
       "gdp": {
         "nominal": 84830000000,
+        "nominal_per_capita": 661.8,
         "real": 1195300000000,
+        "real_per_capita": 9325.09,
+        "population": 128181000,
         "deflator": 7.08
       }
     },
@@ -2390,7 +2501,10 @@
       },
       "gdp": {
         "nominal": 93003000000,
+        "nominal_per_capita": 721.17,
         "real": 1256500000000,
+        "real_per_capita": 9743.26,
+        "population": 128961000,
         "deflator": 7.34
       }
     },
@@ -2453,7 +2567,10 @@
       },
       "gdp": {
         "nominal": 87352000000,
+        "nominal_per_capita": 672.1,
         "real": 1214900000000,
+        "real_per_capita": 9347.61,
+        "population": 129969000,
         "deflator": 7.2
       }
     },
@@ -2516,7 +2633,10 @@
       },
       "gdp": {
         "nominal": 93437000000,
+        "nominal_per_capita": 713.11,
         "real": 1312400000000,
+        "real_per_capita": 10016.18,
+        "population": 131028000,
         "deflator": 7.11
       }
     },
@@ -2579,7 +2699,10 @@
       },
       "gdp": {
         "nominal": 102899000000,
+        "nominal_per_capita": 778.82,
         "real": 1428100000000,
+        "real_per_capita": 10808.95,
+        "population": 132122000,
         "deflator": 7.18
       }
     },
@@ -2642,7 +2765,10 @@
       },
       "gdp": {
         "nominal": 129309000000,
+        "nominal_per_capita": 969.32,
         "real": 1681000000000,
+        "real_per_capita": 12601.01,
+        "population": 133402000,
         "deflator": 7.65
       }
     },
@@ -2705,7 +2831,10 @@
       },
       "gdp": {
         "nominal": 165952000000,
+        "nominal_per_capita": 1230.55,
         "real": 1998500000000,
+        "real_per_capita": 14819.07,
+        "population": 134860000,
         "deflator": 8.29
       }
     },
@@ -2768,7 +2897,10 @@
       },
       "gdp": {
         "nominal": 203084000000,
+        "nominal_per_capita": 1485.19,
         "real": 2338800000000,
+        "real_per_capita": 17104.12,
+        "population": 136739000,
         "deflator": 8.68
       }
     },
@@ -2831,7 +2963,10 @@
       },
       "gdp": {
         "nominal": 224447000000,
+        "nominal_per_capita": 1621.76,
         "real": 2524800000000,
+        "real_per_capita": 18243.17,
+        "population": 138397000,
         "deflator": 8.89
       }
     },
@@ -2894,7 +3029,10 @@
       },
       "gdp": {
         "nominal": 228007000000,
+        "nominal_per_capita": 1629.46,
         "real": 2500100000000,
+        "real_per_capita": 17867.05,
+        "population": 139928000,
         "deflator": 9.11
       }
     },
@@ -2957,7 +3095,10 @@
       },
       "gdp": {
         "nominal": 227535000000,
+        "nominal_per_capita": 1609.28,
         "real": 2209900000000,
+        "real_per_capita": 15629.93,
+        "population": 141389000,
         "deflator": 10.26
       }
     },
@@ -3020,7 +3161,10 @@
       },
       "gdp": {
         "nominal": 249616000000,
+        "nominal_per_capita": 1731.93,
         "real": 2184600000000,
+        "real_per_capita": 15157.57,
+        "population": 144126000,
         "deflator": 11.41
       }
     },
@@ -3083,7 +3227,10 @@
       },
       "gdp": {
         "nominal": 274468000000,
+        "nominal_per_capita": 1871.83,
         "real": 2274600000000,
+        "real_per_capita": 15512.41,
+        "population": 146631000,
         "deflator": 12.06
       }
     },
@@ -3146,7 +3293,10 @@
       },
       "gdp": {
         "nominal": 272475000000,
+        "nominal_per_capita": 1826.39,
         "real": 2261900000000,
+        "real_per_capita": 15161.41,
+        "population": 149188000,
         "deflator": 12.05
       }
     },
@@ -3209,7 +3359,10 @@
       },
       "gdp": {
         "nominal": 299827000000,
+        "nominal_per_capita": 1976.66,
         "real": 2458500000000,
+        "real_per_capita": 16208.04,
+        "population": 151684000,
         "deflator": 12.17
       }
     },
@@ -3272,7 +3425,10 @@
       },
       "gdp": {
         "nominal": 346914000000,
+        "nominal_per_capita": 2248.5,
         "real": 2656300000000,
+        "real_per_capita": 17216.62,
+        "population": 154287000,
         "deflator": 12.99
       }
     },
@@ -3335,7 +3491,10 @@
       },
       "gdp": {
         "nominal": 367341000000,
+        "nominal_per_capita": 2340.44,
         "real": 2764800000000,
+        "real_per_capita": 17615.35,
+        "population": 156954000,
         "deflator": 13.27
       }
     },
@@ -3398,7 +3557,10 @@
       },
       "gdp": {
         "nominal": 389218000000,
+        "nominal_per_capita": 2439.24,
         "real": 2894400000000,
+        "real_per_capita": 18139.32,
+        "population": 159565000,
         "deflator": 13.44
       }
     },
@@ -3461,7 +3623,10 @@
       },
       "gdp": {
         "nominal": 390549000000,
+        "nominal_per_capita": 2404.99,
         "real": 2877700000000,
+        "real_per_capita": 17720.81,
+        "population": 162391000,
         "deflator": 13.58
       }
     },
@@ -3524,7 +3689,10 @@
       },
       "gdp": {
         "nominal": 425478000000,
+        "nominal_per_capita": 2574.36,
         "real": 3083000000000,
+        "real_per_capita": 18653.76,
+        "population": 165275000,
         "deflator": 13.77
       }
     },
@@ -3587,7 +3755,10 @@
       },
       "gdp": {
         "nominal": 449353000000,
+        "nominal_per_capita": 2671.21,
         "real": 3148800000000,
+        "real_per_capita": 18718.23,
+        "population": 168221000,
         "deflator": 14.24
       }
     },
@@ -3650,7 +3821,10 @@
       },
       "gdp": {
         "nominal": 474039000000,
+        "nominal_per_capita": 2767.72,
         "real": 3215100000000,
+        "real_per_capita": 18771.68,
+        "population": 171274000,
         "deflator": 14.74
       }
     },
@@ -3713,7 +3887,10 @@
       },
       "gdp": {
         "nominal": 481229000000,
+        "nominal_per_capita": 2763.44,
         "real": 3191200000000,
+        "real_per_capita": 18325.38,
+        "population": 174141000,
         "deflator": 15.09
       }
     },
@@ -3776,7 +3953,10 @@
       },
       "gdp": {
         "nominal": 521654000000,
+        "nominal_per_capita": 2945.03,
         "real": 3412400000000,
+        "real_per_capita": 19264.95,
+        "population": 177130000,
         "deflator": 15.29
       }
     },
@@ -3839,7 +4019,10 @@
       },
       "gdp": {
         "nominal": 542382000000,
+        "nominal_per_capita": 3000.56,
         "real": 3500300000000,
+        "real_per_capita": 19364.35,
+        "population": 180760000,
         "deflator": 15.49
       }
     },
@@ -3902,7 +4085,10 @@
       },
       "gdp": {
         "nominal": 562209000000,
+        "nominal_per_capita": 3059.77,
         "real": 3590100000000,
+        "real_per_capita": 19538.81,
+        "population": 183742000,
         "deflator": 15.66
       }
     },
@@ -3965,7 +4151,10 @@
       },
       "gdp": {
         "nominal": 603922000000,
+        "nominal_per_capita": 3236.63,
         "real": 3810100000000,
+        "real_per_capita": 20419.64,
+        "population": 186590000,
         "deflator": 15.85
       }
     },
@@ -4028,7 +4217,10 @@
       },
       "gdp": {
         "nominal": 637450000000,
+        "nominal_per_capita": 3367.41,
         "real": 3976100000000,
+        "real_per_capita": 21004.23,
+        "population": 189300000,
         "deflator": 16.03
       }
     },
@@ -4091,7 +4283,10 @@
       },
       "gdp": {
         "nominal": 684460000000,
+        "nominal_per_capita": 3566.25,
         "real": 4205300000000,
+        "real_per_capita": 21910.93,
+        "population": 191927000,
         "deflator": 16.28
       }
     },
@@ -4154,7 +4349,10 @@
       },
       "gdp": {
         "nominal": 742289000000,
+        "nominal_per_capita": 3819.4,
         "real": 4478600000000,
+        "real_per_capita": 23044.35,
+        "population": 194347000,
         "deflator": 16.57
       }
     },
@@ -4217,7 +4415,10 @@
       },
       "gdp": {
         "nominal": 813414000000,
+        "nominal_per_capita": 4137.43,
         "real": 4773900000000,
+        "real_per_capita": 24282.42,
+        "population": 196599000,
         "deflator": 17.04
       }
     },
@@ -4280,7 +4481,10 @@
       },
       "gdp": {
         "nominal": 859959000000,
+        "nominal_per_capita": 4326.79,
         "real": 4904900000000,
+        "real_per_capita": 24678.49,
+        "population": 198752000,
         "deflator": 17.53
       }
     },
@@ -4343,7 +4547,10 @@
       },
       "gdp": {
         "nominal": 940651000000,
+        "nominal_per_capita": 4685.8,
         "real": 5145900000000,
+        "real_per_capita": 25634.01,
+        "population": 200745000,
         "deflator": 18.28
       }
     },
@@ -4406,7 +4613,10 @@
       },
       "gdp": {
         "nominal": 1017615000000,
+        "nominal_per_capita": 5019.41,
         "real": 5306600000000,
+        "real_per_capita": 26174.93,
+        "population": 202736000,
         "deflator": 19.18
       }
     },
@@ -4469,7 +4679,10 @@
       },
       "gdp": {
         "nominal": 1073303000000,
+        "nominal_per_capita": 5233.35,
         "real": 5316400000000,
+        "real_per_capita": 25922.4,
+        "population": 205089000,
         "deflator": 20.19
       }
     },
@@ -4532,7 +4745,10 @@
       },
       "gdp": {
         "nominal": 1164850000000,
+        "nominal_per_capita": 5608.55,
         "real": 5491400000000,
+        "real_per_capita": 26440.11,
+        "population": 207692000,
         "deflator": 21.21
       }
     },
@@ -4595,7 +4811,10 @@
       },
       "gdp": {
         "nominal": 1279110000000,
+        "nominal_per_capita": 6093.21,
         "real": 5780000000000,
+        "real_per_capita": 27533.77,
+        "population": 209924000,
         "deflator": 22.13
       }
     },
@@ -4658,7 +4877,10 @@
       },
       "gdp": {
         "nominal": 1425376000000,
+        "nominal_per_capita": 6725.41,
         "real": 6106400000000,
+        "real_per_capita": 28812.06,
+        "population": 211939000,
         "deflator": 23.34
       }
     },
@@ -4721,7 +4943,10 @@
       },
       "gdp": {
         "nominal": 1545243000000,
+        "nominal_per_capita": 7224.2,
         "real": 6073400000000,
+        "real_per_capita": 28393.91,
+        "population": 213898000,
         "deflator": 25.43
       }
     },
@@ -4784,7 +5009,10 @@
       },
       "gdp": {
         "nominal": 1684904000000,
+        "nominal_per_capita": 7801.17,
         "real": 6060900000000,
+        "real_per_capita": 28062.19,
+        "population": 215981000,
         "deflator": 27.8
       }
     },
@@ -4847,7 +5075,10 @@
       },
       "gdp": {
         "nominal": 1873412000000,
+        "nominal_per_capita": 8590.24,
         "real": 6387400000000,
+        "real_per_capita": 29288.45,
+        "population": 218086000,
         "deflator": 29.33
       }
     },
@@ -4910,7 +5141,10 @@
       },
       "gdp": {
         "nominal": 2081826000000,
+        "nominal_per_capita": 9450.43,
         "real": 6682800000000,
+        "real_per_capita": 30336.51,
+        "population": 220289000,
         "deflator": 31.15
       }
     },
@@ -4973,7 +5207,10 @@
       },
       "gdp": {
         "nominal": 2351599000000,
+        "nominal_per_capita": 10562.86,
         "real": 7052700000000,
+        "real_per_capita": 31679.16,
+        "population": 222629000,
         "deflator": 33.34
       }
     },
@@ -5036,7 +5273,10 @@
       },
       "gdp": {
         "nominal": 2627333000000,
+        "nominal_per_capita": 11671.54,
         "real": 7276000000000,
+        "real_per_capita": 32322.55,
+        "population": 225106000,
         "deflator": 36.1
       }
     },
@@ -5099,7 +5339,10 @@
       },
       "gdp": {
         "nominal": 2857307000000,
+        "nominal_per_capita": 12547.13,
         "real": 7257300000000,
+        "real_per_capita": 31868.56,
+        "population": 227726000,
         "deflator": 39.38
       }
     },
@@ -5162,7 +5405,10 @@
       },
       "gdp": {
         "nominal": 3207041000000,
+        "nominal_per_capita": 13943.17,
         "real": 7441500000000,
+        "real_per_capita": 32353.22,
+        "population": 230008000,
         "deflator": 43.09
       }
     },
@@ -5225,7 +5471,10 @@
       },
       "gdp": {
         "nominal": 3343789000000,
+        "nominal_per_capita": 14399.35,
         "real": 7307300000000,
+        "real_per_capita": 31467.41,
+        "population": 232218000,
         "deflator": 45.76
       }
     },
@@ -5288,7 +5537,10 @@
       },
       "gdp": {
         "nominal": 3634038000000,
+        "nominal_per_capita": 15508.01,
         "real": 7642300000000,
+        "real_per_capita": 32612.99,
+        "population": 234333000,
         "deflator": 47.55
       }
     },
@@ -5351,7 +5603,10 @@
       },
       "gdp": {
         "nominal": 4037613000000,
+        "nominal_per_capita": 17080.01,
         "real": 8195300000000,
+        "real_per_capita": 34667.97,
+        "population": 236394000,
         "deflator": 49.26
       }
     },
@@ -5414,7 +5669,10 @@
       },
       "gdp": {
         "nominal": 4338979000000,
+        "nominal_per_capita": 18192.33,
         "real": 8537000000000,
+        "real_per_capita": 35793.65,
+        "population": 238506000,
         "deflator": 50.82
       }
     },
@@ -5477,7 +5735,10 @@
       },
       "gdp": {
         "nominal": 4579631000000,
+        "nominal_per_capita": 19027.65,
         "real": 8832600000000,
+        "real_per_capita": 36698.06,
+        "population": 240683000,
         "deflator": 51.85
       }
     },
@@ -5540,7 +5801,10 @@
       },
       "gdp": {
         "nominal": 4855215000000,
+        "nominal_per_capita": 19993.23,
         "real": 9137700000000,
+        "real_per_capita": 37628.01,
+        "population": 242843000,
         "deflator": 53.13
       }
     },
@@ -5603,7 +5867,10 @@
       },
       "gdp": {
         "nominal": 5236438000000,
+        "nominal_per_capita": 21367.9,
         "real": 9519400000000,
+        "real_per_capita": 38845.02,
+        "population": 245061000,
         "deflator": 55
       }
     },
@@ -5666,7 +5933,10 @@
       },
       "gdp": {
         "nominal": 5641580000000,
+        "nominal_per_capita": 22804.67,
         "real": 9869000000000,
+        "real_per_capita": 39892.96,
+        "population": 247387000,
         "deflator": 57.16
       }
     },
@@ -5729,7 +5999,10 @@
       },
       "gdp": {
         "nominal": 5963144000000,
+        "nominal_per_capita": 23835.32,
         "real": 10055100000000,
+        "real_per_capita": 40191.3,
+        "population": 250181000,
         "deflator": 59.31
       }
     },
@@ -5792,7 +6065,10 @@
       },
       "gdp": {
         "nominal": 6158129000000,
+        "nominal_per_capita": 24289.55,
         "real": 10044200000000,
+        "real_per_capita": 39617.4,
+        "population": 253530000,
         "deflator": 61.3
       }
     },
@@ -5855,7 +6131,10 @@
       },
       "gdp": {
         "nominal": 6520327000000,
+        "nominal_per_capita": 25378.62,
         "real": 10398000000000,
+        "real_per_capita": 40471.43,
+        "population": 256922000,
         "deflator": 62.7
       }
     },
@@ -5918,7 +6197,10 @@
       },
       "gdp": {
         "nominal": 6858559000000,
+        "nominal_per_capita": 26350.49,
         "real": 10684200000000,
+        "real_per_capita": 41048.56,
+        "population": 260282000,
         "deflator": 64.19
       }
     },
@@ -5981,7 +6263,10 @@
       },
       "gdp": {
         "nominal": 7287236000000,
+        "nominal_per_capita": 27660.27,
         "real": 11114600000000,
+        "real_per_capita": 42187.85,
+        "population": 263455000,
         "deflator": 65.56
       }
     },
@@ -6044,7 +6329,10 @@
       },
       "gdp": {
         "nominal": 7639749000000,
+        "nominal_per_capita": 28657.51,
         "real": 11413000000000,
+        "real_per_capita": 42811.38,
+        "population": 266588000,
         "deflator": 66.93
       }
     },
@@ -6107,7 +6395,10 @@
       },
       "gdp": {
         "nominal": 8073122000000,
+        "nominal_per_capita": 29932.16,
         "real": 11843600000000,
+        "real_per_capita": 43911.7,
+        "population": 269714000,
         "deflator": 68.16
       }
     },
@@ -6170,7 +6461,10 @@
       },
       "gdp": {
         "nominal": 8577552000000,
+        "nominal_per_capita": 31424.44,
         "real": 12370300000000,
+        "real_per_capita": 45319.43,
+        "population": 272958000,
         "deflator": 69.34
       }
     },
@@ -6233,7 +6527,10 @@
       },
       "gdp": {
         "nominal": 9062817000000,
+        "nominal_per_capita": 32817.98,
         "real": 12924900000000,
+        "real_per_capita": 46803.23,
+        "population": 276154000,
         "deflator": 70.1
       }
     },
@@ -6296,7 +6593,10 @@
       },
       "gdp": {
         "nominal": 9631172000000,
+        "nominal_per_capita": 34479.79,
         "real": 13543800000000,
+        "real_per_capita": 48487.08,
+        "population": 279328000,
         "deflator": 71.08
       }
     },
@@ -6359,8 +6659,473 @@
       },
       "gdp": {
         "nominal": 10250952000000,
+        "nominal_per_capita": 36299.66,
         "real": 14096000000000,
+        "real_per_capita": 49915.37,
+        "population": 282398000,
         "deflator": 72.71
+      }
+    },
+    {
+      "year": 2001,
+      "categories": {
+        "radio": {
+          "nominal": 17861000000,
+          "real": 24009947574,
+          "rank": 5,
+          "proportion_of_ads": 0.0772
+        },
+        "television": {
+          "nominal": 54617000000,
+          "real": 73419814491,
+          "rank": 2,
+          "proportion_of_ads": 0.2361
+        },
+        "internet": {
+          "nominal": 5645000000,
+          "real": 7588385536,
+          "rank": 7,
+          "proportion_of_ads": 0.0244
+        },
+        "periodicals": {
+          "nominal": 59818000000,
+          "real": 80411345611,
+          "rank": 1,
+          "proportion_of_ads": 0.2586
+        },
+        "out_of_home": {
+          "nominal": 5134000000,
+          "real": 6901465251,
+          "rank": 8,
+          "proportion_of_ads": 0.0222
+        },
+        "direct_mail": {
+          "nominal": 44725000000,
+          "real": 60122328270,
+          "rank": 3,
+          "proportion_of_ads": 0.1934
+        },
+        "yellow_pages": {
+          "nominal": 13592000000,
+          "real": 18271273021,
+          "rank": 6,
+          "proportion_of_ads": 0.0588
+        },
+        "miscellaneous": {
+          "nominal": 29895000000,
+          "real": 40186853072,
+          "rank": 4,
+          "proportion_of_ads": 0.1293
+        }
+      },
+      "total": {
+        "nominal": 231287000000,
+        "real": 310911412824,
+        "proportion_of_gdp": 0.0219
+      },
+      "gdp": {
+        "nominal": 10581929000000,
+        "nominal_per_capita": 37100.29,
+        "real": 14230700000000,
+        "real_per_capita": 49892.89,
+        "population": 285225000,
+        "deflator": 74.39
+      }
+    },
+    {
+      "year": 2002,
+      "categories": {
+        "radio": {
+          "nominal": 18877000000,
+          "real": 25002649007,
+          "rank": 5,
+          "proportion_of_ads": 0.0797
+        },
+        "television": {
+          "nominal": 58365000000,
+          "real": 77304635762,
+          "rank": 2,
+          "proportion_of_ads": 0.2464
+        },
+        "internet": {
+          "nominal": 4883000000,
+          "real": 6467549669,
+          "rank": 8,
+          "proportion_of_ads": 0.0206
+        },
+        "periodicals": {
+          "nominal": 59002000000,
+          "real": 78148344371,
+          "rank": 1,
+          "proportion_of_ads": 0.2491
+        },
+        "out_of_home": {
+          "nominal": 5175000000,
+          "real": 6854304636,
+          "rank": 7,
+          "proportion_of_ads": 0.0218
+        },
+        "direct_mail": {
+          "nominal": 46067000000,
+          "real": 61015894040,
+          "rank": 3,
+          "proportion_of_ads": 0.1945
+        },
+        "yellow_pages": {
+          "nominal": 13776000000,
+          "real": 18246357616,
+          "rank": 6,
+          "proportion_of_ads": 0.0582
+        },
+        "miscellaneous": {
+          "nominal": 30730000000,
+          "real": 40701986755,
+          "rank": 4,
+          "proportion_of_ads": 0.1297
+        }
+      },
+      "total": {
+        "nominal": 236875000000,
+        "real": 313741721854,
+        "proportion_of_gdp": 0.0217
+      },
+      "gdp": {
+        "nominal": 10929108000000,
+        "nominal_per_capita": 37954.22,
+        "real": 14472700000000,
+        "real_per_capita": 50260.28,
+        "population": 287955000,
+        "deflator": 75.5
+      }
+    },
+    {
+      "year": 2003,
+      "categories": {
+        "radio": {
+          "nominal": 19100000000,
+          "real": 24801973770,
+          "rank": 5,
+          "proportion_of_ads": 0.0778
+        },
+        "television": {
+          "nominal": 60746000000,
+          "real": 78880664849,
+          "rank": 1,
+          "proportion_of_ads": 0.2475
+        },
+        "internet": {
+          "nominal": 5650000000,
+          "real": 7336709518,
+          "rank": 7,
+          "proportion_of_ads": 0.023
+        },
+        "periodicals": {
+          "nominal": 60282000000,
+          "real": 78278145695,
+          "rank": 2,
+          "proportion_of_ads": 0.2456
+        },
+        "out_of_home": {
+          "nominal": 5443000000,
+          "real": 7067913258,
+          "rank": 8,
+          "proportion_of_ads": 0.0222
+        },
+        "direct_mail": {
+          "nominal": 48370000000,
+          "real": 62810024672,
+          "rank": 3,
+          "proportion_of_ads": 0.197
+        },
+        "yellow_pages": {
+          "nominal": 13896000000,
+          "real": 18044409817,
+          "rank": 6,
+          "proportion_of_ads": 0.0566
+        },
+        "miscellaneous": {
+          "nominal": 31990000000,
+          "real": 41540059733,
+          "rank": 4,
+          "proportion_of_ads": 0.1303
+        }
+      },
+      "total": {
+        "nominal": 245477000000,
+        "real": 318759901312,
+        "proportion_of_gdp": 0.0214
+      },
+      "gdp": {
+        "nominal": 11456450000000,
+        "nominal_per_capita": 39419.91,
+        "real": 14877300000000,
+        "real_per_capita": 51190.53,
+        "population": 290626000,
+        "deflator": 77.01
+      }
+    },
+    {
+      "year": 2004,
+      "categories": {
+        "radio": {
+          "nominal": 19581000000,
+          "real": 24764133047,
+          "rank": 5,
+          "proportion_of_ads": 0.0742
+        },
+        "television": {
+          "nominal": 67791000000,
+          "real": 85735424308,
+          "rank": 1,
+          "proportion_of_ads": 0.257
+        },
+        "internet": {
+          "nominal": 6853000000,
+          "real": 8667003921,
+          "rank": 7,
+          "proportion_of_ads": 0.026
+        },
+        "periodicals": {
+          "nominal": 62933000000,
+          "real": 79591501201,
+          "rank": 2,
+          "proportion_of_ads": 0.2386
+        },
+        "out_of_home": {
+          "nominal": 5770000000,
+          "real": 7297331478,
+          "rank": 8,
+          "proportion_of_ads": 0.0219
+        },
+        "direct_mail": {
+          "nominal": 52191000000,
+          "real": 66006070570,
+          "rank": 3,
+          "proportion_of_ads": 0.1979
+        },
+        "yellow_pages": {
+          "nominal": 14002000000,
+          "real": 17708359681,
+          "rank": 6,
+          "proportion_of_ads": 0.0531
+        },
+        "miscellaneous": {
+          "nominal": 34645000000,
+          "real": 43815606425,
+          "rank": 4,
+          "proportion_of_ads": 0.1313
+        }
+      },
+      "total": {
+        "nominal": 263766000000,
+        "real": 333585430631,
+        "proportion_of_gdp": 0.0216
+      },
+      "gdp": {
+        "nominal": 12217196000000,
+        "nominal_per_capita": 41659.66,
+        "real": 15449800000000,
+        "real_per_capita": 52682.58,
+        "population": 293262000,
+        "deflator": 79.07
+      }
+    },
+    {
+      "year": 2005,
+      "categories": {
+        "radio": {
+          "nominal": 19640000000,
+          "real": 24086337994,
+          "rank": 5,
+          "proportion_of_ads": 0.0725
+        },
+        "television": {
+          "nominal": 67947000000,
+          "real": 83329654157,
+          "rank": 1,
+          "proportion_of_ads": 0.2507
+        },
+        "internet": {
+          "nominal": 7764000000,
+          "real": 9521707138,
+          "rank": 7,
+          "proportion_of_ads": 0.0286
+        },
+        "periodicals": {
+          "nominal": 64352000000,
+          "real": 78920775080,
+          "rank": 2,
+          "proportion_of_ads": 0.2374
+        },
+        "out_of_home": {
+          "nominal": 6232000000,
+          "real": 7642874663,
+          "rank": 8,
+          "proportion_of_ads": 0.023
+        },
+        "direct_mail": {
+          "nominal": 55218000000,
+          "real": 67718910964,
+          "rank": 3,
+          "proportion_of_ads": 0.2037
+        },
+        "yellow_pages": {
+          "nominal": 14229000000,
+          "real": 17450331126,
+          "rank": 6,
+          "proportion_of_ads": 0.0525
+        },
+        "miscellaneous": {
+          "nominal": 35692000000,
+          "real": 43772381653,
+          "rank": 4,
+          "proportion_of_ads": 0.1317
+        }
+      },
+      "total": {
+        "nominal": 271074000000,
+        "real": 332442972774,
+        "proportion_of_gdp": 0.0208
+      },
+      "gdp": {
+        "nominal": 13039197000000,
+        "nominal_per_capita": 44052.38,
+        "real": 15988000000000,
+        "real_per_capita": 54014.79,
+        "population": 295993000,
+        "deflator": 81.54
+      }
+    },
+    {
+      "year": 2006,
+      "categories": {
+        "radio": {
+          "nominal": 19643000000,
+          "real": 23365052932,
+          "rank": 5,
+          "proportion_of_ads": 0.0697
+        },
+        "television": {
+          "nominal": 71905000000,
+          "real": 85529915547,
+          "rank": 1,
+          "proportion_of_ads": 0.2553
+        },
+        "internet": {
+          "nominal": 9100000000,
+          "real": 10824313072,
+          "rank": 7,
+          "proportion_of_ads": 0.0323
+        },
+        "periodicals": {
+          "nominal": 63918000000,
+          "real": 76029499227,
+          "rank": 2,
+          "proportion_of_ads": 0.2269
+        },
+        "out_of_home": {
+          "nominal": 6731000000,
+          "real": 8006423219,
+          "rank": 8,
+          "proportion_of_ads": 0.0239
+        },
+        "direct_mail": {
+          "nominal": 58642000000,
+          "real": 69753776615,
+          "rank": 3,
+          "proportion_of_ads": 0.2082
+        },
+        "yellow_pages": {
+          "nominal": 14393000000,
+          "real": 17120256929,
+          "rank": 6,
+          "proportion_of_ads": 0.0511
+        },
+        "miscellaneous": {
+          "nominal": 37321000000,
+          "real": 44392767931,
+          "rank": 4,
+          "proportion_of_ads": 0.1325
+        }
+      },
+      "total": {
+        "nominal": 281653000000,
+        "real": 335022005472,
+        "proportion_of_gdp": 0.0204
+      },
+      "gdp": {
+        "nominal": 13815583000000,
+        "nominal_per_capita": 46234.11,
+        "real": 16433100000000,
+        "real_per_capita": 54993.68,
+        "population": 298818000,
+        "deflator": 84.07
+      }
+    },
+    {
+      "year": 2007,
+      "categories": {
+        "radio": {
+          "nominal": 19152000000,
+          "real": 22179502027,
+          "rank": 5,
+          "proportion_of_ads": 0.0685
+        },
+        "television": {
+          "nominal": 70840000000,
+          "real": 82038216561,
+          "rank": 1,
+          "proportion_of_ads": 0.2534
+        },
+        "internet": {
+          "nominal": 10529000000,
+          "real": 12193398958,
+          "rank": 7,
+          "proportion_of_ads": 0.0377
+        },
+        "periodicals": {
+          "nominal": 60031000000,
+          "real": 69520555877,
+          "rank": 3,
+          "proportion_of_ads": 0.2147
+        },
+        "out_of_home": {
+          "nominal": 7202000000,
+          "real": 8340474812,
+          "rank": 8,
+          "proportion_of_ads": 0.0258
+        },
+        "direct_mail": {
+          "nominal": 60225000000,
+          "real": 69745222930,
+          "rank": 2,
+          "proportion_of_ads": 0.2154
+        },
+        "yellow_pages": {
+          "nominal": 14250000000,
+          "real": 16502605675,
+          "rank": 6,
+          "proportion_of_ads": 0.051
+        },
+        "miscellaneous": {
+          "nominal": 37383000000,
+          "real": 43292414592,
+          "rank": 4,
+          "proportion_of_ads": 0.1337
+        }
+      },
+      "total": {
+        "nominal": 279612000000,
+        "real": 323812391430,
+        "proportion_of_gdp": 0.0193
+      },
+      "gdp": {
+        "nominal": 14474228000000,
+        "nominal_per_capita": 47976.2,
+        "real": 16762400000000,
+        "real_per_capita": 55560.56,
+        "population": 301696000,
+        "deflator": 86.35
       }
     }
   ],
