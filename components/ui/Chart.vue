@@ -6,7 +6,7 @@ const figureStore = useFigureStore();
 const { figures } = storeToRefs(figureStore);
 
 const { width, height } = useChartConfig();
-const { drawStreamGraph } = useChartDrawStack();
+const { drawStreamGraph, drawYearLegend } = useChartDrawStack();
 
 const container = ref<HTMLElement | null>(null);
 const g = ref<d3GSelection | null>(null);
@@ -22,6 +22,7 @@ function createVisualization() {
   // -----------------
 
   drawStreamGraph(g.value, figures.value);
+  drawYearLegend(g.value, figures.value);
 }
 
 // function updateVisualization() {

@@ -9,6 +9,18 @@ interface Category {
   proportion_of_ads: number;
 }
 
+export interface Line {
+  className: string;
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+  stroke?: string;
+  strokeWidth?: number;
+  opacity?: number;
+  transform: string;
+}
+
 export interface Figure {
   year: number;
   categories: Record<

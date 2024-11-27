@@ -1,5 +1,29 @@
 import * as d3 from 'd3';
-import type { d3GSelection, Figure } from '~/types';
+import type { d3GSelection, Figure, Line } from '~/types';
+
+const createLine = (g: d3GSelection, params: Line, color: string) => {
+  g.append('line')
+    .attr('class', params.className)
+    .attr('x1', params.x1)
+    .attr('y1', params.y1)
+    .attr('x2', params.x2)
+    .attr('y2', params.y2)
+    .attr('stroke', params.stroke ?? color)
+    .attr('opacity', params.opacity ?? 1)
+    .attr('stroke-width', params.strokeWidth ?? 1)
+    .attr('transform', params.transform);
+};
+
+const palette = [
+  '#005f73',
+  '#0a9396',
+  '#94d2bd',
+  '#e9d8a6',
+  '#ee9b00',
+  '#ca6702',
+  '#bb3e03',
+  '#ae2012',
+];
 
 export function useChartDrawStack() {
   const { width, height, margin } = useChartConfig();
@@ -134,8 +158,8 @@ export function useChartDrawStack() {
       .join('path')
       .attr('class', 'area')
       .attr('d', (d) => area(d.areaPoints))
-      .attr('fill', (d, i) => d3.schemeCategory10[i])
-      .attr('stroke', (d, i) => d3.schemeCategory10[i])
+      .attr('fill', (d, i) => palette[i])
+      .attr('stroke', (d, i) => palette[i])
       .attr('stroke-width', 1)
       .attr('stroke-linejoin', 'round')
       .attr('opacity', 0.85);
@@ -144,7 +168,37 @@ export function useChartDrawStack() {
     // const yAxis = d3.axisLeft(yScale).tickFormat((d) => d.toString());
   };
 
+  const drawYearLegend = (g: d3GSelection, figures: Figure[]) => {
+    const yScale = d3
+      .scalePoint()
+      .domain(figures.map((f) => f.year))
+      .range([margin.top, height - margin.bottom]);
+
+    const linesGroup = g.append('g').attr('class', 'year-lines');
+
+    for (const figure of figures) {
+      const y = yScale(figure.year);
+
+      // Add console.log to debug
+      console.log(`Drawing line for year ${figure.year} at y=${y}`);
+
+      createLine(
+        linesGroup,
+        {
+          className: 'year-line',
+          x1: 0,
+          x2: width,
+          y1: y,
+          y2: y,
+          opacity: 0.15,
+        },
+        '#000'
+      );
+    }
+  };
+
   return {
     drawStreamGraph: drawAreaBump,
+    drawYearLegend,
   };
 }
