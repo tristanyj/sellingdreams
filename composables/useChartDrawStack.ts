@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import type { d3GSelection, Figure, Line } from '~/types';
+import type { d3GSelection, Figure, Line, CategoryKey } from '~/types';
 
 const createLine = (g: d3GSelection, params: Line, color: string) => {
   g.append('line')
@@ -14,7 +14,7 @@ const createLine = (g: d3GSelection, params: Line, color: string) => {
     .attr('transform', params.transform);
 };
 
-const categories = [
+const categories: CategoryKey[] = [
   'radio',
   'television',
   'internet',
@@ -26,7 +26,7 @@ const categories = [
 ];
 
 const palette = [
-  '#005f73',
+  '#03071e',
   '#0a9396',
   '#94d2bd',
   '#e9d8a6',
@@ -34,13 +34,13 @@ const palette = [
   '#ca6702',
   '#bb3e03',
   '#ae2012',
-];
+].reverse();
 
 export function useChartDrawStack() {
   const { width, height, margin } = useChartConfig();
 
   const drawAreaBump = (g: d3GSelection, figures: Figure[]) => {
-    const spacing = 12;
+    const spacing = 15;
     const totalSpacing = (categories.length - 1) * spacing;
 
     // 1. Create slices
@@ -63,7 +63,6 @@ export function useChartDrawStack() {
       }
     >();
 
-    // Initialize slices
     figures.forEach((yearData) => {
       const slice = {
         year: yearData.year,
@@ -90,7 +89,7 @@ export function useChartDrawStack() {
     // 2. Setup scales
     const yScale = d3
       .scalePoint()
-      .domain(figures.map((f) => f.year))
+      .domain(figures.map((f) => f.year.toString()))
       .range([margin.top, height - margin.bottom]);
 
     const widthScale = d3
@@ -103,7 +102,7 @@ export function useChartDrawStack() {
 
     // 3. Calculate positions within each slice
     slices.forEach((slice) => {
-      slice.y = yScale(slice.year)!;
+      slice.y = yScale(slice.year.toString())!;
 
       const sortedValues = Array.from(slice.values.entries()).sort(
         ([, a], [, b]) => b.value - a.value
@@ -153,7 +152,7 @@ export function useChartDrawStack() {
 
     // 6. Draw the areas
     g.selectAll('.area')
-      .data(series)
+      .data(series.reverse())
       .join('path')
       .attr('class', 'area')
       .attr('d', (d) => area(d.areaPoints))
@@ -161,19 +160,19 @@ export function useChartDrawStack() {
       .attr('stroke', (d, i) => palette[i])
       .attr('stroke-width', 1)
       .attr('stroke-linejoin', 'round')
-      .attr('opacity', 0.85);
+      .attr('opacity', 0.9);
   };
 
   const drawYearLegend = (g: d3GSelection, figures: Figure[]) => {
     const yScale = d3
       .scalePoint()
-      .domain(figures.map((f) => f.year))
+      .domain(figures.map((f) => f.year.toString()))
       .range([margin.top, height - margin.bottom]);
 
     const linesGroup = g.append('g').attr('class', 'year-lines');
 
     for (const figure of figures) {
-      const y = yScale(figure.year);
+      const y = yScale(figure.year.toString()) ?? 0;
 
       // Add console.log to debug
       console.log(`Drawing line for year ${figure.year} at y=${y}`);
@@ -187,6 +186,7 @@ export function useChartDrawStack() {
           y1: y,
           y2: y,
           opacity: 0.15,
+          transform: '',
         },
         '#000'
       );
@@ -200,6 +200,7 @@ export function useChartDrawStack() {
           y1: y,
           y2: y,
           opacity: 0.15,
+          transform: '',
         },
         '#000'
       );
