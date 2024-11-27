@@ -6,6 +6,7 @@ export default <Partial<Config>>{
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        lexend: ['Bricolage Grotesque', 'cursive'],
       },
       colors: {
         primary: slate,
