@@ -16,7 +16,7 @@ export function useChartDrawStack() {
       'miscellaneous',
     ];
 
-    const spacing = 16;
+    const spacing = 12;
     const totalSpacing = (categories.length - 1) * spacing;
 
     // 1. Create slices (same as before)
@@ -141,9 +141,7 @@ export function useChartDrawStack() {
       .attr('opacity', 0.85);
 
     // 7. Add axis (now on the left)
-    const yAxis = d3.axisLeft(yScale).tickFormat((d) => d.toString());
-
-    g.append('g').attr('transform', `translate(${margin.left}, 0)`).call(yAxis);
+    // const yAxis = d3.axisLeft(yScale).tickFormat((d) => d.toString());
   };
 
   return {

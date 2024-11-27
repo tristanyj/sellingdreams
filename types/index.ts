@@ -29,7 +29,10 @@ export interface Figure {
   };
   gdp: {
     real: number;
+    real_per_capita: number;
     nominal: number;
+    nominal_per_capita: number;
+    population: number;
     deflator: number;
   };
 }
