@@ -14,6 +14,17 @@ const createLine = (g: d3GSelection, params: Line, color: string) => {
     .attr('transform', params.transform);
 };
 
+const categories = [
+  'radio',
+  'television',
+  'internet',
+  'periodicals',
+  'out_of_home',
+  'direct_mail',
+  'yellow_pages',
+  'miscellaneous',
+];
+
 const palette = [
   '#005f73',
   '#0a9396',
@@ -29,35 +40,24 @@ export function useChartDrawStack() {
   const { width, height, margin } = useChartConfig();
 
   const drawAreaBump = (g: d3GSelection, figures: Figure[]) => {
-    const categories = [
-      'radio',
-      'television',
-      'internet',
-      'periodicals',
-      'out_of_home',
-      'direct_mail',
-      'yellow_pages',
-      'miscellaneous',
-    ];
-
     const spacing = 12;
     const totalSpacing = (categories.length - 1) * spacing;
 
-    // 1. Create slices (same as before)
+    // 1. Create slices
     const slices = new Map<
       number,
       {
         year: number;
         total: number;
-        y: number; // Changed from x to y
+        y: number;
         values: Map<
           string,
           {
             serieId: string;
             value: number;
             position: number;
-            width: number; // Changed from height
-            beforeWidth: number; // Changed from beforeHeight
+            width: number;
+            beforeWidth: number;
           }
         >;
       }
@@ -87,7 +87,7 @@ export function useChartDrawStack() {
       slices.set(yearData.year, slice);
     });
 
-    // 2. Setup scales (swapped)
+    // 2. Setup scales
     const yScale = d3
       .scalePoint()
       .domain(figures.map((f) => f.year))
@@ -98,9 +98,8 @@ export function useChartDrawStack() {
       .domain([0, 1])
       .range([0, width - margin.left - margin.right - totalSpacing]);
 
-    // Calculate padding for smooth transitions
     const yStep = yScale.step();
-    const areaPointPadding = yStep * 0.3;
+    const areaPointPadding = yStep * 0.15;
 
     // 3. Calculate positions within each slice
     slices.forEach((slice) => {
@@ -144,7 +143,7 @@ export function useChartDrawStack() {
       };
     });
 
-    // 5. Create area generator (swapped x and y)
+    // 5. Create area generator
     const area = d3
       .area<{ y: number; x0: number; x1: number }>()
       .y((d) => d.y)
@@ -163,9 +162,6 @@ export function useChartDrawStack() {
       .attr('stroke-width', 1)
       .attr('stroke-linejoin', 'round')
       .attr('opacity', 0.85);
-
-    // 7. Add axis (now on the left)
-    // const yAxis = d3.axisLeft(yScale).tickFormat((d) => d.toString());
   };
 
   const drawYearLegend = (g: d3GSelection, figures: Figure[]) => {
@@ -186,7 +182,7 @@ export function useChartDrawStack() {
         linesGroup,
         {
           className: 'year-line',
-          x1: 0,
+          x1: 67,
           x2: width,
           y1: y,
           y2: y,
@@ -194,6 +190,28 @@ export function useChartDrawStack() {
         },
         '#000'
       );
+
+      createLine(
+        linesGroup,
+        {
+          className: 'year-line',
+          x1: 0,
+          x2: 25,
+          y1: y,
+          y2: y,
+          opacity: 0.15,
+        },
+        '#000'
+      );
+
+      linesGroup
+        .append('text')
+        .attr('class', 'year-label')
+        .attr('x', 30)
+        .attr('y', y + 4)
+        .attr('text-anchor', 'start')
+        .attr('font-size', '13px')
+        .text(figure.year);
     }
   };
 
