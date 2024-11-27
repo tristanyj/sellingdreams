@@ -5,7 +5,7 @@ export const useFigureStore = defineStore('figure', () => {
   const isLoaded = ref<boolean>(false);
 
   const setFigures = (newFigures: Figure[]) => {
-    figures.value = [...newFigures].filter((f) => f.year >= 1919 && f.year <= 2007);
+    figures.value = [...newFigures].filter((f) => f.year >= 1908 && f.year <= 2007);
     isLoaded.value = true;
   };
 

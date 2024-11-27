@@ -14,6 +14,21 @@ const createLine = (g: d3GSelection, params: Line, color: string) => {
     .attr('transform', params.transform);
 };
 
+type SliceValue = {
+  serieId: string;
+  value: number;
+  position: number;
+  width: number;
+  beforeWidth: number;
+};
+
+type Slice = {
+  year: number;
+  total: number;
+  y: number;
+  values: Map<string, SliceValue>;
+};
+
 const categories: CategoryKey[] = [
   'radio',
   'television',
@@ -34,53 +49,39 @@ const palette = [
   '#ca6702',
   '#bb3e03',
   '#ae2012',
-].reverse();
+];
 
 export function useChartDrawStack() {
   const { width, height, margin } = useChartConfig();
 
   const drawAreaBump = (g: d3GSelection, figures: Figure[]) => {
-    const spacing = 15;
+    const spacing = 5;
     const totalSpacing = (categories.length - 1) * spacing;
 
     // 1. Create slices
-    const slices = new Map<
-      number,
-      {
-        year: number;
-        total: number;
-        y: number;
-        values: Map<
-          string,
-          {
-            serieId: string;
-            value: number;
-            position: number;
-            width: number;
-            beforeWidth: number;
-          }
-        >;
-      }
-    >();
+    const slices = new Map<number, Slice>();
 
     figures.forEach((yearData) => {
-      const slice = {
+      const slice: Slice = {
         year: yearData.year,
         total: 0,
         y: 0,
-        values: new Map(),
+        values: new Map<string, SliceValue>(),
       };
 
       categories.forEach((cat) => {
-        const value = yearData.categories[cat].proportion_of_ads;
-        slice.total += value;
-        slice.values.set(cat, {
-          serieId: cat,
-          value,
-          position: 0,
-          width: 0,
-          beforeWidth: 0,
-        });
+        const categoryData = yearData.categories[cat];
+        if (categoryData) {
+          const value = categoryData.proportion_of_ads;
+          slice.total += value;
+          slice.values.set(cat, {
+            serieId: cat,
+            value,
+            position: 0,
+            width: 0,
+            beforeWidth: 0,
+          });
+        }
       });
 
       slices.set(yearData.year, slice);
@@ -92,29 +93,36 @@ export function useChartDrawStack() {
       .domain(figures.map((f) => f.year.toString()))
       .range([margin.top, height - margin.bottom]);
 
+    const maxGDPProportion = d3.max(figures, (f) => f.total.proportion_of_gdp)!;
     const widthScale = d3
       .scaleLinear()
-      .domain([0, 1])
+      .domain([0, maxGDPProportion])
       .range([0, width - margin.left - margin.right - totalSpacing]);
 
-    const yStep = yScale.step();
-    const areaPointPadding = yStep * 0.15;
-
     // 3. Calculate positions within each slice
-    slices.forEach((slice) => {
+    slices.forEach((slice, year) => {
       slice.y = yScale(slice.year.toString())!;
 
-      const sortedValues = Array.from(slice.values.entries()).sort(
+      const yearFigure = figures.find((f) => f.year === year)!;
+      const totalWidth = widthScale(yearFigure.total.proportion_of_gdp);
+
+      // Calculate initial start position for centering
+      let currentWidth = (width - totalWidth) / 2 + margin.left;
+
+      // Sort categories by value for proper ranking
+      const sortedCategories = Array.from(slice.values.entries()).sort(
         ([, a], [, b]) => b.value - a.value
       );
 
-      let currentWidth = margin.left;
-      sortedValues.forEach(([, value], index) => {
-        value.width = widthScale(value.value);
+      sortedCategories.forEach(([_, value]) => {
+        value.width = totalWidth * value.value; // Scale by proportion of total ads
         value.beforeWidth = currentWidth;
-        currentWidth += value.width + (index < categories.length - 1 ? spacing : 0);
+        currentWidth += value.width + spacing;
       });
     });
+
+    // const yStep = yScale.step();
+    // const areaPointPadding = yStep * 0.15;
 
     // 4. Create series data with extra points
     const series = categories.map((category) => {
@@ -127,13 +135,15 @@ export function useChartDrawStack() {
         const x0 = value.beforeWidth;
         const x1 = x0 + value.width;
 
-        if (i > 0) {
-          areaPoints.push({ y: y - areaPointPadding, x0, x1 });
-        }
         areaPoints.push({ y, x0, x1 });
-        if (i < figures.length - 1) {
-          areaPoints.push({ y: y + areaPointPadding, x0, x1 });
-        }
+
+        // if (i > 0) {
+        //   areaPoints.push({ y: y - areaPointPadding, x0, x1 });
+        // }
+        // areaPoints.push({ y, x0, x1 });
+        // if (i < figures.length - 1) {
+        //   areaPoints.push({ y: y + areaPointPadding, x0, x1 });
+        // }
       });
 
       return {
@@ -173,9 +183,6 @@ export function useChartDrawStack() {
 
     for (const figure of figures) {
       const y = yScale(figure.year.toString()) ?? 0;
-
-      // Add console.log to debug
-      console.log(`Drawing line for year ${figure.year} at y=${y}`);
 
       createLine(
         linesGroup,

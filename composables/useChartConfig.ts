@@ -7,9 +7,9 @@ export function useChartConfig() {
   const width = 1400;
   const margin = {
     top: 50,
-    right: 250,
+    right: 500,
     bottom: 50,
-    left: 250,
+    left: 0,
   };
 
   return {
