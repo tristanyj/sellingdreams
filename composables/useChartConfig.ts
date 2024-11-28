@@ -12,9 +12,24 @@ export function useChartConfig() {
     left: 0,
   };
 
+  const spacing = 10;
+
+  const palette = [
+    '#03071e',
+    '#0a9396',
+    '#94d2bd',
+    '#e9d8a6',
+    '#ee9b00',
+    '#ca6702',
+    '#bb3e03',
+    '#ae2012',
+  ];
+
   return {
     width,
     height,
     margin,
+    palette,
+    spacing,
   };
 }

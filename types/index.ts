@@ -9,18 +9,6 @@ interface Category {
   proportion_of_ads: number;
 }
 
-export interface Line {
-  className: string;
-  x1: number;
-  x2: number;
-  y1: number;
-  y2: number;
-  stroke?: string;
-  strokeWidth?: number;
-  opacity?: number;
-  transform: string;
-}
-
 export type CategoryKey =
   | 'radio'
   | 'television'
@@ -60,3 +48,30 @@ export interface Ad {
 // --------------------------------
 
 export type d3GSelection = d3.Selection<SVGGElement, unknown, null, undefined>;
+
+export interface Line {
+  className: string;
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+  stroke?: string;
+  strokeWidth?: number;
+  opacity?: number;
+  transform: string;
+}
+
+export type FigureSliceCategory = {
+  serieId: string;
+  value: number;
+  position: number;
+  width: number;
+  beforeWidth: number;
+};
+
+export type FigureSlice = {
+  year: number;
+  total: number;
+  y: number;
+  values: Map<string, FigureSliceCategory>;
+};

@@ -3,14 +3,25 @@ import * as d3 from 'd3';
 import type { d3GSelection } from '@/types';
 
 const figureStore = useFigureStore();
-const { figures } = storeToRefs(figureStore);
+const { figures, maxGDPProportion } = storeToRefs(figureStore);
 
-const { width, height } = useChartConfig();
-const { drawStreamGraph, drawYearLegend } = useChartDrawStack();
+const { width, height, margin } = useChartConfig();
+const { drawCategoryAreas } = useChartDrawStack();
+const { drawYearLegend } = useChartDrawLines();
 
 const container = ref<HTMLElement | null>(null);
 const g = ref<d3GSelection | null>(null);
 const isLoading = ref(true);
+
+const yScale = d3
+  .scalePoint()
+  .domain(figures.value.map((f) => f.year.toString()))
+  .range([margin.top, height - margin.bottom]);
+
+const xScale = d3
+  .scaleLinear()
+  .domain([0, maxGDPProportion.value])
+  .range([0, width - margin.left - margin.right]);
 
 function createVisualization() {
   if (!g.value) return;
@@ -21,8 +32,8 @@ function createVisualization() {
   // Steam Graph
   // -----------------
 
-  drawStreamGraph(g.value, figures.value);
-  drawYearLegend(g.value, figures.value);
+  drawCategoryAreas(g.value, xScale, yScale);
+  drawYearLegend(g.value, yScale);
 }
 
 // function updateVisualization() {
@@ -43,7 +54,6 @@ const mountToContainer = () => {
     .attr('viewBox', `0 0 ${width} ${height}`)
     .attr('class', 'mx-auto');
   g.value = svg.append('g');
-  // .attr('transform', `translate(${width / 2},${height / 2})`);
 
   createVisualization();
 
