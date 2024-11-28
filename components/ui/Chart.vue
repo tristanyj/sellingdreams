@@ -6,7 +6,7 @@ const figureStore = useFigureStore();
 const { figures, maxGDPProportion } = storeToRefs(figureStore);
 
 const { width, height, margin } = useChartConfig();
-const { drawCategoryAreas } = useChartDrawStack();
+const { drawCategoryAreas } = useChartDrawAreas();
 const { drawYearLegend } = useChartDrawLines();
 
 const container = ref<HTMLElement | null>(null);

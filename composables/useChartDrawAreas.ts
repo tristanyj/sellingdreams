@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import type { d3GSelection } from '~/types';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
-export function useChartDrawStack() {
+export function useChartDrawAreas() {
   const { width, margin, palette, spacing } = useChartConfig();
 
   const figureStore = useFigureStore();
