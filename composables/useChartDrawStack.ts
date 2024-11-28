@@ -19,7 +19,8 @@ export function useChartDrawStack() {
       const yearFigure = figures.value.find((f) => f.year === year)!;
       const totalWidth = xScale(yearFigure.total.proportion_of_gdp);
 
-      let currentWidth = (width - totalWidth) / 2 + margin.left;
+      const remainingSpace = width - totalWidth - margin.left - margin.right;
+      let currentWidth = margin.left + remainingSpace / 2;
 
       const sortedCategories = Array.from(slice.values.entries()).sort(
         ([, a], [, b]) => b.value - a.value
