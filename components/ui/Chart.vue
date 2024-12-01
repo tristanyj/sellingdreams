@@ -32,8 +32,8 @@ function createVisualization() {
   // Steam Graph
   // -----------------
 
-  drawCategoryAreas(g.value, xScale, yScale);
   drawYearLegend(g.value, yScale);
+  drawCategoryAreas(g.value, xScale, yScale);
 }
 
 // function updateVisualization() {
