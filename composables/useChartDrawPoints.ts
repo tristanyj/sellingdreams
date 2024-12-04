@@ -22,7 +22,7 @@ export function useChartDrawPoints() {
     const radius = {
       small: 3,
       large: 6,
-      target: 12,
+      target: 16,
     };
 
     series.forEach((serie) => {
@@ -47,7 +47,7 @@ export function useChartDrawPoints() {
         .attr('id', (d) => `point-${serie.id}-${d.year}-overlay`)
         .attr('cx', (d) => (d.x0 + d.x1) / 2)
         .attr('cy', (d) => d.y)
-        .attr('r', radius.target)
+        .attr('r', (d) => (Math.abs(d.x0 - d.x1) > 0 ? radius.target : radius.small))
         .attr('opacity', 0)
         .on('click', function (_, d) {
           setSelectedAd({

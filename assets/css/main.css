@@ -35,3 +35,26 @@ body {
 .point {
   @apply cursor-pointer transition-all duration-100 ease-in-out;
 }
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active .modal-content,
+.modal-leave-active .modal-content {
+  transition: transform 0.3s ease-out;
+}
+
+.modal-enter-from .modal-content {
+  transform: scale(0.95);
+}
+
+.modal-leave-to .modal-content {
+  transform: scale(0.95);
+}

@@ -63,27 +63,27 @@ export function useChartDrawAreas() {
           selectArea(selectedArea.value === d.id ? null : d.id);
         })
         .on('mouseenter', function (_, d) {
+          setTooltipArea({
+            id: d.id,
+            name: d.id,
+          });
+
           if (selectedArea.value) return;
 
           const ids = AD_CATEGORIES.filter((cat) => cat !== d.id);
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', opacity.area.muted));
-
-          setTooltipArea({
-            id: d.id,
-            name: d.id,
-          });
         })
         .on('mousemove', (event) => {
           updateMousePosition(event);
         })
         .on('mouseout', function () {
+          setTooltipArea(null);
+
           if (selectedArea.value) return;
 
           const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', 1));
-
-          setTooltipArea(null);
         });
     }
   };
