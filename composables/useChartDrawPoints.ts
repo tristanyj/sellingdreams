@@ -5,6 +5,9 @@ import type { d3GSelection } from '~/types';
 export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
 
+  const interactionStore = useInteractionStore();
+  const { setTooltipPoint, updateMousePosition } = interactionStore;
+
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);
   const { getSeries } = figureStore;
@@ -57,11 +60,19 @@ export function useChartDrawPoints() {
           const yearLine = d3.selectAll(`.year-line:not(#year-line-${d.year})`);
           yearLine.attr('opacity', opacity.line.muted);
 
+          setTooltipPoint({
+            id: serie.id,
+            name: serie.id,
+          });
+
           if (selectedArea.value) return;
 
           const ids = AD_CATEGORIES.filter((cat) => cat !== serie.id);
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', opacity.area.muted));
+        })
+        .on('mousemove', (event) => {
+          updateMousePosition(event);
         })
         .on('mouseout', function (_, d) {
           const points = d3.selectAll(`.point`);
@@ -73,6 +84,8 @@ export function useChartDrawPoints() {
 
           const yearLine = d3.selectAll(`.year-line`);
           yearLine.attr('opacity', opacity.line.enabled);
+
+          setTooltipPoint(null);
 
           if (selectedArea.value) return;
 

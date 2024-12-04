@@ -76,3 +76,15 @@ export type FigureSlice = {
   y: number;
   values: Map<string, FigureSliceCategory>;
 };
+
+interface Tooltip {
+  id: string;
+}
+
+export interface TooltipArea extends Tooltip {
+  name: string;
+}
+
+export interface TooltipPoint extends Tooltip {
+  name: string;
+}

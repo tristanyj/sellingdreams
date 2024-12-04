@@ -5,6 +5,9 @@ import { AD_CATEGORIES } from '~/assets/scripts/constants';
 export function useChartDrawAreas() {
   const { opacity, palette } = useChartConfig();
 
+  const interactionStore = useInteractionStore();
+  const { setTooltipArea, updateMousePosition } = interactionStore;
+
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);
   const { getSeries, selectArea } = figureStore;
@@ -65,12 +68,22 @@ export function useChartDrawAreas() {
           const ids = AD_CATEGORIES.filter((cat) => cat !== d.id);
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', opacity.area.muted));
+
+          setTooltipArea({
+            id: d.id,
+            name: d.id,
+          });
+        })
+        .on('mousemove', (event) => {
+          updateMousePosition(event);
         })
         .on('mouseout', function () {
           if (selectedArea.value) return;
 
           const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', 1));
+
+          setTooltipArea(null);
         });
     }
   };
