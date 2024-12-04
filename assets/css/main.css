@@ -17,3 +17,7 @@ body {
 .category-area {
   @apply transition-all duration-100 ease-in-out;
 }
+
+.category-area-overlay {
+  @apply cursor-pointer;
+}

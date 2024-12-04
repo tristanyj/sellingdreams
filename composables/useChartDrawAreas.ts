@@ -59,22 +59,22 @@ export function useChartDrawAreas() {
       .curve(d3.curveLinear);
 
     if (isOverlay) {
-      g.selectAll('.noise-overlay')
+      g.selectAll('.category-area-overlay')
         .data(series)
         .join('path')
-        .attr('class', 'noise-overlay')
+        .attr('class', 'category-area-overlay')
         .attr('fill', 'url(#noise-pattern)')
-        .attr('id', (d) => `noise-overlay-${d.id}`)
+        .attr('id', (d) => `category-area-${d.id}-overlay`)
         .attr('d', (d) => area(d.areaPoints))
-        .attr('opacity', 0.3)
+        .attr('opacity', 0.2)
         .on('mouseover', function (event, d) {
           const ids = AD_CATEGORIES.filter((cat) => cat !== d.id);
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
-          areas.forEach((area) => area.attr('opacity', 0.5));
+          areas.forEach((area) => area.attr('opacity', 0.75));
         })
         .on('mouseout', function () {
           const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
-          areas.forEach((area) => area.attr('opacity', 0.9));
+          areas.forEach((area) => area.attr('opacity', 1));
         });
     } else {
       g.selectAll('.category-area')
