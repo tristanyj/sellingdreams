@@ -81,6 +81,22 @@ export function useChartDrawLines() {
       .attr('stroke-width', 1)
       .attr('stroke-linejoin', 'round')
       .attr('opacity', 0.1);
+
+    series.forEach((serie) => {
+      serie.areaPoints.forEach((point) => {
+        const y = point.y;
+        createLine(g, {
+          className: 'year-category-line',
+          x1: point.x0,
+          x2: point.x1,
+          y1: y,
+          y2: y,
+          opacity: 0.05,
+          transform: '',
+          stroke: 'white',
+        });
+      });
+    });
   };
 
   return {
