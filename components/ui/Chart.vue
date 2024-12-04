@@ -83,15 +83,15 @@ const mountToContainer = () => {
     .append('pattern')
     .attr('id', 'noise-pattern')
     .attr('patternUnits', 'userSpaceOnUse')
-    .attr('width', 3)
-    .attr('height', 3)
+    .attr('width', 2.5)
+    .attr('height', 2.5)
     .append('image')
     .attr(
       'xlink:href',
       'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFElEQVQoU2NkYGBg+M+ABBgAAdwABkzD8aAAAAABJRU5ErkJggg=='
     )
-    .attr('width', 3)
-    .attr('height', 3);
+    .attr('width', 2.5)
+    .attr('height', 2.5);
 
   g.value = svg.append('g');
 

@@ -31,7 +31,7 @@ export function useChartDrawLines() {
       createLine(lineGroup, {
         className: 'year-line',
         x1: padding,
-        x2: width - padding,
+        x2: width - padding * 1.5,
         y1: y,
         y2: y,
         opacity: 0.15,
@@ -64,7 +64,7 @@ export function useChartDrawLines() {
         .attr('y', y + 4)
         .attr('text-anchor', 'end')
         .attr('font-size', '14px')
-        .text('20% of GDP | $14.86B');
+        .text('$14.86B');
     }
   };
 

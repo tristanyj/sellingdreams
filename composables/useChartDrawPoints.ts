@@ -31,6 +31,7 @@ export function useChartDrawPoints() {
         .attr('cx', (d) => (d.x0 + d.x1) / 2)
         .attr('cy', (d) => d.y)
         .attr('r', radius.small)
+        // .attr('fill', () => palette[k])
         .attr('fill', 'black')
         .attr('stroke', 'white');
     });
