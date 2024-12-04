@@ -8,7 +8,7 @@ const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);
 
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
-const { drawYearLegend } = useChartDrawLines();
+const { drawYearLegend, drawCategoryLines } = useChartDrawLines();
 const { drawAreaPoints } = useChartDrawPoints();
 
 const container = ref<HTMLElement | null>(null);
@@ -40,8 +40,6 @@ function createVisualization() {
   g.value
     .append('rect')
     .attr('class', 'background')
-    .attr('x', -width / 2)
-    .attr('y', -height / 2)
     .attr('width', width)
     .attr('height', height)
     .attr('fill', 'transparent')
@@ -54,6 +52,10 @@ function createVisualization() {
 
   // Hover Area
   drawCategoryAreas(g.value, xScale, yScale, true);
+
+  // Lines
+  drawCategoryLines(g.value, xScale, yScale);
+
   // Points
   drawAreaPoints(g.value, xScale, yScale);
 }
