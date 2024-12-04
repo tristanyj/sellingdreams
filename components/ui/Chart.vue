@@ -34,6 +34,7 @@ function createVisualization() {
 
   drawYearLegend(g.value, yScale);
   drawCategoryAreas(g.value, xScale, yScale);
+  drawCategoryAreas(g.value, xScale, yScale, true);
 }
 
 // function updateVisualization() {
@@ -53,6 +54,22 @@ const mountToContainer = () => {
     .attr('width', width)
     .attr('viewBox', `0 0 ${width} ${height}`)
     .attr('class', 'mx-auto');
+
+  svg
+    .append('defs')
+    .append('pattern')
+    .attr('id', 'noise-pattern')
+    .attr('patternUnits', 'userSpaceOnUse')
+    .attr('width', 3)
+    .attr('height', 3)
+    .append('image')
+    .attr(
+      'xlink:href',
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFElEQVQoU2NkYGBg+M+ABBgAAdwABkzD8aAAAAABJRU5ErkJggg=='
+    )
+    .attr('width', 3)
+    .attr('height', 3);
+
   g.value = svg.append('g');
 
   createVisualization();
