@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import type { d3GSelection, Line } from '~/types';
+import { formatNumber, calcTextLength } from '~/assets/scripts/utils';
 
 const createLine = (g: d3GSelection, params: Line, color = '#000') => {
   g.append('line')
@@ -26,27 +27,24 @@ export function useChartDrawLines() {
 
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
-      const padding = 35;
+      const padding = 5;
+
+      const leftText = figure.year.toString();
+      const rightSubText = `${figure.total.proportion_of_gdp}% of GDP`;
+      const rightText = `$${formatNumber(figure.total.nominal)}`;
+
+      const leftTextLength = calcTextLength(lineGroup, leftText, 14);
+      const rightTextLength = calcTextLength(lineGroup, rightText, 14);
 
       createLine(lineGroup, {
         className: 'year-line',
-        x1: padding,
-        x2: width - padding * 1.5,
+        x1: leftTextLength + padding,
+        x2: width - rightTextLength - padding,
         y1: y,
         y2: y,
         opacity: 0.15,
         transform: '',
       });
-
-      // createLine(lineGroup, {
-      //   className: 'year-line',
-      //   x1: 0,
-      //   x2: 25,
-      //   y1: y,
-      //   y2: y,
-      //   opacity: 0.15,
-      //   transform: '',
-      // });
 
       lineGroup
         .append('text')
@@ -55,16 +53,26 @@ export function useChartDrawLines() {
         .attr('y', y + 4)
         .attr('text-anchor', 'start')
         .attr('font-size', '14px')
-        .text(figure.year);
+        .text(leftText);
+
+      lineGroup
+        .append('text')
+        .attr('class', 'year-sub-label')
+        .attr('x', width)
+        .attr('y', y + 20)
+        .attr('text-anchor', 'end')
+        .attr('font-size', '14px')
+        .attr('opacity', 0.5)
+        .text(rightSubText);
 
       lineGroup
         .append('text')
         .attr('class', 'year-label')
         .attr('x', width)
-        .attr('y', y + 4)
+        .attr('y', y + 3)
         .attr('text-anchor', 'end')
         .attr('font-size', '14px')
-        .text('$14.86B');
+        .text(rightText);
     }
   };
 

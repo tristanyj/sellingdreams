@@ -18,6 +18,10 @@ body {
   @apply font-crimson font-bold;
 }
 
+.year-sub-label {
+  @apply font-crimson;
+}
+
 .category-area {
   @apply transition-all duration-150 ease-in-out;
 }
