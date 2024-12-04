@@ -26,35 +26,45 @@ export function useChartDrawLines() {
 
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
+      const padding = 35;
 
       createLine(lineGroup, {
         className: 'year-line',
-        x1: 67,
-        x2: width,
+        x1: padding,
+        x2: width - padding,
         y1: y,
         y2: y,
         opacity: 0.15,
         transform: '',
       });
 
-      createLine(lineGroup, {
-        className: 'year-line',
-        x1: 0,
-        x2: 25,
-        y1: y,
-        y2: y,
-        opacity: 0.15,
-        transform: '',
-      });
+      // createLine(lineGroup, {
+      //   className: 'year-line',
+      //   x1: 0,
+      //   x2: 25,
+      //   y1: y,
+      //   y2: y,
+      //   opacity: 0.15,
+      //   transform: '',
+      // });
 
       lineGroup
         .append('text')
         .attr('class', 'year-label')
-        .attr('x', 30)
+        .attr('x', 0)
         .attr('y', y + 4)
         .attr('text-anchor', 'start')
-        .attr('font-size', '13px')
+        .attr('font-size', '14px')
         .text(figure.year);
+
+      lineGroup
+        .append('text')
+        .attr('class', 'year-label')
+        .attr('x', width)
+        .attr('y', y + 4)
+        .attr('text-anchor', 'end')
+        .attr('font-size', '14px')
+        .text('20% of GDP | $14.86B');
     }
   };
 

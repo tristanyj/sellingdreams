@@ -7,6 +7,8 @@ export default <Partial<Config>>{
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         lexend: ['Bricolage Grotesque', 'cursive'],
+        garamond: ['EB Garamond', 'serif'],
+        crimson: ['Crimson Text', 'serif'],
       },
       colors: {
         primary: slate,
