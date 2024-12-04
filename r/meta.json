@@ -80,8 +80,10 @@
   "ads": [
     {
       "year": 2000,
+      "category": "television",
       "name": "Hilltop",
-      "client": "Coca-Cola"
+      "client": "Coca-Cola",
+      "slogan": "I'd Like to Buy the World a Coke"
     }
   ]
 }

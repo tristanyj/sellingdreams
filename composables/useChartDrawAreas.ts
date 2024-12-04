@@ -49,7 +49,7 @@ export function useChartDrawAreas() {
         .attr('fill', 'url(#noise-pattern)')
         .attr('id', (d) => `category-area-${d.id}-overlay`)
         .attr('d', (d) => area(d.areaPoints))
-        .attr('opacity', 0.2);
+        .attr('opacity', 0.25);
     } else {
       g.selectAll('.category-area-interaction')
         .data(series)

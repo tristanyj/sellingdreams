@@ -1,3 +1,11 @@
 {
-  "ads": []
+  "ads": [
+    {
+      "year": 2019,
+      "category": "television",
+      "name": "Hilltop",
+      "client": "Coca-Cola",
+      "slogan": "I'd like to buy the world a Coke"
+    }
+  ]
 }
