@@ -50,11 +50,11 @@ function createVisualization() {
   // Areas
   drawCategoryAreas(g.value, xScale, yScale);
 
-  // Hover Area
-  drawCategoryAreas(g.value, xScale, yScale, true);
-
   // Lines
   drawCategoryLines(g.value, xScale, yScale);
+
+  // Hover Area
+  drawCategoryAreas(g.value, xScale, yScale, true);
 
   // Points
   drawAreaPoints(g.value, xScale, yScale);
