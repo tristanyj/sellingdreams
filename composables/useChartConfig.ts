@@ -25,11 +25,22 @@ export function useChartConfig() {
     '#ae2012',
   ];
 
+  const opacity = {
+    area: {
+      disabled: 0.25,
+      muted: 0.65,
+    },
+    point: {
+      muted: 0.25,
+    },
+  };
+
   return {
     width,
     height,
     margin,
     palette,
     spacing,
+    opacity,
   };
 }

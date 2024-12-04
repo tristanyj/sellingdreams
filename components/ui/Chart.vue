@@ -3,7 +3,8 @@ import * as d3 from 'd3';
 import type { d3GSelection } from '@/types';
 
 const figureStore = useFigureStore();
-const { figures, maxGDPProportion } = storeToRefs(figureStore);
+const { selectArea } = figureStore;
+const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);
 
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
@@ -35,6 +36,18 @@ function createVisualization() {
 
   // Legend
   drawYearLegend(g.value, yScale);
+
+  g.value
+    .append('rect')
+    .attr('class', 'background')
+    .attr('x', -width / 2)
+    .attr('y', -height / 2)
+    .attr('width', width)
+    .attr('height', height)
+    .attr('fill', 'transparent')
+    .on('click', () => {
+      selectArea(null);
+    });
 
   // Areas
   drawCategoryAreas(g.value, xScale, yScale);
@@ -87,6 +100,30 @@ const mountToContainer = () => {
 
 onMounted(() => {
   mountToContainer();
+});
+
+function updateVisualization() {
+  if (!container.value) return;
+  createVisualization();
+}
+
+watch(selectedArea, () => {
+  updateVisualization();
+});
+
+const handleOutsideClick = (event: MouseEvent) => {
+  if (container.value && !container.value.contains(event.target as Node)) {
+    selectArea(null);
+  }
+};
+
+onMounted(() => {
+  mountToContainer();
+  window.addEventListener('click', handleOutsideClick);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('click', handleOutsideClick);
 });
 </script>
 

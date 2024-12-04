@@ -3,9 +3,10 @@ import { AD_CATEGORIES } from '~/assets/scripts/constants';
 import type { d3GSelection } from '~/types';
 
 export function useChartDrawPoints() {
-  // const { width, margin } = useChartConfig();
+  const { opacity } = useChartConfig();
 
   const figureStore = useFigureStore();
+  const { selectedArea } = storeToRefs(figureStore);
   const { getSeries } = figureStore;
 
   const drawAreaPoints = (
@@ -15,6 +16,12 @@ export function useChartDrawPoints() {
   ) => {
     const series = getSeries(xScale, yScale);
 
+    const radius = {
+      small: 3,
+      large: 6,
+      target: 12,
+    };
+
     series.forEach((serie) => {
       g.selectAll(`.point point-${serie.id}`)
         .data(serie.areaPoints)
@@ -23,7 +30,7 @@ export function useChartDrawPoints() {
         .attr('id', (d) => `point-${serie.id}-${d.year}`)
         .attr('cx', (d) => (d.x0 + d.x1) / 2)
         .attr('cy', (d) => d.y)
-        .attr('r', 3)
+        .attr('r', radius.small)
         .attr('fill', 'black')
         .attr('stroke', 'white');
     });
@@ -36,21 +43,25 @@ export function useChartDrawPoints() {
         .attr('id', (d) => `point-${serie.id}-${d.year}-overlay`)
         .attr('cx', (d) => (d.x0 + d.x1) / 2)
         .attr('cy', (d) => d.y)
-        .attr('r', 12)
+        .attr('r', radius.target)
         .attr('opacity', 0)
-        .on('mouseover', function (_, d) {
+        .on('mouseenter', function (_, d) {
           const points = d3.selectAll(`.point`);
-          points.attr('opacity', 0.25);
-          d3.select(`#point-${serie.id}-${d.year}`).attr('r', 6).attr('opacity', 1);
+          points.attr('opacity', opacity.point.muted);
+          d3.select(`#point-${serie.id}-${d.year}`).attr('r', radius.large).attr('opacity', 1);
+
+          if (selectedArea.value) return;
 
           const ids = AD_CATEGORIES.filter((cat) => cat !== serie.id);
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
-          areas.forEach((area) => area.attr('opacity', 0.75));
+          areas.forEach((area) => area.attr('opacity', opacity.area.muted));
         })
         .on('mouseout', function (_, d) {
           const points = d3.selectAll(`.point`);
           points.attr('opacity', 1);
-          d3.select(`#point-${serie.id}-${d.year}`).attr('r', 3);
+          d3.select(`#point-${serie.id}-${d.year}`).attr('r', radius.small);
+
+          if (selectedArea.value) return;
 
           const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', 1));

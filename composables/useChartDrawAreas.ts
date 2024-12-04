@@ -3,10 +3,11 @@ import type { d3GSelection } from '~/types';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 export function useChartDrawAreas() {
-  const { palette } = useChartConfig();
+  const { opacity, palette } = useChartConfig();
 
   const figureStore = useFigureStore();
-  const { getSeries } = figureStore;
+  const { selectedArea } = storeToRefs(figureStore);
+  const { getSeries, selectArea } = figureStore;
 
   const drawCategoryAreas = (
     g: d3GSelection,
@@ -32,12 +33,20 @@ export function useChartDrawAreas() {
         .attr('id', (d) => `category-area-${d.id}-overlay`)
         .attr('d', (d) => area(d.areaPoints))
         .attr('opacity', 0.2)
-        .on('mouseover', function (event, d) {
+        .on('click', function (event, d) {
+          event.stopPropagation();
+          selectArea(selectedArea.value === d.id ? null : d.id);
+        })
+        .on('mouseenter', function (_, d) {
+          if (selectedArea.value) return;
+
           const ids = AD_CATEGORIES.filter((cat) => cat !== d.id);
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
-          areas.forEach((area) => area.attr('opacity', 0.75));
+          areas.forEach((area) => area.attr('opacity', opacity.area.muted));
         })
         .on('mouseout', function () {
+          if (selectedArea.value) return;
+
           const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', 1));
         });
@@ -52,7 +61,9 @@ export function useChartDrawAreas() {
         .attr('stroke', (_, i) => palette[i])
         .attr('stroke-width', 1)
         .attr('stroke-linejoin', 'round')
-        .attr('opacity', 1);
+        .attr('opacity', (d) =>
+          selectedArea.value === d.id || !selectedArea.value ? 1 : opacity.area.disabled
+        );
     }
   };
 

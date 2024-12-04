@@ -1,11 +1,12 @@
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
-import type { Figure, FigureSlice, FigureSliceCategory } from '~/types';
+import type { CategoryKey, Figure, FigureSlice, FigureSliceCategory } from '~/types';
 
 export const useFigureStore = defineStore('figure', () => {
   const { width, margin, spacing } = useChartConfig();
 
   const figures = ref<Figure[]>([]);
   const isLoaded = ref<boolean>(false);
+  const selectedArea = ref<CategoryKey | null>(null);
 
   const setFigures = (newFigures: Figure[]) => {
     figures.value = [...newFigures].filter((f) => f.year >= 1908 && f.year <= 2007);
@@ -83,12 +84,19 @@ export const useFigureStore = defineStore('figure', () => {
     return series;
   };
 
+  const selectArea = (areaId: CategoryKey | null) => {
+    console.log('selectArea', areaId);
+    selectedArea.value = areaId;
+  };
+
   return {
     figures,
     figureSlices,
     maxGDPProportion,
     isLoaded,
+    selectedArea,
     setFigures,
     getSeries,
+    selectArea,
   };
 });
