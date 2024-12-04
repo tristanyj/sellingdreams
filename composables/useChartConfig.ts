@@ -6,13 +6,11 @@ export function useChartConfig() {
   const height = 7000;
   const width = 1400;
   const margin = {
-    top: 50,
-    right: 400,
-    bottom: 50,
-    left: 400,
+    x: 800,
+    y: 100,
   };
 
-  const spacing = 20;
+  const spacing = 15;
 
   const palette = [
     '#03071e',

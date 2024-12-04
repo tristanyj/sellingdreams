@@ -56,8 +56,8 @@ export const useFigureStore = defineStore('figure', () => {
       const yearFigure = figures.value.find((f) => f.year === year)!;
       const totalWidth = xScale(yearFigure.total.proportion_of_gdp);
 
-      const remainingSpace = width - totalWidth - margin.left - margin.right;
-      let currentWidth = margin.left + remainingSpace / 2;
+      const remainingSpace = width - totalWidth - margin.x;
+      let currentWidth = margin.x / 2 + remainingSpace / 2 - 100;
 
       const sortedCategories = Array.from(slice.values.entries()).sort(
         ([, a], [, b]) => b.value - a.value

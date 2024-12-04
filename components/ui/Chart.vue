@@ -18,12 +18,12 @@ const isLoading = ref(true);
 const yScale = d3
   .scalePoint()
   .domain(figures.value.map((f) => f.year.toString()))
-  .range([margin.top, height - margin.bottom]);
+  .range([margin.y / 2, height - margin.y / 2]);
 
 const xScale = d3
   .scaleLinear()
   .domain([0, maxGDPProportion.value])
-  .range([0, width - margin.left - margin.right]);
+  .range([0, width - margin.x]);
 
 function createVisualization() {
   if (!g.value) return;
