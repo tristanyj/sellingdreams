@@ -1,14 +1,14 @@
 import type { CategoryKey } from '~/types';
 
 const AD_CATEGORIES: CategoryKey[] = [
-  'radio',
-  'television',
-  'internet',
-  'periodicals',
-  'out_of_home',
-  'direct_mail',
-  'yellow_pages',
   'miscellaneous',
+  'periodicals',
+  'radio',
+  'direct_mail',
+  'out_of_home',
+  'television',
+  'yellow_pages',
+  'internet',
 ];
 
 export { AD_CATEGORIES };

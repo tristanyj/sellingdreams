@@ -1,9 +1,11 @@
 html {
-  @apply bg-gray-50 text-gray-950;
+  @apply bg-[#e5dac2] text-gray-950;
 }
 
 body {
   @apply font-inter;
+  background-color: #fdf0d5;
+  background-image: url('../images/concrete-wall-3.png');
 }
 
 #container svg {

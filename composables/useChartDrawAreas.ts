@@ -52,7 +52,7 @@ export function useChartDrawAreas() {
       .curve(d3.curveBasis);
 
     g.selectAll('.category-area')
-      .data(series.reverse())
+      .data(series)
       .join('path')
       .attr('class', 'category-area')
       .attr('id', (d) => `category-area-${d.id}`)
