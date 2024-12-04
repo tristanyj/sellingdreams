@@ -6,7 +6,7 @@ export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipPoint, updateMousePosition } = interactionStore;
+  const { setTooltipPoint, setSelectedAd, updateMousePosition } = interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);
@@ -49,6 +49,13 @@ export function useChartDrawPoints() {
         .attr('cy', (d) => d.y)
         .attr('r', radius.target)
         .attr('opacity', 0)
+        .on('click', function (_, d) {
+          setSelectedAd({
+            year: d.year,
+            name: serie.id,
+            client: serie.id,
+          });
+        })
         .on('mouseenter', function (_, d) {
           const points = d3.selectAll(`.point`);
           points.attr('opacity', opacity.point.muted);

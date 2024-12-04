@@ -132,6 +132,7 @@ onUnmounted(() => {
 <template>
   <div class="relative z-10">
     <UiTooltip />
+    <UiModal />
     <div
       id="container"
       ref="container"

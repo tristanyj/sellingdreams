@@ -1,4 +1,4 @@
-import type { TooltipArea, TooltipPoint } from '~/types';
+import type { TooltipArea, TooltipPoint, Ad } from '~/types';
 
 export const useInteractionStore = defineStore('interaction', () => {
   // --------------------------------
@@ -9,6 +9,8 @@ export const useInteractionStore = defineStore('interaction', () => {
 
   const tooltipArea = ref<TooltipArea | null>(null);
   const tooltipPoint = ref<TooltipPoint | null>(null);
+
+  const selectedAd = ref<Ad | null>(null);
 
   // --------------------------------
   // Computed
@@ -34,13 +36,19 @@ export const useInteractionStore = defineStore('interaction', () => {
     tooltipPoint.value = data;
   };
 
+  const setSelectedAd = (ad: Ad | null) => {
+    selectedAd.value = ad;
+  };
+
   return {
     mousePosition,
     tooltipArea,
     tooltipPoint,
     isTooltipVisible,
+    selectedAd,
     updateMousePosition,
     setTooltipArea,
     setTooltipPoint,
+    setSelectedAd,
   };
 });
