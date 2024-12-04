@@ -51,6 +51,12 @@ export function useChartDrawPoints() {
           points.attr('opacity', opacity.point.muted);
           d3.select(`#point-${serie.id}-${d.year}`).attr('r', radius.large).attr('opacity', 1);
 
+          const yearText = d3.selectAll(`.year-text:not(#year-text-${d.year})`);
+          yearText.attr('opacity', 0.25);
+
+          const yearLine = d3.selectAll(`.year-line:not(#year-line-${d.year})`);
+          yearLine.attr('opacity', opacity.line.muted);
+
           if (selectedArea.value) return;
 
           const ids = AD_CATEGORIES.filter((cat) => cat !== serie.id);
@@ -61,6 +67,12 @@ export function useChartDrawPoints() {
           const points = d3.selectAll(`.point`);
           points.attr('opacity', 1);
           d3.select(`#point-${serie.id}-${d.year}`).attr('r', radius.small);
+
+          const yearText = d3.selectAll(`.year-text`);
+          yearText.attr('opacity', 1);
+
+          const yearLine = d3.selectAll(`.year-line`);
+          yearLine.attr('opacity', opacity.line.enabled);
 
           if (selectedArea.value) return;
 

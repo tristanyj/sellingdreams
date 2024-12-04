@@ -32,6 +32,10 @@ export function useChartConfig() {
     point: {
       muted: 0.25,
     },
+    line: {
+      enabled: 0.15,
+      muted: 0.05,
+    },
   };
 
   return {

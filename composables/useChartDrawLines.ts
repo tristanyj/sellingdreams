@@ -5,6 +5,7 @@ import { formatNumber, calcTextLength } from '~/assets/scripts/utils';
 const createLine = (g: d3GSelection, params: Line, color = '#000') => {
   g.append('line')
     .attr('class', params.className)
+    .attr('id', params?.id ?? `${params.className}${params.x1}-${params.y1}`)
     .attr('x1', params.x1)
     .attr('y1', params.y1)
     .attr('x2', params.x2)
@@ -16,7 +17,7 @@ const createLine = (g: d3GSelection, params: Line, color = '#000') => {
 };
 
 export function useChartDrawLines() {
-  const { width } = useChartConfig();
+  const { width, opacity } = useChartConfig();
 
   const figureStore = useFigureStore();
   const { figures } = storeToRefs(figureStore);
@@ -27,7 +28,7 @@ export function useChartDrawLines() {
 
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
-      const padding = 5;
+      const padding = 4;
 
       const leftText = figure.year.toString();
       const rightSubText = `${figure.total.proportion_of_gdp}% of GDP`;
@@ -37,18 +38,20 @@ export function useChartDrawLines() {
       const rightTextLength = calcTextLength(lineGroup, rightText, 14);
 
       createLine(lineGroup, {
+        id: `year-line-${figure.year}`,
         className: 'year-line',
         x1: leftTextLength + padding,
         x2: width - rightTextLength - padding,
         y1: y,
         y2: y,
-        opacity: 0.15,
+        opacity: opacity.line.enabled,
         transform: '',
       });
 
       lineGroup
         .append('text')
-        .attr('class', 'year-label')
+        .attr('class', 'year-text left-text')
+        .attr('id', `year-text-${figure.year}`)
         .attr('x', 0)
         .attr('y', y + 4)
         .attr('text-anchor', 'start')
@@ -57,7 +60,8 @@ export function useChartDrawLines() {
 
       lineGroup
         .append('text')
-        .attr('class', 'year-sub-label')
+        .attr('class', 'year-text right-sub-text')
+        .attr('id', `year-text-${figure.year}`)
         .attr('x', width)
         .attr('y', y + 20)
         .attr('text-anchor', 'end')
@@ -67,7 +71,8 @@ export function useChartDrawLines() {
 
       lineGroup
         .append('text')
-        .attr('class', 'year-label')
+        .attr('class', 'year-text right-text')
+        .attr('id', `year-text-${figure.year}`)
         .attr('x', width)
         .attr('y', y + 3)
         .attr('text-anchor', 'end')

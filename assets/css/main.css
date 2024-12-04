@@ -14,11 +14,12 @@ body {
   max-width: 1400px;
 }
 
-.year-label {
-  @apply font-crimson font-bold;
+.left-text,
+.right-text {
+  @apply font-crimson font-bold transition-opacity duration-100 ease-in-out;
 }
 
-.year-sub-label {
+.right-sub-text {
   @apply font-crimson;
 }
 

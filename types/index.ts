@@ -51,6 +51,7 @@ export type d3GSelection = d3.Selection<SVGGElement, unknown, null, undefined>;
 
 export interface Line {
   className: string;
+  id?: string;
   x1: number;
   x2: number;
   y1: number;
