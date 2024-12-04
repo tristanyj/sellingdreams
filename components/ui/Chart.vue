@@ -8,6 +8,7 @@ const { figures, maxGDPProportion } = storeToRefs(figureStore);
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
 const { drawYearLegend } = useChartDrawLines();
+const { drawAreaPoints } = useChartDrawPoints();
 
 const container = ref<HTMLElement | null>(null);
 const g = ref<d3GSelection | null>(null);
@@ -32,9 +33,16 @@ function createVisualization() {
   // Steam Graph
   // -----------------
 
+  // Legend
   drawYearLegend(g.value, yScale);
+
+  // Areas
   drawCategoryAreas(g.value, xScale, yScale);
+
+  // Hover Area
   drawCategoryAreas(g.value, xScale, yScale, true);
+  // Points
+  drawAreaPoints(g.value, xScale, yScale);
 }
 
 // function updateVisualization() {

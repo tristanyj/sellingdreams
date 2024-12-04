@@ -21,3 +21,8 @@ body {
 .category-area-overlay {
   @apply cursor-pointer;
 }
+
+.point-overlay,
+.point {
+  @apply cursor-pointer transition-all duration-100 ease-in-out;
+}
