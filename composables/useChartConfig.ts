@@ -14,7 +14,7 @@ export function useChartConfig() {
   const spacing = 15;
 
   const palette = [
-    '#03071e',
+    '#797d62',
     '#0a9396',
     '#94d2bd',
     '#370617',

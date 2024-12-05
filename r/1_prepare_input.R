@@ -5,7 +5,9 @@ library(dplyr)
 files <- list(
   "ad_expenditure" = "input/raw/ad_exp.csv",
   "gdp" = "input/raw/gdp.csv",
-  "ads" = "input/raw/ads.csv"
+  "ads" = "input/raw/ads.csv",
+  "categories" = "input/raw/categories.csv",
+  "events" = "input/raw/events.csv"
 )
 
 for (i in seq_along(files)) {

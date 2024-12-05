@@ -6,6 +6,8 @@ ads <- fromJSON("output/ads.json")
 output <- list()
 output$figures <- figures$figures
 output$ads <- ads$ads
+output$categories <- ads$categories
+output$events <- ads$events
 
 json_data <- jsonlite::toJSON(output, pretty = TRUE, auto_unbox = TRUE)
 write(json_data, file = "../assets/data/dataset.json")
