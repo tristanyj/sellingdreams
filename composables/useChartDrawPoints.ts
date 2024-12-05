@@ -6,11 +6,11 @@ export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipFigure, setTooltipCategory, setSelectedAd, updateMousePosition } =
+  const { setTooltipFigure, setTooltipCategory, setTooltipAd, setSelectedAd, updateMousePosition } =
     interactionStore;
 
   const figureStore = useFigureStore();
-  const { selectedArea } = storeToRefs(figureStore);
+  const { selectedArea, figures } = storeToRefs(figureStore);
   const { getSeries } = figureStore;
 
   const dataStore = useDataStore();
@@ -35,6 +35,11 @@ export function useChartDrawPoints() {
 
       serie.areaPoints.forEach((point) => {
         const ad = ads.value.find((a) => a.id === `${point.year}-${serie.id}`);
+        const figure = figures.value.find((f) => f.year === point.year);
+        if (!figure) return;
+
+        const figureCategory = figure.categories[serie.id];
+        if (!figureCategory) return;
 
         if (ad) {
           g.append('circle')
@@ -88,6 +93,11 @@ export function useChartDrawPoints() {
 
             setTooltipFigure({
               id: serie.id,
+              year: point.year,
+              nominal: figureCategory.nominal,
+              real: figureCategory.real,
+              rank: figureCategory.rank,
+              proportion_of_ads: figureCategory.proportion_of_ads,
             });
 
             setTooltipCategory({
@@ -96,6 +106,17 @@ export function useChartDrawPoints() {
               description: category.description,
               color: category.color,
             });
+
+            if (ad) {
+              setTooltipAd({
+                id: ad.id,
+                year: ad.year,
+                category: ad.category,
+                client: ad.client,
+                name: ad.name,
+                slogan: ad.slogan,
+              });
+            }
 
             if (selectedArea.value) return;
 
@@ -121,6 +142,8 @@ export function useChartDrawPoints() {
             yearLine.attr('opacity', opacity.line.enabled);
 
             setTooltipFigure(null);
+            setTooltipCategory(null);
+            setTooltipAd(null);
 
             if (selectedArea.value) return;
 

@@ -102,5 +102,10 @@ onMounted(() => {
         {{ tooltipCategory.description }}
       </div>
     </template>
+    <template v-if="tooltipFigure">
+      <div class="w-64">
+        {{ tooltipFigure.nominal }}
+      </div>
+    </template>
   </div>
 </template>
