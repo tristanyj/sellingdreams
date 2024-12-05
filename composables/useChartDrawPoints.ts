@@ -76,6 +76,9 @@ export function useChartDrawPoints() {
             const yearText = d3.selectAll(`.year-text:not(#year-text-${point.year})`);
             yearText.attr('opacity', 0.25);
 
+            const yearSubText = d3.selectAll(`.year-sub-text:not(#year-sub-text-${point.year})`);
+            yearSubText.attr('opacity', 0.1);
+
             const yearLine = d3.selectAll(`.year-line:not(#year-line-${point.year})`);
             yearLine.attr('opacity', opacity.line.muted);
 
@@ -100,6 +103,9 @@ export function useChartDrawPoints() {
 
             const yearText = d3.selectAll(`.year-text`);
             yearText.attr('opacity', 1);
+
+            const yearSubText = d3.selectAll(`.year-sub-text`);
+            yearSubText.attr('opacity', 0.5);
 
             const yearLine = d3.selectAll(`.year-line`);
             yearLine.attr('opacity', opacity.line.enabled);
