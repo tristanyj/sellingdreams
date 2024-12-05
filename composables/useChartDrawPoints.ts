@@ -6,14 +6,15 @@ export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipFigure, setSelectedAd, updateMousePosition } = interactionStore;
+  const { setTooltipFigure, setTooltipCategory, setSelectedAd, updateMousePosition } =
+    interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);
   const { getSeries } = figureStore;
 
   const dataStore = useDataStore();
-  const { ads } = storeToRefs(dataStore);
+  const { ads, categories } = storeToRefs(dataStore);
 
   const drawAreaPoints = (
     g: d3GSelection,
@@ -29,6 +30,9 @@ export function useChartDrawPoints() {
     };
 
     series.forEach((serie) => {
+      const category = categories.value.find((c) => c.id === serie.id);
+      if (!category) return;
+
       serie.areaPoints.forEach((point) => {
         const ad = ads.value.find((a) => a.id === `${point.year}-${serie.id}`);
 
@@ -84,7 +88,13 @@ export function useChartDrawPoints() {
 
             setTooltipFigure({
               id: serie.id,
-              name: serie.id,
+            });
+
+            setTooltipCategory({
+              id: serie.id,
+              name: category.name,
+              description: category.description,
+              color: category.color,
             });
 
             if (selectedArea.value) return;

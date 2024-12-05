@@ -17,7 +17,8 @@ export const useInteractionStore = defineStore('interaction', () => {
   // Computed
   // --------------------------------
 
-  const isTooltipVisible = computed(() => !!tooltipCategory.value || !!tooltipFigure.value);
+  const isTooltipCategoryVisible = computed(() => !!tooltipCategory.value || !!tooltipFigure.value);
+  const isTooltipAdVisible = computed(() => !!tooltipAd.value);
 
   // --------------------------------
   // Methods
@@ -50,7 +51,8 @@ export const useInteractionStore = defineStore('interaction', () => {
     tooltipCategory,
     tooltipFigure,
     tooltipAd,
-    isTooltipVisible,
+    isTooltipCategoryVisible,
+    isTooltipAdVisible,
     selectedAd,
     updateMousePosition,
     setTooltipCategory,

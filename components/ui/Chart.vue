@@ -60,11 +60,6 @@ function createVisualization() {
   drawAreaPoints(g.value, xScale, yScale);
 }
 
-// function updateVisualization() {
-//   if (!container.value) return;
-//   createVisualization();
-// }
-
 const mountToContainer = () => {
   if (!container.value) {
     return;
@@ -131,7 +126,8 @@ onUnmounted(() => {
 
 <template>
   <div class="relative z-10">
-    <UiTooltip />
+    <UiTooltipCategory />
+    <UiTooltipAd />
     <UiModal />
     <div
       id="container"

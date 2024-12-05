@@ -12,6 +12,9 @@ export function useChartDrawAreas() {
   const { selectedArea } = storeToRefs(figureStore);
   const { getSeries, selectArea } = figureStore;
 
+  const dataStore = useDataStore();
+  const { categories } = storeToRefs(dataStore);
+
   const drawCategoryAreas = (
     g: d3GSelection,
     xScale: d3.ScaleLinear<number, number>,
@@ -63,9 +66,14 @@ export function useChartDrawAreas() {
           selectArea(selectedArea.value === d.id ? null : d.id);
         })
         .on('mouseenter', function (_, d) {
+          const category = categories.value.find((cat) => cat.id === d.id);
+          if (!category) return;
+
           setTooltipCategory({
             id: d.id,
-            name: d.id,
+            name: category.name,
+            description: category.description,
+            color: category.color,
           });
 
           if (selectedArea.value) return;

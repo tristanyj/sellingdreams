@@ -5,7 +5,7 @@ import { useWindowSize, useEventListener } from '@vueuse/core';
 const { width, height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
-const { mousePosition, isTooltipVisible, tooltipCategory, tooltipFigure } =
+const { mousePosition, isTooltipAdVisible, tooltipCategory, tooltipFigure } =
   storeToRefs(interactionStore);
 
 const tooltipStyle = computed<CSSProperties>(() => {
@@ -34,7 +34,7 @@ const tooltipStyle = computed<CSSProperties>(() => {
 
   return {
     transform: `translate(${clampedPosX}px, ${clampedPosY}px)`,
-    visibility: isTooltipVisible.value ? 'visible' : 'hidden',
+    visibility: isTooltipAdVisible.value ? 'visible' : 'hidden',
     position: 'fixed',
     top: 0,
     left: 0,
@@ -45,7 +45,7 @@ const tooltipSize = ref({ width: 0, height: 0 });
 const tooltip = ref<HTMLElement | null>(null);
 
 watch(
-  [tooltipCategory, tooltipFigure, isTooltipVisible],
+  [tooltipCategory, tooltipFigure, isTooltipAdVisible],
   async () => {
     if (!tooltip.value) return;
 
@@ -61,7 +61,7 @@ watch(
 );
 
 useEventListener(window, 'resize', () => {
-  if (!tooltip.value || !isTooltipVisible.value) return;
+  if (!tooltip.value || !isTooltipAdVisible.value) return;
 
   const rect = tooltip.value.getBoundingClientRect();
   tooltipSize.value = {
@@ -91,12 +91,11 @@ onMounted(() => {
 
 <template>
   <div
-    v-show="isTooltipVisible"
+    v-show="isTooltipAdVisible"
     ref="tooltip"
-    class="fixed stat-tooltip bg-gray-50 border rounded-md z-100 text-sm font-host"
+    class="fixed bg-gray-50 border rounded-md z-100 text-sm font-host"
     :style="tooltipStyle"
   >
-    <template v-if="tooltipCategory">{{ tooltipCategory.id }}</template>
-    <template v-else-if="tooltipFigure"> tooltip point </template>
+    tooltip ad
   </div>
 </template>
