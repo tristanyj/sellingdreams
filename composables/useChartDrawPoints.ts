@@ -59,7 +59,6 @@ export function useChartDrawPoints() {
           .attr('cx', (point.x0 + point.x1) / 2)
           .attr('cy', point.y)
           .attr('r', radius.small)
-          // .attr('fill', () => palette[k])
           .attr('fill', 'black')
           .attr('stroke', 'white');
 

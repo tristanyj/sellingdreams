@@ -4,6 +4,9 @@ import type { CategoryKey, Figure, FigureSlice, FigureSliceCategory } from '~/ty
 export const useFigureStore = defineStore('figure', () => {
   const { width, margin, spacing } = useChartConfig();
 
+  const dataStore = useDataStore();
+  const { categories } = storeToRefs(dataStore);
+
   const figures = ref<Figure[]>([]);
   const isLoaded = ref<boolean>(false);
   const selectedArea = ref<CategoryKey | null>(null);
@@ -70,16 +73,22 @@ export const useFigureStore = defineStore('figure', () => {
       });
     });
 
-    const series = AD_CATEGORIES.map((category) => ({
-      id: category,
-      areaPoints: figures.value.map((yearData) => {
-        const slice = figureSlices.value.get(yearData.year)!;
-        const value = slice.values.get(category)!;
-        const x0 = value.beforeWidth;
-        const x1 = x0 + value.width;
-        return { y: slice.y, x0, x1, year: slice.year };
-      }),
-    }));
+    const series = AD_CATEGORIES.map((category) => {
+      const cat = categories.value.find((c) => c.id === category);
+      if (!cat) return { id: category, color: '', areaPoints: [] };
+
+      return {
+        id: category,
+        color: cat.color,
+        areaPoints: figures.value.map((yearData) => {
+          const slice = figureSlices.value.get(yearData.year)!;
+          const value = slice.values.get(category)!;
+          const x0 = value.beforeWidth;
+          const x1 = x0 + value.width;
+          return { y: slice.y, x0, x1, year: slice.year };
+        }),
+      };
+    });
 
     return series;
   };

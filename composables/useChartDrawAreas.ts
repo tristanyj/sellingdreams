@@ -3,7 +3,7 @@ import type { d3GSelection } from '~/types';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 export function useChartDrawAreas() {
-  const { opacity, palette } = useChartConfig();
+  const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
   const { setTooltipCategory, updateMousePosition } = interactionStore;
@@ -37,8 +37,8 @@ export function useChartDrawAreas() {
         .attr('class', 'category-area')
         .attr('id', (d) => `category-area-${d.id}`)
         .attr('d', (d) => area(d.areaPoints))
-        .attr('fill', (_, i) => palette[i])
-        .attr('stroke', (_, i) => palette[i])
+        .attr('fill', (d) => d.color)
+        .attr('stroke', (d) => d.color)
         .attr('stroke-width', 1)
         .attr('stroke-linejoin', 'round')
         .attr('opacity', (d) =>
