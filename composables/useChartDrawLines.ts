@@ -29,13 +29,14 @@ export function useChartDrawLines() {
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
       const padding = 4;
+      const fontSize = 16;
 
       const leftText = figure.year.toString();
       const rightSubText = `${figure.total.proportion_of_gdp}% of GDP`;
       const rightText = `$${formatNumber(figure.total.nominal)}`;
 
-      const leftTextLength = calcTextLength(lineGroup, leftText, 14);
-      const rightTextLength = calcTextLength(lineGroup, rightText, 14);
+      const leftTextLength = calcTextLength(lineGroup, leftText, fontSize);
+      const rightTextLength = calcTextLength(lineGroup, rightText, fontSize);
 
       createLine(lineGroup, {
         id: `year-line-${figure.year}`,
@@ -55,7 +56,7 @@ export function useChartDrawLines() {
         .attr('x', 0)
         .attr('y', y + 4)
         .attr('text-anchor', 'start')
-        .attr('font-size', '14px')
+        .attr('font-size', `${fontSize}px`)
         .text(leftText);
 
       lineGroup
@@ -65,7 +66,7 @@ export function useChartDrawLines() {
         .attr('x', width)
         .attr('y', y + 21)
         .attr('text-anchor', 'end')
-        .attr('font-size', '14px')
+        .attr('font-size', `${fontSize}px`)
         .attr('opacity', 0.5)
         .text(rightSubText);
 
@@ -76,7 +77,7 @@ export function useChartDrawLines() {
         .attr('x', width)
         .attr('y', y + 3)
         .attr('text-anchor', 'end')
-        .attr('font-size', '14px')
+        .attr('font-size', `${fontSize}px`)
         .text(rightText);
     }
   };

@@ -16,11 +16,10 @@ const { isLoaded: isAdsLoaded } = storeToRefs(adStore);
           in the United States
         </h1> -->
       </div>
+      <UiChart v-if="isAdsLoaded && isFiguresLoaded" />
     </UContainer>
 
-    <UiChart
-      v-if="isAdsLoaded && isFiguresLoaded"
-      class="mb-20"
-    />
+    <!-- <div class="relative mb-20 px-5">
+    </div> -->
   </div>
 </template>
