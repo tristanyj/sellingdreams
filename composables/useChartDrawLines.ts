@@ -29,7 +29,7 @@ export function useChartDrawLines() {
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
       const padding = 4;
-      const fontSize = 16;
+      const fontSize = 15;
 
       const leftText = figure.year.toString();
       const rightSubText = `${figure.total.proportion_of_gdp}% of GDP`;
