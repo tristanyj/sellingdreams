@@ -6,9 +6,9 @@ export function useChartConfig() {
   const height = 7000;
   const width = 1400;
   const margin = {
-    x: 500,
+    x: 600,
     y: 100,
-    offset: -50,
+    offset: -40,
   };
 
   const spacing = 15;

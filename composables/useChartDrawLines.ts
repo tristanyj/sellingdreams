@@ -23,13 +23,24 @@ export function useChartDrawLines() {
   const { figures } = storeToRefs(figureStore);
   const { getSeries } = figureStore;
 
+  const dataStore = useDataStore();
+  const { categories, events } = storeToRefs(dataStore);
+
   const drawYearLegend = (g: d3GSelection, yScale: d3.ScalePoint<string>) => {
     const lineGroup = g.append('g').attr('class', 'year-legend-group');
 
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
       const padding = 4;
+      const textOffset = 4;
+      const subTextOffset = 22;
       const fontSize = 15;
+
+      const event = events.value.find((e) => e.year === figure.year);
+      let leftSubText = '';
+      if (event) {
+        leftSubText = event.name;
+      }
 
       const leftText = figure.year.toString();
       const rightSubText = `${figure.total.proportion_of_gdp}% of GDP`;
@@ -54,17 +65,56 @@ export function useChartDrawLines() {
         .attr('class', 'year-text left-text')
         .attr('id', `year-text-${figure.year}`)
         .attr('x', 0)
-        .attr('y', y + 4)
+        .attr('y', y + textOffset)
         .attr('text-anchor', 'start')
         .attr('font-size', `${fontSize}px`)
         .text(leftText);
+
+      if (leftSubText) {
+        // Map categories to their respective objects, filtering out any undefined results
+        const cats =
+          event?.categories
+            .map((c) => categories.value.find((cat) => cat.id === c))
+            .filter(Boolean) ?? [];
+
+        console.log('cats :', cats);
+
+        const cubeSize = 10;
+        const padding = 5; // Assuming padding is defined somewhere in your code
+
+        // Calculate subCubeOffset only if there are cubes
+        const subCubeOffset = cats.length > 0 ? cats.length * (cubeSize + padding) : 0;
+
+        // Render each category as a colored cube
+        cats.forEach((cat, i) => {
+          lineGroup
+            .append('rect')
+            .attr('x', i * (cubeSize + padding))
+            .attr('y', y + subTextOffset - cubeSize + 1)
+            .attr('width', cubeSize)
+            .attr('height', cubeSize)
+            .attr('fill', cat?.color ?? 'black');
+        });
+
+        // Append the text, offset by the calculated subCubeOffset
+        lineGroup
+          .append('text')
+          .attr('class', 'year-sub-text left-sub-text')
+          .attr('id', `year-sub-text-${figure.year}`)
+          .attr('x', subCubeOffset)
+          .attr('y', y + subTextOffset)
+          .attr('text-anchor', 'start')
+          .attr('font-size', `${fontSize}px`)
+          .attr('opacity', 0.5)
+          .text(leftSubText);
+      }
 
       lineGroup
         .append('text')
         .attr('class', 'year-sub-text right-sub-text')
         .attr('id', `year-sub-text-${figure.year}`)
         .attr('x', width)
-        .attr('y', y + 21)
+        .attr('y', y + subTextOffset)
         .attr('text-anchor', 'end')
         .attr('font-size', `${fontSize}px`)
         .attr('opacity', 0.5)
@@ -75,7 +125,7 @@ export function useChartDrawLines() {
         .attr('class', 'year-text right-text')
         .attr('id', `year-text-${figure.year}`)
         .attr('x', width)
-        .attr('y', y + 3)
+        .attr('y', y + textOffset)
         .attr('text-anchor', 'end')
         .attr('font-size', `${fontSize}px`)
         .text(rightText);
