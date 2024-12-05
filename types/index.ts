@@ -2,7 +2,20 @@
 // Dataset
 // --------------------------------
 
-interface Category {
+export interface Category {
+  id: CategoryKey;
+  name: string;
+  description: string;
+  color: `#${string}`;
+}
+
+export interface Event {
+  year: number;
+  name: string;
+  categories: CategoryKey[];
+}
+
+interface FigureCategory {
   nominal: number;
   real: number;
   rank: number;
@@ -21,7 +34,7 @@ export type CategoryKey =
 
 export interface Figure {
   year: number;
-  categories: Record<CategoryKey, Category>;
+  categories: Record<CategoryKey, FigureCategory>;
   total: {
     nominal: number;
     real: number;

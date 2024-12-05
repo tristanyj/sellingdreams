@@ -12,8 +12,8 @@ export function useChartDrawPoints() {
   const { selectedArea } = storeToRefs(figureStore);
   const { getSeries } = figureStore;
 
-  const adStore = useAdStore();
-  const { ads } = storeToRefs(adStore);
+  const dataStore = useDataStore();
+  const { ads } = storeToRefs(dataStore);
 
   const drawAreaPoints = (
     g: d3GSelection,

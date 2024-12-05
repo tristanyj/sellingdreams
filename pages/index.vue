@@ -3,8 +3,8 @@ useHead({ title: 'Madison | Description' });
 
 const figureStore = useFigureStore();
 const { isLoaded: isFiguresLoaded } = storeToRefs(figureStore);
-const adStore = useAdStore();
-const { isLoaded: isAdsLoaded } = storeToRefs(adStore);
+const dataStore = useDataStore();
+const { isLoaded: isAdsLoaded } = storeToRefs(dataStore);
 </script>
 
 <template>
