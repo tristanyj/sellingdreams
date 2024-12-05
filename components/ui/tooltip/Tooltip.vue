@@ -5,7 +5,7 @@ import { useWindowSize, useEventListener } from '@vueuse/core';
 const { width, height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
-const { mousePosition, isTooltipVisible, tooltipArea, tooltipPoint } =
+const { mousePosition, isTooltipVisible, tooltipCategory, tooltipFigure } =
   storeToRefs(interactionStore);
 
 const tooltipStyle = computed<CSSProperties>(() => {
@@ -45,7 +45,7 @@ const tooltipSize = ref({ width: 0, height: 0 });
 const tooltip = ref<HTMLElement | null>(null);
 
 watch(
-  [tooltipArea, tooltipPoint, isTooltipVisible],
+  [tooltipCategory, tooltipFigure, isTooltipVisible],
   async () => {
     if (!tooltip.value) return;
 
@@ -96,7 +96,7 @@ onMounted(() => {
     class="fixed stat-tooltip bg-gray-50 border rounded-md z-100 text-sm font-host"
     :style="tooltipStyle"
   >
-    <template v-if="tooltipArea">{{ tooltipArea.id }}</template>
-    <template v-else-if="tooltipPoint"> tooltip point </template>
+    <template v-if="tooltipCategory">{{ tooltipCategory.id }}</template>
+    <template v-else-if="tooltipFigure"> tooltip point </template>
   </div>
 </template>

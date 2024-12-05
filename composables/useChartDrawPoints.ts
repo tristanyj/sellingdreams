@@ -6,7 +6,7 @@ export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipPoint, setSelectedAd, updateMousePosition } = interactionStore;
+  const { setTooltipFigure, setSelectedAd, updateMousePosition } = interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);
@@ -82,7 +82,7 @@ export function useChartDrawPoints() {
             const yearLine = d3.selectAll(`.year-line:not(#year-line-${point.year})`);
             yearLine.attr('opacity', opacity.line.muted);
 
-            setTooltipPoint({
+            setTooltipFigure({
               id: serie.id,
               name: serie.id,
             });
@@ -110,7 +110,7 @@ export function useChartDrawPoints() {
             const yearLine = d3.selectAll(`.year-line`);
             yearLine.attr('opacity', opacity.line.enabled);
 
-            setTooltipPoint(null);
+            setTooltipFigure(null);
 
             if (selectedArea.value) return;
 

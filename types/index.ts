@@ -97,10 +97,24 @@ interface Tooltip {
   id: string;
 }
 
-export interface TooltipArea extends Tooltip {
+export interface TooltipCategory extends Tooltip {
   name: string;
+  description: string;
+  color: `#${string}`;
 }
 
-export interface TooltipPoint extends Tooltip {
+export interface TooltipFigure extends Tooltip {
+  year: number;
+  nominal: number;
+  real: number;
+  rank: number;
+  proportion_of_ads: number;
+}
+
+export interface TooltipAd extends Tooltip {
+  year: number;
+  category: CategoryKey;
+  client: string;
   name: string;
+  slogan: string;
 }

@@ -6,7 +6,7 @@ export function useChartDrawAreas() {
   const { opacity, palette } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipArea, updateMousePosition } = interactionStore;
+  const { setTooltipCategory, updateMousePosition } = interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);
@@ -63,7 +63,7 @@ export function useChartDrawAreas() {
           selectArea(selectedArea.value === d.id ? null : d.id);
         })
         .on('mouseenter', function (_, d) {
-          setTooltipArea({
+          setTooltipCategory({
             id: d.id,
             name: d.id,
           });
@@ -78,7 +78,7 @@ export function useChartDrawAreas() {
           updateMousePosition(event);
         })
         .on('mouseout', function () {
-          setTooltipArea(null);
+          setTooltipCategory(null);
 
           if (selectedArea.value) return;
 

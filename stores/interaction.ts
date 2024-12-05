@@ -1,4 +1,4 @@
-import type { TooltipArea, TooltipPoint, Ad } from '~/types';
+import type { TooltipCategory, TooltipFigure, TooltipAd, Ad } from '~/types';
 
 export const useInteractionStore = defineStore('interaction', () => {
   // --------------------------------
@@ -7,8 +7,9 @@ export const useInteractionStore = defineStore('interaction', () => {
 
   const mousePosition = ref({ x: 0, y: 0 });
 
-  const tooltipArea = ref<TooltipArea | null>(null);
-  const tooltipPoint = ref<TooltipPoint | null>(null);
+  const tooltipCategory = ref<TooltipCategory | null>(null);
+  const tooltipFigure = ref<TooltipFigure | null>(null);
+  const tooltipAd = ref<TooltipAd | null>(null);
 
   const selectedAd = ref<Ad | null>(null);
 
@@ -16,7 +17,7 @@ export const useInteractionStore = defineStore('interaction', () => {
   // Computed
   // --------------------------------
 
-  const isTooltipVisible = computed(() => !!tooltipArea.value || !!tooltipPoint.value);
+  const isTooltipVisible = computed(() => !!tooltipCategory.value || !!tooltipFigure.value);
 
   // --------------------------------
   // Methods
@@ -28,12 +29,16 @@ export const useInteractionStore = defineStore('interaction', () => {
       y: event.clientY,
     };
   };
-  const setTooltipArea = (data: TooltipArea | null) => {
-    tooltipArea.value = data;
+  const setTooltipCategory = (data: TooltipCategory | null) => {
+    tooltipCategory.value = data;
   };
 
-  const setTooltipPoint = (data: TooltipPoint | null) => {
-    tooltipPoint.value = data;
+  const setTooltipFigure = (data: TooltipFigure | null) => {
+    tooltipFigure.value = data;
+  };
+
+  const setTooltipAd = (data: TooltipAd | null) => {
+    tooltipAd.value = data;
   };
 
   const setSelectedAd = (ad: Ad | null) => {
@@ -42,13 +47,15 @@ export const useInteractionStore = defineStore('interaction', () => {
 
   return {
     mousePosition,
-    tooltipArea,
-    tooltipPoint,
+    tooltipCategory,
+    tooltipFigure,
+    tooltipAd,
     isTooltipVisible,
     selectedAd,
     updateMousePosition,
-    setTooltipArea,
-    setTooltipPoint,
+    setTooltipCategory,
+    setTooltipFigure,
+    setTooltipAd,
     setSelectedAd,
   };
 });
