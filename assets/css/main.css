@@ -19,7 +19,8 @@ body {
   @apply font-crimson font-bold transition-opacity duration-100 ease-in-out;
 }
 
-.right-sub-text {
+.right-sub-text,
+.left-sub-text {
   @apply font-crimson;
 }
 
@@ -27,14 +28,16 @@ body {
   @apply transition-all duration-150 ease-in-out;
 }
 
-.category-area-interaction {
+.category-area-interaction,
+.point-interaction-ad {
   @apply cursor-pointer;
 }
 
-.point-overlay,
 .point {
-  @apply cursor-pointer transition-all duration-100 ease-in-out;
+  @apply transition-all duration-100 ease-in-out;
 }
+
+/* Transition */
 
 .modal-enter-active,
 .modal-leave-active {

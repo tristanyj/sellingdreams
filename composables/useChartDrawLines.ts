@@ -63,10 +63,10 @@ export function useChartDrawLines() {
         .attr('class', 'year-text right-sub-text')
         .attr('id', `year-text-${figure.year}`)
         .attr('x', width)
-        .attr('y', y + 20)
+        .attr('y', y + 21)
         .attr('text-anchor', 'end')
         .attr('font-size', '14px')
-        .attr('opacity', 0.5)
+        .attr('opacity', 0.6)
         .text(rightSubText);
 
       lineGroup

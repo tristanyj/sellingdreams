@@ -6,7 +6,7 @@ export function useChartConfig() {
   const height = 7000;
   const width = 1400;
   const margin = {
-    x: 700,
+    x: 600,
     y: 100,
     offset: -40,
   };

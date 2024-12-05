@@ -12,6 +12,7 @@ output$ads <- list()
 
 for (i in seq_len(nrow(ads))) {
   ad <- list(
+    id = paste0(ads$year[i], "-", ads$category[i]),
     year = ads$year[i],
     category = ads$category[i],
     name = ads$name[i],

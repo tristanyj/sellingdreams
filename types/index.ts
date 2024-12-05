@@ -38,9 +38,12 @@ export interface Figure {
 }
 
 export interface Ad {
+  id: `${number}-${CategoryKey}`;
   year: number;
-  name: string;
+  category: CategoryKey;
   client: string;
+  name: string;
+  slogan: string;
 }
 
 // --------------------------------
