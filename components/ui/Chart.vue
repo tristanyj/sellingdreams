@@ -2,9 +2,6 @@
 import * as d3 from 'd3';
 import type { d3GSelection } from '@/types';
 
-const interactionStore = useInteractionStore();
-const { updateMousePosition } = interactionStore;
-
 const figureStore = useFigureStore();
 const { selectArea } = figureStore;
 const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);

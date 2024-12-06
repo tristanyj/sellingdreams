@@ -6,7 +6,7 @@ export function useChartDrawAreas() {
   const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipCategory, updateMousePosition } = interactionStore;
+  const { setTooltipCategory } = interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea } = storeToRefs(figureStore);

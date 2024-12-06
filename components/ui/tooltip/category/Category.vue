@@ -27,13 +27,10 @@ const tooltipStyle = computed<CSSProperties>(() => {
       : mousePosition.value.y - tooltipSize.value.height / 2 - paddingY;
 
   const clampedPosX = Math.max(
-    paddingX,
+    50,
     Math.min(posX, width.value - tooltipSize.value.width - paddingX)
   );
-  const clampedPosY = Math.max(
-    paddingY,
-    Math.min(posY, height.value - tooltipSize.value.height - paddingY)
-  );
+  const clampedPosY = Math.max(10, Math.min(posY, height.value - tooltipSize.value.height - 35));
 
   return {
     transform: `translate(${clampedPosX}px, ${clampedPosY}px)`,
@@ -100,13 +97,13 @@ onMounted(() => {
   <div
     v-show="isTooltipCategoryVisible"
     ref="tooltip"
-    class="fixed bg-gray-50 rounded-md z-100 text-sm font-host p-3"
+    class="fixed bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-56"
     :style="tooltipStyle"
   >
     <template v-if="tooltipCategory">
       <div
         class="grid gap-1"
-        :class="{ 'mb-2': tooltipFigure }"
+        :class="{ 'mb-3': tooltipFigure }"
       >
         <div class="grid grid-flow-col gap-1 justify-start items-center">
           <div
@@ -115,11 +112,11 @@ onMounted(() => {
           />
           <div class="font-medium">{{ tooltipCategory.name }}</div>
         </div>
-        <p class="max-w-56">{{ tooltipCategory.description }}</p>
+        <p class="">{{ tooltipCategory.description }}</p>
       </div>
     </template>
     <template v-if="tooltipFigure">
-      <div class="grid gap-0.5 pt-2 border-t">
+      <div class="grid gap-0.5 pt-3 border-t">
         <div class="">
           <span class="font-medium text-lg leading-tight">{{ tooltipFigure.year }}</span>
         </div>

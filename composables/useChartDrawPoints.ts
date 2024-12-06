@@ -6,8 +6,7 @@ export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
-  const { setTooltipFigure, setTooltipCategory, setTooltipAd, setSelectedAd, updateMousePosition } =
-    interactionStore;
+  const { setTooltipFigure, setTooltipCategory, setTooltipAd, setSelectedAd } = interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea, figures } = storeToRefs(figureStore);
@@ -115,6 +114,7 @@ export function useChartDrawPoints() {
                 client: ad.client,
                 name: ad.name,
                 slogan: ad.slogan,
+                agency: ad.agency,
               });
             }
 

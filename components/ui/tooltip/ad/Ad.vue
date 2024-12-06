@@ -2,6 +2,10 @@
 import type { CSSProperties } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 
+const getImageUrl = (id: string) => {
+  return new URL(`../../../../assets/images/ads/${id}.webp`, import.meta.url).href;
+};
+
 const { width, height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
@@ -26,10 +30,7 @@ const tooltipStyle = computed<CSSProperties>(() => {
     paddingX,
     Math.min(posX, width.value - tooltipSize.value.width - paddingX)
   );
-  const clampedPosY = Math.max(
-    paddingY,
-    Math.min(posY, height.value - tooltipSize.value.height - paddingY)
-  );
+  const clampedPosY = Math.max(10, Math.min(posY, height.value - tooltipSize.value.height - 35));
 
   return {
     transform: `translate(${clampedPosX}px, ${clampedPosY}px)`,
@@ -92,11 +93,30 @@ onMounted(() => {
   <div
     v-show="isTooltipAdVisible"
     ref="tooltip"
-    class="fixed bg-gray-50 border rounded-md z-100 text-sm font-host"
+    class="fixed bg-gray-50 border rounded-md z-100 text-sm font-inter p-3 w-56"
     :style="tooltipStyle"
   >
     <template v-if="tooltipAd">
-      <div>{{ tooltipAd.name }}</div>
+      <div class="grid gap-2">
+        <div class="grid gap-0.5">
+          <div class="grid grid-flow-col justify-start items-center gap-2">
+            <div class="">{{ tooltipAd.year }}</div>
+            <div class="w-1 h-1 rounded-full bg-black" />
+            <div class="">{{ tooltipAd.client }}</div>
+          </div>
+          <div class="grid grid-flow-col items-center gap-2 text-lg leading-tight">
+            <div class="font-medium pr-5">{{ tooltipAd.slogan }}</div>
+          </div>
+        </div>
+        <div>
+          <img
+            :src="getImageUrl(tooltipAd.id)"
+            class="w-full object-contain rounded-sm"
+            alt=""
+          />
+        </div>
+        <div class="text-gray-600 text-xs pt-px">Agency : {{ tooltipAd.agency }}</div>
+      </div>
     </template>
   </div>
 </template>

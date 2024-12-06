@@ -57,6 +57,7 @@ export interface Ad {
   client: string;
   name: string;
   slogan: string;
+  agency: string;
 }
 
 // --------------------------------
@@ -117,4 +118,5 @@ export interface TooltipAd extends Tooltip {
   client: string;
   name: string;
   slogan: string;
+  agency: string;
 }

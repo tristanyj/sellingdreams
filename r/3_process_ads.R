@@ -43,7 +43,8 @@ for (i in seq_len(nrow(ads))) {
     category = ads$category[i],
     name = ads$name[i],
     client = ads$client[i],
-    slogan = ads$slogan[i]
+    slogan = ads$slogan[i],
+    agency = ads$agency[i]
   )
   output$ads[[i]] <- ad
 }
