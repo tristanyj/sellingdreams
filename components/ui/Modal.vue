@@ -38,7 +38,7 @@ onUnmounted(() => {
 
       <div class="flex justify-center items-center min-h-screen p-1">
         <div
-          class="relative rounded-lg w-full max-w-96 bg-gray-50 overflow-hidden transition-all duration-50 will-change-transform transform translate-y-0"
+          class="relative rounded-lg w-full max-w-[540px] max-h-[520px] overflow-y-scroll p-5 text-sm bg-gray-50 overflow-hidden transition-all duration-50 will-change-transform transform translate-y-0"
         >
           <button
             type="button"
@@ -60,7 +60,50 @@ onUnmounted(() => {
             </svg>
           </button>
 
-          hello world
+          <div
+            v-if="selectedAd"
+            class="grid gap-2"
+          >
+            <div class="grid gap-1">
+              <div class="grid grid-flow-col justify-start items-center gap-2">
+                <div class="">{{ selectedAd.year }}</div>
+                <div class="w-1 h-1 rounded-full bg-black" />
+                <div class="">{{ selectedAd.client }}</div>
+              </div>
+              <div class="grid grid-flow-col items-center gap-2 text-2xl leading-tight">
+                <div class="font-medium pr-8">{{ selectedAd.slogan }}</div>
+              </div>
+              <div class="text-gray-600 text-xs mt-0.5 mb-1">Agency : {{ selectedAd.agency }}</div>
+            </div>
+            <div>
+              <iframe
+                class="w-full h-56"
+                src="https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <div class="grid gap-1 mt-2">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro iusto cum
+                at tenetur nihil nesciunt libero dolores ipsam inventore nostrum molestias sapiente,
+                sequi, vitae enim? A animi unde odio.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro iusto cum
+                at tenetur nihil nesciunt libero dolores ipsam inventore nostrum molestias sapiente,
+                sequi, vitae enim? A animi unde odio.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro iusto cum
+                at tenetur nihil nesciunt libero dolores ipsam inventore nostrum molestias sapiente,
+                sequi, vitae enim? A animi unde odio.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
