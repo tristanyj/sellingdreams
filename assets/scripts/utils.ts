@@ -7,6 +7,39 @@ export function formatNumber(value: number, decimals?: number): string {
   return `${value / 1e9}B`;
 }
 
+export function wrapText(text: string, width: number): string[] {
+  const words = text.split(/\s+/).reverse();
+  const lines: string[] = [];
+  let line: string[] = [];
+  let lineLength = 0;
+  const spaceWidth = 4; // Approximate space width
+
+  while (words.length > 0) {
+    const word = words.pop()!;
+    const wordWidth = word.length * 5.5; // Approximate width per character
+
+    if (lineLength + wordWidth + (line.length > 0 ? spaceWidth : 0) > width) {
+      if (line.length > 0) {
+        lines.push(line.join(' '));
+        line = [word];
+        lineLength = wordWidth;
+      } else {
+        // If single word is too long, just add it
+        lines.push(word);
+      }
+    } else {
+      line.push(word);
+      lineLength += wordWidth + (line.length > 0 ? spaceWidth : 0);
+    }
+  }
+
+  if (line.length > 0) {
+    lines.push(line.join(' '));
+  }
+
+  return lines;
+}
+
 export function calcTextLength(g: d3GSelection, text: string, fontSize: number) {
   const tempText = g
     .append('text')

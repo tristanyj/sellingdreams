@@ -118,7 +118,46 @@ export function useChartDrawLegend() {
     });
   };
 
+  const drawAreaLegend = (g: d3GSelection) => {
+    const misc = series.value.find((s) => s.id === 'miscellaneous')?.areaPoints.slice(1, 3);
+
+    if (!misc) return;
+
+    console.log('misc', misc);
+
+    const x0Mid = (misc[0].x0 + misc[1].x0) / 2;
+    const x1Mid = (misc[0].x1 + misc[1].x1) / 2;
+    const x01Mid = (x0Mid + x1Mid) / 2;
+
+    const x0 = (x0Mid + x01Mid) / 2;
+    const y0 = (misc[0].y + misc[1].y) / 2;
+
+    const x1 = 400;
+    const y1 = 150;
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: x0,
+      x2: x1,
+      y1: y0,
+      y2: y1,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: x1,
+      x2: x1,
+      y1: y1,
+      y2: y1 - 50,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
+  };
+
   return {
     drawCategoryLegend,
+    drawAreaLegend,
   };
 }
