@@ -135,7 +135,7 @@ export function useChartDrawLegend() {
 
     const x0 = (x0Mid + x01Mid) / 2;
 
-    const x1 = x0 - 125;
+    const x1 = x0 - 120;
     const y1 = yMid - 190;
 
     createLine(g, {
@@ -180,7 +180,7 @@ export function useChartDrawLegend() {
       transform: '',
     });
 
-    const lineOffset = 60;
+    const lineOffset = 40;
 
     createLine(g, {
       className: 'legend-line',
