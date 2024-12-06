@@ -11,6 +11,7 @@ export function calcTextLength(g: d3GSelection, text: string, fontSize: number) 
   const tempText = g
     .append('text')
     .text(text)
+    .attr('class', 'text-path')
     .style('font-size', `${fontSize}px`)
     .style('visibility', 'hidden');
 

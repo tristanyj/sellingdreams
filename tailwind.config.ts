@@ -8,7 +8,7 @@ export default <Partial<Config>>{
         inter: ['Inter', 'sans-serif'],
         lexend: ['Bricolage Grotesque', 'cursive'],
         garamond: ['EB Garamond', 'serif'],
-        crimson: ['Crimson Text', 'serif'],
+        crimson: ['Crimson Pro', 'serif'],
       },
       colors: {
         primary: slate,

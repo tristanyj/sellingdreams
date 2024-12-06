@@ -42,6 +42,8 @@ export function useChartDrawPoints() {
       const category = categories.value.find((c) => c.id === serie.id);
       if (!category) return;
 
+      const isMuted = selectedArea.value && selectedArea.value !== serie.id;
+
       serie.areaPoints.forEach((point) => {
         const ad = ads.value.find((a) => a.id === `${point.year}-${serie.id}`);
         const figure = figures.value.find((f) => f.year === point.year);
@@ -98,6 +100,7 @@ export function useChartDrawPoints() {
             arcGroup
               .append('text')
               .append('textPath')
+              .attr('class', 'text-path')
               .attr('href', `#${arc.id}`)
               .attr('startOffset', `${textOffsetPercentage}%`)
               .attr('opacity', arc.opacity)
@@ -124,7 +127,8 @@ export function useChartDrawPoints() {
           .attr('cy', point.y)
           .attr('r', radius.small)
           .attr('fill', 'black')
-          .attr('stroke', 'white');
+          .attr('stroke', 'white')
+          .attr('opacity', isMuted ? opacity.point.muted : 1);
 
         const interactionCircle = g
           .append('circle')
@@ -132,7 +136,14 @@ export function useChartDrawPoints() {
           .attr('id', `point-${serie.id}-${point.year}-interaction`)
           .attr('cx', (point.x0 + point.x1) / 2)
           .attr('cy', point.y)
-          .attr('r', Math.abs(point.x0 - point.x1) > 0 ? radius.target + 15 : radius.small)
+          .attr(
+            'r',
+            Math.abs(point.x0 - point.x1) > 0
+              ? ad
+                ? radius.target + 15
+                : radius.target
+              : radius.small + 6
+          )
           .attr('opacity', 0)
           .on('click', function (_) {
             if (ad) {
@@ -194,8 +205,14 @@ export function useChartDrawPoints() {
           // updateMousePosition(event);
           // })
           .on('mouseout', function (_) {
-            const points = d3.selectAll(`.point`);
-            points.attr('opacity', 1);
+            if (selectedArea.value) {
+              d3.selectAll(`.point`).attr('opacity', opacity.point.muted);
+              const points = d3.selectAll(`.point-${selectedArea.value}`);
+              points.attr('opacity', 1);
+            } else {
+              const points = d3.selectAll(`.point`);
+              points.attr('opacity', 1);
+            }
             d3.select(`#point-${serie.id}-${point.year}`).attr('r', radius.small);
 
             const yearText = d3.selectAll(`.year-text`);
