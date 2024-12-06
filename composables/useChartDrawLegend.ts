@@ -24,10 +24,10 @@ export function useChartDrawLegend() {
       point: s.areaPoints[0],
     }));
 
-    const fontSize = 14;
+    const fontSize = 15;
     const legendGroup = g.append('g').attr('class', 'legend-group');
     const totalItems = firstOfEach.length;
-    const maxOffset = 30; // Maximum offset for edge items
+    const maxOffset = 50;
 
     firstOfEach.forEach((serie, index) => {
       const category = categories.value.find((c) => c.id === serie.id);
@@ -35,10 +35,10 @@ export function useChartDrawLegend() {
 
       const x = (serie.point.x0 + serie.point.x1) / 2;
       const y2Mid = serie.point.y - 20;
-      const y2 = serie.point.y - 50;
+      const y2 = serie.point.y - 30;
 
       // Calculate offsets
-      const offsetFactor = (index / (totalItems - 1)) * 2 - 1; // Scale between -1 and 1
+      const offsetFactor = (index / (totalItems - 0)) * 2 - 1;
       const offset = offsetFactor * maxOffset;
 
       const x2 = index === 0 ? x : x + offset;
@@ -49,7 +49,7 @@ export function useChartDrawLegend() {
         x2: x2,
         y1: serie.point.y,
         y2: index === 0 ? y2 : y2Mid,
-        opacity: opacity.line.enabled,
+        opacity: opacity.line.legend,
         transform: '',
       });
 
@@ -60,7 +60,7 @@ export function useChartDrawLegend() {
           x2: x2,
           y1: y2Mid,
           y2: y2,
-          opacity: opacity.line.enabled,
+          opacity: opacity.line.legend,
           transform: '',
         });
       }

@@ -30,7 +30,7 @@ export function useChartDrawLines() {
 
     for (const figure of figures.value) {
       const y = yScale(figure.year.toString()) ?? 0;
-      const padding = 10;
+      const padding = 7;
       const textOffset = 4;
       const subTextOffset = 22;
       const fontSize = 15;
