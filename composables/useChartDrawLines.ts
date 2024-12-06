@@ -71,21 +71,16 @@ export function useChartDrawLines() {
         .text(leftText);
 
       if (leftSubText) {
-        // Map categories to their respective objects, filtering out any undefined results
         const cats =
           event?.categories
             .map((c) => categories.value.find((cat) => cat.id === c))
             .filter(Boolean) ?? [];
 
-        console.log('cats :', cats);
-
         const cubeSize = 10;
-        const padding = 5; // Assuming padding is defined somewhere in your code
+        const padding = 5;
 
-        // Calculate subCubeOffset only if there are cubes
         const subCubeOffset = cats.length > 0 ? cats.length * (cubeSize + padding) : 0;
 
-        // Render each category as a colored cube
         cats.forEach((cat, i) => {
           lineGroup
             .append('rect')
@@ -96,7 +91,6 @@ export function useChartDrawLines() {
             .attr('fill', cat?.color ?? 'black');
         });
 
-        // Append the text, offset by the calculated subCubeOffset
         lineGroup
           .append('text')
           .attr('class', 'year-sub-text left-sub-text')

@@ -11,7 +11,7 @@ const tooltipStyle = computed<CSSProperties>(() => {
   if (!mousePosition.value) return {};
 
   const paddingX = 25;
-  const paddingY = 25;
+  const paddingY = 0;
 
   const isPastHalfWidth = mousePosition.value.x > width.value * 0.65;
   const isPastHalfHeight = mousePosition.value.y > height.value * 0.65;
@@ -20,7 +20,7 @@ const tooltipStyle = computed<CSSProperties>(() => {
   const posY =
     isPastHalfWidth && isPastHalfHeight
       ? mousePosition.value.y - tooltipSize.value.height - paddingY
-      : mousePosition.value.y + paddingY;
+      : mousePosition.value.y - tooltipSize.value.height / 2 - paddingY;
 
   const clampedPosX = Math.max(
     paddingX,

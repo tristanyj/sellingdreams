@@ -19,7 +19,7 @@ export function useChartDrawAreas() {
     g: d3GSelection,
     xScale: d3.ScaleLinear<number, number>,
     yScale: d3.ScalePoint<string>,
-    isOverlay = false
+    isInteraction = false
   ) => {
     const series = getSeries(xScale, yScale);
 
@@ -30,7 +30,7 @@ export function useChartDrawAreas() {
       .x1((d) => d.x1)
       .curve(d3.curveLinear);
 
-    if (!isOverlay) {
+    if (!isInteraction) {
       g.selectAll('.category-area')
         .data(series)
         .join('path')
