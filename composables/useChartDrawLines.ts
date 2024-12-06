@@ -76,18 +76,17 @@ export function useChartDrawLines() {
             .map((c) => categories.value.find((cat) => cat.id === c))
             .filter(Boolean) ?? [];
 
-        const cubeSize = 9;
-        const padding = 5;
+        const circleSize = 10;
+        const padding = 4;
 
-        const subCubeOffset = cats.length > 0 ? cats.length * (cubeSize + padding) : 0;
+        const subCubeOffset = cats.length > 0 ? cats.length * (circleSize + padding) + 1 : 0;
 
         cats.forEach((cat, i) => {
           lineGroup
-            .append('rect')
-            .attr('x', i * (cubeSize + padding))
-            .attr('y', y + subTextOffset - cubeSize)
-            .attr('width', cubeSize)
-            .attr('height', cubeSize)
+            .append('circle')
+            .attr('cx', 6 + i * (circleSize + padding))
+            .attr('cy', 6 + y + subTextOffset - circleSize)
+            .attr('r', circleSize / 2)
             .attr('fill', cat?.color ?? 'black');
         });
 
