@@ -10,7 +10,7 @@ const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
 const { drawYearLegend, drawCategoryLines } = useChartDrawLines();
 const { drawAreaPoints } = useChartDrawPoints();
-const { drawCategoryLegend, drawAreaLegend } = useChartDrawLegend();
+const { drawCategoryLegend, drawAreaLegend, drawFigureLegend } = useChartDrawLegend();
 
 const container = ref<HTMLElement | null>(null);
 const g = ref<d3GSelection | null>(null);
@@ -65,6 +65,7 @@ function createVisualization() {
   // Legend
   drawCategoryLegend(g.value);
   drawAreaLegend(g.value);
+  drawFigureLegend(g.value);
 
   // Points
   drawAreaPoints(g.value);

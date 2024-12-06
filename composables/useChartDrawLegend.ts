@@ -3,11 +3,11 @@ import type { d3GSelection } from '~/types';
 
 import { createLine } from './useChartDrawLines';
 
-import { wrapText, wrapText2 } from '~/assets/scripts/utils';
+import { wrapText2 } from '~/assets/scripts/utils';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 export function useChartDrawLegend() {
-  const { opacity } = useChartConfig();
+  const { width, opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
   const { setTooltipCategory } = interactionStore;
@@ -127,8 +127,6 @@ export function useChartDrawLegend() {
 
     if (!misc) return;
 
-    console.log('misc', misc);
-
     const x0Mid = misc.x0;
     const x1Mid = misc.x1;
     const yMid = misc.y;
@@ -137,7 +135,7 @@ export function useChartDrawLegend() {
     const x0 = (x0Mid + x01Mid) / 2;
 
     const x1 = x0 - 125;
-    const y1 = yMid - 180;
+    const y1 = yMid - 200;
 
     createLine(g, {
       className: 'legend-line',
@@ -181,7 +179,7 @@ export function useChartDrawLegend() {
       transform: '',
     });
 
-    const lineOffset = 30;
+    const lineOffset = 70;
 
     createLine(g, {
       className: 'legend-line',
@@ -193,10 +191,13 @@ export function useChartDrawLegend() {
       transform: '',
     });
 
+    const p1 = 70;
+    const p2 = 90;
+
     const text = g
       .append('text')
       .attr('x', x1)
-      .attr('y', y1 - lineOffset - 65 - 90)
+      .attr('y', y1 - lineOffset - p1 - p2)
       .attr('font-size', 15)
       .attr('font-family', 'Crimson Pro')
       .attr('class', 'label')
@@ -213,7 +214,7 @@ export function useChartDrawLegend() {
     const text2 = g
       .append('text')
       .attr('x', x1)
-      .attr('y', y1 - lineOffset - 65)
+      .attr('y', y1 - lineOffset - p1)
       .attr('font-size', 15)
       .attr('font-family', 'Crimson Pro')
       .attr('class', 'label')
@@ -228,8 +229,59 @@ export function useChartDrawLegend() {
     text2.attr('transform', `translate(${x1 - bbox2.width / 2})`);
   };
 
+  const drawFigureLegend = (g: d3GSelection) => {
+    const misc = series.value.find((s) => s.id === 'miscellaneous')?.areaPoints[0];
+    if (!misc) return;
+
+    const x = width - 8;
+    const y = misc.y - 20;
+    const y1 = y - 130;
+    const y2 = y1 - 32;
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: width - 8,
+      x2: width - 8,
+      y1: y,
+      y2: y1,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: width - 8,
+      x2: width - 24,
+      y1: y1,
+      y2: y2,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
+
+    const text = g
+      .append('text')
+      .attr('x', x)
+      .attr('y', y2 - 35)
+      .attr('class', 'right-text')
+      .attr('font-size', 15)
+      .attr('text-anchor', 'end')
+      .attr('font-family', 'Crimson Pro')
+      .text(() => `Total amount of dollars spent on advertising (Not adjusted for inflation)`);
+
+    const text2 = g
+      .append('text')
+      .attr('class', 'right-sub-text')
+      .attr('x', x)
+      .attr('y', y2 - 15)
+      .attr('font-size', 15)
+      .attr('text-anchor', 'end')
+      .attr('opacity', 0.5)
+      .text(() => `% of Gross Domestic Product (GDP)`);
+  };
+
   return {
     drawCategoryLegend,
     drawAreaLegend,
+    drawFigureLegend,
   };
 }
