@@ -81,7 +81,7 @@ onUnmounted(() => {
             </div>
             <div v-if="['television', 'radio'].includes(selectedAd.category)">
               <iframe
-                class="w-full h-56"
+                class="w-full h-64"
                 :src="selectedAd.youtube_link"
                 title="YouTube video player"
                 frameborder="0"

@@ -51,10 +51,22 @@
   ],
   "ads": [
     {
+      "id": "1959-periodicals",
+      "year": 1959,
+      "category": "periodicals",
+      "name": "Think small",
+      "short_name": "Think small",
+      "client": "Volkswagen",
+      "slogan": "",
+      "agency": "Doyle Dane Bernbach",
+      "youtube_link": ""
+    },
+    {
       "id": "1960-periodicals",
       "year": 1960,
       "category": "periodicals",
       "name": "Lemon",
+      "short_name": "Lemon",
       "client": "Volkswagen",
       "slogan": "We pluck the lemons, you get the plums.",
       "agency": "Doyle Dane Bernbach",
@@ -64,11 +76,23 @@
       "id": "1971-television",
       "year": 1971,
       "category": "television",
-      "name": "I'd like to buy the world a Coke.",
+      "name": "Hilltop — I'd like to buy the world a Coke",
+      "short_name": "Hilltop",
       "client": "Coca-Cola",
-      "slogan": "Hilltop",
+      "slogan": "",
       "agency": "McCann-Erikson",
       "youtube_link": "https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ"
+    },
+    {
+      "id": "1984-television",
+      "year": 1984,
+      "category": "television",
+      "name": "1984",
+      "short_name": "1984",
+      "client": "Apple",
+      "slogan": "Why 1984 won't be like 1984",
+      "agency": "Chiat/Day",
+      "youtube_link": "https://www.youtube.com/embed/2zfqw8nhUwA?si=Q9J9Z9QvQ9q9Q9Q"
     }
   ],
   "events": [

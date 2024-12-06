@@ -1,3 +1,5 @@
-year;category;client;agency;name;slogan;youtube_link
-1960;periodicals;Volkswagen;Doyle Dane Bernbach;Lemon;We pluck the lemons, you get the plums.;
-1971;television;Coca-Cola;McCann-Erikson;I'd like to buy the world a Coke.;Hilltop;https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ
+year;category;client;agency;name;short_name;slogan;youtube_link
+1959;periodicals;Volkswagen;Doyle Dane Bernbach;Think small;Think small;;
+1960;periodicals;Volkswagen;Doyle Dane Bernbach;Lemon;Lemon;We pluck the lemons, you get the plums.;
+1971;television;Coca-Cola;McCann-Erikson;Hilltop — I'd like to buy the world a Coke;Hilltop;;https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ
+1984;television;Apple;Chiat/Day;1984;1984;Why 1984 won't be like 1984;https://www.youtube.com/embed/2zfqw8nhUwA?si=Q9J9Z9QvQ9q9Q9Q

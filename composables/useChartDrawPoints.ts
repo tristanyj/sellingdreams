@@ -1,9 +1,26 @@
 import * as d3 from 'd3';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
+import { calcTextLength } from '~/assets/scripts/utils';
 import type { d3GSelection } from '~/types';
+
+export interface Arc {
+  innerRadius: number;
+  outerRadius: number;
+  startAngle: number;
+  endAngle: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+}
 
 export function useChartDrawPoints() {
   const { opacity } = useChartConfig();
+
+  const arcGenerator = d3
+    .arc<Arc>()
+    .innerRadius((d) => d.innerRadius)
+    .outerRadius((d) => d.outerRadius)
+    .startAngle((d) => d.startAngle)
+    .endAngle((d) => d.endAngle);
 
   const interactionStore = useInteractionStore();
   const { setTooltipFigure, setTooltipCategory, setTooltipAd, setSelectedAd } = interactionStore;
@@ -41,6 +58,61 @@ export function useChartDrawPoints() {
         if (!figureCategory) return;
 
         if (ad) {
+          const fontSize = 11;
+          const arcGroup = g
+            .append('g')
+            .attr('class', 'center')
+            .attr('transform', `translate(${(point.x0 + point.x1) / 2},${point.y})`);
+
+          const textArcs = [
+            {
+              id: 'top-arc',
+              text: ad.short_name,
+              radius: radius.target + 4,
+              startAngle: (3 * Math.PI) / 2,
+              endAngle: (5 * Math.PI) / 2,
+              color: '#fff',
+              opacity: 0.9,
+            },
+            {
+              id: 'bottom-arc',
+              text: ad.client,
+              radius: radius.target + 11,
+              startAngle: (3 * Math.PI) / 2,
+              endAngle: Math.PI / 2,
+              color: '#fff',
+              opacity: 0.6,
+            },
+          ];
+
+          textArcs.forEach((arc) => {
+            const textArc = arcGenerator({
+              innerRadius: arc.radius,
+              outerRadius: arc.radius,
+              startAngle: arc.startAngle,
+              endAngle: arc.endAngle,
+              data: null,
+            });
+
+            const textLength = calcTextLength(g, arc.text, fontSize);
+
+            const arcLength = Math.abs(arc.endAngle - arc.startAngle) * arc.radius;
+            const textPercentage = (textLength / arcLength) * 100;
+            const textOffsetPercentage = (100 - textPercentage) / 4;
+
+            arcGroup.append('path').attr('id', arc.id).attr('d', textArc);
+
+            arcGroup
+              .append('text')
+              .append('textPath')
+              .attr('href', `#${arc.id}`)
+              .attr('startOffset', `${textOffsetPercentage}%`)
+              .attr('opacity', arc.opacity)
+              .style('font-size', fontSize)
+              .style('fill', arc.color)
+              .text(arc.text);
+          });
+
           g.append('circle')
             .attr('class', `point-bg point-bg-${serie.id}`)
             .attr('id', `point-bg-${serie.id}-${point.year}`)
@@ -115,6 +187,7 @@ export function useChartDrawPoints() {
                 name: ad.name,
                 slogan: ad.slogan,
                 agency: ad.agency,
+                short_name: ad.short_name,
               });
             }
 
