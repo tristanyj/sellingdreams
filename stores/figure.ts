@@ -24,7 +24,7 @@ export const useFigureStore = defineStore('figure', () => {
   >([]);
 
   const setFigures = (newFigures: Figure[]) => {
-    figures.value = [...newFigures].filter((f) => f.year >= 1912 && f.year <= 2007);
+    figures.value = [...newFigures].filter((f) => f.year >= 1910 && f.year <= 2007);
     isLoaded.value = true;
   };
 

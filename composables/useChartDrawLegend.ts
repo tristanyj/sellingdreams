@@ -2,6 +2,8 @@ import * as d3 from 'd3';
 import type { d3GSelection } from '~/types';
 
 import { createLine } from './useChartDrawLines';
+
+import { wrapText, wrapText2 } from '~/assets/scripts/utils';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 export function useChartDrawLegend() {
@@ -119,41 +121,111 @@ export function useChartDrawLegend() {
   };
 
   const drawAreaLegend = (g: d3GSelection) => {
-    const misc = series.value.find((s) => s.id === 'miscellaneous')?.areaPoints.slice(1, 3);
+    const misc = series.value.find((s) => s.id === 'miscellaneous')?.areaPoints[2];
+
+    // TODO: refactor this function
 
     if (!misc) return;
 
     console.log('misc', misc);
 
-    const x0Mid = (misc[0].x0 + misc[1].x0) / 2;
-    const x1Mid = (misc[0].x1 + misc[1].x1) / 2;
+    const x0Mid = misc.x0;
+    const x1Mid = misc.x1;
+    const yMid = misc.y;
     const x01Mid = (x0Mid + x1Mid) / 2;
 
     const x0 = (x0Mid + x01Mid) / 2;
-    const y0 = (misc[0].y + misc[1].y) / 2;
 
-    const x1 = 400;
-    const y1 = 150;
+    const x1 = x0 - 125;
+    const y1 = yMid - 180;
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: x0Mid,
+      x2: x1Mid,
+      y1: yMid,
+      y2: yMid,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: x0Mid,
+      x2: x0Mid,
+      y1: yMid - 10,
+      y2: yMid + 10,
+      strokeWidth: 2,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
+
+    createLine(g, {
+      className: 'legend-line',
+      x1: x1Mid,
+      x2: x1Mid,
+      y1: yMid - 10,
+      y2: yMid + 10,
+      strokeWidth: 2,
+      opacity: opacity.line.legend,
+      transform: '',
+    });
 
     createLine(g, {
       className: 'legend-line',
       x1: x0,
       x2: x1,
-      y1: y0,
+      y1: yMid,
       y2: y1,
       opacity: opacity.line.legend,
       transform: '',
     });
+
+    const lineOffset = 30;
 
     createLine(g, {
       className: 'legend-line',
       x1: x1,
       x2: x1,
       y1: y1,
-      y2: y1 - 50,
+      y2: y1 - lineOffset,
       opacity: opacity.line.legend,
       transform: '',
     });
+
+    const text = g
+      .append('text')
+      .attr('x', x1)
+      .attr('y', y1 - lineOffset - 65 - 90)
+      .attr('font-size', 15)
+      .attr('font-family', 'Crimson Pro')
+      .attr('class', 'label')
+      .attr('stroke-width', 1)
+      .text(
+        () =>
+          `Eight advertising categories are each represented with a column of a certain color. For a given year, the sum width of all columns represents the total amount of money spent on advertising in the US, as a percentage of the GDP.`
+      )
+      .call(wrapText2, 320);
+
+    const bbox = text.node().getBBox();
+    text.attr('transform', `translate(${x1 - bbox.width / 2})`);
+
+    const text2 = g
+      .append('text')
+      .attr('x', x1)
+      .attr('y', y1 - lineOffset - 65)
+      .attr('font-size', 15)
+      .attr('font-family', 'Crimson Pro')
+      .attr('class', 'label')
+      .attr('stroke-width', 1)
+      .text(
+        () =>
+          `The width of a column represents, for a given year, the percentage of money spent on this category among advertising categories. Higher percentages are placed on the left, lower percentages on the right.`
+      )
+      .call(wrapText2, 320);
+
+    const bbox2 = text2.node().getBBox();
+    text2.attr('transform', `translate(${x1 - bbox2.width / 2})`);
   };
 
   return {

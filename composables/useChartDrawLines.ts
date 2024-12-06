@@ -33,6 +33,7 @@ export function useChartDrawLines() {
       const padding = 7;
       const textOffset = 4;
       const subTextOffset = 22;
+      const fontSizeYear = 17;
       const fontSize = 15;
 
       const event = events.value.find((e) => e.year === figure.year);
@@ -45,7 +46,7 @@ export function useChartDrawLines() {
       const rightSubText = `${(figure.total.proportion_of_gdp * 100).toFixed(2)}% of GDP`;
       const rightText = `$${formatNumber(figure.total.nominal)}`;
 
-      const leftTextLength = calcTextLength(lineGroup, leftText, fontSize);
+      const leftTextLength = calcTextLength(lineGroup, leftText, fontSizeYear);
       const rightTextLength = calcTextLength(lineGroup, rightText, fontSize);
 
       createLine(lineGroup, {
@@ -66,7 +67,7 @@ export function useChartDrawLines() {
         .attr('x', 0)
         .attr('y', y + textOffset)
         .attr('text-anchor', 'start')
-        .attr('font-size', `${fontSize}px`)
+        .attr('font-size', `${fontSizeYear}px`)
         .text(leftText);
 
       if (leftSubText) {
