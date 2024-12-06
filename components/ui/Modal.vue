@@ -3,6 +3,10 @@ const interactionStore = useInteractionStore();
 const { selectedAd } = storeToRefs(interactionStore);
 const { setSelectedAd } = interactionStore;
 
+const getImageUrl = (id: string) => {
+  return new URL(`../../assets/images/ads/${id}.webp`, import.meta.url).href;
+};
+
 function handleEscape(e: KeyboardEvent) {
   if (e.key === 'Escape' && isModalOpen.value) {
     setSelectedAd(null);
@@ -71,19 +75,26 @@ onUnmounted(() => {
                 <div class="">{{ selectedAd.client }}</div>
               </div>
               <div class="grid grid-flow-col items-center gap-2 text-2xl leading-tight">
-                <div class="font-medium pr-8">{{ selectedAd.slogan }}</div>
+                <div class="font-medium pr-8">{{ selectedAd.name }}</div>
               </div>
               <div class="text-gray-600 text-xs mt-0.5 mb-1">Agency : {{ selectedAd.agency }}</div>
             </div>
-            <div>
+            <div v-if="['television', 'radio'].includes(selectedAd.category)">
               <iframe
                 class="w-full h-56"
-                src="https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ"
+                :src="selectedAd.youtube_link"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
+              />
+            </div>
+            <div v-else>
+              <img
+                :src="getImageUrl(selectedAd.id)"
+                class="w-full object-contain rounded-sm"
+                alt=""
               />
             </div>
             <div class="grid gap-1 mt-2">

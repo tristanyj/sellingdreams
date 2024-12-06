@@ -58,6 +58,7 @@ export interface Ad {
   name: string;
   slogan: string;
   agency: string;
+  youtube_link: string;
 }
 
 // --------------------------------

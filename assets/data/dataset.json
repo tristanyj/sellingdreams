@@ -7131,13 +7131,24 @@
   ],
   "ads": [
     {
+      "id": "1960-periodicals",
+      "year": 1960,
+      "category": "periodicals",
+      "name": "Lemon",
+      "client": "Volkswagen",
+      "slogan": "We pluck the lemons, you get the plums.",
+      "agency": "Doyle Dane Bernbach",
+      "youtube_link": ""
+    },
+    {
       "id": "1971-television",
       "year": 1971,
       "category": "television",
-      "name": "Hilltop",
+      "name": "I'd like to buy the world a Coke.",
       "client": "Coca-Cola",
-      "slogan": "I'd like to buy the world a Coke",
-      "agency": "McCann-Erikson"
+      "slogan": "Hilltop",
+      "agency": "McCann-Erikson",
+      "youtube_link": "https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ"
     }
   ],
   "categories": [

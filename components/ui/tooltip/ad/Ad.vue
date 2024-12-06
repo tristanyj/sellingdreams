@@ -3,7 +3,7 @@ import type { CSSProperties } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 
 const getImageUrl = (id: string) => {
-  return new URL(`../../../../assets/images/ads/${id}.webp`, import.meta.url).href;
+  return new URL(`../../../../assets/images/ads/${id}-preview.webp`, import.meta.url).href;
 };
 
 const { width, height } = useWindowSize();
@@ -105,7 +105,7 @@ onMounted(() => {
             <div class="">{{ tooltipAd.client }}</div>
           </div>
           <div class="grid grid-flow-col items-center gap-2 text-lg leading-tight">
-            <div class="font-medium pr-5">{{ tooltipAd.slogan }}</div>
+            <div class="font-medium pr-5">{{ tooltipAd.name }}</div>
           </div>
         </div>
         <div>
