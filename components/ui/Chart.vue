@@ -152,9 +152,11 @@ const adjustedForInflation = computed({
 
 <template>
   <div class="relative z-10">
-    <div class="">
-      <div class="">Adjusted for inflation</div>
-      <UToggle v-model="adjustedForInflation" />
+    <div class="flex">
+      <div class="grid grid-flow-col gap-2 items-center text-sm">
+        <div class="">Adjusted for inflation</div>
+        <UToggle v-model="adjustedForInflation" />
+      </div>
     </div>
     <UiTooltipCategory />
     <UiTooltipAd />

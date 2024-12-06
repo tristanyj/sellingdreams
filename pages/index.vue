@@ -1,10 +1,16 @@
 <script setup lang="ts">
 useHead({ title: 'Madison | Description' });
 
+import { useWindowScroll } from '@vueuse/core';
+
+const { x, y } = useWindowScroll();
+
 const figureStore = useFigureStore();
 const { isLoaded: isFiguresLoaded } = storeToRefs(figureStore);
 const dataStore = useDataStore();
-const { isLoaded: isAdsLoaded } = storeToRefs(dataStore);
+const { isLoaded: isAdsLoaded, categories } = storeToRefs(dataStore);
+
+const adjustedForInflation = ref(false);
 </script>
 
 <template>
@@ -19,7 +25,35 @@ const { isLoaded: isAdsLoaded } = storeToRefs(dataStore);
       <UiChart v-if="isAdsLoaded && isFiguresLoaded" />
     </UContainer>
 
-    <!-- <div class="relative mb-20 px-5">
-    </div> -->
+    <Transition name="modal">
+      <div
+        v-if="y > 550"
+        class="fixed z-50 top-1 left-1/2 transform -translate-x-1/2 bg-[#E7DECC]/95 border border-white rounded-md px-2.5 py-1.5"
+      >
+        <div class="grid grid-flow-col items-center gap-3 text-xs text-gray-800">
+          <div
+            v-for="category in categories"
+            :key="`category-${category.id}`"
+            class="grid grid-flow-col gap-0.5 items-center"
+          >
+            <div
+              class="w-2.5 h-2.5 rounded-full"
+              :style="{ backgroundColor: category.color }"
+            />
+            <div class="">
+              {{ category.name }}
+            </div>
+          </div>
+          <div class="opacity-20">|</div>
+          <div class="grid grid-flow-col gap-2 items-center">
+            <div class="">Adjusted for inflation</div>
+            <UToggle
+              v-model="adjustedForInflation"
+              size="xs"
+            />
+          </div>
+        </div>
+      </div>
+    </Transition>
   </div>
 </template>

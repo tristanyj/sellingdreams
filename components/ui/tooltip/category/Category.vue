@@ -30,7 +30,7 @@ const tooltipStyle = computed<CSSProperties>(() => {
     50,
     Math.min(posX, width.value - tooltipSize.value.width - paddingX)
   );
-  const clampedPosY = Math.max(10, Math.min(posY, height.value - tooltipSize.value.height - 35));
+  const clampedPosY = Math.max(40, Math.min(posY, height.value - tooltipSize.value.height - 35));
 
   return {
     transform: `translate(${clampedPosX}px, ${clampedPosY}px)`,
