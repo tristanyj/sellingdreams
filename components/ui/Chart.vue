@@ -48,10 +48,10 @@ function createVisualization() {
     .attr('fill', 'transparent')
     .on('click', () => {
       selectArea(null);
-    })
-    .on('mousemove', (event) => {
-      updateMousePosition(event);
     });
+  // .on('mousemove', (event) => {
+  //   updateMousePosition(event);
+  // });
 
   // Areas
   drawCategoryAreas(g.value, xScale, yScale);

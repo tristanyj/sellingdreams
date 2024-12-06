@@ -10,7 +10,7 @@ const { mousePosition, isTooltipAdVisible, tooltipAd } = storeToRefs(interaction
 const tooltipStyle = computed<CSSProperties>(() => {
   if (!mousePosition.value) return {};
 
-  const paddingX = 25;
+  const paddingX = 100;
   const paddingY = 0;
 
   const isPastHalfWidth = mousePosition.value.x > width.value * 0.65;

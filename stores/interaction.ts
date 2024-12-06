@@ -30,6 +30,14 @@ export const useInteractionStore = defineStore('interaction', () => {
       y: event.clientY,
     };
   };
+
+  const updateMousePositionFromHook = (x: number, y: number) => {
+    mousePosition.value = {
+      x,
+      y,
+    };
+  };
+
   const setTooltipCategory = (data: TooltipCategory | null) => {
     tooltipCategory.value = data;
   };
@@ -55,6 +63,7 @@ export const useInteractionStore = defineStore('interaction', () => {
     isTooltipAdVisible,
     selectedAd,
     updateMousePosition,
+    updateMousePositionFromHook,
     setTooltipCategory,
     setTooltipFigure,
     setTooltipAd,

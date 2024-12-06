@@ -76,7 +76,7 @@ export function useChartDrawLines() {
             .map((c) => categories.value.find((cat) => cat.id === c))
             .filter(Boolean) ?? [];
 
-        const cubeSize = 10;
+        const cubeSize = 9;
         const padding = 5;
 
         const subCubeOffset = cats.length > 0 ? cats.length * (cubeSize + padding) : 0;
@@ -85,7 +85,7 @@ export function useChartDrawLines() {
           lineGroup
             .append('rect')
             .attr('x', i * (cubeSize + padding))
-            .attr('y', y + subTextOffset - cubeSize + 1)
+            .attr('y', y + subTextOffset - cubeSize)
             .attr('width', cubeSize)
             .attr('height', cubeSize)
             .attr('fill', cat?.color ?? 'black');

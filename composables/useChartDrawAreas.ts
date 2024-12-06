@@ -82,9 +82,9 @@ export function useChartDrawAreas() {
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', opacity.area.muted));
         })
-        .on('mousemove', (event) => {
-          updateMousePosition(event);
-        })
+        // .on('mousemove', (event) => {
+        //   updateMousePosition(event);
+        // })
         .on('mouseout', function () {
           setTooltipCategory(null);
 

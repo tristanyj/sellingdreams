@@ -2,16 +2,19 @@
 import type { CSSProperties } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 
+import { formatNumber } from '~/assets/scripts/utils';
+
 const { width, height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
+const { updateMousePosition } = interactionStore;
 const { mousePosition, isTooltipCategoryVisible, tooltipCategory, tooltipFigure } =
   storeToRefs(interactionStore);
 
 const tooltipStyle = computed<CSSProperties>(() => {
   if (!mousePosition.value) return {};
 
-  const paddingX = 50;
+  const paddingX = 100;
   const paddingY = 0;
 
   const isPastHalfWidth = mousePosition.value.x > width.value * 0.75;
@@ -70,6 +73,10 @@ useEventListener(window, 'resize', () => {
   };
 });
 
+useEventListener(window, 'mousemove', (event) => {
+  updateMousePosition(event);
+});
+
 onMounted(() => {
   if (!tooltip.value) return;
 
@@ -93,18 +100,35 @@ onMounted(() => {
   <div
     v-show="isTooltipCategoryVisible"
     ref="tooltip"
-    class="fixed stat-tooltip bg-gray-50 border rounded-md z-100 text-sm font-host"
+    class="fixed bg-gray-50 rounded-md z-100 text-sm font-host p-3"
     :style="tooltipStyle"
   >
     <template v-if="tooltipCategory">
-      <div class="w-64">
-        {{ tooltipCategory.id }}, {{ tooltipCategory.name }},
-        {{ tooltipCategory.description }}
+      <div
+        class="grid gap-1"
+        :class="{ 'mb-2': tooltipFigure }"
+      >
+        <div class="grid grid-flow-col gap-1 justify-start items-center">
+          <div
+            class="w-3 h-3 rounded-full"
+            :style="{ backgroundColor: tooltipCategory.color }"
+          />
+          <div class="font-medium">{{ tooltipCategory.name }}</div>
+        </div>
+        <p class="max-w-56">{{ tooltipCategory.description }}</p>
       </div>
     </template>
     <template v-if="tooltipFigure">
-      <div class="w-64">
-        {{ tooltipFigure.nominal }}
+      <div class="grid gap-0.5 pt-2 border-t">
+        <div class="">
+          <span class="font-medium text-lg leading-tight">{{ tooltipFigure.year }}</span>
+        </div>
+        <div class="">
+          <span class="underline">Expenditure</span> : ${{ formatNumber(tooltipFigure.nominal) }}
+        </div>
+        <div class="">
+          <span class="underline">% of ads</span> : {{ tooltipFigure.proportion_of_ads }}%
+        </div>
       </div>
     </template>
   </div>

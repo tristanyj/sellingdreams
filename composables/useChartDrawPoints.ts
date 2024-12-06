@@ -62,7 +62,8 @@ export function useChartDrawPoints() {
           .attr('fill', 'black')
           .attr('stroke', 'white');
 
-        g.append('circle')
+        const interactionCircle = g
+          .append('circle')
           .attr('class', `point-interaction${ad ? '-ad' : ''} point-${serie.id}-interaction`)
           .attr('id', `point-${serie.id}-${point.year}-interaction`)
           .attr('cx', (point.x0 + point.x1) / 2)
@@ -123,9 +124,9 @@ export function useChartDrawPoints() {
             const areas = ids.map((id) => d3.select(`#category-area-${id}`));
             areas.forEach((area) => area.attr('opacity', opacity.area.muted));
           })
-          .on('mousemove', (event) => {
-            updateMousePosition(event);
-          })
+          // .on('mousemove', (event) => {
+          // updateMousePosition(event);
+          // })
           .on('mouseout', function (_) {
             const points = d3.selectAll(`.point`);
             points.attr('opacity', 1);
@@ -149,6 +150,10 @@ export function useChartDrawPoints() {
             const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
             areas.forEach((area) => area.attr('opacity', 1));
           });
+
+        if (ad) {
+          interactionCircle.append('title').text('Click to see more details');
+        }
       });
     });
   };
