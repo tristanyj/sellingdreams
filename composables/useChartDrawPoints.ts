@@ -26,26 +26,19 @@ export function useChartDrawPoints() {
   const { setTooltipFigure, setTooltipCategory, setTooltipAd, setSelectedAd } = interactionStore;
 
   const figureStore = useFigureStore();
-  const { selectedArea, figures } = storeToRefs(figureStore);
-  const { getSeries } = figureStore;
+  const { selectedArea, figures, series } = storeToRefs(figureStore);
 
   const dataStore = useDataStore();
   const { ads, categories } = storeToRefs(dataStore);
 
-  const drawAreaPoints = (
-    g: d3GSelection,
-    xScale: d3.ScaleLinear<number, number>,
-    yScale: d3.ScalePoint<string>
-  ) => {
-    const series = getSeries(xScale, yScale);
-
+  const drawAreaPoints = (g: d3GSelection) => {
     const radius = {
       small: 3,
       large: 6,
       target: 18,
     };
 
-    series.forEach((serie) => {
+    series.value.forEach((serie) => {
       const category = categories.value.find((c) => c.id === serie.id);
       if (!category) return;
 
@@ -139,7 +132,7 @@ export function useChartDrawPoints() {
           .attr('id', `point-${serie.id}-${point.year}-interaction`)
           .attr('cx', (point.x0 + point.x1) / 2)
           .attr('cy', point.y)
-          .attr('r', Math.abs(point.x0 - point.x1) > 0 ? radius.target : radius.small)
+          .attr('r', Math.abs(point.x0 - point.x1) > 0 ? radius.target + 15 : radius.small)
           .attr('opacity', 0)
           .on('click', function (_) {
             if (ad) {

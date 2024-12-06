@@ -7,11 +7,11 @@ export function useChartConfig() {
   const width = 1400;
   const margin = {
     x: 600,
-    y: 100,
+    y: 300,
     offset: -40,
   };
 
-  const spacing = 15;
+  const spacing = 16;
 
   const opacity = {
     area: {

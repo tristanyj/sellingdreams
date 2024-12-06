@@ -10,6 +10,18 @@ export const useFigureStore = defineStore('figure', () => {
   const figures = ref<Figure[]>([]);
   const isLoaded = ref<boolean>(false);
   const selectedArea = ref<CategoryKey | null>(null);
+  const series = ref<
+    {
+      id: CategoryKey;
+      color: `#${string}`;
+      areaPoints: {
+        y: number;
+        x0: number;
+        x1: number;
+        year: number;
+      }[];
+    }[]
+  >([]);
 
   const setFigures = (newFigures: Figure[]) => {
     figures.value = [...newFigures].filter((f) => f.year >= 1912 && f.year <= 2007);
@@ -52,7 +64,7 @@ export const useFigureStore = defineStore('figure', () => {
     return Math.max(...figures.value.map((f) => f.total.proportion_of_gdp));
   });
 
-  const getSeries = (xScale: d3.ScaleLinear<number, number>, yScale: d3.ScalePoint<string>) => {
+  const calcSeries = (xScale: d3.ScaleLinear<number, number>, yScale: d3.ScalePoint<string>) => {
     figureSlices.value.forEach((slice, year) => {
       slice.y = yScale(slice.year.toString())!;
 
@@ -73,9 +85,9 @@ export const useFigureStore = defineStore('figure', () => {
       });
     });
 
-    const series = AD_CATEGORIES.map((category) => {
+    series.value = AD_CATEGORIES.map((category) => {
       const cat = categories.value.find((c) => c.id === category);
-      if (!cat) return { id: category, color: '', areaPoints: [] };
+      if (!cat) return null;
 
       return {
         id: category,
@@ -88,9 +100,7 @@ export const useFigureStore = defineStore('figure', () => {
           return { y: slice.y, x0, x1, year: slice.year };
         }),
       };
-    });
-
-    return series;
+    }).filter((s) => s !== null);
   };
 
   const selectArea = (areaId: CategoryKey | null) => {
@@ -99,12 +109,13 @@ export const useFigureStore = defineStore('figure', () => {
 
   return {
     figures,
+    series,
     figureSlices,
     maxGDPProportion,
     isLoaded,
     selectedArea,
     setFigures,
-    getSeries,
+    calcSeries,
     selectArea,
   };
 });

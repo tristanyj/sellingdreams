@@ -3,13 +3,14 @@ import * as d3 from 'd3';
 import type { d3GSelection } from '@/types';
 
 const figureStore = useFigureStore();
-const { selectArea } = figureStore;
+const { selectArea, calcSeries } = figureStore;
 const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);
 
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
 const { drawYearLegend, drawCategoryLines } = useChartDrawLines();
 const { drawAreaPoints } = useChartDrawPoints();
+const { drawCategoryLegend } = useChartDrawLegend();
 
 const container = ref<HTMLElement | null>(null);
 const g = ref<d3GSelection | null>(null);
@@ -24,6 +25,8 @@ const xScale = d3
   .scaleLinear()
   .domain([0, maxGDPProportion.value])
   .range([0, width - margin.x]);
+
+calcSeries(xScale, yScale);
 
 function createVisualization() {
   if (!g.value) return;
@@ -51,16 +54,19 @@ function createVisualization() {
   // });
 
   // Areas
-  drawCategoryAreas(g.value, xScale, yScale);
+  drawCategoryAreas(g.value);
 
   // Lines
-  drawCategoryLines(g.value, xScale, yScale);
+  drawCategoryLines(g.value);
 
   // Hover Area
-  drawCategoryAreas(g.value, xScale, yScale, true);
+  drawCategoryAreas(g.value, true);
+
+  // Legend
+  drawCategoryLegend(g.value);
 
   // Points
-  drawAreaPoints(g.value, xScale, yScale);
+  drawAreaPoints(g.value);
 }
 
 const mountToContainer = () => {

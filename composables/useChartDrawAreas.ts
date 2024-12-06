@@ -9,20 +9,13 @@ export function useChartDrawAreas() {
   const { setTooltipCategory } = interactionStore;
 
   const figureStore = useFigureStore();
-  const { selectedArea } = storeToRefs(figureStore);
-  const { getSeries, selectArea } = figureStore;
+  const { selectedArea, series } = storeToRefs(figureStore);
+  const { selectArea } = figureStore;
 
   const dataStore = useDataStore();
   const { categories } = storeToRefs(dataStore);
 
-  const drawCategoryAreas = (
-    g: d3GSelection,
-    xScale: d3.ScaleLinear<number, number>,
-    yScale: d3.ScalePoint<string>,
-    isInteraction = false
-  ) => {
-    const series = getSeries(xScale, yScale);
-
+  const drawCategoryAreas = (g: d3GSelection, isInteraction = false) => {
     const area = d3
       .area<{ y: number; x0: number; x1: number }>()
       .y((d) => d.y)
@@ -32,7 +25,7 @@ export function useChartDrawAreas() {
 
     if (!isInteraction) {
       g.selectAll('.category-area')
-        .data(series)
+        .data(series.value)
         .join('path')
         .attr('class', 'category-area')
         .attr('id', (d) => `category-area-${d.id}`)
@@ -46,7 +39,7 @@ export function useChartDrawAreas() {
         );
 
       g.selectAll('.category-area-overlay')
-        .data(series)
+        .data(series.value)
         .join('path')
         .attr('class', 'category-area-overlay')
         .attr('fill', 'url(#noise-pattern)')
@@ -55,7 +48,7 @@ export function useChartDrawAreas() {
         .attr('opacity', 0.25);
     } else {
       g.selectAll('.category-area-interaction')
-        .data(series)
+        .data(series.value)
         .join('path')
         .attr('class', 'category-area-interaction')
         .attr('id', (d) => `category-area-${d.id}-interaction`)

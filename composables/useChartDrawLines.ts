@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import type { d3GSelection, Line } from '~/types';
 import { formatNumber, calcTextLength } from '~/assets/scripts/utils';
 
-const createLine = (g: d3GSelection, params: Line, color = '#000') => {
+export const createLine = (g: d3GSelection, params: Line, color = '#000') => {
   g.append('line')
     .attr('class', params.className)
     .attr('id', params?.id ?? `${params.className}${params.x1}-${params.y1}`)
@@ -20,8 +20,7 @@ export function useChartDrawLines() {
   const { width, opacity } = useChartConfig();
 
   const figureStore = useFigureStore();
-  const { figures } = storeToRefs(figureStore);
-  const { getSeries } = figureStore;
+  const { figures, series } = storeToRefs(figureStore);
 
   const dataStore = useDataStore();
   const { categories, events } = storeToRefs(dataStore);
@@ -125,13 +124,7 @@ export function useChartDrawLines() {
     }
   };
 
-  const drawCategoryLines = (
-    g: d3GSelection,
-    xScale: d3.ScaleLinear<number, number>,
-    yScale: d3.ScalePoint<string>
-  ) => {
-    const series = getSeries(xScale, yScale);
-
+  const drawCategoryLines = (g: d3GSelection) => {
     const line = d3
       .line<{ y: number; x: number }>()
       .y((d) => d.y)
@@ -139,7 +132,7 @@ export function useChartDrawLines() {
       .curve(d3.curveLinear);
 
     g.selectAll('.category-line')
-      .data(series)
+      .data(series.value)
       .join('path')
       .attr('class', 'category-line')
       .attr('d', (d) => line(d.areaPoints.map((p) => ({ y: p.y, x: (p.x0 + p.x1) / 2 }))))
@@ -149,7 +142,7 @@ export function useChartDrawLines() {
       .attr('stroke-linejoin', 'round')
       .attr('opacity', 0.1);
 
-    series.forEach((serie) => {
+    series.value.forEach((serie) => {
       serie.areaPoints.forEach((point) => {
         const y = point.y;
         createLine(g, {
