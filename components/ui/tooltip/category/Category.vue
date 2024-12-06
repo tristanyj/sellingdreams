@@ -8,7 +8,7 @@ const { width, height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
 const { updateMousePosition } = interactionStore;
-const { mousePosition, isTooltipCategoryVisible, tooltipCategory, tooltipFigure } =
+const { mousePosition, isTooltipCategoryVisible, tooltipCategory, tooltipFigure, figureMode } =
   storeToRefs(interactionStore);
 
 const tooltipStyle = computed<CSSProperties>(() => {
@@ -121,7 +121,9 @@ onMounted(() => {
           <span class="font-medium text-lg leading-tight">{{ tooltipFigure.year }}</span>
         </div>
         <div class="">
-          <span class="underline">Expenditure</span> : ${{ formatNumber(tooltipFigure.nominal) }}
+          <span class="underline">Expenditure</span> : ${{
+            formatNumber(tooltipFigure[figureMode])
+          }}
         </div>
         <div class="">
           <span class="underline">% of ads</span> :

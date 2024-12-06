@@ -1,11 +1,11 @@
 import { select } from 'd3-selection';
 import type { d3GSelection } from '~/types';
 
-export function formatNumber(value: number, decimals?: number): string {
-  if (value < 1e3) return value.toFixed(decimals ?? 1);
-  if (value < 1e6) return `${(value / 1e3).toFixed(decimals ?? 1)}k`;
-  if (value < 1e9) return `${value / 1e6}M`;
-  return `${value / 1e9}B`;
+export function formatNumber(value: number): string {
+  if (value < 1e3) return value.toFixed(2);
+  if (value < 1e6) return `${(value / 1e3).toFixed(2)}k`;
+  if (value < 1e9) return `${(value / 1e6).toFixed(2)}M`;
+  return `${(value / 1e9).toFixed(2)}B`;
 }
 
 export function wrapText(text: string, width: number): string[] {

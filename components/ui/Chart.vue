@@ -6,6 +6,10 @@ const figureStore = useFigureStore();
 const { selectArea, calcSeries } = figureStore;
 const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);
 
+const interactionStore = useInteractionStore();
+const { figureMode } = storeToRefs(interactionStore);
+const { setFigureMode } = interactionStore;
+
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
 const { drawYearLegend, drawCategoryLines } = useChartDrawLines();
@@ -119,6 +123,10 @@ watch(selectedArea, () => {
   updateVisualization();
 });
 
+watch(figureMode, () => {
+  updateVisualization();
+});
+
 const handleOutsideClick = (event: MouseEvent) => {
   if (container.value && !container.value.contains(event.target as Node)) {
     selectArea(null);
@@ -133,10 +141,21 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('click', handleOutsideClick);
 });
+
+const adjustedForInflation = computed({
+  get: () => figureMode.value === 'real',
+  set: (value) => {
+    setFigureMode(value ? 'real' : 'nominal');
+  },
+});
 </script>
 
 <template>
   <div class="relative z-10">
+    <div class="">
+      <div class="">Adjusted for inflation</div>
+      <UToggle v-model="adjustedForInflation" />
+    </div>
     <UiTooltipCategory />
     <UiTooltipAd />
     <UiModal />

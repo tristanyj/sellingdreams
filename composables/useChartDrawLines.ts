@@ -22,6 +22,9 @@ export function useChartDrawLines() {
   const figureStore = useFigureStore();
   const { figures, series } = storeToRefs(figureStore);
 
+  const interactionStore = useInteractionStore();
+  const { figureMode } = storeToRefs(interactionStore);
+
   const dataStore = useDataStore();
   const { categories, events } = storeToRefs(dataStore);
 
@@ -44,7 +47,7 @@ export function useChartDrawLines() {
 
       const leftText = figure.year.toString();
       const rightSubText = `${(figure.total.proportion_of_gdp * 100).toFixed(2)}% of GDP`;
-      const rightText = `$${formatNumber(figure.total.nominal)}`;
+      const rightText = `$${formatNumber(figure.total[figureMode.value])}`;
 
       const leftTextLength = calcTextLength(lineGroup, leftText, fontSizeYear);
       const rightTextLength = calcTextLength(lineGroup, rightText, fontSize);

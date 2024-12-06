@@ -10,6 +10,7 @@ export function useChartDrawLegend() {
   const { width, opacity } = useChartConfig();
 
   const interactionStore = useInteractionStore();
+  const { figureMode } = storeToRefs(interactionStore);
   const { setTooltipCategory } = interactionStore;
 
   const figureStore = useFigureStore();
@@ -135,7 +136,7 @@ export function useChartDrawLegend() {
     const x0 = (x0Mid + x01Mid) / 2;
 
     const x1 = x0 - 125;
-    const y1 = yMid - 200;
+    const y1 = yMid - 190;
 
     createLine(g, {
       className: 'legend-line',
@@ -179,7 +180,7 @@ export function useChartDrawLegend() {
       transform: '',
     });
 
-    const lineOffset = 70;
+    const lineOffset = 60;
 
     createLine(g, {
       className: 'legend-line',
@@ -235,7 +236,7 @@ export function useChartDrawLegend() {
 
     const x = width - 8;
     const y = misc.y - 20;
-    const y1 = y - 130;
+    const y1 = y - 120;
     const y2 = y1 - 32;
 
     createLine(g, {
@@ -266,7 +267,12 @@ export function useChartDrawLegend() {
       .attr('font-size', 15)
       .attr('text-anchor', 'end')
       .attr('font-family', 'Crimson Pro')
-      .text(() => `Total amount of dollars spent on advertising (Not adjusted for inflation)`);
+      .text(
+        () =>
+          `Total amount of dollars spent on advertising (${
+            figureMode.value === 'nominal' ? 'Not adjusted' : 'Adjusted'
+          } for inflation)`
+      );
 
     const text2 = g
       .append('text')
