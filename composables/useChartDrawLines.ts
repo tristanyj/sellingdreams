@@ -43,7 +43,7 @@ export function useChartDrawLines() {
       }
 
       const leftText = figure.year.toString();
-      const rightSubText = `${figure.total.proportion_of_gdp}% of GDP`;
+      const rightSubText = `${(figure.total.proportion_of_gdp * 100).toFixed(2)}% of GDP`;
       const rightText = `$${formatNumber(figure.total.nominal)}`;
 
       const leftTextLength = calcTextLength(lineGroup, leftText, fontSize);

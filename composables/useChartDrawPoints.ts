@@ -25,7 +25,7 @@ export function useChartDrawPoints() {
     const radius = {
       small: 3,
       large: 6,
-      target: 16,
+      target: 18,
     };
 
     series.forEach((serie) => {

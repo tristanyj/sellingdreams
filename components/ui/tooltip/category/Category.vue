@@ -124,7 +124,8 @@ onMounted(() => {
           <span class="underline">Expenditure</span> : ${{ formatNumber(tooltipFigure.nominal) }}
         </div>
         <div class="">
-          <span class="underline">% of ads</span> : {{ tooltipFigure.proportion_of_ads }}%
+          <span class="underline">% of ads</span> :
+          {{ (tooltipFigure.proportion_of_ads * 100).toFixed(2) }}%
         </div>
       </div>
     </template>
