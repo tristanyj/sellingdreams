@@ -202,7 +202,7 @@ export function useChartDrawPoints() {
             areas.forEach((area) => area.attr('opacity', opacity.area.muted));
           })
           // .on('mousemove', (event) => {
-          // updateMousePosition(event);
+          //   updateMousePosition(event);
           // })
           .on('mouseout', function (_) {
             if (selectedArea.value) {
