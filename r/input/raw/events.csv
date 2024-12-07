@@ -1,8 +1,43 @@
 year;category_ids;name
-1914;;Start of World War I
-1918;;End of World War I
-1929;;Start of the Great Depression
-1939;;Start of World War II
-1945;;End of World War II
+1914;;Creation of the FTC
+1915;;Development of Coca-Cola's contour bottle
+1917;miscellaneous;Use of advertising for war bonds
+1920;radio;First commercial radio broadcast (KDKA)
+1922;radio;First radio ad (WEAF)
+1923;periodicals;First issue of Time magazine
+1925;out_of_home;First electric billboard
+1926;radio;First radio jingle
+1929;;Stock market crash
+1930;radio;First in-car radio (Motorola)
+1934;;Creation of the FCC
+1936;periodicals;First issue of Life magazine
+1940;television;First TV news broadcast (NBC)
+1941;television;First TV commercial (Bulova watches)
+1946;television;First TV variety show (Hour Glass)
+1948;television;Introduction of cable TV
+1952;television;First political TV ad (Eisenhower campaign)
+1954;television;First color TV broadcast (Rose Parade)
+1956;television;First TV remote control (Zenith)
+1960;television;First televised presidential debate (Kennedy/Nixon)
+1962;out_of_home;First advertising bus shelter
+1965;out_of_home;Highway Beautification Act
+1966;television;First Super Bowl broadcast
+1967;direct_mail;Introduction of ZIP codes in the US
+1969;television,radio;Live broadcast of the moon landing
 1971;television,radio;Tobacco advertising ban
-1993;internet;World Wide Web launch
+1972;television;Widespread adoption of color TV sets
+1977;;Release of the first Star Wars movie
+1979;;Release of the Sony Walkman
+1980;television;Launch of CNN
+1981;television;Launch of MTV
+1982;miscellaneous;First product placement in a movie (E.T.)
+1984;television;Apple Macintosh commercial
+1988;miscellaneous,out_of_home;Nike's "Just Do It" campaign
+1990;television;Children's Television Act
+1993;internet;World Wide Web public release
+1996;internet,peridicals;The New York Times launches website
+1998;internet;Founding of Google
+2000;internet;Dot-com bubble burst
+2004;internet;Founding of Facebook
+2005;out_of_home;First digital billboard
+2007;internet;Release of the first iPhone

@@ -8,7 +8,7 @@ export function useChartConfig() {
   const margin = {
     x: 600,
     y: 800,
-    offset: -40,
+    offset: 0,
   };
 
   const spacing = 16;

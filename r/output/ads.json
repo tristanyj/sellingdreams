@@ -98,28 +98,128 @@
   "events": [
     {
       "year": 1914,
-      "name": "Start of World War I",
+      "name": "Creation of the FTC",
       "categories": []
     },
     {
-      "year": 1918,
-      "name": "End of World War I",
+      "year": 1915,
+      "name": "Development of Coca-Cola's contour bottle",
       "categories": []
+    },
+    {
+      "year": 1917,
+      "name": "Use of advertising for war bonds",
+      "categories": "miscellaneous"
+    },
+    {
+      "year": 1920,
+      "name": "First commercial radio broadcast (KDKA)",
+      "categories": "radio"
+    },
+    {
+      "year": 1922,
+      "name": "First radio ad (WEAF)",
+      "categories": "radio"
+    },
+    {
+      "year": 1923,
+      "name": "First issue of Time magazine",
+      "categories": "periodicals"
+    },
+    {
+      "year": 1925,
+      "name": "First electric billboard",
+      "categories": "out_of_home"
+    },
+    {
+      "year": 1926,
+      "name": "First radio jingle",
+      "categories": "radio"
     },
     {
       "year": 1929,
-      "name": "Start of the Great Depression",
+      "name": "Stock market crash",
       "categories": []
     },
     {
-      "year": 1939,
-      "name": "Start of World War II",
+      "year": 1930,
+      "name": "First in-car radio (Motorola)",
+      "categories": "radio"
+    },
+    {
+      "year": 1934,
+      "name": "Creation of the FCC",
       "categories": []
     },
     {
-      "year": 1945,
-      "name": "End of World War II",
-      "categories": []
+      "year": 1936,
+      "name": "First issue of Life magazine",
+      "categories": "periodicals"
+    },
+    {
+      "year": 1940,
+      "name": "First TV news broadcast (NBC)",
+      "categories": "television"
+    },
+    {
+      "year": 1941,
+      "name": "First TV commercial (Bulova watches)",
+      "categories": "television"
+    },
+    {
+      "year": 1946,
+      "name": "First TV variety show (Hour Glass)",
+      "categories": "television"
+    },
+    {
+      "year": 1948,
+      "name": "Introduction of cable TV",
+      "categories": "television"
+    },
+    {
+      "year": 1952,
+      "name": "First political TV ad (Eisenhower campaign)",
+      "categories": "television"
+    },
+    {
+      "year": 1954,
+      "name": "First color TV broadcast (Rose Parade)",
+      "categories": "television"
+    },
+    {
+      "year": 1956,
+      "name": "First TV remote control (Zenith)",
+      "categories": "television"
+    },
+    {
+      "year": 1960,
+      "name": "First televised presidential debate (Kennedy/Nixon)",
+      "categories": "television"
+    },
+    {
+      "year": 1962,
+      "name": "First advertising bus shelter",
+      "categories": "out_of_home"
+    },
+    {
+      "year": 1965,
+      "name": "Highway Beautification Act",
+      "categories": "out_of_home"
+    },
+    {
+      "year": 1966,
+      "name": "First Super Bowl broadcast",
+      "categories": "television"
+    },
+    {
+      "year": 1967,
+      "name": "Introduction of ZIP codes in the US",
+      "categories": "direct_mail"
+    },
+    {
+      "year": 1969,
+      "name": "Live broadcast of the moon landing",
+      "categories": ["television", "radio"]
     },
     {
       "year": 1971,
@@ -127,8 +227,83 @@
       "categories": ["television", "radio"]
     },
     {
+      "year": 1972,
+      "name": "Widespread adoption of color TV sets",
+      "categories": "television"
+    },
+    {
+      "year": 1977,
+      "name": "Release of the first Star Wars movie",
+      "categories": []
+    },
+    {
+      "year": 1979,
+      "name": "Release of the Sony Walkman",
+      "categories": []
+    },
+    {
+      "year": 1980,
+      "name": "Launch of CNN",
+      "categories": "television"
+    },
+    {
+      "year": 1981,
+      "name": "Launch of MTV",
+      "categories": "television"
+    },
+    {
+      "year": 1982,
+      "name": "First product placement in a movie (E.T.)",
+      "categories": "miscellaneous"
+    },
+    {
+      "year": 1984,
+      "name": "Apple Macintosh commercial",
+      "categories": "television"
+    },
+    {
+      "year": 1988,
+      "name": "Nike's Just Do It campaign",
+      "categories": ["miscellaneous", "out_of_home"]
+    },
+    {
+      "year": 1990,
+      "name": "Children's Television Act",
+      "categories": "television"
+    },
+    {
       "year": 1993,
-      "name": "World Wide Web launch",
+      "name": "World Wide Web public release",
+      "categories": "internet"
+    },
+    {
+      "year": 1996,
+      "name": "The New York Times launches website",
+      "categories": ["internet", "peridicals"]
+    },
+    {
+      "year": 1998,
+      "name": "Founding of Google",
+      "categories": "internet"
+    },
+    {
+      "year": 2000,
+      "name": "Dot-com bubble burst",
+      "categories": "internet"
+    },
+    {
+      "year": 2004,
+      "name": "Founding of Facebook",
+      "categories": "internet"
+    },
+    {
+      "year": 2005,
+      "name": "First digital billboard",
+      "categories": "out_of_home"
+    },
+    {
+      "year": 2007,
+      "name": "Release of the first iPhone",
       "categories": "internet"
     }
   ]
