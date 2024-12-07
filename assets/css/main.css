@@ -26,7 +26,24 @@ body {
 }
 
 .category-area {
-  @apply transition-all duration-150 ease-in-out;
+  @apply transition-opacity duration-150 ease-in-out;
+  will-change: opacity;
+}
+
+.category-area {
+  opacity: 1;
+}
+
+.category-area.muted {
+  opacity: 0.65;
+}
+
+.category-area.disabled {
+  opacity: 0.25;
+}
+
+.tooltip {
+  will-change: transform;
 }
 
 .category-area-interaction,

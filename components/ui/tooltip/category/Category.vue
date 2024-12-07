@@ -97,7 +97,7 @@ onMounted(() => {
   <div
     v-show="isTooltipCategoryVisible"
     ref="tooltip"
-    class="fixed bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-56"
+    class="fixed tooltip bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-56"
     :style="tooltipStyle"
   >
     <template v-if="tooltipCategory">

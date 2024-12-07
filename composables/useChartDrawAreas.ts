@@ -3,8 +3,6 @@ import type { d3GSelection } from '~/types';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 export function useChartDrawAreas() {
-  const { opacity } = useChartConfig();
-
   const interactionStore = useInteractionStore();
   const { setTooltipCategory } = interactionStore;
 
@@ -34,9 +32,7 @@ export function useChartDrawAreas() {
         .attr('stroke', (d) => d.color)
         .attr('stroke-width', 1)
         .attr('stroke-linejoin', 'round')
-        .attr('opacity', (d) =>
-          selectedArea.value === d.id || !selectedArea.value ? 1 : opacity.area.disabled
-        );
+        .classed('disabled', (d) => selectedArea.value !== d.id && !!selectedArea.value);
 
       g.selectAll('.category-area-overlay')
         .data(series.value)
@@ -72,8 +68,7 @@ export function useChartDrawAreas() {
           if (selectedArea.value) return;
 
           const ids = AD_CATEGORIES.filter((cat) => cat !== d.id);
-          const areas = ids.map((id) => d3.select(`#category-area-${id}`));
-          areas.forEach((area) => area.attr('opacity', opacity.area.muted));
+          ids.forEach((id) => d3.select(`#category-area-${id}`).classed('muted', true));
         })
         // .on('mousemove', (event) => {
         //   updateMousePosition(event);
@@ -83,8 +78,7 @@ export function useChartDrawAreas() {
 
           if (selectedArea.value) return;
 
-          const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
-          areas.forEach((area) => area.attr('opacity', 1));
+          AD_CATEGORIES.forEach((id) => d3.select(`#category-area-${id}`).classed('muted', false));
         });
     }
   };
