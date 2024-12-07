@@ -55,15 +55,15 @@ export function useChartDrawAreas() {
           selectArea(selectedArea.value === d.id ? null : d.id);
         })
         .on('mouseenter', function (_, d) {
-          const category = categories.value.find((cat) => cat.id === d.id);
-          if (!category) return;
+          // const category = categories.value.find((cat) => cat.id === d.id);
+          // if (!category) return;
 
-          setTooltipCategory({
-            id: d.id,
-            name: category.name,
-            description: category.description,
-            color: category.color,
-          });
+          // setTooltipCategory({
+          //   id: d.id,
+          //   name: category.name,
+          //   description: category.description,
+          //   color: category.color,
+          // });
 
           if (selectedArea.value) return;
 
@@ -74,11 +74,11 @@ export function useChartDrawAreas() {
         //   updateMousePosition(event);
         // })
         .on('mouseout', function () {
-          setTooltipCategory(null);
+          // setTooltipCategory(null);
 
           if (selectedArea.value) return;
 
-          AD_CATEGORIES.forEach((id) => d3.select(`#category-area-${id}`).classed('muted', false));
+          d3.selectAll(`.category-area`).classed('muted', false);
         });
     }
   };
