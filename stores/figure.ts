@@ -105,6 +105,7 @@ export const useFigureStore = defineStore('figure', () => {
 
   const selectArea = (areaId: CategoryKey | null) => {
     selectedArea.value = areaId;
+    console.log('selectedArea', areaId);
   };
 
   return {

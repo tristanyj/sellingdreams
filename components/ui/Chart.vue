@@ -128,7 +128,12 @@ watch(figureMode, () => {
 });
 
 const handleOutsideClick = (event: MouseEvent) => {
-  if (container.value && !container.value.contains(event.target as Node)) {
+  console.log('click', event);
+  if (
+    container.value &&
+    !container.value.contains(event.target as Node) &&
+    !document.getElementById('guide')?.contains(event.target as Node)
+  ) {
     selectArea(null);
   }
 };
