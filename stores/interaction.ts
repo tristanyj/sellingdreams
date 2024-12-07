@@ -14,6 +14,7 @@ export const useInteractionStore = defineStore('interaction', () => {
   const selectedAd = ref<Ad | null>(null);
 
   const figureMode = ref<'nominal' | 'real'>('nominal');
+  const performanceMode = ref<'low' | 'high'>('high');
 
   // --------------------------------
   // Computed
@@ -60,6 +61,10 @@ export const useInteractionStore = defineStore('interaction', () => {
     figureMode.value = mode;
   };
 
+  const setPerformanceMode = (mode: 'low' | 'high') => {
+    performanceMode.value = mode;
+  };
+
   return {
     mousePosition,
     tooltipCategory,
@@ -69,7 +74,9 @@ export const useInteractionStore = defineStore('interaction', () => {
     isTooltipAdVisible,
     selectedAd,
     figureMode,
+    performanceMode,
     setFigureMode,
+    setPerformanceMode,
     updateMousePosition,
     updateMousePositionFromHook,
     setTooltipCategory,

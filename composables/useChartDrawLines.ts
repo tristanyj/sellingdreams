@@ -32,6 +32,11 @@ export function useChartDrawLines() {
     const lineGroup = g.append('g').attr('class', 'year-legend-group');
 
     for (const figure of figures.value) {
+      const yearGroup = lineGroup
+        .append('g')
+        .attr('class', 'year-group')
+        .attr('id', `year-group-${figure.year}`);
+
       const y = yScale(figure.year.toString()) ?? 0;
       const padding = 7;
       const textOffset = 4;
@@ -52,7 +57,7 @@ export function useChartDrawLines() {
       const leftTextLength = calcTextLength(lineGroup, leftText, fontSizeYear);
       const rightTextLength = calcTextLength(lineGroup, rightText, fontSize);
 
-      createLine(lineGroup, {
+      createLine(yearGroup, {
         id: `year-line-${figure.year}`,
         className: 'year-line',
         x1: leftTextLength + padding,
@@ -63,15 +68,23 @@ export function useChartDrawLines() {
         transform: '',
       });
 
-      lineGroup
+      yearGroup
         .append('text')
-        .attr('class', 'year-text left-text')
-        .attr('id', `year-text-${figure.year}`)
+        .attr('class', `year year-text year-${figure.year} year-main-text`)
         .attr('x', 0)
         .attr('y', y + textOffset)
         .attr('text-anchor', 'start')
         .attr('font-size', `${fontSizeYear}px`)
         .text(leftText);
+
+      yearGroup
+        .append('text')
+        .attr('class', `year year-text year-${figure.year} year-main-text`)
+        .attr('x', width)
+        .attr('y', y + textOffset)
+        .attr('text-anchor', 'end')
+        .attr('font-size', `${fontSize}px`)
+        .text(rightText);
 
       if (leftSubText) {
         const cats =
@@ -85,7 +98,7 @@ export function useChartDrawLines() {
         const subCubeOffset = cats.length > 0 ? cats.length * (circleSize + padding) + 1 : 0;
 
         cats.forEach((cat, i) => {
-          lineGroup
+          yearGroup
             .append('circle')
             .attr('cx', 6 + i * (circleSize + padding))
             .attr('cy', 6 + y + subTextOffset - circleSize)
@@ -93,38 +106,24 @@ export function useChartDrawLines() {
             .attr('fill', cat?.color ?? 'black');
         });
 
-        lineGroup
+        yearGroup
           .append('text')
-          .attr('class', 'year-sub-text left-sub-text')
-          .attr('id', `year-sub-text-${figure.year}`)
+          .attr('class', `year year-text year-${figure.year} year-sub-text`)
           .attr('x', subCubeOffset)
           .attr('y', y + subTextOffset)
           .attr('text-anchor', 'start')
           .attr('font-size', `${fontSize}px`)
-          .attr('opacity', 0.5)
           .text(leftSubText);
       }
 
-      lineGroup
+      yearGroup
         .append('text')
-        .attr('class', 'year-sub-text right-sub-text')
-        .attr('id', `year-sub-text-${figure.year}`)
+        .attr('class', `year year-text year-${figure.year} year-sub-text`)
         .attr('x', width)
         .attr('y', y + subTextOffset)
         .attr('text-anchor', 'end')
         .attr('font-size', `${fontSize}px`)
-        .attr('opacity', 0.5)
         .text(rightSubText);
-
-      lineGroup
-        .append('text')
-        .attr('class', 'year-text right-text')
-        .attr('id', `year-text-${figure.year}`)
-        .attr('x', width)
-        .attr('y', y + textOffset)
-        .attr('text-anchor', 'end')
-        .attr('font-size', `${fontSize}px`)
-        .text(rightText);
     }
   };
 

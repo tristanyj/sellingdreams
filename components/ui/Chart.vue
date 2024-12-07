@@ -8,7 +8,6 @@ const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);
 
 const interactionStore = useInteractionStore();
 const { figureMode } = storeToRefs(interactionStore);
-const { setFigureMode } = interactionStore;
 
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
@@ -146,23 +145,12 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('click', handleOutsideClick);
 });
-
-const adjustedForInflation = computed({
-  get: () => figureMode.value === 'real',
-  set: (value) => {
-    setFigureMode(value ? 'real' : 'nominal');
-  },
-});
 </script>
 
 <template>
   <div class="relative z-10">
-    <div class="flex">
-      <div class="grid grid-flow-col gap-2 items-center text-sm">
-        <div class="">Adjusted for inflation</div>
-        <UToggle v-model="adjustedForInflation" />
-      </div>
-    </div>
+    <UiToggleFigureMode />
+    <UiTogglePerformanceMode />
     <UiTooltipCategory />
     <UiTooltipAd />
     <UiModal />

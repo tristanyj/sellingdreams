@@ -9,24 +9,55 @@ body {
 }
 
 #container svg {
-  margin: 0 auto;
-  width: 100%;
+  @apply font-crimson w-full mx-auto;
 }
 
-.left-text,
-.right-text {
+.year-main-text {
   @apply font-crimson font-medium transition-opacity duration-100 ease-in-out;
 }
 
-.right-sub-text,
-.left-sub-text,
-.legend-text,
-.text-path {
-  @apply font-crimson;
+.year-line {
+  @apply opacity-15 transition-opacity duration-100 ease-in-out;
+  will-change: opacity;
+}
+
+.year-group.disabled {
+  opacity: 0.25;
+}
+
+.year-line.disabled {
+  opacity: 0.05;
+}
+
+.year-text {
+  @apply opacity-100 transition-opacity duration-100 ease-in-out;
+  will-change: opacity;
+}
+
+.year-sub-text {
+  @apply opacity-50 transition-opacity duration-100 ease-in-out;
+  will-change: opacity;
+}
+
+.year-text.disabled {
+  opacity: 0.25;
+}
+
+.year-sub-text.disabled {
+  opacity: 0.1;
+}
+
+.point {
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+  will-change: transform, opacity;
+}
+
+.point.disabled {
+  opacity: 0.25;
 }
 
 .category-area {
-  @apply transition-opacity duration-150 ease-in-out;
+  @apply transition-opacity duration-100 ease-in-out;
   will-change: opacity;
 }
 
@@ -41,7 +72,6 @@ body {
 .category-area.disabled {
   opacity: 0.25;
 }
-
 .tooltip {
   will-change: transform;
 }
@@ -49,10 +79,6 @@ body {
 .category-area-interaction,
 .point-interaction-ad {
   @apply cursor-pointer;
-}
-
-.point {
-  @apply transition-all duration-100 ease-in-out;
 }
 
 /* Transition */

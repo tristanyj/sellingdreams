@@ -1,5 +1,4 @@
 import * as d3 from 'd3';
-import { AD_CATEGORIES } from '~/assets/scripts/constants';
 import { calcTextLength } from '~/assets/scripts/utils';
 import type { d3GSelection } from '~/types';
 
@@ -13,8 +12,6 @@ export interface Arc {
 }
 
 export function useChartDrawPoints() {
-  const { opacity } = useChartConfig();
-
   const arcGenerator = d3
     .arc<Arc>()
     .innerRadius((d) => d.innerRadius)
@@ -23,7 +20,8 @@ export function useChartDrawPoints() {
     .endAngle((d) => d.endAngle);
 
   const interactionStore = useInteractionStore();
-  const { setTooltipFigure, setTooltipCategory, setTooltipAd, setSelectedAd } = interactionStore;
+  const { setTooltipFigure, updateMousePosition, setTooltipCategory, setTooltipAd, setSelectedAd } =
+    interactionStore;
 
   const figureStore = useFigureStore();
   const { selectedArea, figures, series } = storeToRefs(figureStore);
@@ -120,6 +118,8 @@ export function useChartDrawPoints() {
             .attr('stroke', 'white');
         }
 
+        const yearElements = d3.selectAll(`.year-group:not(#year-group-${point.year})`);
+
         g.append('circle')
           .attr('class', `point point-${serie.id}`)
           .attr('id', `point-${serie.id}-${point.year}`)
@@ -128,7 +128,7 @@ export function useChartDrawPoints() {
           .attr('r', radius.small)
           .attr('fill', 'black')
           .attr('stroke', 'white')
-          .attr('opacity', isMuted ? opacity.point.muted : 1);
+          .classed('disabled', !!isMuted);
 
         const interactionCircle = g
           .append('circle')
@@ -152,19 +152,13 @@ export function useChartDrawPoints() {
           })
           .on('mouseenter', function (_) {
             const points = d3.selectAll(`.point`);
-            points.attr('opacity', opacity.point.muted);
+            points.classed('disabled', true);
+
             d3.select(`#point-${serie.id}-${point.year}`)
               .attr('r', radius.large)
-              .attr('opacity', 1);
+              .classed('disabled', false);
 
-            const yearText = d3.selectAll(`.year-text:not(#year-text-${point.year})`);
-            yearText.attr('opacity', 0.25);
-
-            const yearSubText = d3.selectAll(`.year-sub-text:not(#year-sub-text-${point.year})`);
-            yearSubText.attr('opacity', 0.1);
-
-            const yearLine = d3.selectAll(`.year-line:not(#year-line-${point.year})`);
-            yearLine.attr('opacity', opacity.line.muted);
+            yearElements.classed('disabled', true);
 
             setTooltipFigure({
               id: serie.id,
@@ -197,32 +191,27 @@ export function useChartDrawPoints() {
 
             if (selectedArea.value) return;
 
-            const ids = AD_CATEGORIES.filter((cat) => cat !== serie.id);
-            const areas = ids.map((id) => d3.select(`#category-area-${id}`));
-            areas.forEach((area) => area.attr('opacity', opacity.area.muted));
+            d3.selectAll(`.category-area:not(#category-area-${serie.id})`).classed(
+              'disabled',
+              true
+            );
           })
-          // .on('mousemove', (event) => {
-          //   updateMousePosition(event);
-          // })
+          .on('mousemove', (event) => {
+            updateMousePosition(event);
+          })
           .on('mouseout', function (_) {
             if (selectedArea.value) {
-              d3.selectAll(`.point`).attr('opacity', opacity.point.muted);
+              d3.selectAll(`.point`).classed('disabled', true);
               const points = d3.selectAll(`.point-${selectedArea.value}`);
-              points.attr('opacity', 1);
+              points.classed('disabled', false);
             } else {
               const points = d3.selectAll(`.point`);
-              points.attr('opacity', 1);
+              points.classed('disabled', false);
             }
+
             d3.select(`#point-${serie.id}-${point.year}`).attr('r', radius.small);
 
-            const yearText = d3.selectAll(`.year-text`);
-            yearText.attr('opacity', 1);
-
-            const yearSubText = d3.selectAll(`.year-sub-text`);
-            yearSubText.attr('opacity', 0.5);
-
-            const yearLine = d3.selectAll(`.year-line`);
-            yearLine.attr('opacity', opacity.line.enabled);
+            yearElements.classed('disabled', false);
 
             setTooltipFigure(null);
             setTooltipCategory(null);
@@ -230,8 +219,7 @@ export function useChartDrawPoints() {
 
             if (selectedArea.value) return;
 
-            const areas = AD_CATEGORIES.map((id) => d3.select(`#category-area-${id}`));
-            areas.forEach((area) => area.attr('opacity', 1));
+            d3.selectAll(`.category-area`).classed('muted', false).classed('disabled', false);
           });
 
         if (ad) {
