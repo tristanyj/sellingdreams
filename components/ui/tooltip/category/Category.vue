@@ -17,19 +17,20 @@ const tooltipStyle = computed<CSSProperties>(() => {
   const paddingX = 120;
   const paddingY = 0;
 
+  const isCenter = tooltipCategory.value?.center ? true : false;
+
   const isPastHalfWidth = mousePosition.value.x > width.value * 0.75;
   const isPastHalfHeight = mousePosition.value.y > height.value * 0.75;
 
-  const posX = mousePosition.value.x - tooltipSize.value.width - paddingX;
+  const offsetX = isCenter ? 0 : tooltipSize.value.width;
+
+  const posX = mousePosition.value.x - offsetX - paddingX;
   const posY =
     isPastHalfWidth && isPastHalfHeight
       ? mousePosition.value.y - tooltipSize.value.height
       : mousePosition.value.y - tooltipSize.value.height / 2 - paddingY;
 
-  const clampedPosX = Math.max(
-    paddingX,
-    Math.min(posX, width.value - tooltipSize.value.width - paddingX)
-  );
+  const clampedPosX = Math.max(paddingX, Math.min(posX, width.value - offsetX - paddingX));
   const clampedPosY = Math.max(40, Math.min(posY, height.value - tooltipSize.value.height - 35));
 
   return {

@@ -20,6 +20,7 @@ export function useChartDrawLines() {
   const { width, opacity } = useChartConfig();
 
   const figureStore = useFigureStore();
+  const { selectArea } = figureStore;
   const { figures, series } = storeToRefs(figureStore);
 
   const interactionStore = useInteractionStore();
@@ -29,7 +30,12 @@ export function useChartDrawLines() {
   const { categories, events } = storeToRefs(dataStore);
 
   const drawYearLegend = (g: d3GSelection, yScale: d3.ScalePoint<string>) => {
-    const lineGroup = g.append('g').attr('class', 'year-legend-group');
+    const lineGroup = g
+      .append('g')
+      .attr('class', 'year-legend-group')
+      .on('click', () => {
+        selectArea(null);
+      });
 
     for (const figure of figures.value) {
       const yearGroup = lineGroup
@@ -103,7 +109,9 @@ export function useChartDrawLines() {
             .attr('cx', 6 + i * (circleSize + padding))
             .attr('cy', 6 + y + subTextOffset - circleSize)
             .attr('r', circleSize / 2)
-            .attr('fill', cat?.color ?? 'black');
+            .attr('fill', cat?.color ?? 'black')
+            .append('title')
+            .text(cat?.name ?? '');
         });
 
         yearGroup

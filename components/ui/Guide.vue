@@ -24,6 +24,7 @@ const onMouseEnter = (id: CategoryKey) => {
     name: category.name,
     description: category.description,
     color: category.color,
+    center: true,
   });
 
   if (selectedArea.value) return;

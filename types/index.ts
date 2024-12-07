@@ -104,6 +104,7 @@ export interface TooltipCategory extends Tooltip {
   name: string;
   description: string;
   color: `#${string}`;
+  center?: boolean;
 }
 
 export interface TooltipFigure extends Tooltip {

@@ -40,9 +40,6 @@ function createVisualization() {
   // Steam Graph
   // -----------------
 
-  // Legend
-  drawYearLegend(g.value, yScale);
-
   g.value
     .append('rect')
     .attr('class', 'background')
@@ -55,6 +52,9 @@ function createVisualization() {
   // .on('mousemove', (event) => {
   //   updateMousePosition(event);
   // });
+
+  // Legend
+  drawYearLegend(g.value, yScale);
 
   // Areas
   drawCategoryAreas(g.value);
