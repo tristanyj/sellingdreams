@@ -119,7 +119,7 @@ onMounted(() => {
     <template v-if="tooltipFigure">
       <div class="grid gap-0.5 pt-3 border-t">
         <div class="">
-          <span class="font-medium text-lg leading-tight">{{ tooltipFigure.year }}</span>
+          <span class="font-semibold text-lg leading-tight">{{ tooltipFigure.year }}</span>
         </div>
         <div class="">
           <span class="underline">Expenditure</span> : ${{

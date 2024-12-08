@@ -104,7 +104,7 @@ onMounted(() => {
             <div class="">{{ tooltipAd?.client }}</div>
           </div>
           <div class="grid grid-flow-col items-center gap-2 text-lg leading-tight">
-            <div class="font-medium pr-5">{{ tooltipAd?.name }}</div>
+            <div class="font-semibold pr-5">{{ tooltipAd?.name }}</div>
           </div>
         </div>
         <div>
