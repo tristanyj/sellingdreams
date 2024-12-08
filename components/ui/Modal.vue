@@ -25,6 +25,15 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener('keydown', handleEscape);
 });
+
+// block scroll when modal is open
+watch(isModalOpen, (value) => {
+  if (value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
 </script>
 
 <template>
@@ -68,7 +77,7 @@ onUnmounted(() => {
             v-if="selectedAd"
             class="grid gap-2"
           >
-            <div class="grid gap-1">
+            <div class="grid gap-1 mb-1">
               <div class="grid grid-flow-col justify-start items-center gap-2">
                 <div class="">{{ selectedAd.year }}</div>
                 <div class="w-1 h-1 rounded-full bg-black" />
@@ -77,7 +86,12 @@ onUnmounted(() => {
               <div class="grid grid-flow-col items-center gap-2 text-2xl leading-tight">
                 <div class="font-medium pr-8">{{ selectedAd.name }}</div>
               </div>
-              <div class="text-gray-600 text-xs mt-0.5 mb-1">Agency : {{ selectedAd.agency }}</div>
+              <div
+                v-if="selectedAd.agency"
+                class="text-gray-600 text-xs mt-0.5"
+              >
+                Agency : {{ selectedAd.agency }}
+              </div>
             </div>
             <div v-if="['television', 'radio'].includes(selectedAd.category)">
               <iframe

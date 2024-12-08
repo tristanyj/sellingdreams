@@ -10,6 +10,7 @@ const { selectedArea } = storeToRefs(figureStore);
 const { selectArea } = figureStore;
 
 const interactionStore = useInteractionStore();
+const { selectedAd } = storeToRefs(interactionStore);
 const { setTooltipCategory } = interactionStore;
 
 const dataStore = useDataStore();
@@ -38,14 +39,16 @@ const onMouseLeave = () => {
   if (selectedArea.value) return;
   document.querySelectorAll('.category-area').forEach((el) => el.classList.remove('muted'));
 };
+
+const isOpen = computed(() => !selectedAd.value && y.value > 550);
 </script>
 
 <template>
   <div id="guide">
     <Transition name="modal">
       <div
-        v-if="y > 550"
-        class="fixed z-50 top-1 left-0 w-full grid justify-center"
+        v-if="isOpen"
+        class="fixed z-20 top-1 left-0 w-full grid justify-center"
       >
         <div class="bg-[#E7DECC]/95 border border-white rounded-md px-1 py-1">
           <div class="grid grid-flow-col items-center text-xs text-gray-800">
