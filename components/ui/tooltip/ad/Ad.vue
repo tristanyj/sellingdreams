@@ -2,10 +2,6 @@
 import type { CSSProperties } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 
-const getImageUrl = (id: string) => {
-  return new URL(`../../../../assets/images/ads/${id}-preview.webp`, import.meta.url).href;
-};
-
 const { width, height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
@@ -108,11 +104,11 @@ onMounted(() => {
           </div>
         </div>
         <div>
-          <img
+          <NuxtImg
             v-if="tooltipAd?.id"
-            :src="getImageUrl(tooltipAd?.id)"
+            :src="`ads/${tooltipAd.id}-preview.webp`"
             class="w-full object-contain rounded-sm"
-            alt=""
+            :alt="tooltipAd.id"
           />
         </div>
         <div

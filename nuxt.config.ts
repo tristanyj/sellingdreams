@@ -49,16 +49,10 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores/**'],
   },
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    [
-      '@pinia/nuxt',
-      {
-        autoImports: ['defineStore', 'storeToRefs'],
-      },
-    ],
-    '@pinia-plugin-persistedstate/nuxt',
-  ],
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', [
+    '@pinia/nuxt',
+    {
+      autoImports: ['defineStore', 'storeToRefs'],
+    },
+  ], '@pinia-plugin-persistedstate/nuxt', '@nuxt/image'],
 });

@@ -5,10 +5,6 @@ const interactionStore = useInteractionStore();
 const { selectedAd } = storeToRefs(interactionStore);
 const { setSelectedAd } = interactionStore;
 
-const getImageUrl = (id: string) => {
-  return new URL(`../../assets/images/ads/${id}.webp`, import.meta.url).href;
-};
-
 function handleEscape(e: KeyboardEvent) {
   if (e.key === 'Escape' && isModalOpen.value) {
     setSelectedAd(null);
@@ -103,8 +99,8 @@ watch(isModalOpen, (value) => {
               />
             </div>
             <div v-else>
-              <img
-                :src="getImageUrl(selectedAd.id)"
+              <NuxtImg
+                :src="`ads/${selectedAd.id}.webp`"
                 class="w-full object-contain rounded-sm"
                 alt=""
               />

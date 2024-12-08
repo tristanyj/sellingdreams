@@ -5,5 +5,8 @@ export default defineAppConfig({
     container: {
       constrained: 'max-w-[1480px]',
     },
+    toggle: {
+      inactive: 'bg-gray-300',
+    },
   },
 });
