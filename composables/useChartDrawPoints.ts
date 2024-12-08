@@ -56,7 +56,7 @@ export function useChartDrawPoints() {
         if (!figureCategory) return;
 
         if (ad) {
-          const fontSize = 11;
+          const fontSize = 12;
           const arcGroup = g
             .append('g')
             .attr('class', 'center')

@@ -80,3 +80,7 @@ body {
 .point-interaction-ad {
   @apply cursor-pointer;
 }
+
+.hover-opacity:hover {
+  opacity: 0.9 !important;
+}
