@@ -11,6 +11,11 @@ export interface Arc {
   data: any;
 }
 
+function truncateText(text: string, maxLength: number, suffix = '...') {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength - 3) + suffix;
+}
+
 export function useChartDrawPoints() {
   const arcGenerator = d3
     .arc<Arc>()
@@ -67,15 +72,16 @@ export function useChartDrawPoints() {
               color: '#fff',
               opacity: 0.9,
             },
-            // {
-            //   id: 'bottom-arc',
-            //   text: ad.client,
-            //   radius: radius.target + 11,
-            //   startAngle: (3 * Math.PI) / 2,
-            //   endAngle: Math.PI / 2,
-            //   color: '#fff',
-            //   opacity: 0.6,
-            // },
+            {
+              id: 'bottom-arc',
+              text: ad.client,
+              radius: radius.target + 11,
+              // inverse
+              startAngle: Math.PI * 2,
+              endAngle: 0,
+              color: '#fff',
+              opacity: 0.6,
+            },
           ];
 
           textArcs.forEach((arc) => {
@@ -87,10 +93,11 @@ export function useChartDrawPoints() {
               data: null,
             });
 
-            const textLength = calcTextLength(g, arc.text, fontSize);
-
             const arcLength = Math.abs(arc.endAngle - arc.startAngle) * arc.radius;
-            const textPercentage = (textLength / arcLength) * 100;
+            const maxTextWidth = arcLength / fontSize; // Rough estimate of max characters
+            const truncatedText = truncateText(arc.text, Math.floor(maxTextWidth), '..');
+            const truncatedTextLength = calcTextLength(g, truncatedText, fontSize);
+            const textPercentage = (truncatedTextLength / arcLength) * 100;
             const textOffsetPercentage = (100 - textPercentage) / 4;
 
             arcGroup.append('path').attr('id', arc.id).attr('d', textArc);
@@ -104,7 +111,7 @@ export function useChartDrawPoints() {
               .attr('opacity', arc.opacity)
               .style('font-size', fontSize)
               .style('fill', arc.color)
-              .text(arc.text);
+              .text(truncatedText);
           });
 
           g.append('circle')
