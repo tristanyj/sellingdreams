@@ -28,7 +28,7 @@ const tooltipStyle = computed<CSSProperties>(() => {
 
   const clampedPosX = Math.max(
     paddingX,
-    Math.min(posX, width.value - tooltipSize.value.width - paddingX)
+    Math.min(posX, width.value - tooltipSize.value.width - paddingX + 67)
   );
   const clampedPosY = Math.max(40, Math.min(posY, height.value - tooltipSize.value.height - 35));
 

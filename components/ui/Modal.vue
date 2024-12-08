@@ -86,7 +86,7 @@ watch(isModalOpen, (value) => {
                 <div class="">{{ selectedAd.client }}</div>
               </div>
               <div class="grid grid-flow-col items-center gap-2 text-2xl leading-tight">
-                <div class="font-medium pr-8">{{ selectedAd.name }}</div>
+                <div class="font-semibold pr-8">{{ selectedAd.name }}</div>
               </div>
               <div
                 v-if="selectedAd.agency"
