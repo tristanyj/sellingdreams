@@ -66,7 +66,7 @@ const imageAds: ImageAd[] = [
     url: 'ads/1971-television-preview.webp',
     alt: '1971 - Coca-Cola',
     x: 0,
-    y: -205,
+    y: -200,
     width: 265,
     opacity: 0.85,
   },
@@ -83,8 +83,31 @@ const selectAd = (imageAd: ImageAd) => {
 <template>
   <div class="relative grid">
     <UiGuide />
+    <div class="absolute top-[580px] opacity-[0.04] w-full">
+      <div class="relative overflow-hidden whitespace-nowrap w-full">
+        <div
+          ref="adTrack"
+          class="inline-block whitespace-nowrap will-change-transform"
+        >
+          <NuxtImg
+            v-for="(ad, index) in imageAds"
+            :key="`first-${index}`"
+            :src="ad.url"
+            :alt="ad.alt"
+            class="inline-block w-[320px] h-auto rounded-md mr-10"
+          />
+          <NuxtImg
+            v-for="(ad, index) in imageAds"
+            :key="`second-${index}`"
+            :src="ad.url"
+            :alt="ad.alt"
+            class="inline-block w-[320px] h-auto rounded-md mr-10"
+          />
+        </div>
+      </div>
+    </div>
     <UContainer>
-      <div class="relative grid gap-5 pt-64 pb-20">
+      <div class="relative grid gap-5 pt-60 2xl:pt-72 pb-20">
         <h1 class="font-crimson font-bold text-7xl text-center">
           A century of advertising <br />
           in the United States
