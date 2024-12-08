@@ -56,8 +56,8 @@ export interface Ad {
   category: CategoryKey;
   client: string;
   name: string;
-  short_name: string;
-  slogan: string;
+  // short_name: string;
+  // slogan: string;
   agency: string;
   youtube_link: string;
   description: string;
@@ -121,7 +121,7 @@ export interface TooltipAd extends Tooltip {
   category: CategoryKey;
   client: string;
   name: string;
-  slogan: string;
-  short_name: string;
+  // slogan: string;
+  // short_name: string;
   agency: string;
 }

@@ -60,7 +60,7 @@ export function useChartDrawPoints() {
           const textArcs = [
             {
               id: 'top-arc',
-              text: ad.short_name,
+              text: ad.name,
               radius: radius.target + 4,
               startAngle: Math.PI,
               endAngle: Math.PI * 3,
@@ -183,9 +183,9 @@ export function useChartDrawPoints() {
                 category: ad.category,
                 client: ad.client,
                 name: ad.name,
-                slogan: ad.slogan,
+                // slogan: ad.slogan,
                 agency: ad.agency,
-                short_name: ad.short_name,
+                // short_name: ad.short_name,
               });
             }
 

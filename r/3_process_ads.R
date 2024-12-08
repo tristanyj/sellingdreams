@@ -42,9 +42,7 @@ for (i in seq_len(nrow(ads))) {
     year = ads$year[i],
     category = ads$category[i],
     name = ads$name[i],
-    short_name = ads$short_name[i],
     client = ads$client[i],
-    slogan = ads$slogan[i],
     agency = ads$agency[i],
     youtube_link = ads$youtube_link[i],
     description = ads$description[i]

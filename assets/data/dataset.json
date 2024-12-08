@@ -7135,156 +7135,300 @@
       "year": 1911,
       "category": "miscellaneous",
       "name": "A skin you love to touch",
-      "short_name": "A skin you love to touch",
       "client": "Woodbury Soap Company",
-      "slogan": "A skin you love to touch",
-      "agency": "J. Walker Thompson Agency",
+      "agency": "J. Walter Thompson",
       "youtube_link": "",
       "description": "In 1911, Woodbury Soap Company became the first company to use sex appeal to sell a product. Their ad slogan, created by the J. Walter Thompson Agency, claimed that women who used the soap would have A Skin You Love To Touch. The slogan became so popular that Woodbury used it until the 1940s."
     },
     {
-      "id": "1916-miscellaneous",
-      "year": 1916,
+      "id": "1913-miscellaneous",
+      "year": 1913,
       "category": "miscellaneous",
-      "name": "So long till Monday!",
-      "short_name": "So long till Monday!",
-      "client": "Indian Motorcycles",
-      "slogan": "So long till Monday!",
-      "agency": "Hendee Manufacturing Company",
+      "name": "Campbell's Kids",
+      "client": "Campbell's",
+      "agency": "",
       "youtube_link": "",
-      "description": "Indian Motorcycles, manufactured by the Hendee Manufacturing Company (later renamed the Indian Motorcycle Manufacturing Company) of Springfield, Massachusetts, were the first motorcycles to be manufactured in America. The Company's co-owners, George Hendee and Carl Oscar Hedstrom, focused on technological innovations that would increase the speed and horsepower of their motorcycles, and in 1916 they released a model with a Powerplus engine. Indian Motorcycles from this era were used by the United States military during World War I, as well as by police departments across the nation."
+      "description": "The Campbell's Kids are the advertising cartoon mascot of the Campbell Soup Company. Drawn by Grace Drayton in 1904, the characters became popular almost immediately, leading to the production of dolls, cookbooks, cards, plates, T-shirts, and many other items fashioned in their likeness. The Campbell's Kids have spanned many generations and still represent the Campbell Soup Company today."
+    },
+    {
+      "id": "1917-miscellaneous",
+      "year": 1917,
+      "category": "miscellaneous",
+      "name": "It's toasted",
+      "client": "Lucky Strike",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Lucky Strike is an American brand of cigarettes owned by the British American Tobacco group. Individual cigarettes of the brand are often referred to colloquially as Luckies. In 1917, the brand debuted the slogan It's Toasted to promote the manufacturing method of toasting – rather than sun drying – the tobacco. In an attempt to counter this popular campaign, competitor Camel took a different approach, claiming that Camel was a fresh cigarette never parched or toasted."
+    },
+    {
+      "id": "1922-periodicals",
+      "year": 1922,
+      "category": "periodicals",
+      "name": "Keep that wedding day complexion",
+      "client": "Palmolive",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Palmolive is an American multinational brand of a line of products produced by Colgate-Palmolive. The Palmolive brand grew from one product, Palmolive bar soap. Made of coconut, palm and olive oils, Palmolive bar soap was introduced in 1898. Originally, the bar soap floated like Procter & Gamble's Ivory bar soap. By the turn of the 20th century, Palmolive bar soap was the world's best-selling soap. In 1898, the company introduced a pale, olive-green-colored, floating bar of soap made of coconut, palm and olive oils aggressively marketed under the brand name Palmolive. The soap became very popular, due to an advertising campaign promoting it as the type of soap that would have been favored in ancient Egypt by the Pharaohs and especially the Pharaoh's Daughter"
+    },
+    {
+      "id": "1926-miscellaneous",
+      "year": 1926,
+      "category": "miscellaneous",
+      "name": "Burma Shave signs",
+      "client": "Burma Shave",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Burma-Shave was an American brand of brushless shaving cream, famous for its advertising gimmick of posting humorous rhyming poems on small sequential highway roadside signs. Burma-Shave sign series first appeared on U.S. Highway 65 near Lakeville, Minnesota, in 1926, and remained a major advertising component until 1963 in most of the contiguous United States. The first series read: Cheer up, face – the war is over! Burma-Shave."
+    },
+    {
+      "id": "1931-periodicals",
+      "year": 1931,
+      "category": "periodicals",
+      "name": "My hat's off to the pause that refreshes",
+      "client": "Coca-Cola",
+      "agency": "",
+      "youtube_link": "",
+      "description": "This is the first image of the Coca-Cola Santa Claus by artist Haddon Sundblom, introduced in 1931. The ad appeared in The Saturday Evening Post and Collier's in December 1931. The brand decided to tie Santa Claus and Christmas to the drink because people often thought Coca-Cola was a drink for the hot summer months. They were designed to remind people that Coca-Cola was ideal for every month of the year."
+    },
+    {
+      "id": "1933-radio",
+      "year": 1933,
+      "category": "radio",
+      "name": "Oxydol's Own Ma Perkins",
+      "client": "Oxydol",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Ma Perkins (sometimes called Oxydol's Own Ma Perkins) is an American radio soap opera that was heard on NBC from 1933 to 1949 and on CBS from 1942 to 1960. It was also broadcast in Canada, and Radio Luxembourg carried it in Europe. Oxydol sponsored Ma Perkins from 1933 until 1956. When the show first began, it was broadcast from New York City. In 1940, the show moved to Chicago, where it was broadcast until 1960."
+    },
+    {
+      "id": "1939-radio",
+      "year": 1939,
+      "category": "radio",
+      "name": "Pepsi-Cola hits the spot",
+      "client": "Pepsi-Cola",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Earlier campaigns for Pepsi-Cola had emphasized price competition. Twelve US fl oz (350 ml) Pepsi bottles contained nearly twice as much beverage as seven US fl oz (210 ml) standard Coca-Cola bottles, and Coca-Cola was by far the leading brand of soft drink. Pepsi launched a jingle campaign in 1939, Pepsi-Cola Hits the Spot. This 1939 jingle focused on the simple proposition that Pepsi was just as good as Coke, but better value."
+    },
+    {
+      "id": "1944-radio",
+      "year": 1944,
+      "category": "radio",
+      "name": "The Lucky Strike Program starring Jack Benny",
+      "client": "Lucky Strike",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Luckies were the cigarette of choice for famous smoker Bette Davis. Starting in the fall of 1944, Lucky Strike began sponsoring comedian Jack Benny's Radio and TV show, The Jack Benny Program, which was also introduced as The Lucky Strike Program."
+    },
+    {
+      "id": "1947-periodicals",
+      "year": 1947,
+      "category": "periodicals",
+      "name": "A diamond is forever",
+      "client": "De Beers",
+      "agency": "",
+      "youtube_link": "",
+      "description": "The De Beers Group is a South African–British corporation that specializes in the diamond industry, including mining, exploitation, retail, inscription, grading, trading and industrial diamond manufacturing. De Beers successfully advertised diamonds to manipulate consumer demand. One of the most effective marketing strategies has been the marketing of diamonds as a symbol of love and commitment. Copywriter Frances Gerety (1916–1999) working for N. W. Ayer & Son coined the famous advertising slogan, 'A Diamond is Forever', in 1947. In 2000, Advertising Age magazine named 'A Diamond is Forever' the best advertising slogan of the 20th century. The slogan may have inspired the James Bond book, film and song title Diamonds Are Forever."
+    },
+    {
+      "id": "1952-television",
+      "year": 1952,
+      "category": "television",
+      "name": "See the USA in your Chevrolet",
+      "client": "Chevrolet",
+      "agency": "",
+      "youtube_link": "",
+      "description": "See The USA In Your Chevrolet is a commercial jingle from c. 1949, with lyrics and music by Leo Corday and Leon Carr of the American Society of Composers, Authors and Publishers (ASCAP). It was written for the Chevrolet Division of General Motors. The jingle was sung on the television program Inside U.S.A. with Chevrolet by real-life husband-wife duo, Peter Lind Hayes and Mary Healy. It became associated with Dinah Shore through Chevrolet's decade-long sponsorship of her television shows. Shore sang the song after 1952, and it became a signature song of hers. Later the song was also sung by Pat Boone on his Pat Boone-Chevy Showroom (ABC) from 1957 through 1960."
+    },
+    {
+      "id": "1955-miscellaneous",
+      "year": 1955,
+      "category": "miscellaneous",
+      "name": "They're gr-r-reat!",
+      "client": "Frosted Flakes",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Tony the Tiger is the advertising cartoon anthropomorphic tiger mascot for Frosted Flakes (also known as Frosties) breakfast cereal, appearing on its packaging and advertising. A recognizable and distinct voice was needed for the Tony the Tiger character. Initially, he was voiced by Dallas McKennon, but shortly after the initial Sugar Frosted Flakes advertisements aired, McKennon was replaced by Thurl Ravenscroft, who spent the next five decades providing the characteristic deep bass voice associated with the character, notably the familiar They're gr-r-reat! catchphrase."
+    },
+    {
+      "id": "1958-radio",
+      "year": 1958,
+      "category": "radio",
+      "name": "Relief is just a swallow away",
+      "client": "Alka-Seltzer",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Alka-Seltzer is an effervescent antacid and pain reliever owned by Bayer since 1978. First marketed by the Dr. Miles Medicine Company of Elkhart, Indiana, United States, Alka-Seltzer contains three active ingredients: aspirin (acetylsalicylic acid or ASA), sodium bicarbonate, and anhydrous citric acid. The aspirin is a pain reliever and anti-inflammatory, the sodium bicarbonate is an antacid, and the citric acid reacts with the sodium bicarbonate and water to form effervescence. Alka-Seltzer TV ads from the 1960s and 1970s in the US were among the most popular of the 20th century, ranking number 13, according to Advertising Age. To increase sales in a relatively flat business, Bayer revived several of the vintage spots."
     },
     {
       "id": "1959-periodicals",
       "year": 1959,
       "category": "periodicals",
       "name": "Think small",
-      "short_name": "Think small",
       "client": "Volkswagen",
-      "slogan": "",
       "agency": "Doyle Dane Bernbach",
       "youtube_link": "",
-      "description": ""
+      "description": "Think Small was one of the most famous ads in the advertising campaign for the Volkswagen Beetle, art-directed by Helmut Krone. The copy for Think Small was written by Julian Koenig at the Doyle Dane Bernbach (DDB) agency in 1959. Doyle Dane Bernbach's Volkswagen Beetle campaign was ranked as the best advertising campaign of the twentieth century by Ad Age, in a survey of North American advertisements. Koenig was followed by many other writers during Krone's art-directorship of the first 100 ads of the campaign, most notably Bob Levenson. The campaign has been considered so successful that it did much more than boost sales and build a lifetime of brand loyalty [...] The ad, and the work of the ad agency behind it, changed the very nature of advertising—from the way it's created to what you see as a consumer today."
     },
     {
       "id": "1960-periodicals",
       "year": 1960,
       "category": "periodicals",
       "name": "Lemon",
-      "short_name": "Lemon",
       "client": "Volkswagen",
-      "slogan": "We pluck the lemons, you get the plums",
       "agency": "Doyle Dane Bernbach",
       "youtube_link": "",
-      "description": ""
+      "description": "In American English, a lemon is a vehicle that turns out to have several manufacturing issues affecting its safety, value or utility. Any vehicle with such severe issues may be termed a lemon, and by extension, the term may include any product with flaws too great or severe to serve its purpose. Its first attribution to mean a problematic car was in a Volkswagen advertisement created by Julian Koenig and Helmut Krone as part of an advertisement campaign managed by William Bernbach, all advertising executives with the firm Doyle Dane Bernbach in 1960, which was a follow-up to their Think Small advertising campaign for VW."
     },
     {
       "id": "1964-television",
       "year": 1964,
       "category": "television",
       "name": "Daisy",
-      "short_name": "Daisy",
       "client": "Lyndon B. Johnson",
-      "slogan": "Daisy",
       "agency": "Doyle Dane Bernbach",
       "youtube_link": "https://www.youtube.com/embed/riDypP1KfOU?si=edYCyDTPZLH3hub-",
-      "description": ""
+      "description": "Daisy, sometimes referred to as Daisy Girl or Peace, Little Girl, is an American political advertisement that aired on television as part of Lyndon B. Johnson's 1964 presidential campaign. Though aired only once, it is considered one of the most important factors in Johnson's landslide victory over the Republican Party's candidate, Barry Goldwater, and a turning point in political and advertising history. A partnership between the Doyle Dane Bernbach agency and Tony Schwartz, the Daisy advertisement was designed to broadcast Johnson's anti-war and anti-nuclear positions. Goldwater was against the Nuclear Test Ban Treaty and suggested the use of nuclear weapons in the Vietnam War, if necessary. The Johnson campaign used Goldwater's speeches to imply he would wage a nuclear war."
+    },
+    {
+      "id": "1966-television",
+      "year": 1966,
+      "category": "television",
+      "name": "Put a tiger in your tank",
+      "client": "Esso",
+      "agency": "",
+      "youtube_link": "",
+      "description": "The Put a Tiger in Your Tank advertising campaign was first launched in the United States in 1959 by the Esso brand (Note: Esso, a brand under the umbrella of Standard Oil of New Jersey, which had merged with Humble Oil, underwent a significant rebranding, adopting the name Exxon in the early 1970s to unify its identity and enhance brand recognition across various regions and markets). The campaign's aim was to promote gasoline sales and was one of the most successful and recognizable advertising campaigns of its time. The campaign's concept was straightforward: fill up with Esso gasoline, and you would have the power and energy of a tiger in your tank, allowing you to tackle anything that comes your way. This campaign not only revolutionized advertising tactics but also left an indelible mark on the cultural landscape of the time."
+    },
+    {
+      "id": "1968-periodicals",
+      "year": 1968,
+      "category": "periodicals",
+      "name": "Marlboro Man",
+      "client": "Marlboro",
+      "agency": "",
+      "youtube_link": "",
+      "description": "The Marlboro Man is a figure that was used in tobacco advertising campaigns for Marlboro cigarettes. In the United States, where the campaign originated, it was used from 1954 to 1999. The Marlboro Man was first conceived by advertising executive Leo Burnett in 1954. The images initially featured rugged men portrayed in a variety of roles but later primarily featured a rugged cowboy or cowboys in picturesque wild terrain. The ads were originally conceived as a way to popularize filtered cigarettes, which at the time were considered feminine. The campaign, created by Leo Burnett Worldwide, is said to be one of the most brilliant advertisement campaigns of all time. It transformed a feminine brand carrying the slogan Mild as May into a masculine one in a matter of months. Ellen Merlo, the vice president of marketing services at Philip Morris, was quoted in a 1989 Marlboro advertisement: We perceive Formula One and Indy car racing as adding, if you will, a modern-day dimension to the Marlboro Man. The image of Marlboro is very rugged, individualistic, heroic. And so is this style of auto racing. From an image standpoint, the fit is good.. Cowboys proved to be popular, which led to the Marlboro Cowboy and Marlboro Country campaigns."
     },
     {
       "id": "1971-television",
       "year": 1971,
       "category": "television",
       "name": "I'd like to buy the world a Coke",
-      "short_name": "Hilltop",
       "client": "Coca-Cola",
-      "slogan": "",
       "agency": "McCann-Erikson",
       "youtube_link": "https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ",
-      "description": ""
+      "description": "I'd Like to Teach the World to Sing (In Perfect Harmony) is a pop song (originally known as True Love and Apple Pie) by British hit songwriters Roger Cook and Roger Greenaway, and sung by Susan Shirley. The lyrics were rewritten by the songwriters—together with US advertising executive Bill Backer and US songwriter Billy Davis—as a jingle for The Coca-Cola Company's advertising agency, McCann Erickson, to become Buy the World a Coke in the 1971 Hilltop television commercial for Coca-Cola and sung by the Hillside Singers. Buy the World a Coke was produced by Billy Davis and portrayed a positive message of hope and love, featuring a multicultural collection of teenagers on top of a hill appearing to sing the song. The idea originally came to Bill Backer, an advertising executive working for McCann Erickson, the agency responsible for Coca-Cola. Backer, Roger Cook and Billy Davis were delayed at Shannon Airport in Ireland. After a forced layover with many hot tempers, they noticed their fellow travelers the next morning were talking and joking while drinking Coca-Cola. Backer wrote the line I'd like to buy the world a Coke on a napkin and shared it with Cook and Roger Greenaway. The song became so popular that its creators revised it, adding three verses and removing product references to create a full-length song appropriate for commercial release. The full-length song was re-recorded by both The Hillside Singers and The New Seekers and both versions became huge hits."
     },
     {
-      "id": "1984-television",
-      "year": 1984,
+      "id": "1975-direct_mail",
+      "year": 1975,
+      "category": "direct_mail",
+      "name": "11 records for a penny",
+      "client": "Columbia Record Club",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Columbia House was an umbrella brand for Columbia Records' mail-order music clubs, the primary iteration of which was the Columbia Record Club, established in 1955. The Columbia House brand was introduced in the early 1970s by Columbia Records (a division of CBS, Inc.), and had a significant market presence in the 1970s, 1980s and early 1990s. Since Columbia House's beginnings, following the sale of Columbia House to BMG, and continuing after the sale to Direct Brands, Columbia House has attracted criticism for its business practices. During the first three decades of Columbia House, it had a most unique marketing strategy: Give the customer several albums for free (although most of its early marketing campaigns required the customer to tape a penny to the enclosed postcard/order form) with the promise that they would purchase a set number of records or tapes at full club prices plus shipping. There were dozens of small sheets of stamps that were enclosed in the mailer, these stamps had pictures of the actual album cover of the records offered by Columbia House. The customer would tear the stamp off the sheet, moisten the stamp and affix them onto the order card. These Columbia House envelopes would arrive as junk mail to countless homes on a regular basis."
+    },
+    {
+      "id": "1979-television",
+      "year": 1979,
       "category": "television",
-      "name": "Where's the beef?",
-      "short_name": "Where's the beef?",
-      "client": "Wendy's",
-      "slogan": "Where's the beef?",
-      "agency": "Dancer Fitzgerald Sample",
-      "youtube_link": "https://www.youtube.com/embed/1FZNYXKHwNw?si=kMNrlU7Gj4nqdWhj",
-      "description": "The Where's the Beef? campaign was launched by Wendy's in 1984 to promote the company's line of hamburgers. The campaign featured a series of television commercials that showed"
+      "name": "Tastes great, less filling",
+      "client": "Miller Lite",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Miller Lite's long-running Tastes Great!...Less Filling! advertising campaign was ranked by Advertising Age magazine as the eighth best advertising campaign in history. The campaign was developed by the McCann-Erickson Worldwide advertising agency. In the prime of the campaign, television commercials typically portrayed a Lite Beer drinker noting its great taste followed by another who observed that it was less filling. This usually led to a parody of Wild West saloon fights in which every patron got involved in the dispute for no real reason, though in this case it was always a shouting match, and blows were never thrown. The commercials were closed with a voice-over from actor Eddie Barth, who read the slogan, Lite Beer from Miller: Everything you've always wanted in a beer. And less."
     },
     {
       "id": "1984-television",
       "year": 1984,
       "category": "television",
       "name": "1984",
-      "short_name": "1984",
       "client": "Apple",
-      "slogan": "Why 1984 won't be like 1984",
       "agency": "Chiat/Day",
       "youtube_link": "https://www.youtube.com/embed/2zfqw8nhUwA?si=Q9J9Z9QvQ9q9Q9Q",
-      "description": ""
+      "description": "1984 is an American television commercial that introduced the Apple Macintosh personal computer. It was conceived by Steve Hayden, Brent Thomas, and Lee Clow at Chiat/Day, produced by New York production company Fairbanks Films, and directed by Ridley Scott. The ad was a reference to George Orwell's noted 1949 novel, Nineteen Eighty-Four, which described a dystopian future ruled by a televised Big Brother. English athlete Anya Major performed as the unnamed heroine and David Graham as Big Brother. In the US, it first aired in 10 local outlets, including Twin Falls, Idaho, where Chiat/Day ran the ad on December 31, 1983, at the last possible break before midnight on KMVT, so that the advertisement qualified for the 1984 Clio Awards. Its second televised airing, and only US national airing, was on January 22, 1984, during a break in the third quarter of the telecast of Super Bowl XVIII by CBS. Originally a subject of contention within Apple, it has subsequently been called a watershed event and a masterpiece in advertising. In 1995, The Clio Awards added it to its Hall of Fame, and Advertising Age placed it on the top of its list of 50 greatest commercials."
     },
     {
       "id": "1988-television",
       "year": 1988,
       "category": "television",
       "name": "Just Do It",
-      "short_name": "Just Do It",
       "client": "Nike",
-      "slogan": "Just Do It",
       "agency": "Wieden+Kennedy",
       "youtube_link": "https://www.youtube.com/embed/0yO7xLAGugQ?si=_dzDUaJieaDSTyg-",
-      "description": "The Just Do It campaign was launched by Nike in 1988 to promote the company's line of athletic shoes and apparel. The campaign was created by the advertising agency Wieden+Kennedy, and it was designed to inspire people to push themselves to achieve their goals. The campaign featured a series of television commercials that showed athletes overcoming obstacles and achieving success, and it was accompanied by the slogan Just Do It. The campaign was a huge success, and it helped to establish Nike as one of the leading brands in the sports industry."
+      "description": "Just Do It or JDI for short is a trademark of shoe company Nike. Kalin Reeves tagline was coined in 1988 at an advertising agency meeting. The founder of the Wieden+Kennedy agency, Dan Wieden, credits the inspiration for his Just Do It Nike slogan to a death row inmate Gary Gilmore’s last words: Let's do it. From 1988 to 1998, Nike increased its share of the North American domestic sport-shoe business from 18% to 43% (from $877 million to $9.2 billion in worldwide sales). In many Nike-related situations, Just Do It appears alongside the Nike logo, known as the Swoosh."
+    },
+    {
+      "id": "1993-television",
+      "year": 1993,
+      "category": "television",
+      "name": "Got milk?",
+      "client": "California Milk Processor Board",
+      "agency": "",
+      "youtube_link": "",
+      "description": "Got Milk? (often stylized as got milk?) is an American advertising campaign on television and YouTube encouraging the consumption of milk and dairy products. Created by the advertising agency Goodby Silverstein & Partners for the California Milk Processor Board in 1993, it was later licensed for use by milk processors and dairy farmers. It was launched in 1993 by the Aaron Burr television commercial, directed by Michael Bay. The national campaign, run by MilkPEP (Milk Processor Education Program) began to add the got milk? logo to its Milk Mustache ads in 1995. In January 2014, MilkPEP discontinued its Milk Mustache and got milk? advertisements, launching a new campaign with the tagline Milk Life. The campaign continued in California and the got milk? trademark is licensed to food and merchandise companies for U.S. and international sales. The campaign has led to increased milk sales in California, although not nationwide."
+    },
+    {
+      "id": "1995-television",
+      "year": 1995,
+      "category": "television",
+      "name": "Budweiser Frogs",
+      "client": "Budweiser",
+      "agency": "",
+      "youtube_link": "",
+      "description": "The Budweiser Frogs are three lifelike puppet frogs named Bud, Weis, and Er, who began appearing in American television commercials for Budweiser beer during Super Bowl XXIX in 1995. Adweek called it one of the most iconic alcohol campaigns in advertising history. The first Budweiser Frogs commercial was created by David Swaine, Michael Smith and Mark Choate of DMB&B/St. Louis. The commercial was directed by Gore Verbinski, who would later direct the first three Pirates of the Caribbean films."
     },
     {
       "id": "1997-television",
       "year": 1997,
       "category": "television",
       "name": "Think different",
-      "short_name": "Think different",
       "client": "Apple",
-      "slogan": "Here's to the crazy ones...",
       "agency": "TBWA\\Chiat\\Day",
       "youtube_link": "",
-      "description": "The Think Different campaign was launched by Apple in 1997 to promote the company's Macintosh computer. The campaign featured black-and-white photographs of famous people, including Albert Einstein, John Lennon, and Mahatma Gandhi, along with the slogan Think Different. The campaign was created by the advertising agency TBWA\\Chiat\\Day, and it was designed to emphasize Apple's commitment to innovation and creativity."
+      "description": "Think different is an advertising slogan used from 1997 to 2002 by Apple Computer, Inc., now named Apple Inc. The campaign was created by the Los Angeles office of advertising agency TBWA\\Chiat\\Day. The slogan has been widely taken as a response to the IBM slogan Think. It was used in a television advertisement, several print advertisements, and several TV promos for Apple products. Significantly shortened versions of the advertisement script were used in two television advertisements, known as Crazy Ones, directed by Chiat\\Day's Jennifer Golub who also shared the art director credit with Jessica Schulman Edelstein and Yvonne Smith."
     },
     {
       "id": "2000-television",
       "year": 2000,
       "category": "television",
       "name": "Whassup?",
-      "short_name": "Whassup?",
       "client": "Budweiser",
-      "slogan": "True",
       "agency": "DDB Worldwide",
       "youtube_link": "https://www.youtube.com/embed/JJmqCKtJnxM?si=vvA14lUkfvVGk8A_",
-      "description": ""
+      "description": "Whassup? (also known as Wazzup) was a commercial campaign for Budweiser beer from 1999 to 2002. The first spot aired during Monday Night Football on December 20, 1999. The ad campaign ran in much of the world and became a pop culture catchphrase, comically slurring what's up?. The commercials were based on the short film True written and directed by Charles Stone III, featuring Stone and several of his childhood friends: Fred Thomas, Paul Williams, Terry Williams, Jimmy Puerto Rock Perez, and Kevin Lofton. The characters sat around talking on the phone and saying whassup? to one another in a comical way. Steve Weinshel from C&C STORM films sent the popular short film to creative director Vinny Warren and art director Chuck Taylor at the Chicago-based ad agency DDB. They then presented the concept to August Busch IV, vice president of Anheuser-Busch. Impressed, Busch IV licensed the idea from C&C Storm films and enlisted Stone as the director for Budweiser TV commercials inspired by the film. Scott Martin Brooks won the role of Dookie when Kevin Lofton declined to audition. Whassup? was awarded the Cannes Grand Prix award and the Grand Clio award, among others. The campaign was inducted into the CLIO Hall of Fame in May 2006."
     },
     {
       "id": "2004-television",
       "year": 2004,
       "category": "television",
       "name": "Campaign for Real Beauty",
-      "short_name": "Campaign for Real Beauty",
       "client": "Dove",
-      "slogan": "Real beauty comes in all shapes and sizes",
-      "agency": "Ogilvy",
+      "agency": "Ogilvy & Mather",
       "youtube_link": "",
-      "description": "The Campaign for Real Beauty was launched by Dove in 2004 to promote the company's line of beauty products."
+      "description": "The Dove Campaign for Real Beauty is a worldwide marketing campaign launched by Unilever in 2004 aiming to build self confidence in women and young children. Dove's partners in the campaign included Ogilvy, Edelman Public Relations, and Harbinger Communications (in Canada) along with other consultants. Part of the overall project was the Evolution campaign. According to Ad Age, the campaign successfully increased sales of Dove soap from $2 billion to $4 billion in three years. The series received significant media coverage from talk shows, women's magazines, and mainstream news broadcasts and publications, generating media exposure that Unilever has estimated to be worth more than 30 times the paid-for media space. Following this success, the campaign expanded into other media with a series of television spots (Flip Your Wigs and the Pro-Age series, among others) and print advertisements (Tested on Real Curves), culminating in the 2006 Little Girls global campaign, which featured regional versions of the same advertisement in both print and screen, for which Unilever purchased a 30-second spot in the commercial break during Super Bowl XL at an estimated cost of $2.5 million."
     },
     {
       "id": "2005-television",
       "year": 2005,
       "category": "television",
       "name": "The man your man could smell like",
-      "short_name": "Smell like a man, man",
       "client": "Old Spice",
-      "slogan": "",
       "agency": "Wieden+Kennedy",
       "youtube_link": "https://www.youtube.com/embed/owGykVbfgUE?si=Q9J9Z9QvQ9q9Q9Q",
-      "description": ""
+      "description": "Smell Like a Man, Man is a television advertising campaign in the United States created by ad agency Wieden+Kennedy for the Old Spice brand of male grooming products, owned by Procter & Gamble. The campaign is commonly referred to as The Man Your Man Could Smell Like, the title of the campaign's initial 30-second commercial. The campaign was launched to market Old Spice's Red Zone After Hours Body Wash, but was subsequently expanded to include other products, following its success. The campaign targets female viewers, despite the product's intended market being male, as the company determined that women frequently make purchasing decisions for hygiene products even for male household members. The commercial was a hit on video-sharing websites, such as YouTube, where it had received over 60 million views by February 22, 2022. In June 2010 the ad won the Grand Prix for film at the Cannes Lions International Advertising Festival, and in July 2010 it won a Primetime Emmy Award for Outstanding Commercial. Overall this combined with the original ad series to become one of the most popular viral campaigns in recent history."
+    },
+    {
+      "id": "2005-out_of_home",
+      "year": 2005,
+      "category": "out_of_home",
+      "name": "Light bulb",
+      "client": "The Economist",
+      "agency": "",
+      "youtube_link": "",
+      "description": "The Economist's Light Bulb ad features a large, three-dimensional light bulb on a billboard, which illuminates when someone walks beneath it. This clever design symbolizes the moment of insight or enlightenment that readers experience when engaging with The Economist, visually representing how the publication can spark new ideas and understanding. By incorporating an interactive element, the ad creates a memorable experience for passersby, reinforcing The Economist's identity as a source of intelligent and thought-provoking content. With minimal text and a focus on powerful imagery, the ad effectively captures attention and communicates the brand's value proposition through a simple yet impactful concept."
     }
   ],
   "categories": [
@@ -7375,7 +7519,7 @@
     },
     {
       "year": 1926,
-      "name": "First radio jingle",
+      "name": "First radio jingle (Wheaties)",
       "categories": "radio"
     },
     {
