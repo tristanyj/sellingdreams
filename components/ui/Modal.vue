@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatDescription } from '@/assets/scripts/utils';
+
 const interactionStore = useInteractionStore();
 const { selectedAd } = storeToRefs(interactionStore);
 const { setSelectedAd } = interactionStore;
@@ -111,9 +113,12 @@ watch(isModalOpen, (value) => {
                 alt=""
               />
             </div>
-            <div class="grid gap-2 mt-2">
+            <div
+              v-if="selectedAd.description"
+              class="grid gap-2 mt-2"
+            >
               <p
-                v-for="(paragraph, i) in selectedAd.description"
+                v-for="(paragraph, i) in formatDescription(selectedAd.description)"
                 :key="`paragraph-${i}`"
               >
                 {{ paragraph }}

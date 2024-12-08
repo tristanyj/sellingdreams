@@ -8,6 +8,10 @@ export function formatNumber(value: number): string {
   return `${(value / 1e9).toFixed(2)}B`;
 }
 
+export function formatDescription(descriptionParts: string[]) {
+  return descriptionParts.map((part) => part.replace(/\\/g, '"'));
+}
+
 export function wrapText(text: string, width: number): string[] {
   const words = text.split(/\s+/).reverse();
   const lines: string[] = [];
