@@ -53,11 +53,11 @@ watch(isModalOpen, (value) => {
 
       <div class="flex justify-center items-center min-h-screen p-1">
         <div
-          class="relative rounded-lg w-full max-w-[540px] max-h-[520px] overflow-y-scroll p-5 text-sm bg-gray-50 overflow-hidden transition-all duration-50 will-change-transform transform translate-y-0"
+          class="relative rounded-lg w-full max-w-[480px] max-h-[580px] overflow-y-scroll p-5 text-sm bg-gray-50 shadow-xl transition-all duration-50 will-change-transform transform translate-y-0"
         >
           <button
             type="button"
-            class="absolute z-10 top-4 right-4 text-gray-400 hover:text-gray-500"
+            class="absolute z-10 top-3 right-3 text-gray-400 hover:text-gray-500"
             @click="setSelectedAd(null)"
           >
             <svg
@@ -79,20 +79,16 @@ watch(isModalOpen, (value) => {
             v-if="selectedAd"
             class="grid gap-2"
           >
-            <div class="grid gap-1 mb-1">
-              <div class="grid grid-flow-col justify-start items-center gap-2">
+            <div class="grid gap-1 mb-2.5">
+              <div class="grid grid-flow-col justify-center items-center gap-2">
                 <div class="">{{ selectedAd.year }}</div>
                 <div class="w-1 h-1 rounded-full bg-black" />
                 <div class="">{{ selectedAd.client }}</div>
               </div>
-              <div class="grid grid-flow-col items-center gap-2 text-2xl leading-tight">
-                <div class="font-semibold pr-8">{{ selectedAd.name }}</div>
-              </div>
               <div
-                v-if="selectedAd.agency"
-                class="text-gray-600 text-xs mt-0.5"
+                class="grid grid-flow-col items-center justify-center gap-2 text-2xl px-5 leading-tight"
               >
-                Agency : {{ selectedAd.agency }}
+                <div class="font-semibold text-center">{{ selectedAd.name }}</div>
               </div>
             </div>
             <div v-if="['television', 'radio'].includes(selectedAd.category)">
@@ -112,6 +108,12 @@ watch(isModalOpen, (value) => {
                 class="w-full object-contain rounded-sm"
                 alt=""
               />
+            </div>
+            <div
+              v-if="selectedAd.agency"
+              class="text-gray-600 text-center text-xs mt-1"
+            >
+              Agency : {{ selectedAd.agency }}
             </div>
             <div
               v-if="selectedAd.description"

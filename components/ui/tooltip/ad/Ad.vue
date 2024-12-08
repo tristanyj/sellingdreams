@@ -97,14 +97,14 @@ onMounted(() => {
   >
     <template v-if="tooltipAd">
       <div class="grid gap-2">
-        <div class="grid gap-0.5">
-          <div class="grid grid-flow-col justify-start items-center gap-2">
+        <div class="grid gap-0.5 text-center">
+          <div class="grid grid-flow-col justify-center text-center items-center gap-2">
             <div class="">{{ tooltipAd?.year }}</div>
             <div class="w-1 h-1 rounded-full bg-black" />
             <div class="">{{ tooltipAd?.client }}</div>
           </div>
-          <div class="grid grid-flow-col items-center gap-2 text-lg leading-tight">
-            <div class="font-semibold pr-5">{{ tooltipAd?.name }}</div>
+          <div class="grid grid-flow-col justify-center items-center gap-2 text-lg leading-tight">
+            <div class="font-semibold px-2">{{ tooltipAd?.name }}</div>
           </div>
         </div>
         <div>
@@ -117,7 +117,7 @@ onMounted(() => {
         </div>
         <div
           v-if="tooltipAd?.agency"
-          class="text-gray-600 text-xs pt-px"
+          class="text-gray-600 text-center text-xs pt-px"
         >
           Agency : {{ tooltipAd?.agency }}
         </div>

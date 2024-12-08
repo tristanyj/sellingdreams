@@ -149,8 +149,6 @@ onUnmounted(() => {
 
 <template>
   <div class="relative z-10">
-    <UiToggleFigureMode />
-    <UiTogglePerformanceMode />
     <UiTooltipCategory />
     <UiTooltipAd />
     <UiModal />

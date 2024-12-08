@@ -28,7 +28,7 @@ const adjustedForInflation = computed({
       class="grid grid-flow-col items-center"
       :class="{
         'gap-0.5 text-xs': size === 'sm',
-        'gap-2 text-sm': size === 'md',
+        'gap-1 text-sm': size === 'md',
       }"
     >
       <div>Adjusted for inflation</div>
