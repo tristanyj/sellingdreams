@@ -111,8 +111,13 @@ watch(isModalOpen, (value) => {
                 alt=""
               />
             </div>
-            <div class="grid gap-1 mt-2">
-              {{ selectedAd.description }}
+            <div class="grid gap-2 mt-2">
+              <p
+                v-for="(paragraph, i) in selectedAd.description"
+                :key="`paragraph-${i}`"
+              >
+                {{ paragraph }}
+              </p>
             </div>
           </div>
         </div>

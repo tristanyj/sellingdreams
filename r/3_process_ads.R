@@ -37,6 +37,8 @@ for (i in seq_len(nrow(categories))) {
 }
 
 for (i in seq_len(nrow(ads))) {
+  description_parts <- strsplit(ads$description[i], "\\|")[[1]]
+
   ad <- list(
     id = paste0(ads$year[i], "-", ads$category[i]),
     year = ads$year[i],
@@ -45,7 +47,7 @@ for (i in seq_len(nrow(ads))) {
     client = ads$client[i],
     agency = ads$agency[i],
     youtube_link = ads$youtube_link[i],
-    description = ads$description[i]
+    description = description_parts
   )
   output$ads[[i]] <- ad
 }

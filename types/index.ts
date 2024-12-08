@@ -60,7 +60,7 @@ export interface Ad {
   // slogan: string;
   agency: string;
   youtube_link: string;
-  description: string;
+  description: string[];
 }
 
 // --------------------------------

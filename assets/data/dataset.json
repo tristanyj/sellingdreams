@@ -7158,7 +7158,7 @@
       "client": "Lucky Strike",
       "agency": "Lord & Thomas",
       "youtube_link": "",
-      "description": "Lucky Strike is an American brand of cigarettes owned by the British American Tobacco group. Individual cigarettes of the brand are often referred to colloquially as Luckies. In 1917, the brand debuted the slogan It's Toasted to promote the manufacturing method of toasting – rather than sun drying – the tobacco. In an attempt to counter this popular campaign, competitor Camel took a different approach, claiming that Camel was a fresh cigarette never parched or toasted."
+      "description": ["Lucky Strike is an American brand of cigarettes owned by the British American Tobacco group. Individual cigarettes of the brand are often referred to colloquially as Luckies.", "In 1917, the brand debuted the slogan It's Toasted to promote the manufacturing method of toasting – rather than sun drying – the tobacco. In an attempt to counter this popular campaign, competitor Camel took a different approach, claiming that Camel was a fresh cigarette never parched or toasted."]
     },
     {
       "id": "1922-periodicals",

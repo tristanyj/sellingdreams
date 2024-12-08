@@ -16,7 +16,11 @@ export const useDataStore = defineStore('data', () => {
     events: Event[];
     categories: Category[];
   }) => {
-    ads.value = newAds;
+    ads.value = [...newAds].map((e) => ({
+      ...e,
+      description: typeof e.description === 'string' ? [e.description] : e.description,
+    }));
+
     events.value = [...newEvents].map((e) => ({
       ...e,
       categories: typeof e.categories === 'string' ? [e.categories] : e.categories,
