@@ -62,20 +62,20 @@ export function useChartDrawPoints() {
               id: 'top-arc',
               text: ad.short_name,
               radius: radius.target + 4,
-              startAngle: (3 * Math.PI) / 2,
-              endAngle: (5 * Math.PI) / 2,
+              startAngle: Math.PI,
+              endAngle: Math.PI * 3,
               color: '#fff',
               opacity: 0.9,
             },
-            {
-              id: 'bottom-arc',
-              text: ad.client,
-              radius: radius.target + 11,
-              startAngle: (3 * Math.PI) / 2,
-              endAngle: Math.PI / 2,
-              color: '#fff',
-              opacity: 0.6,
-            },
+            // {
+            //   id: 'bottom-arc',
+            //   text: ad.client,
+            //   radius: radius.target + 11,
+            //   startAngle: (3 * Math.PI) / 2,
+            //   endAngle: Math.PI / 2,
+            //   color: '#fff',
+            //   opacity: 0.6,
+            // },
           ];
 
           textArcs.forEach((arc) => {

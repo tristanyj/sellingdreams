@@ -98,21 +98,7 @@ onUnmounted(() => {
               />
             </div>
             <div class="grid gap-1 mt-2">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro iusto cum
-                at tenetur nihil nesciunt libero dolores ipsam inventore nostrum molestias sapiente,
-                sequi, vitae enim? A animi unde odio.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro iusto cum
-                at tenetur nihil nesciunt libero dolores ipsam inventore nostrum molestias sapiente,
-                sequi, vitae enim? A animi unde odio.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro iusto cum
-                at tenetur nihil nesciunt libero dolores ipsam inventore nostrum molestias sapiente,
-                sequi, vitae enim? A animi unde odio.
-              </p>
+              {{ selectedAd.description }}
             </div>
           </div>
         </div>

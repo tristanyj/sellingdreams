@@ -7131,6 +7131,30 @@
   ],
   "ads": [
     {
+      "id": "1911-miscellaneous",
+      "year": 1911,
+      "category": "miscellaneous",
+      "name": "A skin you love to touch",
+      "short_name": "A skin you love to touch",
+      "client": "Woodbury Soap Company",
+      "slogan": "A skin you love to touch",
+      "agency": "J. Walker Thompson Agency",
+      "youtube_link": "",
+      "description": "In 1911, Woodbury Soap Company became the first company to use sex appeal to sell a product. Their ad slogan, created by the J. Walter Thompson Agency, claimed that women who used the soap would have A Skin You Love To Touch. The slogan became so popular that Woodbury used it until the 1940s."
+    },
+    {
+      "id": "1916-miscellaneous",
+      "year": 1916,
+      "category": "miscellaneous",
+      "name": "So long till Monday!",
+      "short_name": "So long till Monday!",
+      "client": "Indian Motorcycles",
+      "slogan": "So long till Monday!",
+      "agency": "Hendee Manufacturing Company",
+      "youtube_link": "",
+      "description": "Indian Motorcycles, manufactured by the Hendee Manufacturing Company (later renamed the Indian Motorcycle Manufacturing Company) of Springfield, Massachusetts, were the first motorcycles to be manufactured in America. The Company's co-owners, George Hendee and Carl Oscar Hedstrom, focused on technological innovations that would increase the speed and horsepower of their motorcycles, and in 1916 they released a model with a Powerplus engine. Indian Motorcycles from this era were used by the United States military during World War I, as well as by police departments across the nation."
+    },
+    {
       "id": "1959-periodicals",
       "year": 1959,
       "category": "periodicals",
@@ -7139,7 +7163,8 @@
       "client": "Volkswagen",
       "slogan": "",
       "agency": "Doyle Dane Bernbach",
-      "youtube_link": ""
+      "youtube_link": "",
+      "description": ""
     },
     {
       "id": "1960-periodicals",
@@ -7148,20 +7173,46 @@
       "name": "Lemon",
       "short_name": "Lemon",
       "client": "Volkswagen",
-      "slogan": "We pluck the lemons, you get the plums.",
+      "slogan": "We pluck the lemons, you get the plums",
       "agency": "Doyle Dane Bernbach",
-      "youtube_link": ""
+      "youtube_link": "",
+      "description": ""
+    },
+    {
+      "id": "1964-television",
+      "year": 1964,
+      "category": "television",
+      "name": "Daisy",
+      "short_name": "Daisy",
+      "client": "Lyndon B. Johnson",
+      "slogan": "Daisy",
+      "agency": "Doyle Dane Bernbach",
+      "youtube_link": "https://www.youtube.com/embed/riDypP1KfOU?si=edYCyDTPZLH3hub-",
+      "description": ""
     },
     {
       "id": "1971-television",
       "year": 1971,
       "category": "television",
-      "name": "Hilltop — I'd like to buy the world a Coke",
+      "name": "I'd like to buy the world a Coke",
       "short_name": "Hilltop",
       "client": "Coca-Cola",
       "slogan": "",
       "agency": "McCann-Erikson",
-      "youtube_link": "https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ"
+      "youtube_link": "https://www.youtube.com/embed/C2406n8_rUw?si=NnwXw3KJ6_h--jhZ",
+      "description": ""
+    },
+    {
+      "id": "1984-television",
+      "year": 1984,
+      "category": "television",
+      "name": "Where's the beef?",
+      "short_name": "Where's the beef?",
+      "client": "Wendy's",
+      "slogan": "Where's the beef?",
+      "agency": "Dancer Fitzgerald Sample",
+      "youtube_link": "https://www.youtube.com/embed/1FZNYXKHwNw?si=kMNrlU7Gj4nqdWhj",
+      "description": "The Where's the Beef? campaign was launched by Wendy's in 1984 to promote the company's line of hamburgers. The campaign featured a series of television commercials that showed"
     },
     {
       "id": "1984-television",
@@ -7172,7 +7223,68 @@
       "client": "Apple",
       "slogan": "Why 1984 won't be like 1984",
       "agency": "Chiat/Day",
-      "youtube_link": "https://www.youtube.com/embed/2zfqw8nhUwA?si=Q9J9Z9QvQ9q9Q9Q"
+      "youtube_link": "https://www.youtube.com/embed/2zfqw8nhUwA?si=Q9J9Z9QvQ9q9Q9Q",
+      "description": ""
+    },
+    {
+      "id": "1988-television",
+      "year": 1988,
+      "category": "television",
+      "name": "Just Do It",
+      "short_name": "Just Do It",
+      "client": "Nike",
+      "slogan": "Just Do It",
+      "agency": "Wieden+Kennedy",
+      "youtube_link": "https://www.youtube.com/embed/0yO7xLAGugQ?si=_dzDUaJieaDSTyg-",
+      "description": "The Just Do It campaign was launched by Nike in 1988 to promote the company's line of athletic shoes and apparel. The campaign was created by the advertising agency Wieden+Kennedy, and it was designed to inspire people to push themselves to achieve their goals. The campaign featured a series of television commercials that showed athletes overcoming obstacles and achieving success, and it was accompanied by the slogan Just Do It. The campaign was a huge success, and it helped to establish Nike as one of the leading brands in the sports industry."
+    },
+    {
+      "id": "1997-television",
+      "year": 1997,
+      "category": "television",
+      "name": "Think different",
+      "short_name": "Think different",
+      "client": "Apple",
+      "slogan": "Here's to the crazy ones...",
+      "agency": "TBWA\\Chiat\\Day",
+      "youtube_link": "",
+      "description": "The Think Different campaign was launched by Apple in 1997 to promote the company's Macintosh computer. The campaign featured black-and-white photographs of famous people, including Albert Einstein, John Lennon, and Mahatma Gandhi, along with the slogan Think Different. The campaign was created by the advertising agency TBWA\\Chiat\\Day, and it was designed to emphasize Apple's commitment to innovation and creativity."
+    },
+    {
+      "id": "2000-television",
+      "year": 2000,
+      "category": "television",
+      "name": "Whassup?",
+      "short_name": "Whassup?",
+      "client": "Budweiser",
+      "slogan": "True",
+      "agency": "DDB Worldwide",
+      "youtube_link": "https://www.youtube.com/embed/JJmqCKtJnxM?si=vvA14lUkfvVGk8A_",
+      "description": ""
+    },
+    {
+      "id": "2004-television",
+      "year": 2004,
+      "category": "television",
+      "name": "Campaign for Real Beauty",
+      "short_name": "Campaign for Real Beauty",
+      "client": "Dove",
+      "slogan": "Real beauty comes in all shapes and sizes",
+      "agency": "Ogilvy",
+      "youtube_link": "",
+      "description": "The Campaign for Real Beauty was launched by Dove in 2004 to promote the company's line of beauty products."
+    },
+    {
+      "id": "2005-television",
+      "year": 2005,
+      "category": "television",
+      "name": "The man your man could smell like",
+      "short_name": "Smell like a man, man",
+      "client": "Old Spice",
+      "slogan": "",
+      "agency": "Wieden+Kennedy",
+      "youtube_link": "https://www.youtube.com/embed/owGykVbfgUE?si=Q9J9Z9QvQ9q9Q9Q",
+      "description": ""
     }
   ],
   "categories": [

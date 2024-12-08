@@ -46,7 +46,8 @@ for (i in seq_len(nrow(ads))) {
     client = ads$client[i],
     slogan = ads$slogan[i],
     agency = ads$agency[i],
-    youtube_link = ads$youtube_link[i]
+    youtube_link = ads$youtube_link[i],
+    description = ads$description[i]
   )
   output$ads[[i]] <- ad
 }
