@@ -22,3 +22,13 @@
 .modal-leave-to .modal-content {
   transform: scale(0.95);
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
