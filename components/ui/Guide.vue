@@ -40,7 +40,7 @@ const onMouseLeave = () => {
   document.querySelectorAll('.category-area').forEach((el) => el.classList.remove('muted'));
 };
 
-const isOpen = computed(() => !selectedAd.value && y.value > 550);
+const isOpen = computed(() => !selectedAd.value && y.value > 750);
 </script>
 
 <template>

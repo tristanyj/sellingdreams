@@ -36,10 +36,6 @@ function createVisualization() {
 
   g.value.selectAll('*').remove();
 
-  // -----------------
-  // Steam Graph
-  // -----------------
-
   g.value
     .append('rect')
     .attr('class', 'background')
@@ -49,9 +45,6 @@ function createVisualization() {
     .on('click', () => {
       selectArea(null);
     });
-  // .on('mousemove', (event) => {
-  //   updateMousePosition(event);
-  // });
 
   // Legend
   drawYearLegend(g.value, yScale);
@@ -127,7 +120,6 @@ watch(figureMode, () => {
 });
 
 const handleOutsideClick = (event: MouseEvent) => {
-  console.log('click', event);
   if (
     container.value &&
     !container.value.contains(event.target as Node) &&
@@ -149,8 +141,14 @@ onUnmounted(() => {
 
 <template>
   <div class="relative z-10">
-    <UiTooltipCategory />
-    <UiTooltipAd />
+    <UiTooltipCategory
+      class="hidden lg:block"
+      :offset="80"
+    />
+    <UiTooltipAd
+      class="hidden lg:block"
+      :offset="80"
+    />
     <UiModal />
     <div
       id="container"

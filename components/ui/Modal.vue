@@ -24,7 +24,6 @@ onUnmounted(() => {
   document.removeEventListener('keydown', handleEscape);
 });
 
-// block scroll when modal is open
 watch(isModalOpen, (value) => {
   if (value) {
     document.body.style.overflow = 'hidden';

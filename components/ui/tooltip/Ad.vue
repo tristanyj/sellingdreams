@@ -2,34 +2,27 @@
 import type { CSSProperties } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 
-const { width, height } = useWindowSize();
+const { height } = useWindowSize();
 
 const interactionStore = useInteractionStore();
 const { mousePosition, isTooltipAdVisible, tooltipAd } = storeToRefs(interactionStore);
 
+interface Props {
+  offset: number;
+}
+
+const props = defineProps<Props>();
+
 const tooltipStyle = computed<CSSProperties>(() => {
   if (!mousePosition.value) return {};
 
-  const paddingX = 100;
-  const paddingY = 0;
+  const posX = mousePosition.value.x + props.offset;
+  const posY = mousePosition.value.y - tooltipSize.value.height / 2;
 
-  const isPastHalfWidth = mousePosition.value.x > width.value * 0.65;
-  const isPastHalfHeight = mousePosition.value.y > height.value * 0.65;
-
-  const posX = mousePosition.value.x + paddingX;
-  const posY =
-    isPastHalfWidth && isPastHalfHeight
-      ? mousePosition.value.y - tooltipSize.value.height - paddingY
-      : mousePosition.value.y - tooltipSize.value.height / 2 - paddingY;
-
-  const clampedPosX = Math.max(
-    paddingX,
-    Math.min(posX, width.value - tooltipSize.value.width - paddingX + 67)
-  );
-  const clampedPosY = Math.max(40, Math.min(posY, height.value - tooltipSize.value.height - 35));
+  const clampedPosY = Math.max(45, Math.min(posY, height.value - tooltipSize.value.height - 35));
 
   return {
-    transform: `translate(${clampedPosX}px, ${clampedPosY}px)`,
+    transform: `translate(${posX}px, ${clampedPosY}px)`,
     visibility: isTooltipAdVisible.value ? 'visible' : 'hidden',
     position: 'fixed',
     top: 0,
@@ -88,34 +81,34 @@ onMounted(() => {
 <template>
   <div
     ref="tooltip"
-    class="fixed tooltip bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-64 shadow-md"
+    class="fixed tooltip bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-72 shadow-md"
     :style="tooltipStyle"
   >
     <template v-if="tooltipAd">
       <div class="grid gap-2">
         <div class="grid gap-0.5 text-center">
           <div class="grid grid-flow-col justify-center text-center items-center gap-2">
-            <div class="">{{ tooltipAd?.year }}</div>
+            <div class="">{{ tooltipAd.year }}</div>
             <div class="w-1 h-1 rounded-full bg-black" />
-            <div class="">{{ tooltipAd?.client }}</div>
+            <div class="">{{ tooltipAd.client }}</div>
           </div>
           <div class="grid grid-flow-col justify-center items-center gap-2 text-lg leading-tight">
-            <div class="font-semibold px-2">{{ tooltipAd?.name }}</div>
+            <div class="font-semibold px-2">{{ tooltipAd.name }}</div>
           </div>
         </div>
         <div>
           <NuxtImg
-            v-if="tooltipAd?.id"
+            v-if="tooltipAd.id"
             :src="`ads/${tooltipAd.id}-preview.webp`"
             class="w-full object-contain rounded-sm"
             :alt="tooltipAd.id"
           />
         </div>
         <div
-          v-if="tooltipAd?.agency"
+          v-if="tooltipAd.agency"
           class="text-gray-600 text-center text-xs pt-px"
         >
-          Agency : {{ tooltipAd?.agency }}
+          Agency : {{ tooltipAd.agency }}
         </div>
       </div>
     </template>

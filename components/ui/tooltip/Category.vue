@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import type { CSSProperties } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
-
 import { formatNumber } from '~/assets/scripts/utils';
 
-const { width, height } = useWindowSize();
+const { height } = useWindowSize();
+
+interface Props {
+  offset: number;
+}
+
+const props = defineProps<Props>();
 
 const interactionStore = useInteractionStore();
 const { updateMousePosition } = interactionStore;
@@ -14,27 +19,17 @@ const { mousePosition, isTooltipCategoryVisible, tooltipCategory, tooltipFigure,
 const tooltipStyle = computed<CSSProperties>(() => {
   if (!mousePosition.value) return {};
 
-  const paddingX = 120;
-  const paddingY = 0;
-
   const isCenter = tooltipCategory.value?.center ? true : false;
-
-  const isPastHalfWidth = mousePosition.value.x > width.value * 0.75;
-  const isPastHalfHeight = mousePosition.value.y > height.value * 0.75;
 
   const offsetX = isCenter ? 0 : tooltipSize.value.width;
 
-  const posX = mousePosition.value.x - offsetX - paddingX;
-  const posY =
-    isPastHalfWidth && isPastHalfHeight
-      ? mousePosition.value.y - tooltipSize.value.height
-      : mousePosition.value.y - tooltipSize.value.height / 2 - paddingY;
+  const posX = mousePosition.value.x - offsetX - props.offset - 30;
+  const posY = mousePosition.value.y - tooltipSize.value.height / 2;
 
-  const clampedPosX = Math.max(paddingX, Math.min(posX, width.value - offsetX - paddingX));
-  const clampedPosY = Math.max(40, Math.min(posY, height.value - tooltipSize.value.height - 35));
+  const clampedPosY = Math.max(45, Math.min(posY, height.value - tooltipSize.value.height - 35));
 
   return {
-    transform: `translate(${clampedPosX}px, ${clampedPosY}px)`,
+    transform: `translate(${posX}px, ${clampedPosY}px)`,
     visibility: isTooltipCategoryVisible.value ? 'visible' : 'hidden',
     position: 'fixed',
     top: 0,
@@ -98,7 +93,7 @@ onMounted(() => {
   <div
     v-show="isTooltipCategoryVisible"
     ref="tooltip"
-    class="fixed tooltip bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-64 shadow-md"
+    class="fixed tooltip bg-gray-50 rounded-md z-100 text-sm font-inter p-3 w-56 shadow-md"
     :style="tooltipStyle"
   >
     <template v-if="tooltipCategory">
