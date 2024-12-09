@@ -3,11 +3,12 @@ export function useChartConfig() {
   // Main Config
   // ------------------------------
 
-  const height = 7000;
+  const height = 6500;
   const width = 1400;
   const margin = {
     x: 600,
-    y: 800,
+    top: 290,
+    bottom: 25,
     offset: 0,
   };
 

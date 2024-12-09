@@ -22,7 +22,7 @@ const isLoading = ref(true);
 const yScale = d3
   .scalePoint()
   .domain(figures.value.map((f) => f.year.toString()))
-  .range([margin.y / 2, height - margin.y / 2]);
+  .range([margin.top, height - margin.bottom]);
 
 const xScale = d3
   .scaleLinear()
