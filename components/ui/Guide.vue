@@ -50,7 +50,7 @@ const isOpen = computed(() => !selectedAd.value && y.value > 550);
         v-if="isOpen"
         class="fixed z-20 top-1 left-0 w-full grid justify-center"
       >
-        <div class="bg-[#E7DECC]/95 border border-black/30 rounded-md px-1 py-1">
+        <div class="bg-[#E7DECC]/95 border border-black/25 rounded-md px-1 py-1">
           <div class="grid grid-flow-col items-center text-xs text-gray-800">
             <button
               v-for="category in categories"

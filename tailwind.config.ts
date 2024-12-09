@@ -9,6 +9,7 @@ export default <Partial<Config>>{
         lexend: ['Bricolage Grotesque', 'cursive'],
         garamond: ['EB Garamond', 'serif'],
         crimson: ['Crimson Pro', 'serif'],
+        josefin: ['Josefin Sans', 'sans-serif'],
       },
       colors: {
         primary: slate,
