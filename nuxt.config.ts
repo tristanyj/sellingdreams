@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const SITE_TITLE = 'Madison';
-const SITE_DESCRIPTION = 'Description';
+const SITE_TITLE =
+  'Selling Dreams | 100 years of advertising evolution and iconic campaigns in the United States';
+const SITE_DESCRIPTION =
+  'Selling Dreams is a visual history of advertising in the United States, from 1910 to 2007. Explore the most iconic campaigns and the evolution of advertising over the past 100 years.';
 const SITE_URL = 'https://google.com/';
 
 export default defineNuxtConfig({
@@ -49,10 +51,17 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores/**'],
   },
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', [
-    '@pinia/nuxt',
-    {
-      autoImports: ['defineStore', 'storeToRefs'],
-    },
-  ], '@pinia-plugin-persistedstate/nuxt', '@nuxt/image'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'storeToRefs'],
+      },
+    ],
+    '@pinia-plugin-persistedstate/nuxt',
+    '@nuxt/image',
+  ],
 });

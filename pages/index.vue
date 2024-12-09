@@ -1,5 +1,8 @@
 <script setup lang="ts">
-useHead({ title: 'Madison | Description' });
+useHead({
+  title:
+    'Selling Dreams — 100 years of advertising evolution and iconic campaigns in the United States',
+});
 
 const figureStore = useFigureStore();
 const { isLoaded: isFiguresLoaded } = storeToRefs(figureStore);
