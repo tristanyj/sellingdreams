@@ -3,15 +3,9 @@ import type { d3GSelection } from '~/types';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 export function useChartDrawAreas() {
-  const interactionStore = useInteractionStore();
-  const { setTooltipCategory } = interactionStore;
-
   const figureStore = useFigureStore();
   const { selectedArea, series } = storeToRefs(figureStore);
   const { selectArea } = figureStore;
-
-  const dataStore = useDataStore();
-  const { categories } = storeToRefs(dataStore);
 
   const drawCategoryAreas = (g: d3GSelection, isInteraction = false) => {
     const area = d3
@@ -55,27 +49,12 @@ export function useChartDrawAreas() {
           selectArea(selectedArea.value === d.id ? null : d.id);
         })
         .on('mouseenter', function (_, d) {
-          // const category = categories.value.find((cat) => cat.id === d.id);
-          // if (!category) return;
-
-          // setTooltipCategory({
-          //   id: d.id,
-          //   name: category.name,
-          //   description: category.description,
-          //   color: category.color,
-          // });
-
           if (selectedArea.value) return;
 
           const ids = AD_CATEGORIES.filter((cat) => cat !== d.id);
           ids.forEach((id) => d3.select(`#category-area-${id}`).classed('muted', true));
         })
-        // .on('mousemove', (event) => {
-        //   updateMousePosition(event);
-        // })
         .on('mouseout', function () {
-          // setTooltipCategory(null);
-
           if (selectedArea.value) return;
 
           d3.selectAll(`.category-area`).classed('muted', false);

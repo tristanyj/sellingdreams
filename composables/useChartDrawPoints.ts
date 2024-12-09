@@ -1,24 +1,17 @@
 import * as d3 from 'd3';
-import { calcTextLength } from '~/assets/scripts/utils';
+import { calcTextLength, truncateText } from '~/assets/scripts/utils';
 import type { d3GSelection } from '~/types';
-
-export interface Arc {
-  innerRadius: number;
-  outerRadius: number;
-  startAngle: number;
-  endAngle: number;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data: any;
-}
-
-function truncateText(text: string, maxLength: number, suffix = '...') {
-  if (text.length <= maxLength) return text;
-  return text.slice(0, maxLength - 3) + suffix;
-}
 
 export function useChartDrawPoints() {
   const arcGenerator = d3
-    .arc<Arc>()
+    .arc<{
+      innerRadius: number;
+      outerRadius: number;
+      startAngle: number;
+      endAngle: number;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      data: any;
+    }>()
     .innerRadius((d) => d.innerRadius)
     .outerRadius((d) => d.outerRadius)
     .startAngle((d) => d.startAngle)
@@ -76,7 +69,6 @@ export function useChartDrawPoints() {
               id: 'bottom-arc',
               text: ad.client,
               radius: radius.target + 11,
-              // inverse
               startAngle: Math.PI * 2,
               endAngle: 0,
               color: '#fff',
@@ -94,7 +86,7 @@ export function useChartDrawPoints() {
             });
 
             const arcLength = Math.abs(arc.endAngle - arc.startAngle) * arc.radius;
-            const maxTextWidth = arcLength / fontSize; // Rough estimate of max characters
+            const maxTextWidth = arcLength / fontSize;
             const truncatedText = truncateText(arc.text, Math.floor(maxTextWidth), '..');
             const truncatedTextLength = calcTextLength(g, truncatedText, fontSize);
             const textPercentage = (truncatedTextLength / arcLength) * 100;
@@ -190,9 +182,7 @@ export function useChartDrawPoints() {
                 category: ad.category,
                 client: ad.client,
                 name: ad.name,
-                // slogan: ad.slogan,
                 agency: ad.agency,
-                // short_name: ad.short_name,
               });
             }
 

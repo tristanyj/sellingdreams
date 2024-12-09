@@ -1,10 +1,10 @@
 import * as d3 from 'd3';
 import type { d3GSelection } from '~/types';
 
-import { createLine } from './useChartDrawLines';
-
 import { wrapText2 } from '~/assets/scripts/utils';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
+
+import { createLine } from './useChartDrawLines';
 
 export function useChartDrawLegend() {
   const { width, opacity } = useChartConfig();
@@ -36,19 +36,18 @@ export function useChartDrawLegend() {
       const category = categories.value.find((c) => c.id === serie.id);
       if (!category) return;
 
-      const x = (serie.point.x0 + serie.point.x1) / 2;
-      const y2Mid = serie.point.y - 20;
-      const y2 = serie.point.y - 30;
-
-      // Calculate offsets
       const offsetFactor = (index / (totalItems - 0)) * 2 - 1;
       const offset = offsetFactor * maxOffset;
 
-      const x2 = index === 0 ? x : x + offset;
+      const x1 = (serie.point.x0 + serie.point.x1) / 2;
+      const x2 = index === 0 ? x1 : x1 + offset;
+
+      const y2Mid = serie.point.y - 20;
+      const y2 = serie.point.y - 30;
 
       createLine(legendGroup, {
         className: 'legend-line',
-        x1: x,
+        x1: x1,
         x2: x2,
         y1: serie.point.y,
         y2: index === 0 ? y2 : y2Mid,
@@ -107,9 +106,6 @@ export function useChartDrawLegend() {
           const areas = ids.map((id) => d3.select(`#category-area-${id}`));
           areas.forEach((area) => area.attr('opacity', opacity.area.muted));
         })
-        // .on('mousemove', (event) => {
-        //   updateMousePosition(event);
-        // })
         .on('mouseout', function () {
           setTooltipCategory(null);
 
@@ -123,75 +119,59 @@ export function useChartDrawLegend() {
 
   const drawAreaLegend = (g: d3GSelection) => {
     const misc = series.value.find((s) => s.id === 'miscellaneous')?.areaPoints[2];
-
-    // TODO: refactor this function
-
     if (!misc) return;
 
     const fontSize = 16;
-
-    const x0Mid = misc.x0;
-    const x1Mid = misc.x1;
-    const yMid = misc.y;
-    const x01Mid = (x0Mid + x1Mid) / 2;
-
-    const x0 = (x0Mid + x01Mid) / 2;
-
-    const x1 = x0 - 120;
-    const y1 = yMid - 190;
-
-    createLine(g, {
-      className: 'legend-line',
-      x1: x0Mid,
-      x2: x1Mid,
-      y1: yMid,
-      y2: yMid,
-      opacity: opacity.line.legend,
-      transform: '',
-    });
-
-    createLine(g, {
-      className: 'legend-line',
-      x1: x0Mid,
-      x2: x0Mid,
-      y1: yMid - 10,
-      y2: yMid + 10,
-      strokeWidth: 2,
-      opacity: opacity.line.legend,
-      transform: '',
-    });
-
-    createLine(g, {
-      className: 'legend-line',
-      x1: x1Mid,
-      x2: x1Mid,
-      y1: yMid - 10,
-      y2: yMid + 10,
-      strokeWidth: 2,
-      opacity: opacity.line.legend,
-      transform: '',
-    });
-
-    createLine(g, {
-      className: 'legend-line',
-      x1: x0,
-      x2: x1,
-      y1: yMid,
-      y2: y1,
-      opacity: opacity.line.legend,
-      transform: '',
-    });
-
     const lineOffset = 40;
 
-    createLine(g, {
-      className: 'legend-line',
-      x1: x1,
-      x2: x1,
-      y1: y1,
-      y2: y1 - lineOffset,
-      opacity: opacity.line.legend,
-      transform: '',
+    const miscMid = (misc.x0 + (misc.x0 + misc.x1) / 2) / 2;
+
+    const x1 = miscMid - 120;
+    const y1 = misc.y - 190;
+
+    const lines = [
+      {
+        x1: misc.x0,
+        x2: misc.x1,
+        y1: misc.y,
+        y2: misc.y,
+      },
+      {
+        x1: misc.x0,
+        x2: misc.x0,
+        y1: misc.y - 10,
+        y2: misc.y + 10,
+      },
+      {
+        x1: misc.x1,
+        x2: misc.x1,
+        y1: misc.y - 10,
+        y2: misc.y + 10,
+      },
+      {
+        x1: miscMid,
+        x2: x1,
+        y1: misc.y,
+        y2: y1,
+      },
+      {
+        x1: x1,
+        x2: x1,
+        y1: y1,
+        y2: y1 - lineOffset,
+      },
+    ];
+
+    lines.forEach((line) => {
+      createLine(g, {
+        className: 'legend-line',
+        x1: line.x1,
+        x2: line.x2,
+        y1: line.y1,
+        y2: line.y2,
+        opacity: opacity.line.legend,
+        transform: '',
+      });
     });
 
     const p1 = 70;
