@@ -56,7 +56,7 @@ for (i in seq_len(nrow(events))) {
   categories <- if (!is.na(events$category_ids[i]) && nchar(events$category_ids[i]) > 0) {
     unlist(strsplit(events$category_ids[i], ","))
   } else {
-    character(0)  # Empty character vector for an empty array
+    character(0)
   }
 
   event <- list(

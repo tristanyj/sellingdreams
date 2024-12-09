@@ -6,8 +6,6 @@ export default <Partial<Config>>{
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        lexend: ['Bricolage Grotesque', 'cursive'],
-        garamond: ['EB Garamond', 'serif'],
         crimson: ['Crimson Pro', 'serif'],
         josefin: ['Josefin Sans', 'sans-serif'],
       },

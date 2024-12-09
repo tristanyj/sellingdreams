@@ -2,6 +2,18 @@
 // Dataset
 // --------------------------------
 
+export type CategoryKey =
+  | 'radio'
+  | 'television'
+  | 'internet'
+  | 'periodicals'
+  | 'out_of_home'
+  | 'direct_mail'
+  | 'yellow_pages'
+  | 'miscellaneous';
+
+export type AdId = `${number}-${CategoryKey}`;
+
 export interface Category {
   id: CategoryKey;
   name: string;
@@ -22,16 +34,6 @@ interface FigureCategory {
   proportion_of_ads: number;
 }
 
-export type CategoryKey =
-  | 'radio'
-  | 'television'
-  | 'internet'
-  | 'periodicals'
-  | 'out_of_home'
-  | 'direct_mail'
-  | 'yellow_pages'
-  | 'miscellaneous';
-
 export interface Figure {
   year: number;
   categories: Record<CategoryKey, FigureCategory>;
@@ -50,40 +52,6 @@ export interface Figure {
   };
 }
 
-export type AdId = `${number}-${CategoryKey}`;
-
-export interface Ad {
-  id: AdId;
-  year: number;
-  category: CategoryKey;
-  client: string;
-  name: string;
-  // short_name: string;
-  // slogan: string;
-  agency: string;
-  youtube_link: string;
-  description: string[];
-}
-
-// --------------------------------
-// D3
-// --------------------------------
-
-export type d3GSelection = d3.Selection<SVGGElement, unknown, null, undefined>;
-
-export interface Line {
-  className: string;
-  id?: string;
-  x1: number;
-  x2: number;
-  y1: number;
-  y2: number;
-  stroke?: string;
-  strokeWidth?: number;
-  opacity?: number;
-  transform: string;
-}
-
 export type FigureSliceCategory = {
   serieId: string;
   value: number;
@@ -98,6 +66,17 @@ export type FigureSlice = {
   y: number;
   values: Map<string, FigureSliceCategory>;
 };
+
+export interface Ad {
+  id: AdId;
+  year: number;
+  category: CategoryKey;
+  client: string;
+  name: string;
+  agency: string;
+  youtube_link: string;
+  description: string[];
+}
 
 interface Tooltip {
   id: string;
@@ -123,7 +102,41 @@ export interface TooltipAd extends Tooltip {
   category: CategoryKey;
   client: string;
   name: string;
-  // slogan: string;
-  // short_name: string;
   agency: string;
+}
+
+export interface ImageAd {
+  id: AdId;
+  url: string;
+  alt: string;
+  x: number;
+  y: number;
+  width: number;
+  opacity: number;
+}
+
+export interface BgAd {
+  id: AdId;
+  url: string;
+  alt: string;
+  offset: number;
+}
+
+// --------------------------------
+// D3
+// --------------------------------
+
+export type d3GSelection = d3.Selection<SVGGElement, unknown, null, undefined>;
+
+export interface Line {
+  className: string;
+  id?: string;
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+  stroke?: string;
+  strokeWidth?: number;
+  opacity?: number;
+  transform: string;
 }

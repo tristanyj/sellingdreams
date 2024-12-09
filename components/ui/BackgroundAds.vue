@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import type { AdId } from '~/types';
+import type { BgAd } from '~/types';
 import { useWindowSize } from '@vueuse/core';
 
 const { width } = useWindowSize();
 
 const imgOffset = computed(() => (width.value < 1536 ? 75 : 0));
-
-interface BgAd {
-  id: AdId;
-  url: string;
-  alt: string;
-  offset: number;
-}
 
 interface Props {
   ads: BgAd[];

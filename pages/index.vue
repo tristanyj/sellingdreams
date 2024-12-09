@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AdId } from '~/types';
+import type { AdId, ImageAd, BgAd } from '~/types';
 
 useHead({ title: 'Madison | Description' });
 
@@ -11,23 +11,6 @@ const { isLoaded: isFiguresLoaded } = storeToRefs(figureStore);
 
 const dataStore = useDataStore();
 const { isLoaded: isAdsLoaded, ads } = storeToRefs(dataStore);
-
-interface ImageAd {
-  id: AdId;
-  url: string;
-  alt: string;
-  x: number;
-  y: number;
-  width: number;
-  opacity: number;
-}
-
-interface BgAd {
-  id: AdId;
-  url: string;
-  alt: string;
-  offset: number;
-}
 
 const imageAds: ImageAd[] = [
   {
