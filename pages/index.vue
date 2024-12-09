@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CategoryKey } from '~/types';
+import type { AdId } from '~/types';
 
 useHead({ title: 'Madison | Description' });
 
@@ -12,10 +12,8 @@ const { isLoaded: isFiguresLoaded } = storeToRefs(figureStore);
 const dataStore = useDataStore();
 const { isLoaded: isAdsLoaded, ads } = storeToRefs(dataStore);
 
-type Id = `${number}-${CategoryKey}`;
-
 interface ImageAd {
-  id: Id;
+  id: AdId;
   url: string;
   alt: string;
   x: number;
@@ -25,7 +23,7 @@ interface ImageAd {
 }
 
 interface BgAd {
-  id: Id;
+  id: AdId;
   url: string;
   alt: string;
   offset: number;
@@ -33,7 +31,7 @@ interface BgAd {
 
 const imageAds: ImageAd[] = [
   {
-    id: '1917-miscellaneous' as Id,
+    id: '1917-miscellaneous' as AdId,
     url: 'ads/1917-miscellaneous-preview.webp',
     alt: '1917 - Lucky Strike',
     x: 550,
@@ -42,7 +40,7 @@ const imageAds: ImageAd[] = [
     opacity: 0.75,
   },
   {
-    id: '1981-periodicals' as Id,
+    id: '1981-periodicals' as AdId,
     url: 'ads/1981-periodicals-preview.webp',
     alt: '1981 - Absolut Vodka',
     x: 600,
@@ -51,7 +49,7 @@ const imageAds: ImageAd[] = [
     opacity: 0.85,
   },
   {
-    id: '1960-periodicals' as Id,
+    id: '1960-periodicals' as AdId,
     url: 'ads/1960-periodicals-preview.webp',
     alt: '1960 - Volkswagen',
     x: -680,
@@ -60,7 +58,7 @@ const imageAds: ImageAd[] = [
     opacity: 0.85,
   },
   {
-    id: '1984-television' as Id,
+    id: '1984-television' as AdId,
     url: 'ads/1984-television-preview.webp',
     alt: '1984 - Apple',
     x: -500,
@@ -69,13 +67,52 @@ const imageAds: ImageAd[] = [
     opacity: 0.7,
   },
   {
-    id: '1971-television' as Id,
+    id: '1971-television' as AdId,
     url: 'ads/1971-television-preview.webp',
     alt: '1971 - Coca-Cola',
     x: 0,
     y: -150,
     width: 265,
     opacity: 0.85,
+  },
+];
+
+const bgAdsTop: BgAd[] = [
+  {
+    id: '1922-periodicals' as Id,
+    url: 'ads/1922-periodicals-preview.webp',
+    alt: '1922 - ',
+    offset: 0,
+  },
+  {
+    id: '1933-radio' as Id,
+    url: 'ads/1933-radio-preview.webp',
+    alt: '1933 - ',
+    offset: -1,
+  },
+  {
+    id: '1966-television' as Id,
+    url: 'ads/1966-television-preview.webp',
+    alt: '1966 - ',
+    offset: -2,
+  },
+  {
+    id: '1975-direct_mail' as Id,
+    url: 'ads/1975-direct_mail-preview.webp',
+    alt: '1975 - ',
+    offset: -2,
+  },
+  {
+    id: '1979-television' as Id,
+    url: 'ads/1979-television-preview.webp',
+    alt: '1979 - ',
+    offset: -1,
+  },
+  {
+    id: '2005-out_of_home' as Id,
+    url: 'ads/2005-out_of_home-preview.webp',
+    alt: '2005 - ',
+    offset: 0,
   },
 ];
 
@@ -118,45 +155,6 @@ const bgAdsBottom: BgAd[] = [
   },
 ];
 
-const bgAdsTop: BgAd[] = [
-  {
-    id: '1922-periodicals' as Id,
-    url: 'ads/1922-periodicals-preview.webp',
-    alt: '1922 - ',
-    offset: 0,
-  },
-  {
-    id: '1933-radio' as Id,
-    url: 'ads/1933-radio-preview.webp',
-    alt: '1933 - ',
-    offset: 1,
-  },
-  {
-    id: '1966-television' as Id,
-    url: 'ads/1966-television-preview.webp',
-    alt: '1966 - ',
-    offset: 2,
-  },
-  {
-    id: '1975-direct_mail' as Id,
-    url: 'ads/1975-direct_mail-preview.webp',
-    alt: '1975 - ',
-    offset: 2,
-  },
-  {
-    id: '1979-television' as Id,
-    url: 'ads/1979-television-preview.webp',
-    alt: '1979 - ',
-    offset: 1,
-  },
-  {
-    id: '2005-out_of_home' as Id,
-    url: 'ads/2005-out_of_home-preview.webp',
-    alt: '2005 - ',
-    offset: 0,
-  },
-];
-
 const selectAd = (imageAd: ImageAd) => {
   const ad = ads.value.find((ad) => ad.id === imageAd.id);
   if (!ad) return;
@@ -168,36 +166,11 @@ const selectAd = (imageAd: ImageAd) => {
 <template>
   <div class="relative grid">
     <UiGuide />
-    <div class="absolute left-1/2 transform -translate-x-1/2 -top-20 opacity-[0.04]">
-      <div class="relative grid grid-flow-col w-full">
-        <NuxtImg
-          v-for="ad in bgAdsTop"
-          :key="`first-${ad.id}`"
-          :src="ad.url"
-          :alt="ad.alt"
-          :style="{
-            top: `-${ad.offset * 100}px`,
-          }"
-          class="relative block h-[400px] max-w-none w-auto rounded-md mr-10"
-        />
-      </div>
-    </div>
-    <div class="absolute -left-32 top-[600px] opacity-[0.04]">
-      <div class="relative overflow-hidden whitespace-nowrap w-full">
-        <div class="inline-block whitespace-nowrap will-change-transform">
-          <NuxtImg
-            v-for="ad in bgAdsBottom"
-            :key="`first-${ad.id}`"
-            :src="ad.url"
-            :alt="ad.alt"
-            :style="{
-              bottom: `-${ad.offset * 50}px`,
-            }"
-            class="relative inline-block w-[320px] h-auto rounded-md mr-10"
-          />
-        </div>
-      </div>
-    </div>
+    <UiBackgroundAds :ads="bgAdsTop" />
+    <UiBackgroundAds
+      :ads="bgAdsBottom"
+      :top="600"
+    />
     <UContainer>
       <div class="relative grid gap-5 pt-64 2xl:pt-80 mt-8 pb-20">
         <h1 class="flex justify-center font-josefin uppercase font-bold text-7xl text-center">

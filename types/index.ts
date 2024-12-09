@@ -50,8 +50,10 @@ export interface Figure {
   };
 }
 
+export type AdId = `${number}-${CategoryKey}`;
+
 export interface Ad {
-  id: `${number}-${CategoryKey}`;
+  id: AdId;
   year: number;
   category: CategoryKey;
   client: string;
