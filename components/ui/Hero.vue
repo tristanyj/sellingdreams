@@ -4,8 +4,10 @@ import type { AdId, ImageAd } from '~/types';
 const interactionStore = useInteractionStore();
 const { setSelectedAd } = interactionStore;
 
+const isLoaded = ref(false);
+
 const dataStore = useDataStore();
-const { isLoaded, ads } = storeToRefs(dataStore);
+const { ads } = storeToRefs(dataStore);
 
 const imageAds: ImageAd[] = [
   {
@@ -61,6 +63,12 @@ const selectAd = (imageAd: ImageAd) => {
 
   setSelectedAd(ad);
 };
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoaded.value = true;
+  }, 500);
+});
 </script>
 
 <template>
@@ -75,31 +83,37 @@ const selectAd = (imageAd: ImageAd) => {
     <h1 class="font-crimson font-medium text-3xl text-center max-w-[654px] mx-auto px-2">
       100 years of advertising evolution and iconic campaigns in the United States
     </h1>
-    <div
-      v-if="isLoaded"
-      class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-    >
-      <div
-        v-for="(ad, index) in imageAds"
-        :key="`ad-${index}`"
-        class="absolute transform -translate-x-1/2 -translate-y-1/2 border transition-opacity cursor-pointer hover-opacity"
-        :style="{
-          width: `${ad.width}px`,
-          top: `${ad.y}px`,
-          left: `${ad.x}px`,
-          opacity: `${ad.opacity}`,
-        }"
-        @click="selectAd(ad)"
-      >
-        <NuxtImg
-          class="h-auto max-w-none rounded-lg"
-          :src="ad.url"
-          :alt="ad.alt"
-          :style="{
-            width: `${ad.width}px`,
-          }"
-        />
-      </div>
+    <div>
+      <Transition>
+        <!-- <div v-if="isLoaded"> -->
+        <div
+          v-if="isLoaded"
+          class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
+          <div
+            v-for="(ad, index) in imageAds"
+            :key="`ad-${index}`"
+            class="absolute transform -translate-x-1/2 -translate-y-1/2 border transition-opacity cursor-pointer hover-opacity"
+            :style="{
+              width: `${ad.width}px`,
+              top: `${ad.y}px`,
+              left: `${ad.x}px`,
+              opacity: `${ad.opacity}`,
+            }"
+            @click="selectAd(ad)"
+          >
+            <NuxtImg
+              class="h-auto max-w-none rounded-lg"
+              :src="ad.url"
+              :alt="ad.alt"
+              :style="{
+                width: `${ad.width}px`,
+              }"
+            />
+            <!-- </div> -->
+          </div>
+        </div>
+      </Transition>
     </div>
   </div>
   <p

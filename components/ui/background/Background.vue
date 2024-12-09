@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { AdId, BgAd } from '~/types';
 
+const isLoaded = ref(false);
+
 const bgAdsTop: BgAd[] = [
   {
     id: '1922-periodicals' as AdId,
@@ -78,12 +80,24 @@ const bgAdsBottom: BgAd[] = [
     offset: 0,
   },
 ];
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoaded.value = true;
+  }, 250);
+});
 </script>
 
 <template>
-  <UiBackgroundAds :ads="bgAdsTop" />
-  <UiBackgroundAds
-    :ads="bgAdsBottom"
-    :top="500"
-  />
+  <div>
+    <Transition>
+      <div v-if="isLoaded">
+        <UiBackgroundAds :ads="bgAdsTop" />
+        <UiBackgroundAds
+          :ads="bgAdsBottom"
+          :top="500"
+        />
+      </div>
+    </Transition>
+  </div>
 </template>

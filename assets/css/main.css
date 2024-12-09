@@ -5,7 +5,7 @@ html {
 body {
   @apply font-inter;
   background-color: #fdf0d5;
-  background-image: url('../images/concrete-wall-3.png');
+  background-image: url('../images/concrete-wall-3.webp');
 }
 
 #container svg {
