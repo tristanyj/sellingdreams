@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import type { AdId } from '~/types';
+import { useWindowSize } from '@vueuse/core';
+
+const { width } = useWindowSize();
+
+const imgOffset = computed(() => (width.value < 1536 ? 75 : 0));
 
 interface BgAd {
   id: AdId;
@@ -30,7 +35,7 @@ withDefaults(defineProps<Props>(), {
         :src="ad.url"
         :alt="ad.alt"
         :style="{
-          top: `${ad.offset * 50}px`,
+          top: `${ad.offset * 50 - imgOffset}px`,
         }"
         class="relative block h-[400px] max-w-none w-auto rounded-md mr-10"
       />

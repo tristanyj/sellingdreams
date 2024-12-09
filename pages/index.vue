@@ -79,37 +79,37 @@ const imageAds: ImageAd[] = [
 
 const bgAdsTop: BgAd[] = [
   {
-    id: '1922-periodicals' as Id,
+    id: '1922-periodicals' as AdId,
     url: 'ads/1922-periodicals-preview.webp',
     alt: '1922 - ',
     offset: 0,
   },
   {
-    id: '1933-radio' as Id,
+    id: '1933-radio' as AdId,
     url: 'ads/1933-radio-preview.webp',
     alt: '1933 - ',
     offset: -1,
   },
   {
-    id: '1966-television' as Id,
+    id: '1966-television' as AdId,
     url: 'ads/1966-television-preview.webp',
     alt: '1966 - ',
     offset: -2,
   },
   {
-    id: '1975-direct_mail' as Id,
+    id: '1975-direct_mail' as AdId,
     url: 'ads/1975-direct_mail-preview.webp',
     alt: '1975 - ',
     offset: -2,
   },
   {
-    id: '1979-television' as Id,
+    id: '1979-television' as AdId,
     url: 'ads/1979-television-preview.webp',
     alt: '1979 - ',
     offset: -1,
   },
   {
-    id: '2005-out_of_home' as Id,
+    id: '2005-out_of_home' as AdId,
     url: 'ads/2005-out_of_home-preview.webp',
     alt: '2005 - ',
     offset: 0,
@@ -118,37 +118,37 @@ const bgAdsTop: BgAd[] = [
 
 const bgAdsBottom: BgAd[] = [
   {
-    id: '1911-miscellaneous' as Id,
+    id: '1911-miscellaneous' as AdId,
     url: 'ads/1911-miscellaneous-preview.webp',
     alt: '1911 - ',
     offset: 0,
   },
   {
-    id: '1931-periodicals' as Id,
+    id: '1931-periodicals' as AdId,
     url: 'ads/1931-periodicals-preview.webp',
     alt: '1931 - ',
     offset: 1,
   },
   {
-    id: '1947-periodicals' as Id,
+    id: '1947-periodicals' as AdId,
     url: 'ads/1947-periodicals-preview.webp',
     alt: '1947 - ',
     offset: 2,
   },
   {
-    id: '1955-miscellaneous' as Id,
+    id: '1955-miscellaneous' as AdId,
     url: 'ads/1955-miscellaneous-preview.webp',
     alt: '1955 - ',
     offset: 2,
   },
   {
-    id: '1958-television' as Id,
+    id: '1958-television' as AdId,
     url: 'ads/1958-television-preview.webp',
     alt: '1958 - ',
     offset: 1,
   },
   {
-    id: '1968-periodicals' as Id,
+    id: '1968-periodicals' as AdId,
     url: 'ads/1968-periodicals-preview.webp',
     alt: '1968 - ',
     offset: 0,
@@ -164,24 +164,28 @@ const selectAd = (imageAd: ImageAd) => {
 </script>
 
 <template>
-  <div class="relative grid">
+  <div class="relative grid overflow-hidden">
     <UiGuide />
     <UiBackgroundAds :ads="bgAdsTop" />
     <UiBackgroundAds
       :ads="bgAdsBottom"
-      :top="600"
+      :top="500"
     />
     <UContainer>
-      <div class="relative grid gap-5 pt-64 2xl:pt-80 mt-8 pb-20">
-        <h1 class="flex justify-center font-josefin uppercase font-bold text-7xl text-center">
-          <div class="bg-primary-100/20 px-2 py-1 rounded-sm leading-none">
+      <div class="relative grid gap-5 pt-16 lg:pt-64 2xl:pt-80 mt-8 pb-8 lg:pb-20">
+        <div
+          class="flex justify-center font-josefin uppercase font-bold text-6xl lg:text-7xl text-center"
+        >
+          <h1 class="lg:bg-primary-100/20 px-2 py-1 rounded-sm leading-none">
             <span class="relative top-2">Selling Dreams</span>
-          </div>
-        </h1>
-        <h1 class="font-crimson font-medium text-3xl text-center max-w-[654px] mx-auto">
+          </h1>
+        </div>
+        <h1 class="font-crimson font-medium text-3xl text-center max-w-[654px] mx-auto px-2">
           100 years of advertising evolution and iconic campaigns in the United States
         </h1>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div
+          class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
           <div
             v-for="(ad, index) in imageAds"
             :key="`ad-${index}`"
@@ -205,14 +209,16 @@ const selectAd = (imageAd: ImageAd) => {
           </div>
         </div>
       </div>
-      <p class="font-crimson max-w-[420px] mx-auto text-center mt-5 mb-40 opacity-80 rounded-xl">
+      <p
+        class="font-crimson max-w-[420px] mx-auto text-center mt-5 mb-20 lg:mb-40 opacity-90 rounded-xl text-lg"
+      >
         Advertising is more than just a way to sell products, it's a reflection of the society and
         culture of its time. In the heart of individuals, it creates long-lasting memories and
         emotions. This project showcases the evolution of advertising in the United States from 1910
         to 2007 and highlights iconic campaigns that shaped both the industry and cultural norms.
       </p>
       <UiChart v-if="isAdsLoaded && isFiguresLoaded" />
-      <div class="relative py-20 text-center lowercase font-crimson">
+      <div class="relative pt-10 pb-14 lg:pt-16 lg:pb-20 text-center lowercase font-crimson">
         <p class="opacity-80">
           Created by Tristan Lanoye
           <span class="relative right-1 mx-3 opacity-60">|</span>

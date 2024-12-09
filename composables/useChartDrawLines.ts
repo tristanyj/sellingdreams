@@ -44,11 +44,11 @@ export function useChartDrawLines() {
         .attr('id', `year-group-${figure.year}`);
 
       const y = yScale(figure.year.toString()) ?? 0;
-      const padding = 7;
+      const padding = 10;
       const textOffset = 4;
       const subTextOffset = 22;
-      const fontSizeYear = 17;
-      const fontSize = 15;
+      const fontSizeYear = 16;
+      const fontSize = 16;
 
       const event = events.value.find((e) => e.year === figure.year);
       let leftSubText = '';

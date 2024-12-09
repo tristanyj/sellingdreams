@@ -27,7 +27,7 @@ export function useChartDrawLegend() {
       point: s.areaPoints[0],
     }));
 
-    const fontSize = 15;
+    const fontSize = 16;
     const legendGroup = g.append('g').attr('class', 'legend-group');
     const totalItems = firstOfEach.length;
     const maxOffset = 50;
@@ -128,6 +128,8 @@ export function useChartDrawLegend() {
 
     if (!misc) return;
 
+    const fontSize = 16;
+
     const x0Mid = misc.x0;
     const x1Mid = misc.x1;
     const yMid = misc.y;
@@ -193,13 +195,13 @@ export function useChartDrawLegend() {
     });
 
     const p1 = 70;
-    const p2 = 90;
+    const p2 = 94;
 
     const text = g
       .append('text')
       .attr('x', x1)
       .attr('y', y1 - lineOffset - p1 - p2)
-      .attr('font-size', 15)
+      .attr('font-size', fontSize)
       .attr('font-family', 'Crimson Pro')
       .attr('class', 'label')
       .attr('stroke-width', 1)
@@ -207,7 +209,7 @@ export function useChartDrawLegend() {
         () =>
           `Eight advertising categories are each represented with a column of a certain color. For a given year, the sum width of all columns represents the total amount of money spent on advertising in the US, as a percentage of the GDP.`
       )
-      .call(wrapText2, 320);
+      .call(wrapText2, 340);
 
     const bbox = text.node().getBBox();
     text.attr('transform', `translate(${x1 - bbox.width / 2})`);
@@ -216,7 +218,7 @@ export function useChartDrawLegend() {
       .append('text')
       .attr('x', x1)
       .attr('y', y1 - lineOffset - p1)
-      .attr('font-size', 15)
+      .attr('font-size', fontSize)
       .attr('font-family', 'Crimson Pro')
       .attr('class', 'label')
       .attr('stroke-width', 1)
@@ -224,7 +226,7 @@ export function useChartDrawLegend() {
         () =>
           `The width of a column represents, for a given year, the percentage of money spent on this category among advertising categories. Higher percentages are placed on the left, lower percentages on the right.`
       )
-      .call(wrapText2, 320);
+      .call(wrapText2, 340);
 
     const bbox2 = text2.node().getBBox();
     text2.attr('transform', `translate(${x1 - bbox2.width / 2})`);
@@ -238,6 +240,8 @@ export function useChartDrawLegend() {
     const y = misc.y - 20;
     const y1 = y - 120;
     const y2 = y1 - 32;
+
+    const fontSize = 16;
 
     createLine(g, {
       className: 'legend-line',
@@ -264,7 +268,7 @@ export function useChartDrawLegend() {
       .attr('x', x)
       .attr('y', y2 - 35)
       .attr('class', 'right-text')
-      .attr('font-size', 15)
+      .attr('font-size', fontSize)
       .attr('text-anchor', 'end')
       .attr('font-family', 'Crimson Pro')
       .text(
@@ -279,7 +283,7 @@ export function useChartDrawLegend() {
       .attr('class', 'right-sub-text')
       .attr('x', x)
       .attr('y', y2 - 15)
-      .attr('font-size', 15)
+      .attr('font-size', fontSize)
       .attr('text-anchor', 'end')
       .attr('opacity', 0.5)
       .text(() => `% of Gross Domestic Product (GDP)`);

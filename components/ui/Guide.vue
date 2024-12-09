@@ -52,24 +52,26 @@ const isOpen = computed(() => !selectedAd.value && y.value > 550);
       >
         <div class="bg-[#E7DECC]/95 border border-black/25 rounded-md px-1 py-1">
           <div class="grid grid-flow-col items-center text-xs text-gray-800">
-            <button
-              v-for="category in categories"
-              :key="`category-${category.id}`"
-              class="grid grid-flow-col gap-0.5 items-center cursor-pointer hover:bg-gray-100/30 rounded-md px-1.5 py-0.5"
-              :class="{ 'bg-gray-100/40': category.id === selectedArea }"
-              @click="selectArea(selectedArea === category.id ? null : category.id)"
-              @mouseenter="onMouseEnter(category.id)"
-              @mouseleave="onMouseLeave"
-            >
-              <div
-                class="w-2.5 h-2.5 rounded-full"
-                :style="{ backgroundColor: category.color }"
-              />
-              <div class="">
-                {{ category.name }}
-              </div>
-            </button>
-            <div class="opacity-20 mx-1">|</div>
+            <div class="hidden lg:grid grid-flow-col items-center">
+              <button
+                v-for="category in categories"
+                :key="`category-${category.id}`"
+                class="grid grid-flow-col gap-0.5 items-center cursor-pointer hover:bg-gray-100/30 rounded-md px-1.5 py-0.5"
+                :class="{ 'bg-gray-100/40': category.id === selectedArea }"
+                @click="selectArea(selectedArea === category.id ? null : category.id)"
+                @mouseenter="onMouseEnter(category.id)"
+                @mouseleave="onMouseLeave"
+              >
+                <div
+                  class="w-2.5 h-2.5 rounded-full"
+                  :style="{ backgroundColor: category.color }"
+                />
+                <div class="">
+                  {{ category.name }}
+                </div>
+              </button>
+            </div>
+            <div class="hidden lg:grid opacity-20 mx-1">|</div>
             <div class="grid grid-flow-col gap-0.5 items-center">
               <UiToggleFigureMode
                 size="sm"
