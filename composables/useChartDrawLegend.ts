@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import type { d3GSelection } from '~/types';
 
-import { wrapText2 } from '~/assets/scripts/utils';
+import { wrapText } from '~/assets/scripts/utils';
 import { AD_CATEGORIES } from '~/assets/scripts/constants';
 
 import { createLine } from './useChartDrawLines';
@@ -189,9 +189,12 @@ export function useChartDrawLegend() {
         () =>
           `Eight advertising categories are each represented with a column of a certain color. For a given year, the sum width of all columns represents the total amount of money spent on advertising in the US, as a percentage of the GDP.`
       )
-      .call(wrapText2, 340);
+      // @ts-expect-error - d3 typing issue
+      .call(wrapText, 340);
 
-    const bbox = text.node().getBBox();
+    const textNode = text.node();
+    if (!textNode) return;
+    const bbox = textNode.getBBox();
     text.attr('transform', `translate(${x1 - bbox.width / 2})`);
 
     const text2 = g
@@ -206,10 +209,14 @@ export function useChartDrawLegend() {
         () =>
           `The width of a column represents, for a given year, the percentage of money spent on this category among advertising categories. Higher percentages are placed on the left, lower percentages on the right.`
       )
-      .call(wrapText2, 340);
+      // @ts-expect-error - d3 typing issue
+      .call(wrapText, 340);
 
-    const bbox2 = text2.node().getBBox();
-    text2.attr('transform', `translate(${x1 - bbox2.width / 2})`);
+    const text2Node = text2.node();
+    if (text2Node) {
+      const bbox2 = text2Node.getBBox();
+      text2.attr('transform', `translate(${x1 - bbox2.width / 2})`);
+    }
   };
 
   const drawFigureLegend = (g: d3GSelection) => {
@@ -243,8 +250,7 @@ export function useChartDrawLegend() {
       transform: '',
     });
 
-    const text = g
-      .append('text')
+    g.append('text')
       .attr('x', x)
       .attr('y', y2 - 35)
       .attr('class', 'right-text')
@@ -258,8 +264,7 @@ export function useChartDrawLegend() {
           } for inflation)`
       );
 
-    const text2 = g
-      .append('text')
+    g.append('text')
       .attr('class', 'right-sub-text')
       .attr('x', x)
       .attr('y', y2 - 15)

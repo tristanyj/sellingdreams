@@ -17,47 +17,14 @@ export function truncateText(text: string, maxLength: number, suffix = '...') {
   return text.slice(0, maxLength - 3) + suffix;
 }
 
-export function wrapText(text: string, width: number): string[] {
-  const words = text.split(/\s+/).reverse();
-  const lines: string[] = [];
-  let line: string[] = [];
-  let lineLength = 0;
-  const spaceWidth = 4;
-
-  while (words.length > 0) {
-    const word = words.pop()!;
-    const wordWidth = word.length * 5.5;
-
-    if (lineLength + wordWidth + (line.length > 0 ? spaceWidth : 0) > width) {
-      if (line.length > 0) {
-        lines.push(line.join(' '));
-        line = [word];
-        lineLength = wordWidth;
-      } else {
-        lines.push(word);
-      }
-    } else {
-      line.push(word);
-      lineLength += wordWidth + (line.length > 0 ? spaceWidth : 0);
-    }
-  }
-
-  if (line.length > 0) {
-    lines.push(line.join(' '));
-  }
-
-  return lines;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function wrapText2(text: d3.Selection<SVGElement, any, any, any>, maxWidth: number) {
+export function wrapText(text: d3GSelection, maxWidth: number) {
   text.each(function () {
     const text = select(this);
     const words = text.text().split(/\s+/).reverse();
     let word;
     let line: string[] = [];
     let lineNumber = 0;
-    const lineHeight = 1.1; // ems
+    const lineHeight = 1.2;
     const y = text.attr('y');
     const dy = parseFloat(text.attr('dy')) || 0;
     let tspan = text.text(null).append('tspan').attr('x', 0).attr('y', y).attr('dy', `${dy}em`);
@@ -79,7 +46,6 @@ export function wrapText2(text: d3.Selection<SVGElement, any, any, any>, maxWidt
       }
     }
 
-    // Calculate the maximum width of the text block
     const textWidth = Math.max(
       ...text
         .selectAll('tspan')
@@ -87,7 +53,6 @@ export function wrapText2(text: d3.Selection<SVGElement, any, any, any>, maxWidt
         .map((tspan) => (tspan ? (tspan as SVGTextElement).getComputedTextLength() : 0))
     );
 
-    // Center each line by adjusting the x attribute of each tspan
     text.selectAll('tspan').each(function () {
       const tspan = select(this);
       const tspanWidth = (tspan.node() as SVGTextElement)?.getComputedTextLength() || 0;
