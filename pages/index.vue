@@ -237,17 +237,9 @@ const selectAd = (imageAd: ImageAd) => {
         culture of its time. In the heart of individuals, it creates long-lasting memories and
         emotions. This project showcases the evolution of advertising in the United States from 1910
         to 2007 and highlights iconic campaigns that shaped both the industry and cultural norms.
-        <!-- The data used in this project is sourced from the
-        <a
-          href="https://www.purplemotes.net/2008/09/14/us-advertising-expenditure-data/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-gray-800 transition-colors duration-50 underline"
-          >Douglas Galbi blog</a
-        >. -->
       </p>
       <UiChart v-if="isAdsLoaded && isFiguresLoaded" />
-      <div class="relative py-16 text-center lowercase font-crimson">
+      <div class="relative py-20 text-center lowercase font-crimson">
         <p class="opacity-80">
           Created by Tristan Lanoye
           <span class="relative right-1 mx-3 opacity-60">|</span>
@@ -260,23 +252,23 @@ const selectAd = (imageAd: ImageAd) => {
         </p>
         <div class="max-w-80 mx-auto h-px bg-gray-900 my-4 opacity-15" />
         <div class="text-gray-700 text-sm lowercase">
-          Data from
+          Expenditure data from
           <a
-            href="https://www.basketball-reference.com/"
+            href="https://www.purplemotes.net/2008/09/14/us-advertising-expenditure-data/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-gray-800 transition-colors duration-50 underline"
-            >Basketball Reference</a
+            >Douglas Galbi</a
           >
         </div>
         <div class="text-gray-700 text-sm lowercase">
-          Data from
+          GDP data from
           <a
-            href="https://www.basketball-reference.com/"
+            href="https://www.measuringworth.com/datasets/usgdp/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-gray-800 transition-colors duration-50 underline"
-            >Basketball Reference</a
+            >Measuring Worth</a
           >
         </div>
       </div>
