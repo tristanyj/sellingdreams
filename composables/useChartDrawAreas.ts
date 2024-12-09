@@ -7,6 +7,9 @@ export function useChartDrawAreas() {
   const { selectedArea, series } = storeToRefs(figureStore);
   const { selectArea } = figureStore;
 
+  const interactionStore = useInteractionStore();
+  const { performanceMode } = storeToRefs(interactionStore);
+
   const drawCategoryAreas = (g: d3GSelection, isInteraction = false) => {
     const area = d3
       .area<{ y: number; x0: number; x1: number }>()
@@ -28,14 +31,16 @@ export function useChartDrawAreas() {
         .attr('stroke-linejoin', 'round')
         .classed('disabled', (d) => selectedArea.value !== d.id && !!selectedArea.value);
 
-      g.selectAll('.category-area-overlay')
-        .data(series.value)
-        .join('path')
-        .attr('class', 'category-area-overlay')
-        .attr('fill', 'url(#noise-pattern)')
-        .attr('id', (d) => `category-area-${d.id}-overlay`)
-        .attr('d', (d) => area(d.areaPoints))
-        .attr('opacity', 0.25);
+      if (performanceMode.value === 'high') {
+        g.selectAll('.category-area-overlay')
+          .data(series.value)
+          .join('path')
+          .attr('class', 'category-area-overlay')
+          .attr('fill', 'url(#noise-pattern)')
+          .attr('id', (d) => `category-area-${d.id}-overlay`)
+          .attr('d', (d) => area(d.areaPoints))
+          .attr('opacity', 0.25);
+      }
     } else {
       g.selectAll('.category-area-interaction')
         .data(series.value)

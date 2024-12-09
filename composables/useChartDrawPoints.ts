@@ -18,6 +18,7 @@ export function useChartDrawPoints() {
     .endAngle((d) => d.endAngle);
 
   const interactionStore = useInteractionStore();
+  const { performanceMode } = storeToRefs(interactionStore);
   const { setTooltipFigure, updateMousePosition, setTooltipCategory, setTooltipAd, setSelectedAd } =
     interactionStore;
 
@@ -150,14 +151,16 @@ export function useChartDrawPoints() {
             }
           })
           .on('mouseenter', function (_) {
-            const points = d3.selectAll(`.point`);
-            points.classed('disabled', true);
+            if (performanceMode.value === 'high') {
+              const points = d3.selectAll(`.point`);
+              points.classed('disabled', true);
 
-            d3.select(`#point-${serie.id}-${point.year}`)
-              .attr('r', radius.large)
-              .classed('disabled', false);
+              d3.select(`#point-${serie.id}-${point.year}`)
+                .attr('r', radius.large)
+                .classed('disabled', false);
 
-            yearElements.classed('disabled', true);
+              yearElements.classed('disabled', true);
+            }
 
             setTooltipFigure({
               id: serie.id,
@@ -188,27 +191,31 @@ export function useChartDrawPoints() {
 
             if (selectedArea.value) return;
 
-            d3.selectAll(`.category-area:not(#category-area-${serie.id})`).classed(
-              'disabled',
-              true
-            );
+            if (performanceMode.value === 'high') {
+              d3.selectAll(`.category-area:not(#category-area-${serie.id})`).classed(
+                'disabled',
+                true
+              );
+            }
           })
           .on('mousemove', (event) => {
             updateMousePosition(event);
           })
           .on('mouseout', function (_) {
-            if (selectedArea.value) {
-              d3.selectAll(`.point`).classed('disabled', true);
-              const points = d3.selectAll(`.point-${selectedArea.value}`);
-              points.classed('disabled', false);
-            } else {
-              const points = d3.selectAll(`.point`);
-              points.classed('disabled', false);
+            if (performanceMode.value === 'high') {
+              if (selectedArea.value) {
+                d3.selectAll(`.point`).classed('disabled', true);
+                const points = d3.selectAll(`.point-${selectedArea.value}`);
+                points.classed('disabled', false);
+              } else {
+                const points = d3.selectAll(`.point`);
+                points.classed('disabled', false);
+              }
+
+              d3.select(`#point-${serie.id}-${point.year}`).attr('r', radius.small);
+
+              yearElements.classed('disabled', false);
             }
-
-            d3.select(`#point-${serie.id}-${point.year}`).attr('r', radius.small);
-
-            yearElements.classed('disabled', false);
 
             setTooltipFigure(null);
             setTooltipCategory(null);
@@ -216,7 +223,9 @@ export function useChartDrawPoints() {
 
             if (selectedArea.value) return;
 
-            d3.selectAll(`.category-area`).classed('muted', false).classed('disabled', false);
+            if (performanceMode.value === 'high') {
+              d3.selectAll(`.category-area`).classed('muted', false).classed('disabled', false);
+            }
           });
 
         if (ad) {

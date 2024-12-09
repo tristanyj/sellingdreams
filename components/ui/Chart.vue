@@ -7,7 +7,7 @@ const { selectArea, calcSeries } = figureStore;
 const { figures, maxGDPProportion, selectedArea } = storeToRefs(figureStore);
 
 const interactionStore = useInteractionStore();
-const { figureMode } = storeToRefs(interactionStore);
+const { figureMode, performanceMode } = storeToRefs(interactionStore);
 
 const { width, height, margin } = useChartConfig();
 const { drawCategoryAreas } = useChartDrawAreas();
@@ -56,7 +56,9 @@ function createVisualization() {
   drawCategoryLines(g.value);
 
   // Hover Area
-  drawCategoryAreas(g.value, true);
+  if (performanceMode.value === 'high') {
+    drawCategoryAreas(g.value, true);
+  }
 
   // Legend
   drawCategoryLegend(g.value);
@@ -116,6 +118,10 @@ watch(selectedArea, () => {
 });
 
 watch(figureMode, () => {
+  updateVisualization();
+});
+
+watch(performanceMode, () => {
   updateVisualization();
 });
 
