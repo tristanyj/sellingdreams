@@ -100,8 +100,8 @@ watch(isModalOpen, (value) => {
             <div v-else>
               <NuxtImg
                 :src="`ads/${selectedAd.id}.webp`"
-                class="w-full object-contain rounded-sm"
-                alt=""
+                class="w-full object-contain min-h-48 rounded-sm"
+                :alt="selectedAd.id"
               />
             </div>
             <div

@@ -100,7 +100,7 @@ onMounted(() => {
           <NuxtImg
             v-if="tooltipAd.id"
             :src="`ads/${tooltipAd.id}-preview.webp`"
-            class="w-full object-contain rounded-sm"
+            class="w-full min-h-48 object-contain rounded-sm"
             :alt="tooltipAd.id"
           />
         </div>
