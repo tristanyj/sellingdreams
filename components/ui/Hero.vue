@@ -67,7 +67,7 @@ const selectAd = (imageAd: ImageAd) => {
 onMounted(() => {
   setTimeout(() => {
     isLoaded.value = true;
-  }, 500);
+  }, 300);
 });
 </script>
 
