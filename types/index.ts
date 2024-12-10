@@ -113,6 +113,8 @@ export interface ImageAd {
   y: number;
   width: number;
   opacity: number;
+  w: number;
+  h: number;
 }
 
 export interface BgAd {
@@ -120,6 +122,8 @@ export interface BgAd {
   url: string;
   alt: string;
   offset: number;
+  width: number;
+  height: number;
 }
 
 // --------------------------------

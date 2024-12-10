@@ -17,6 +17,8 @@ const imageAds: ImageAd[] = [
     x: 550,
     y: -130,
     width: 130,
+    w: 300,
+    h: 438,
     opacity: 0.75,
   },
   {
@@ -26,6 +28,8 @@ const imageAds: ImageAd[] = [
     x: 600,
     y: 290,
     width: 220,
+    w: 400,
+    h: 514,
     opacity: 0.85,
   },
   {
@@ -35,6 +39,8 @@ const imageAds: ImageAd[] = [
     x: -680,
     y: -50,
     width: 250,
+    w: 400,
+    h: 508,
     opacity: 0.85,
   },
   {
@@ -44,6 +50,8 @@ const imageAds: ImageAd[] = [
     x: -500,
     y: 300,
     width: 150,
+    w: 400,
+    h: 266,
     opacity: 0.7,
   },
   {
@@ -53,6 +61,8 @@ const imageAds: ImageAd[] = [
     x: 0,
     y: -150,
     width: 265,
+    w: 400,
+    h: 226,
     opacity: 0.85,
   },
 ];
@@ -67,7 +77,7 @@ const selectAd = (imageAd: ImageAd) => {
 onMounted(() => {
   setTimeout(() => {
     isLoaded.value = true;
-  }, 300);
+  }, 0);
 });
 </script>
 
@@ -106,6 +116,8 @@ onMounted(() => {
               class="h-auto max-w-none rounded-lg"
               :src="ad.url"
               :alt="ad.alt"
+              :width="ad.w"
+              :height="ad.h"
               :style="{
                 width: `${ad.width}px`,
               }"

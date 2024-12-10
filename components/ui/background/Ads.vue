@@ -4,7 +4,6 @@ import { useWindowSize } from '@vueuse/core';
 
 const { width } = useWindowSize();
 
-const isLoaded = ref(false);
 const imgOffset = computed(() => (width.value < 1536 ? 75 : 0));
 
 interface Props {
@@ -14,12 +13,6 @@ interface Props {
 
 withDefaults(defineProps<Props>(), {
   top: 0,
-});
-
-onMounted(() => {
-  setTimeout(() => {
-    isLoaded.value = true;
-  }, 1000);
 });
 </script>
 
@@ -34,6 +27,8 @@ onMounted(() => {
         :key="`first-${ad.id}`"
         :src="ad.url"
         :alt="ad.alt"
+        :width="ad.width"
+        :height="ad.height"
         :style="{
           top: `${ad.offset * 50 - imgOffset}px`,
         }"
