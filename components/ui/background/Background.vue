@@ -108,7 +108,7 @@ const bgAdsBottom: BgAd[] = [
 onMounted(() => {
   setTimeout(() => {
     isLoaded.value = true;
-  }, 0);
+  }, 1000);
 });
 </script>
 
