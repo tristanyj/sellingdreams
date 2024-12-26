@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { AdId, BgAd } from '~/types';
 
-const isLoaded = ref(false);
+const imageLoaderStore = useImageLoaderStore();
+const { allImagesLoaded } = storeToRefs(imageLoaderStore);
+const { registerImages } = imageLoaderStore;
 
 const bgAdsTop: BgAd[] = [
   {
@@ -105,17 +107,27 @@ const bgAdsBottom: BgAd[] = [
   },
 ];
 
+const checkImagesLoaded = (ads: BgAd[]) => {
+  ads.forEach((ad) => {
+    const img = new Image();
+    img.src = ad.url;
+    img.onload = () => imageLoaderStore.imageLoaded();
+    img.onerror = () => imageLoaderStore.imageLoaded();
+  });
+};
+
+registerImages(bgAdsTop.concat(bgAdsBottom).length);
+
 onMounted(() => {
-  setTimeout(() => {
-    isLoaded.value = true;
-  }, 1000);
+  checkImagesLoaded(bgAdsTop);
+  checkImagesLoaded(bgAdsBottom);
 });
 </script>
 
 <template>
   <div>
     <Transition>
-      <div v-if="isLoaded">
+      <div v-if="allImagesLoaded">
         <UiBackgroundAds :ads="bgAdsTop" />
         <UiBackgroundAds
           :ads="bgAdsBottom"

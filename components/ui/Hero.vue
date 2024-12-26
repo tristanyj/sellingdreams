@@ -4,7 +4,9 @@ import type { AdId, ImageAd } from '~/types';
 const interactionStore = useInteractionStore();
 const { setSelectedAd } = interactionStore;
 
-const isLoaded = ref(false);
+const imageLoaderStore = useImageLoaderStore();
+const { allImagesLoaded } = storeToRefs(imageLoaderStore);
+const { registerImages } = imageLoaderStore;
 
 const dataStore = useDataStore();
 const { ads } = storeToRefs(dataStore);
@@ -74,10 +76,19 @@ const selectAd = (imageAd: ImageAd) => {
   setSelectedAd(ad);
 };
 
+const checkImagesLoaded = (ads: ImageAd[]) => {
+  ads.forEach((ad) => {
+    const img = new Image();
+    img.src = ad.url;
+    img.onload = () => imageLoaderStore.imageLoaded();
+    img.onerror = () => imageLoaderStore.imageLoaded(); // Handle error case
+  });
+};
+
+registerImages(imageAds.length);
+
 onMounted(() => {
-  setTimeout(() => {
-    isLoaded.value = true;
-  }, 750);
+  checkImagesLoaded(imageAds);
 });
 </script>
 
@@ -95,9 +106,8 @@ onMounted(() => {
     </h1>
     <div>
       <Transition>
-        <!-- <div v-if="isLoaded"> -->
         <div
-          v-if="isLoaded"
+          v-if="allImagesLoaded"
           class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <div
@@ -122,7 +132,6 @@ onMounted(() => {
                 width: `${ad.width}px`,
               }"
             />
-            <!-- </div> -->
           </div>
         </div>
       </Transition>
